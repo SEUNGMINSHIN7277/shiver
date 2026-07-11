@@ -24,7 +24,15 @@
 
 ## 세션 로그 (최신이 위)
 
-### 2026-07-11 — 세션 1 (초기 셋업)
+### 2026-07-11 — 세션 1 (초기 셋업 + 데이터 검증 리서치)
 - 공고문(HWP) 파싱, 필수요건 분석 완료: data.go.kr 등록 데이터 1건 이상 필수, 마감 7/13 18:00
-- CLAUDE.md, .gitignore, PROGRESS.md, DEV_SPEC.md 작성
-- 공공데이터 소스 검증 리서치 수행
+- CLAUDE.md, .gitignore, PROGRESS.md, DEV_SPEC.md, USER_ACTION_ITEMS.md, .env.example 작성
+- 데이터 검증 리서치 완료 (병렬 에이전트 6개, 검색 인덱스 교차검증 — data.go.kr 직접 접근은
+  이 환경에서 차단되어 M1에서 사용자 육안 확인 필요):
+  - **Koreana 본문은 data.go.kr 미등록** → 요건 충족(등록 데이터셋) / 코퍼스(크롤링) 이원 구조 확정
+  - R1 충족 포트폴리오 확정: 핵심=KF 한국음식정보_영어(15044203, 인증키 불요) + 백업 2 + 보강 3
+  - Koreana 사이트 구조 규명 (eGovFrame, selectNttList/NttInfo.do, langTy 코드 8종 확인,
+    언어판 정렬 키는 미확인 → M1 파일럿 최우선 과제)
+  - KF 저작권정책 확인 (KOGL 1유형은 KF 완전보유 저작물만 — Koreana 기사별 확인 필요)
+  - 역대 수상작 분석 (해외안전·ODA 편중, 문화·언어 공백 → 포지셔닝 근거, DEV_SPEC §1.2)
+- M0 잔여: 백엔드/파이프라인 코드 스캐폴딩 (다음 세션에서 M1과 함께 진행 가능)
