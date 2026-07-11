@@ -203,10 +203,14 @@ async function loadProvenance() {
   const c = d.counts;
   $("#hero-stats").textContent =
     `용어 ${c.glossary_terms.toLocaleString()}개 · 다국어 대역 ${c.glossary_renderings.toLocaleString()}개 · ` +
-    `근거 코퍼스 ${c.corpus_docs.toLocaleString()}문서 · 공공데이터셋 ${d.opendata_provenance.filter((p) => p.portal_url).length}종 연동`;
+    `근거 코퍼스 ${c.corpus_docs.toLocaleString()}문서(Koreana ${(c.koreana_articles || 0).toLocaleString()}기사 포함) · ` +
+    `용어 근거연결 ${(c.evidence_links || 0).toLocaleString()}건`;
   $("#provenance-badges").innerHTML = d.opendata_provenance
     .map((p) => {
-      const inner = `<span class="dot"></span>${esc(p.dataset_name)} · ${esc(p.provider)} (${p.record_count}건)`;
+      const live = p.status !== "approved_pending";
+      const dotColor = live ? "" : ' style="background:#ff9f0a"';
+      const cnt = live ? `${p.record_count.toLocaleString()}건` : "승인·연동대기";
+      const inner = `<span class="dot"${dotColor}></span>${esc(p.dataset_name)} · ${esc(p.provider)} (${cnt})`;
       return p.portal_url
         ? `<a class="badge" href="${esc(p.portal_url)}" target="_blank" rel="noopener">${inner}</a>`
         : `<span class="badge">${inner}</span>`;

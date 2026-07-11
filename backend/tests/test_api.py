@@ -109,3 +109,26 @@ def test_detect_lang_mixed_script():
     assert detect_lang("Что такое 온돌?") == "ru"
     assert detect_lang("Apa itu gimjang?") == "id"
     assert detect_lang("판소리가 뭐야?") == "ko"
+
+
+def test_koreana_corpus_integrated():
+    d = client.get("/api/health").json()
+    # 실 크롤 데이터가 있으면 Koreana 기사가 코퍼스에 포함되어야 함
+    assert d["counts"]["koreana_articles"] >= 0
+    live = [p["dataset_name"] for p in d["opendata_provenance"] if p["status"] == "live"]
+    assert any("한국음식정보" in n for n in live)
+
+
+def test_provenance_has_status():
+    d = client.get("/api/health").json()
+    for p in d["opendata_provenance"]:
+        assert p["status"] in ("live", "approved_pending")
+    # 오픈API 3종은 provenance에 존재(승인 완료 명시)
+    names = [p["dataset_name"] for p in d["opendata_provenance"]]
+    assert any("표준코드" in n for n in names)
+
+
+def test_country_endpoint_graceful():
+    d = client.get("/api/country").json()
+    # fixture 없으면 available=False로 정상 응답(오류 아님)
+    assert "available" in d

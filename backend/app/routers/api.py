@@ -68,7 +68,7 @@ def _term_card(t: dict) -> dict:
         "source_label": {
             "kf_food": "KF 한국음식정보 (공공데이터포털 15044203)",
             "koica_oda": "KOICA ODA 용어사전 (공공데이터포털 15052909)",
-            "curated_v0": "K-Rosetta 문화용어 v0 (Koreana 정렬 예정)",
+            "curated_v0": "K-Rosetta 문화용어 (Koreana 근거 연결)",
         }.get(t["source"], t["source"]),
     }
 
@@ -187,11 +187,32 @@ def benchmark_summary() -> dict:
 @router.get("/health")
 def health() -> dict:
     con = get_db()
-    prov = [dict(r) for r in con.execute("SELECT * FROM opendata_provenance").fetchall()]
+    prov = [dict(r) for r in con.execute(
+        "SELECT * FROM opendata_provenance ORDER BY status DESC, dataset_name").fetchall()]
     counts = {
         "glossary_terms": con.execute("SELECT count(*) FROM glossary_terms").fetchone()[0],
         "glossary_renderings": con.execute("SELECT count(*) FROM glossary_renderings").fetchone()[0],
         "corpus_docs": con.execute("SELECT count(*) FROM corpus_docs").fetchone()[0],
+        "koreana_articles": con.execute(
+            "SELECT count(*) FROM corpus_docs WHERE source='koreana_pilot'").fetchone()[0],
+        "evidence_links": con.execute("SELECT count(*) FROM glossary_evidence").fetchone()[0],
     }
     return {"status": "ok", "demo_mode": get_settings().demo_mode,
             "counts": counts, "opendata_provenance": prov}
+
+
+@router.get("/country")
+def country(q: str = "", limit: int = 30) -> dict:
+    """외교부 국가·지역별 표준코드(오픈API) 조회 — 응답 fixture 도착 시 활성."""
+    con = get_db()
+    n = con.execute("SELECT count(*) FROM countries").fetchone()[0]
+    if n == 0:
+        return {"available": False, "count": 0,
+                "notice": "외교부 국가표준코드 오픈API 승인 완료. 라이브 응답 기록 후 활성화됩니다."}
+    like = f"%{q}%"
+    rows = con.execute(
+        "SELECT iso2, iso3, name_ko, name_en FROM countries"
+        " WHERE name_ko LIKE ? OR name_en LIKE ? OR iso2 LIKE ? LIMIT ?",
+        (like, like, q.upper(), limit),
+    ).fetchall()
+    return {"available": True, "count": n, "results": [dict(r) for r in rows]}
