@@ -35,9 +35,27 @@ def _subtitle_form(rendering: str | None) -> str | None:
     return rendering.split("(")[0].strip()
 
 
+def _term_evidence(term_id: int) -> list[dict]:
+    con = get_db()
+    rows = con.execute(
+        """SELECT e.lang, e.snippet, d.title, d.source, d.published, d.url
+           FROM glossary_evidence e JOIN corpus_docs d ON d.id = e.doc_id
+           WHERE e.term_id=? LIMIT 4""",
+        (term_id,),
+    ).fetchall()
+    label = {"kf_archive": "KF 디지털 아카이브", "koreana_pilot": "Koreana"}
+    return [
+        {"lang": r["lang"], "title": r["title"], "snippet": r["snippet"],
+         "source_label": label.get(r["source"], r["source"]),
+         "published": r["published"], "url": r["url"]}
+        for r in rows
+    ]
+
+
 def _term_card(t: dict) -> dict:
     r = t.get("rendering") or {}
     return {
+        "evidence": _term_evidence(t["id"]) if t.get("id") else [],
         "term_ko": t["term_ko"],
         "subtitle_form": _subtitle_form(r.get("rendering")),
         "category": t["category"],

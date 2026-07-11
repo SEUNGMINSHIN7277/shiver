@@ -106,6 +106,10 @@ function renderTranslation(d) {
         <div class="t-rend">${esc(t.rendering || "—")}</div>
         <div class="t-def">${esc((t.definition_ko || "").slice(0, 90))}</div>
         ${t.fallback_to_en ? '<div class="t-fallback">※ 선택 언어 대역 준비 중 — 영문 표준 표시</div>' : ""}
+        ${(t.evidence || [])
+          .slice(0, 2)
+          .map((e) => `<div class="t-evi" title="${esc(e.snippet || "")}">📖 ${esc(e.title)} <span class="muted">· ${esc(e.source_label)}${e.published ? " · " + esc(e.published) : ""}</span></div>`)
+          .join("")}
         <span class="t-src">${esc(t.source_label)}</span>
       </div>`
     )

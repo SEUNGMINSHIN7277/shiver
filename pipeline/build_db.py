@@ -27,6 +27,7 @@ SCHEMA = """
 DROP TABLE IF EXISTS glossary_terms;
 DROP TABLE IF EXISTS glossary_renderings;
 DROP TABLE IF EXISTS corpus_docs;
+DROP TABLE IF EXISTS glossary_evidence;
 DROP TABLE IF EXISTS opendata_provenance;
 DROP TABLE IF EXISTS corpus_fts;
 
@@ -62,6 +63,14 @@ CREATE VIRTUAL TABLE corpus_fts USING fts5(
   title, body, content='corpus_docs', content_rowid='id',
   tokenize='unicode61 remove_diacritics 2'
 );
+CREATE TABLE glossary_evidence (
+  id INTEGER PRIMARY KEY,
+  term_id INTEGER NOT NULL REFERENCES glossary_terms(id),
+  doc_id INTEGER NOT NULL REFERENCES corpus_docs(id),
+  lang TEXT NOT NULL,
+  snippet TEXT
+);
+CREATE INDEX idx_ev_term ON glossary_evidence(term_id);
 CREATE TABLE opendata_provenance (
   dataset_name TEXT PRIMARY KEY,
   provider TEXT, portal_url TEXT, license TEXT,
@@ -256,9 +265,64 @@ def load_koreana_pilot(con: sqlite3.Connection) -> int:
     return n
 
 
+def _snippet(body: str, needle: str, width: int = 70) -> str:
+    i = body.find(needle)
+    if i < 0:
+        return body[:width * 2]
+    s, e = max(0, i - width), min(len(body), i + len(needle) + width)
+    return ("…" if s > 0 else "") + body[s:e] + ("…" if e < len(body) else "")
+
+
+def link_evidence(con: sqlite3.Connection) -> int:
+    """문화 용어 ↔ 근거 기사 자동 연결.
+
+    - 한국어 문서(kf_archive, koreana_pilot ko판): 용어 원문 매칭
+    - 외국어 문서(koreana_pilot 타 언어판): 대역의 음차 헤드(예: 'pansori') 매칭
+    Koreana 파일럿 코퍼스가 도착하면 재빌드만으로 다국어 근거가 자동 확장된다.
+    """
+    n = 0
+    terms = con.execute(
+        "SELECT id, term_ko FROM glossary_terms WHERE domain='culture'"
+    ).fetchall()
+    for t in terms:
+        # 한국어 근거 (제목 우선, 최대 3건)
+        rows = con.execute(
+            """SELECT id, title, body FROM corpus_docs
+               WHERE source IN ('kf_archive','koreana_pilot') AND lang='ko'
+                 AND (title LIKE '%'||?||'%' OR body LIKE '%'||?||'%')
+               ORDER BY (title LIKE '%'||?||'%') DESC LIMIT 3""",
+            (t["term_ko"], t["term_ko"], t["term_ko"]),
+        ).fetchall()
+        for r in rows:
+            con.execute(
+                "INSERT INTO glossary_evidence(term_id, doc_id, lang, snippet) VALUES(?,?,?,?)",
+                (t["id"], r["id"], "ko", _snippet(r["body"] or r["title"], t["term_ko"])),
+            )
+            n += 1
+        # 외국어 근거 (Koreana 파일럿 언어판 — 음차 헤드 매칭)
+        for rend in con.execute(
+            "SELECT lang, rendering FROM glossary_renderings WHERE term_id=?", (t["id"],)
+        ).fetchall():
+            head = rend["rendering"].split("(")[0].strip()
+            if len(head) < 3:
+                continue
+            for r in con.execute(
+                """SELECT id, title, body FROM corpus_docs
+                   WHERE source='koreana_pilot' AND lang=? AND body LIKE '%'||?||'%' LIMIT 2""",
+                (rend["lang"], head),
+            ).fetchall():
+                con.execute(
+                    "INSERT INTO glossary_evidence(term_id, doc_id, lang, snippet) VALUES(?,?,?,?)",
+                    (t["id"], r["id"], rend["lang"], _snippet(r["body"], head)),
+                )
+                n += 1
+    return n
+
+
 def main() -> None:
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     con = sqlite3.connect(DB_PATH)
+    con.row_factory = sqlite3.Row
     con.executescript(SCHEMA)
     counts = {
         "kf_food(음식 용어)": load_food(con),
@@ -268,6 +332,7 @@ def main() -> None:
         "koreana_pilot(파일럿 기사)": load_koreana_pilot(con),
     }
     con.execute("INSERT INTO corpus_fts(rowid, title, body) SELECT id, title, body FROM corpus_docs")
+    counts["glossary_evidence(용어→근거 연결)"] = link_evidence(con)
     now = time.strftime("%Y-%m-%dT%H:%M:%S")
     for key, p in PROVENANCE.items():
         rc = con.execute(
