@@ -59,7 +59,16 @@
   **예외**: `data/pilot/`은 S0 스프린트용 소량 파일럿 데이터(<30MB) — 사용자가 로컬 크롤링/다운로드
   산출물을 커밋해 원격 세션과 공유하는 통로로 커밋 허용
 
-## 4. Claude API 사용 규약
+## 3.5 ★ 비용 0원 원칙 (사용자 결정, 2026-07-11)
+
+- **유료 API를 호출하는 코드를 실행하지 않는다** (Anthropic API, OpenAI 등).
+  `ANTHROPIC_API_KEY`가 없는 것이 정상 상태다.
+- LLM이 필요한 오프라인 작업(용어 추출·역어 정렬·번역·채점)은 **Claude Code 세션이
+  직접 수행**해 결과를 `data/pilot/derived/` 또는 fixture로 커밋한다.
+- 런타임 기본값은 `DEMO_MODE=cached`. live 모드 코드는 작성하되 실행·과금하지 않는다.
+- 유료 전환(소액 충전 포함)은 반드시 사용자의 명시적 승인 후에만.
+
+## 4. Claude API 사용 규약 (DEMO_MODE=live 전환 시에만 적용)
 
 - 항상 공식 `anthropic` Python SDK 사용. 모델 ID는 정확히 `claude-opus-4-8` / `claude-haiku-4-5`.
 - 사고 모드: `thinking={"type": "adaptive"}`. `budget_tokens`/`temperature` 등은 사용 금지(400 에러).

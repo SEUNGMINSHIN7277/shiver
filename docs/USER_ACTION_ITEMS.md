@@ -23,9 +23,10 @@ Claude Code가 자율 개발을 진행하기 위해 **사용자만 할 수 있�
   - [ ] 붙임4 개인정보 수집·이용 동의서
 - 문의: 02-2100-7163, 064-804-1021
 
-### 2. API 키 발급 → 저장소 루트에 `.env` 생성 (`.env.example` 복사)
-- [ ] **Anthropic API 키** → `ANTHROPIC_API_KEY` (console.anthropic.com, 결제수단 등록.
-      개발 전체 기간 LLM 비용 추정 $50~120 — DEV_SPEC §7)
+### 2. 데이터 준비 (전부 무료 — 비용 0원 원칙, DEV_SPEC §7.0)
+- [x] ~~Anthropic API 키~~ → **당분간 불필요.** LLM 작업은 Claude Code 세션(Max 구독 포함)이
+      직접 수행하고, 데모는 DEMO_MODE=cached로 서빙. 발표 단계에서 자유입력 라이브 데모를
+      원할 때만 소액($10~20) 충전 여부 결정
 - [ ] **공공데이터포털 인증키** → `DATA_GO_KR_API_KEY`
       1. data.go.kr 회원가입(본인인증 필요 — 사용자만 가능)
       2. 아래 오픈API 상세페이지에서 각각 [활용신청] 클릭 (자동승인 유형은 20~30분 내,
@@ -38,9 +39,9 @@ Claude Code가 자율 개발을 진행하기 위해 **사용자만 할 수 있�
       3. 마이페이지 → 인증키(일반 인증키 Encoding) 복사
       4. (인증키 불필요) 파일데이터 2종은 바로 다운로드해 `data/raw/opendata/`에 넣어도 됨:
          한국음식정보_영어(15044203), 디지털 아카이브 기사 목록(15139278)
-- [ ] (선택, 벤치마크용) **OpenAI API 키** → `OPENAI_API_KEY` — "GPT vs K-Rosetta" 직접 비교에
-      필요. 미제공 시 베이스라인을 'Claude 바닐라 번역'으로 대체하고 발표에서 명시
-- [ ] (선택) **Google Cloud Translation API 키** → `GOOGLE_TRANSLATE_API_KEY`
+- [ ] (선택, 무료) 벤치마크 외부 비교축: Google 번역 **웹**(translate.google.com)에서
+      세션이 준비해 줄 문장 30~50개의 번역 결과를 복사해 전달 (~30분).
+      유료 API 키(OpenAI/Google Cloud)는 쓰지 않음 — 비용 0원 원칙
 
 ## 🟡 P1 — 개발 초반 (M1, ~7/16)
 
