@@ -1,0 +1,1806 @@
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="코리아나">
+        <meta property="og:description" content="코리아나 홈페이지에 오신 것을 환영합니다.">
+        <meta property="og:image" content="/images/web/koreana/main/logo.png">
+        <meta property="og:url" content="https://www.koreana.or.kr">
+		<title>코리아나</title>
+		<meta name="keywords" content="코리아나">
+		<meta name="description" content="코리아나 홈페이지에 오신 것을 환영합니다. ">
+		<link rel="stylesheet" href="/css/web/koreana/main.css" media="all">
+		<!-- <link rel="stylesheet" href="/00_common/css/jquery.fullPage.css" media="all"> -->
+		<link rel="stylesheet" href="/00_common/js/mCustomScrollbar/jquery.mCustomScrollbar.css" media="all">
+		<script src="/00_common/js/jquery-1.11.2.min.js"></script>
+		<script src="/00_common/js/jquery-ui.min.js"></script>
+		<script src="/00_common/js/modernizr-2.6.2.min.js"></script>
+		<script src="/00_common/js/slick.min.js"></script>
+		<!-- <script src="/00_common/js/jquery.fullPage.js"></script> -->
+		<script src="/00_common/js/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
+		<script src="/00_common/js/ScrollMagic.min.js"></script>
+		<script src="/00_common/js/T3_layout.js"></script>
+		<script src="/js/web/koreana/main.js"></script>
+        <script src="/js/web/koreana/common.js"></script>
+        <script src="/00_common/js/common.js"></script>
+
+        <!-- 상단팝업 js/css -->
+        <script src="/js/common.js"></script>
+        <script src="/js/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="/css/com/jquery/jquery-ui.min.css" media="all"/>
+
+		<script type="text/javascript">
+	    	$(document).ready(function() {
+	    		var agent = navigator.userAgent.toLowerCase();
+	     		if ( navigator.userAgent.indexOf("Trident") > -1 && "" == 1) {
+	     			if("KOR" == "KOR" || "KOR" == "" || "KOR" == undefined) {
+	     				alert('일부 웹사이트는 Internet Explorer에서 잘 작동하지 않을 수 있습니다. 다른 브라우저를 사용하여 주시기 바랍니다.') ;
+	     			} else {
+	     				alert('Some websites may not work well in Internet Explorer. Please use a different browser.') ;
+	     			}
+	    		}
+
+	    	});
+        </script>
+
+	</head>
+    <body oncontextmenu="return false">
+		<!-- skipArea -->
+		<input type="hidden" id="languageType" value="KOR"/>
+		<div id="skipArea"><a href="#gnb">메인메뉴 바로가기</a><a href="#container">본문으로 바로가기</a></div>
+
+		<div id="wrap" class="onTop">
+
+			
+<!DOCTYPE html>
+
+
+
+<!-- upper popup
+<div class="up-popup" id="up-popup">
+	<div class="container">
+		<div class="poplst" id="popSlide">
+			<div class="item"><a href="#">
+				<p class="ico"><img src="/00_common/images/T2_layout/ico_uppop01.png" alt=""></p>
+				<span>2020 Calender KF Global Center</span>
+				<strong>2020 KT 글로벌센터 사업일정</strong>
+			</a></div>
+			<div class="item"><a href="#">
+				<p class="ico"><img src="/00_common/images/T2_layout/ico_uppop02.png" alt=""></p>
+				<span>2020 하반기 PUBLIC DIPLOMACY</span>
+				<strong>공공외교 활동을 꾸는 이들을 위한 프로그램 안내서</strong>
+			</a></div>
+			<div class="item"><a href="#">
+				<p class="ico"><img src="/00_common/images/T2_layout/ico_uppop01.png" alt=""></p>
+				<span></span>
+				<strong></strong>
+			</a></div>
+		</div>
+		<div class="count">
+			<a href="#" id="uppopStop"><i class="xi-pause"></i><em class="sr-only">상단팝업 정지</em></a>
+			<a href="#" id="uppopPlay"><i class="xi-play"></i><em class="sr-only">상단팝업 재생</em></a>
+		</div>
+	</div>
+</div>-->
+
+        <!-- //바로가기 -->
+
+        	<!-- header -->
+            
+            
+			     
+
+
+
+
+
+<!-- header  -->
+<header id="header" class="sub_header">
+<!-- 전환 추적 태그 삽입 start -->
+<!-- 글로벌 구글 태그 (gtag.js) 통합 코드 --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D4WVCBH82G"></script> 
+<script> window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+// GA4 설정 (디버그 모드 포함)
+gtag('config', 'G-D4WVCBH82G');
+
+// 구글 광고(AW) 설정
+//gtag('config', 'AW-482413566');
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics, Google Ads: 482413566 -->
+<script>
+
+window.onload = function(){
+	var l_from_koreana_do = $("#languageType").val();
+	console.log(l_from_koreana_do);
+
+	if(l_from_koreana_do == "CHN") {
+		$("#container").addClass('lang_cn');
+	}
+	else if(l_from_koreana_do == "JPN"){
+		$("#container").addClass('lang_cn');
+	}
+	else if(l_from_koreana_do == "VNM"){
+		$("#container").addClass('lang_vnm');
+	}
+	else if(l_from_koreana_do == "ARE"){
+		$("#container").addClass('lang_are');
+		$(".img-cap").addClass('are_imgcap');
+	}
+
+	else {
+		$("#container").removeClass('lang_cn');
+		$("#container").removeClass('lang_are');
+		$(".img-cap").removeClass('are_imgcap');
+	}
+
+}
+</script>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '4183848851733798');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=4183848851733798&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+	<script>
+		!function (w, d, t) {
+		  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+
+		  ttq.load('C3NOOKB3G487IS97LMF0');
+		  ttq.page();
+		}(window, document, 'ttq');
+	</script>
+<script src="/js/webtrends.js"></script>
+<!-- 전환 추적 태그 삽입 end   -->
+
+	<div class="header_wrap">
+		<div class="container">
+			<!-- KF logo -->
+			
+				<h1><a href="javascript:" onclick="javascript:location.href='https://www.kf.or.kr/kid/ssoLoginChecker.do?rtnUrl='+encodeURIComponent('https://www.kf.or.kr/kf/main.do?langTy=KOR')" target="_self"><img src="/00_common/images/T3_layout/kf_sub_log.jpg" alt="KF"><em>한국국제교류재단</em></a></h1>
+			
+			
+			<!--   href="/koreana/main.do"  -->
+			<div class="top_link">
+				<!-- 한영근 주임 요청으로 삭제
+				<div class="year_select">
+					<a href="javascript:void(0);" class="select_btn">back issue</a>
+					<ul>
+						<li><a href="">2021.03.</a></li>
+						<li><a href="">2021.02.</a></li>
+						<li><a href="">2021.01.</a></li>
+						<li><a href="">2020.12.</a></li>
+						<li><a href="">2020.11.</a></li>
+						<li><a href="">2020.10.</a></li>
+						<li><a href="">2020.09.</a></li>
+						<li><a href="">2020.08.</a></li>
+						<li><a href="">2020.07.</a></li>
+						<li><a href="">2020.06.</a></li>
+						<li><a href="">2020.05.</a></li>
+						<li><a href="">2020.04.</a></li>
+						<li><a href="">2020.03.</a></li>
+						<li><a href="">2020.02.</a></li>
+						<li><a href="">2020.01.</a></li>
+						<li><a href="">2019.12.</a></li>
+					</ul>
+				</div>
+				 -->
+				<ul class="linklst">
+					<li>
+						
+							<a href="javascript:" onclick="goUnityLoginPage('koreana','','KOR');">LOGIN</a>
+						
+						
+					</li>
+					<li>
+						
+						
+							<a href="javascript:;" onclick="goUnityJoinPage('koreana','')">JOIN</a>
+						
+					</li>
+					<li class="lang">
+                        <a href="javascript:void(0);">
+                        
+                        
+                        KOR
+                        
+                        </a>
+						<ul class="lst langList">
+                        
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=ARE">ARE</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=CHN">CHN</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=ENG">ENG</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=ESP">ESP</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=FRA">FRA</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=GER">GER</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=IDN">IDN</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=JPN">JPN</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=RUS">RUS</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=VNM">VNM</a></li>
+                            
+                        
+						</ul>
+					</li>
+				</ul>
+				<p class="snslst">
+					<a href="https://www.facebook.com/koreafoundation" target="_blank" title="새창열기"><i class="xi-facebook"></i><em class="sr-only">페이스북 바로가기</em></a>
+					<a href="https://www.instagram.com/koreafoundation/" target="_blank" title="새창열기"><i class="xi-instagram"></i><em class="sr-only">인스타그램 바로가기</em></a>
+					<a href="https://www.youtube.com/user/TheKoreaFoundation" target="_blank" title="새창열기"><i class="xi-youtube-play"></i><em class="sr-only">유튜브 바로가기</em></a>
+					<a href="https://twitter.com/koreafoundation" target="_blank" title="새창열기" class="twitter-icon"><em class="sr-only">x(트위터)바로가기</em></a>
+				</p>
+				<div class="kfPlus">
+					<a class="hashSlide" href="#kfPlusList">KF 플러스</a>
+				</div>
+				<!-- <p class="popBtn"><a href="#" id="uppopBtn" class="on">POPUP</a></p> -->
+			</div>
+		</div>
+
+
+		<!-- logo -->
+		<h2>
+			<a href="/koreana/main.do?langTy=KOR"><img src="/images/web/koreana/main/logo.png" alt="KOREANA 웹진 - KOREAN CULTURE & ART"></a>
+		</h2>
+
+		<div id="nav">
+					<div id="gnb">
+				<!--FMENU_START-->
+						
+							<div class="dep01_tit container">
+							<ul>
+								<li><a href="/koreana/na/ntt/selectNttList.do?mi=1544&bbsId=1114"  ><span>Features</span></a></li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1113&bbsIds=1121&bbsIds=1115&bbsIds=1850&bbsIds=1125&bbsIds=1119&mi=1064"  ><span>Arts & Culture</span></a></li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1120&bbsIds=1130&bbsIds=1126&bbsIds=1116&mi=1065"  ><span>Lifestyle</span></a></li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1123&bbsIds=1122&bbsIds=1811&bbsIds=1118&bbsIds=1340&bbsIds=1117&bbsIds=1810&mi=1066"  ><span>Past Series</span></a></li>
+								<li>
+									
+										<a href="/koreana/cm/cntnts/cntntsView.do?mi=1088&cntntsId=2301"  ><span>About</span></a>
+									
+										
+								</li>
+								<li><a href="/koreana/an/arn/selectArList.do?mi=1068"  ><span>Archive</span></a></li>
+							</ul>
+							</div>
+				<!--FMENU_END-->
+
+				<div class="wrap">
+				<!--START-->
+						
+							<ul class="dep01">
+								<li><a href="/koreana/na/ntt/selectNttList.do?mi=1544&bbsId=1114"  ><span>Features</span></a></li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1113&bbsIds=1121&bbsIds=1115&bbsIds=1850&bbsIds=1125&bbsIds=1119&mi=1064"  ><span>Arts & Culture</span></a>
+									<ul class="dep02">
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1546&bbsId=1113"  ><span>Focus</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1079&bbsId=1121"  ><span>Interview</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1069&bbsId=1115"  ><span>Guardians of Heritage</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=15630&bbsId=1850"  ><span>Brick by Brick</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1082&bbsId=1125"  ><span>Art Review</span></a></li>							
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1077&bbsId=1119"  ><span>Entertainment</span></a></li>	
+									</ul>
+								</li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1120&bbsIds=1130&bbsIds=1126&bbsIds=1116&mi=1065"  ><span>Lifestyle</span></a>
+									<ul class="dep02">
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1547&bbsId=1120"  ><span>On the Road</span></a></li>				
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1586&bbsId=1130"  ><span>Another Day</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1083&bbsId=1126"  ><span>Books & More</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1074&bbsId=1116"  ><span>K-uisine</span></a></li>
+										
+									</ul>
+								</li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1123&bbsIds=1122&bbsIds=1811&bbsIds=1118&bbsIds=1340&bbsIds=1117&bbsIds=1810&mi=1066"  ><span>Past Series</span></a>
+									<ul class="dep02">
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1078&bbsId=1123"  ><span>Lifestyle</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1081&bbsId=1122"  ><span>In Love with Korea</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=15291&bbsId=1811"  ><span>Greener Pastures</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1076&bbsId=1118"  ><span>Image of Korea</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1587&bbsId=1340"  ><span>Video</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1075&bbsId=1117"  ><span>Tales of Two Koreas</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=15290&bbsId=1810"  ><span>What&apos;s On</span></a></li>
+									</ul>
+								</li>
+							<!-- 	<li><a href="/koreana/cm/cntnts/cntntsView.do?mi=1088&cntntsId=2301"  ><span>About</span></a> -->
+								
+								<li>
+									
+										<a href="/koreana/cm/cntnts/cntntsView.do?mi=1088&cntntsId=2301"  ><span>About</span></a>
+									
+										
+								
+								
+									<ul class="dep02">
+										<!-- <li><a href="/koreana/cm/cntnts/cntntsView.do?mi=1088&cntntsId=1400"  ><span>About Koreana</span></a></li> -->
+										   <li>
+												
+												        <a href="/koreana/cm/cntnts/cntntsView.do?mi=1088&cntntsId=2301"  ><span>About Koreana</span></a>
+												
+													
+													
+													<li>
+										
+										<li><a href="/koreana/su/subscribeView.do?mi=1548"  ><span>Subscribe</span></a></li>
+										<li><a href="/koreana/ad/cu/contactUsInsertPage.do?sysId=koreana"  ><span>Contact Us</span></a></li>
+									</ul>
+								</li>
+								<li><a href="/koreana/an/arn/selectArList.do?mi=1068"  ><span>Archive</span></a></li>
+							</ul>
+				<!--END-->
+				</div>
+				</div>
+				   <div class="gnbblind"></div>
+				</div>
+
+
+
+          <div class="top_util">
+              <!-- search -->
+              <a href="#searchFull" class="btnSrch hashSlide" id="srchOpen"><i class="xi-search"></i><em class="sr-only">통합검색열기</em></a>
+
+              <!-- fullMenu -->
+              <a href="#fullMenu" class="fullmenu" id="fullmenuOpen">전체메뉴<span></span><span></span><span></span></a>
+          </div>
+      </div>
+  </header>
+  <!-- //header -->
+
+
+            
+            
+            
+            <!-- //header  -->
+
+	            <!-- container -->
+	            <div id="container">
+                
+
+
+
+
+
+
+
+	
+	
+
+<script>
+$(function () {
+
+	//리스트 팝업 : 보기, 취소
+	$(".viewPopListBtn").click(function(){
+		var btnTy = $(this).attr("id");
+
+		if ( btnTy == "close" ) {
+				//팝업 목록 닫기
+				$(".pop_header").hide();
+
+		} else {
+
+			$("#listPopup").dialog({
+			    autoOpen: true,
+			    modal: false,
+			    resizeable : false,
+			    title: "코리아나 팝업 목록",
+			    width: 380,
+			    height: 350,
+			    show:{
+			  		effect:"blind",
+			  		duration: 100
+			    },
+			    hide:{
+			   	 	effect:"blind",
+			   	 	duration: 100
+			    },
+			    position: {my:'left+50 top+50', at: 'left top' }
+			}).dialog('open');
+
+		}
+
+	});
+
+	//리스트 팝업 : 팝업 보기
+	$(".viewPopupBtn").click(function(){
+		var popupSn = $(this).attr("data-seq");
+		var popupTitle = $(this).attr("title");
+		var popupWidth = $("#popupData"+popupSn).attr("data-width");
+		var popupHeight = $("#popupData"+popupSn).attr("data-height");
+		var popupWidthLc = $("#popupData"+popupSn).attr("data-widthLc");
+		var popupHeightLc = $("#popupData"+popupSn).attr("data-heightLc");
+		var popupFileId = $("#popupData"+popupSn).attr("data-fileId");
+		var popupFileList = $("#popupData"+popupSn).attr("data-fileList");
+
+
+		var fileHeight = "";
+		if( popupFileId != "" && popupFileList != "" ) {
+			fileHeight = popupFileList.split("},").length;
+			popupHeight = parseInt(popupHeight) + parseInt(fileHeight)*20;
+			popupWidth = parseInt(popupWidth) + parseInt(fileHeight)*5;
+
+		}
+			$("#popupNormal"+popupSn).dialog({
+			    autoOpen: true,
+			    modal: false,
+			    resizeable : false,
+			    title: popupTitle,
+			    width: popupWidth,
+			    height: popupHeight,
+			    show:{
+			  		effect:"blind",
+			  		duration: 100
+			    },
+			    hide:{
+			   	 	effect:"blind",
+			   	 	duration: 100
+			    },
+			    position: {my:'left+'+popupWidthLc+' top+'+popupHeightLc+'', at: 'left top'}
+			}).dialog('open');
+
+	});
+
+
+
+});
+
+$(document).ready(function(){
+
+	// 리스트 팝업 호출 여부
+	var popCallAt = "";
+
+	// 팝업 호출 : 기본 창 팝업
+	if (popCallAt == "") {
+
+		
+	}
+	  
+			
+});
+
+</script>
+	
+
+				
+
+
+
+			<!-- container -->
+<section class="section section01">
+					<div class="T2_B01">
+						<!-- visual -->
+						<div class="main_visual container">
+							<div class="main_vis">
+								<div class="vislst" id="mainVis">
+									
+										
+											
+												<div class="item">
+													<a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=138465&amp;bbsId=1114">
+														<img src="/upload/mn/_6f4141db-c243-43bc-b350-7d57156988521783645107070.png" alt="">
+													</a>
+												</div>
+											
+												<div class="item">
+													<a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=138466&amp;bbsId=1114">
+														<img src="/upload/mn/_5ea594ed-4045-45ef-8eac-c481988a33ef1783645146723.png" alt="">
+													</a>
+												</div>
+											
+												<div class="item">
+													<a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=138467&amp;bbsId=1114">
+														<img src="/upload/mn/img_d70cb03b-84b3-4627-80e0-832948cd2e401783645370218.png" alt="">
+													</a>
+												</div>
+											
+												<div class="item">
+													<a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=138468&amp;bbsId=1114">
+														<img src="/upload/mn/img_a5d0d24b-83e0-4648-91f8-9e9df46823301783645378346.png" alt="">
+													</a>
+												</div>
+											
+										
+										
+									<!-- F -->
+								</div>
+								<div class="control">
+									<a href="#" id="visualPrev">
+										<i class="xi-arrow-up"></i><em class="sr-only">이전으로</em>
+									</a>
+									<p class="count"></p>
+									<a href="#" id="visualNext">
+										<i class="xi-arrow-down"></i><em class="sr-only">다음으로</em>
+									</a>
+								</div>
+							</div>
+
+							<div class="sub_vis" id="subVis">
+								
+									
+										
+												<div class="item">
+													<div class="txt"><a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=138465&amp;bbsId=1114">
+														<span class="mt2" >SPECIAL FEATURE 1 </span>
+														<strong class="mt3" >호텔의 시대에서 셰프의 시대로 – 한국 파인 다이닝 연대기</strong>
+														<p class="mt4" >한국의 현대사는 유난히 압축적이었다. 한국전쟁의 상흔을 딛고 산업화와 민주화를 이뤘으며, 이제는 문화와 기술 분야에서 세계의 주목을 받고 있다. 한국의 식문화 또한 역동적인 변화의 흐름 속에서 성장해 왔다. 특히 최근에는 소수 계층을 중심으로 향유되던 파인 다이닝이 일반 대중의 관심을 끌며, 대중문화의 한 영역으로 자리 잡기 시작했다.</p>
+														<div class="efBox">
+															<span class="ef1 mt1"></span>
+															<span class="ef2 mt2"></span>
+															<span class="ef3 mt3"></span>
+															<span class="ef4 mt4"></span>
+														</div>
+													</a></div>
+												</div>
+										
+												<div class="item">
+													<div class="txt"><a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=138466&amp;bbsId=1114">
+														<span class="mt2" >SPECIAL FEATURE 2</span>
+														<strong class="mt3" >새로운 얼굴의 한식, 익숙한 맛의 색다른 문법</strong>
+														<p class="mt4" >국내 파인 다이닝 레스토랑의 가파른 성장에는 한식이 있다. 미식업계의 권위 있는 주요 상을 수상한 레스토랑 대부분이 파인 다이닝에 한식을 접목한 곳들이다. 프랑스나 이탈리아, 미국 등 서양에서도 흔히 경험할 수 있는 음식이었다면 해외에서 굳이 한국 레스토랑에 시선을 둘 이유가 없다. 이 점은 한국 레스토랑의 장점이자 특별함이다.</p>
+														<div class="efBox">
+															<span class="ef1 mt1"></span>
+															<span class="ef2 mt2"></span>
+															<span class="ef3 mt3"></span>
+															<span class="ef4 mt4"></span>
+														</div>
+													</a></div>
+												</div>
+										
+												<div class="item">
+													<div class="txt"><a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=138467&amp;bbsId=1114">
+														<span class="mt2" >SPECIAL FEATURE 3</span>
+														<strong class="mt3" >한국적 파인 다이닝의 원류 - 조선 왕실의 연회</strong>
+														<p class="mt4" >애피타이저에서 메인 디시를 거쳐 디저트로 이어지는 파인 다이닝의 코스 방식은 19세기 초 프랑스 파리의 귀족 계급과 고급 레스토랑에 도입되어, 19세기 중후반 기본 형식으로 자리 잡았다. 그런데 시선을 조선(1392~1910) 왕실의 연회로 돌리면 뜻밖의 사실과 마주치게 된다. 조선 왕실은 이미 15세기 이래 코스 방식으로 음식을 제공하고, 전국에서 최고의 식재료를 조달하며, 전문 요리사 조직을 운영하는 정교한 연회 시스템을 갖추고 있었다.</p>
+														<div class="efBox">
+															<span class="ef1 mt1"></span>
+															<span class="ef2 mt2"></span>
+															<span class="ef3 mt3"></span>
+															<span class="ef4 mt4"></span>
+														</div>
+													</a></div>
+												</div>
+										
+												<div class="item">
+													<div class="txt"><a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=138468&amp;bbsId=1114">
+														<span class="mt2" >SPECIAL FEATURE 4</span>
+														<strong class="mt3" >한식 파인 다이닝의 지속가능한 미래</strong>
+														<p class="mt4" >최정윤은 약 30년 동안 현장과 이론, 국내와 해외를 아우르며 한식의 경계를 넓혀온 요리 연구가이다. 세계 무대에서 지속적으로 성장할 수 있는 한식의 미래 생태계를 구축하기 위해 2023년 비영리 사단법인 난로학원을 설립해 운영 중이다. 2025년에는 ‘월드 50 베스트 레스토랑’ 한국 의장으로 임명되어 한국과 세계의 미식계를 잇는 가교 역할도 하고 있다. 서울 북촌에 자리한 찻집 해온에서 그녀를 만났다.</p>
+														<div class="efBox">
+															<span class="ef1 mt1"></span>
+															<span class="ef2 mt2"></span>
+															<span class="ef3 mt3"></span>
+															<span class="ef4 mt4"></span>
+														</div>
+													</a></div>
+												</div>
+										
+									
+									
+								
+	                           
+							</div>
+						</div>
+						<!-- //visual-->
+					</div>
+					
+				</section>
+
+				<section class="section section02">
+					<div class="T2_B02">
+						<!-- Features -->
+						<div class="featureKF container">
+							<h3 class="comTit"><span>Features</span></h3>
+							<div class="gallerylst" id="ftList">
+							  
+
+                            	<div class="item">
+									<ul>
+										<li class="fst mt-act2-left"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1545&bbsId=1114&nttSn=138468">
+											<p><img src="/upload/koreana/na/bbs_1114/ntt_138468/_2b4e54d8-0b78-45b9-8ba9-04305f55be791783642111709.jpg" alt="한식 파인 다이닝의 지속가능한 미래" onerror="this.src='/images/co/na/noImg.gif'"></p>
+											<div class="con">
+												<p class="info">
+													<em>Features</em>
+													<span >
+														<em>2026 SUMMER</em>
+														
+													</span>
+												</p>
+												<strong class="areCheck">한식 파인 다이닝의 지속가능한 미래</strong>
+												<span class="areCheck">최정윤은 약 30년 동안 현장과 이론, 국내와 해외를 아우르며 한식의 경계를 넓혀온 요리 연구가이다. 세계 무대에서 지속적으로 성장할 수 있는 한식의 미래 생태계를 구축하기 위해 2023년 비영리 사단법인 난로학원을 설립해 운영 중이다. 2025년에는 ‘월드 50 베스트 레스토랑’ 한국 의장으로 임명되어 한국과 세계의 미식계를 잇는 가교 역할도 하고 있다. 서울 북촌에 자리한 찻집 해온에서 그녀를 만났다.</span>
+												<p class="tag">
+	                                                
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+		                                                	<span>#K푸드</span>
+		                                               	
+	                                               
+		                                              	
+		                                                	<span>#최정윤</span>
+		                                               	
+	                                               
+		                                              	
+		                                                	<span>#파인다이닝</span>
+		                                               	
+	                                               
+		                                              	
+		                                                	<span>#난로학원</span>
+		                                               	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+                                               </p>
+
+											</div>
+										</a></li>
+
+										<li class="mt-act3-right"><a href="/koreana/na/ntt/selectNttInfo.do?mi=1545&bbsId=1114&nttSn=138467">
+											<p><img src="/upload/koreana/na/bbs_1114/ntt_138467/_c81e9507-4d6c-4127-8403-18b6d666616a1783642036550.jpg" alt="한국적 파인 다이닝의 원류 - 조선 왕실의 연회" onerror="this.src='/images/co/na/noImg.gif'"></p>
+											<div class="con">
+												<p class="info">
+													<em>Features</em>
+
+													<span>
+														<em>2026 SUMMER</em>
+														
+													</span>
+												</p>
+												<strong class="areCheck">한국적 파인 다이닝의 원류 - 조선 왕실의 연회</strong>
+												<span class="areCheck">애피타이저에서 메인 디시를 거쳐 디저트로 이어지는 파인 다이닝의 코스 방식은 19세기 초 프랑스 파리의 귀족 계급과 고급 레스토랑에 도입되어, 19세기 중후반 기본 형식으로 자리 잡았다. 그런데 시선을 조선(1392~1910) 왕실의 연회로 돌리면 뜻밖의 사실과 마주치게 된다. 조선 왕실은 이미 15세기 이래 코스 방식으로 음식을 제공하고, 전국에서 최고의 식재료를 조달하며, 전문 요리사 조직을 운영하는 정교한 연회 시스템을 갖추고 있었다.</span>
+												<p class="tag">
+                                                
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                                <span>#궁중음식 </span>
+                                               
+                                               
+                                              
+                                                <span>#왕실연회 </span>
+                                               
+                                               
+                                              
+                                                <span>#궁중요리</span>
+                                               
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               </p>
+											</div>
+										</a></li>
+
+										<li class="mt-act3-right"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1545&bbsId=1114&nttSn=138466">
+											<p><img src="/upload/koreana/na/bbs_1114/ntt_138466/_72702f83-af08-4837-81a1-becf90709f531783641962319.jpg" alt="새로운 얼굴의 한식, 익숙한 맛의 색다른 문법 " onerror="this.src='/images/co/na/noImg.gif'"></p>
+											<div class="con">
+												<p class="info">
+													<em>Features</em>
+
+													<span>
+														<em>2026 SUMMER</em>
+														
+													</span>
+												</p>
+												<strong class="areCheck">새로운 얼굴의 한식, 익숙한 맛의 색다른 문법 </strong>
+												<span class="areCheck">국내 파인 다이닝 레스토랑의 가파른 성장에는 한식이 있다. 미식업계의 권위 있는 주요 상을 수상한 레스토랑 대부분이 파인 다이닝에 한식을 접목한 곳들이다. 프랑스나 이탈리아, 미국 등 서양에서도 흔히 경험할 수 있는 음식이었다면 해외에서 굳이 한국 레스토랑에 시선을 둘 이유가 없다. 이 점은 한국 레스토랑의 장점이자 특별함이다.</span>
+												<p class="tag">
+                                                 
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                                <span>#컨템포러리한식</span>
+                                               
+                                               
+                                                 
+                                                <span>#파인다이닝</span>
+                                               
+                                               
+                                                 
+                                                <span>#발효음식</span>
+                                               
+                                               
+                                                </p>
+											</div>
+										</a></li>
+									</ul>
+								</div>
+                                 
+
+                            	<div class="item">
+									<ul>
+										<li class="fst mt-act2-left"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1545&bbsId=1114&nttSn=138465">
+											<p><img src="/upload/koreana/na/bbs_1114/ntt_138465/_546d3ba4-5dea-4307-ad9c-16e226cc87c41783641891407.jpg" alt="호텔의 시대에서 셰프의 시대로 – 한국 파인 다이닝 연대기 " onerror="this.src='/images/co/na/noImg.gif'"></p>
+											<div class="con">
+												<p class="info">
+													<em>Features</em>
+													<span >
+														<em>2026 SUMMER</em>
+														
+													</span>
+												</p>
+												<strong class="areCheck">호텔의 시대에서 셰프의 시대로 – 한국 파인 다이닝 연대기 </strong>
+												<span class="areCheck">한국의 현대사는 유난히 압축적이었다. 한국전쟁의 상흔을 딛고 산업화와 민주화를 이뤘으며, 이제는 문화와 기술 분야에서 세계의 주목을 받고 있다. 한국의 식문화 또한 역동적인 변화의 흐름 속에서 성장해 왔다. 특히 최근에는 소수 계층을 중심으로 향유되던 파인 다이닝이 일반 대중의 관심을 끌며, 대중문화의 한 영역으로 자리 잡기 시작했다.</span>
+												<p class="tag">
+	                                                
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+		                                                	<span>#파인다이닝 </span>
+		                                               	
+	                                               
+		                                              	
+		                                                	<span>#한국파인다이닝 </span>
+		                                               	
+	                                               
+		                                              	
+		                                                	<span>#셰프</span>
+		                                               	
+	                                               
+		                                              	
+		                                                	<span>#미슐랭가이드</span>
+		                                               	
+	                                               
+		                                              	
+		                                                	<span>#한식파인다이닝</span>
+		                                               	
+	                                               
+		                                              	
+		                                                	<span>#K푸드</span>
+		                                               	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+                                               </p>
+
+											</div>
+										</a></li>
+
+										<li class="mt-act3-right"><a href="/koreana/na/ntt/selectNttInfo.do?mi=1545&bbsId=1114&nttSn=136825">
+											<p><img src="/upload/koreana/na/bbs_1114/ntt_136825/_76d56e2f-8a22-4695-943f-68543ae2fc0a1774830535948.jpg" alt="한지의 조형적 실험과 가능성" onerror="this.src='/images/co/na/noImg.gif'"></p>
+											<div class="con">
+												<p class="info">
+													<em>Features</em>
+
+													<span>
+														<em>2026 SPRING</em>
+														
+													</span>
+												</p>
+												<strong class="areCheck">한지의 조형적 실험과 가능성</strong>
+												<span class="areCheck">한지는 현대 공예와 디자인 분야에서도 중요한 표현 매체로 활용된다. 형태를 구현하고 디테일을 표현하는 데 있어 한계가 없으며, 작가의 메시지를 유연하게 전달할 수 있기 때문이다. 이로써 한지는 고유의 문화유산을 넘어, 동시대 작가들의 재해석을 통해 현대인의 일상생활 속에 아름답게 스며들고 있다.</span>
+												<p class="tag">
+                                                
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                                <span>#한지</span>
+                                               
+                                               
+                                              
+                                                <span>#한지공예</span>
+                                               
+                                               
+                                              
+                                                <span>#핸드메이드</span>
+                                               
+                                               
+                                              
+                                                <span>#아트오브제</span>
+                                               
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               </p>
+											</div>
+										</a></li>
+
+										<li class="mt-act3-right"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1545&bbsId=1114&nttSn=136824">
+											<p><img src="/upload/koreana/na/bbs_1114/ntt_136824/_2e8f422e-12bc-4e9a-9e89-bb994d3390a71774830439219.jpg" alt="시간을 기억하는 종이 " onerror="this.src='/images/co/na/noImg.gif'"></p>
+											<div class="con">
+												<p class="info">
+													<em>Features</em>
+
+													<span>
+														<em>2026 SPRING</em>
+														
+													</span>
+												</p>
+												<strong class="areCheck">시간을 기억하는 종이 </strong>
+												<span class="areCheck">한지는 시각과 촉각을 동시에 자극하는 종이다. 한지의 가장 큰 특징은 시간이 흐를수록 드러난다. 보통의 종이는 시간이 지날수록 점차 약해지지만, 잘 만든 한지는 오히려 섬유가 안정되며 질긴 내구성을 획득한다. 그래서 한지는 ‘천년을 가는 종이’라는 수사를 넘어, 실제로 시간을 견디는 재료로 평가받는다.</span>
+												<p class="tag">
+                                                 
+                                                 
+                                                <span>#한지</span>
+                                               
+                                               
+                                                 
+                                                <span>#공방</span>
+                                               
+                                               
+                                                 
+                                                <span>#복원</span>
+                                               
+                                               
+                                                 
+                                                <span>#색한지</span>
+                                               
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                </p>
+											</div>
+										</a></li>
+									</ul>
+								</div>
+                                 
+
+							</div>
+							<div class="control">
+								<a href="#" id="ftPrev"><i class="xi-arrow-left"></i><em class="sr-only">이전으로</em></a>
+								<a href="#" id="ftStop"><i class="xi-pause"></i><em class="sr-only">정지</em></a>
+								<a href="#" id="ftPlay"><i class="xi-play"></i><em class="sr-only">재생</em></a>
+								<a href="#" id="ftNext"><i class="xi-arrow-right"></i><em class="sr-only">다음으로</em></a>
+								<!-- <a href="#"><i class="xi-plus"></i><em class="sr-only">더보기</em></a> -->
+							</div>
+						</div>
+						<!-- //Features -->
+					</div>
+				</section>
+
+				<section class="section section03">
+					<div class="T2_B03">
+						<!-- Culture -->
+						<div class="cltrKF container">
+							<h3 class="comTit"><span>Arts & Culture</span></h3>
+							<div class="gallerylst" id="cltrList">
+                              
+								<div class="item"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1077&bbsId=1119&nttSn=138476">
+									<p><img src="/upload/koreana/na/bbs_1119/ntt_138476/_87b83808-f477-4ccf-bfc0-b97329c501f81783643623928.jpg" alt="미국 코믹스 업계의 한국인 크리에이터들 " onerror="this.src='/images/co/na/noImg.gif'"></p>
+									<div class="con">
+ 										<p class="info">
+											<em>Entertainment</em>
+
+											<span>
+												<em>2026 SUMMER</em>
+												
+											</span>
+										</p>
+										<strong class="areCheck">미국 코믹스 업계의 한국인 크리에이터들 </strong>
+										
+										<!-- what's on 인 경우에는 내용을 표시하지 않는다. -->
+										
+											
+											
+												<span class="areCheck">슈퍼 히어로는 더 이상 서구만의 문화적 현상이 아니다. 한류가 전 세계로 확산되면서 한국인 크리에이터, 아티스트, 캐릭터들이 미국 코믹스의 세계에서 꾸준히 자리를 잡아가고 있다. 이들은 독보적인 비주얼 스타일과 내러티브 방식으로 코믹스 장르의 판도를 바꾸어 나가는 중이다. 짐 리 DC 코믹스 회장부터 차세대 아티스트와 커버 일러스트레이터에 이르기까지, 한국인 크리에이터들은 글로벌 슈퍼 히어로 산업의 창작 세계를 함께 넓혀가고 있다.</span>
+											
+										
+										
+										<p class="tag">
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                            	<span>#한국인 크리에이터들</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#타이거디비전</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#슈퍼히어로</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#고 김정기 작가</span>
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+                                        </p>
+									</div>
+								</a></div>
+                                
+								<div class="item"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1077&bbsId=1119&nttSn=138475">
+									<p><img src="/upload/koreana/na/bbs_1119/ntt_138475/_b2a9bc75-c309-4f8b-bf61-6aefde99c2ed1783643556066.jpg" alt="스포츠 활성화 이끄는 스포츠 예능 프로그램 " onerror="this.src='/images/co/na/noImg.gif'"></p>
+									<div class="con">
+ 										<p class="info">
+											<em>Entertainment</em>
+
+											<span>
+												<em>2026 SUMMER</em>
+												
+											</span>
+										</p>
+										<strong class="areCheck">스포츠 활성화 이끄는 스포츠 예능 프로그램 </strong>
+										
+										<!-- what's on 인 경우에는 내용을 표시하지 않는다. -->
+										
+											
+											
+												<span class="areCheck">과거, 국내 스포츠 예능 프로그램은 웃음과 재미를 주는 일반적 예능 프로그램과 별반 다르지 않았다. 하지만 최근 들어 스포츠 자체를 변화시킬 정도의 영향력을 갖기 시작했다. 팬덤을 결집시키고, 그 저변을 확산함으로써 위기에 처한 종목을 부활시키는 데까지 이르고 있다.</span>
+											
+										
+										
+										<p class="tag">
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                            	<span>#스포츠예능프로그램</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#신인감독김연경</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#예능프로그램</span>
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+                                        </p>
+									</div>
+								</a></div>
+                                
+								<div class="item"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=15630&bbsId=1850&nttSn=138473">
+									<p><img src="/upload/koreana/na/bbs_1850/ntt_138473/_d3d9f070-cf98-4b27-9b16-63a73dcbac731783643417097.jpg" alt="‘문제아’에서 ‘문제 해결사’로 - 건축가 양수인" onerror="this.src='/images/co/na/noImg.gif'"></p>
+									<div class="con">
+ 										<p class="info">
+											<em>Brick by Brick</em>
+
+											<span>
+												<em>2026 SUMMER</em>
+												
+											</span>
+										</p>
+										<strong class="areCheck">‘문제아’에서 ‘문제 해결사’로 - 건축가 양수인</strong>
+										
+										<!-- what's on 인 경우에는 내용을 표시하지 않는다. -->
+										
+											
+											
+												<span class="areCheck">양수인은 2010년부터 건축사사무소 ‘삶것’을 운영하며, 뚜렷한 개성으로 주목받고 있는 건축가이다. 건축은 물론 광고 캠페인, 상징 조형물 등 다양한 작업을 병행한다. 삶것을 ‘건축에 기반을 둔 디자인 회사’로 소개하는 그는 건축가가 삶의 다기한 문제를 풀어가는 해결사 역할을 해야 한다고 생각한다. 그는 건축이 '예술'이 아니라 '실용'의 영역이어야 한다고 믿으며, 최적의 명료한 해법을 찾기 위해 영역을 넘나들곤 한다.</span>
+											
+										
+										
+										<p class="tag">
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                            	<span>#양수인</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#건축가</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#리노베이션</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#가벼운건축</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#AI건축</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#공공건축</span>
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+                                        </p>
+									</div>
+								</a></div>
+                                
+								<div class="item"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1082&bbsId=1125&nttSn=138472">
+									<p><img src="/upload/koreana/na/bbs_1125/ntt_138472/_c8717000-aaa9-42eb-a1e5-039664b6e84d1783643293924.jpg" alt="두 세계를 잇는 조각 " onerror="this.src='/images/co/na/noImg.gif'"></p>
+									<div class="con">
+ 										<p class="info">
+											<em>Art Review</em>
+
+											<span>
+												<em>2026 SUMMER</em>
+												
+											</span>
+										</p>
+										<strong class="areCheck">두 세계를 잇는 조각 </strong>
+										
+										<!-- what's on 인 경우에는 내용을 표시하지 않는다. -->
+										
+											
+											
+												<span class="areCheck">1935년생인 김윤신은 1970년대 한국 조각계에서 중추적 역할을 한 1세대 조각가이다. 1980년대 중반 아르헨티나로 이주하면서 국내 주류 모더니즘에서 단절된 채 자신만의 독자적인 시각 문법을 구축했다. 동양의 음양 사상에 기반을 둔 작업 철학을 초기부터 지금까지 일관되게 견지해 오고 있다. 2024년 베니스비엔날레 본 전시에 처음으로 초청, 국내외 갤러리들의 주목을 받으며 새롭게 조명되고 있다.</span>
+											
+										
+										
+										<p class="tag">
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                            	<span>#김윤신</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#조각가 </span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#현대미술</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#한국현대미술</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#조각</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#베니스비엔날레</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#호암미술관</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#K아트</span>
+	                                            
+	                                        
+                                        </p>
+									</div>
+								</a></div>
+                                
+								<div class="item"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1069&bbsId=1115&nttSn=138471">
+									<p><img src="/upload/koreana/na/bbs_1115/ntt_138471/_b1aa947c-b14b-46ce-bd7d-c66283839b081783643006728.jpg" alt="과거의 가치를 미래로 잇는 사람들  " onerror="this.src='/images/co/na/noImg.gif'"></p>
+									<div class="con">
+ 										<p class="info">
+											<em>Guardians of Heritage</em>
+
+											<span>
+												<em>2026 SUMMER</em>
+												
+											</span>
+										</p>
+										<strong class="areCheck">과거의 가치를 미래로 잇는 사람들  </strong>
+										
+										<!-- what's on 인 경우에는 내용을 표시하지 않는다. -->
+										
+											
+											
+												<span class="areCheck">재단법인 아름지기(이하 아름지기)는 우리 전통문화의 가치를 창조적으로 계승하고 발전시키기 위해 활동하는 비영리 문화 단체이다. 문화유산 환경 개선 사업을 비롯해 많은 이들이 전통문화를 가까이에서 누리고 경험할 수 있도록 다채로운 콘텐츠를 기획, 개발한다. 아름지기는 전통문화에 대한 일반의 관심을 촉발하는 길잡이 역할을 하고 있다.</span>
+											
+										
+										
+										<p class="tag">
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                            	<span>#아름지기</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#문화유산</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#전통문화</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#한국문화</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#문화유산보존</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#전통공예</span>
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+                                        </p>
+									</div>
+								</a></div>
+                                
+								<div class="item"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1079&bbsId=1121&nttSn=138470">
+									<p><img src="/upload/koreana/na/bbs_1121/ntt_138470/_4fe39afe-1f1d-4436-8aad-7245b8ee45431783642802206.jpg" alt="표준이라는 구심점" onerror="this.src='/images/co/na/noImg.gif'"></p>
+									<div class="con">
+ 										<p class="info">
+											<em>Interview</em>
+
+											<span>
+												<em>2026 SUMMER</em>
+												
+											</span>
+										</p>
+										<strong class="areCheck">표준이라는 구심점</strong>
+										
+										<!-- what's on 인 경우에는 내용을 표시하지 않는다. -->
+										
+											
+											
+												<span class="areCheck">가구 스튜디오 스탠다드에이(STANDARD.a)는 공장식 조립 가구가 대세인 우리나라에서 15년 동안 꾸준히 수제 디자인 가구를 선보여 왔다. ‘가치를 굳건히 지켜내는 것이 표준’이라는 이들의 믿음은 갤러리, 카페, 파인 다이닝 레스토랑, 복합문화공간 등 여러 공간에서 숨 쉬고 있다. 서울 서교동에 위치한 스탠다드에이의 쇼룸에서 이들을 만났다.</span>
+											
+										
+										
+										<p class="tag">
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                            	<span>#스탠다드에이</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#디자인가구</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#원목가구</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#핸드크래

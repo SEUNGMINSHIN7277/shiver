@@ -1,0 +1,1960 @@
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Koreana">
+        <meta property="og:description" content="Koreana 홈페이지에 오신 것을 환영합니다.">
+        <meta property="og:image" content="/images/web/koreana/main/logo.png">
+        <meta property="og:url" content="https://www.koreana.or.kr">
+		<title>Koreana</title>
+		<meta name="keywords" content="Koreana">
+		<meta name="description" content="Koreana 홈페이지에 오신 것을 환영합니다. ">
+		<link rel="stylesheet" href="/css/web/koreana/main.css" media="all">
+		<!-- <link rel="stylesheet" href="/00_common/css/jquery.fullPage.css" media="all"> -->
+		<link rel="stylesheet" href="/00_common/js/mCustomScrollbar/jquery.mCustomScrollbar.css" media="all">
+		<script src="/00_common/js/jquery-1.11.2.min.js"></script>
+		<script src="/00_common/js/jquery-ui.min.js"></script>
+		<script src="/00_common/js/modernizr-2.6.2.min.js"></script>
+		<script src="/00_common/js/slick.min.js"></script>
+		<!-- <script src="/00_common/js/jquery.fullPage.js"></script> -->
+		<script src="/00_common/js/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
+		<script src="/00_common/js/ScrollMagic.min.js"></script>
+		<script src="/00_common/js/T3_layout.js"></script>
+		<script src="/js/web/koreana/main.js"></script>
+        <script src="/js/web/koreana/common.js"></script>
+        <script src="/00_common/js/common.js"></script>
+
+        <!-- 상단팝업 js/css -->
+        <script src="/js/common.js"></script>
+        <script src="/js/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="/css/com/jquery/jquery-ui.min.css" media="all"/>
+
+		<script type="text/javascript">
+	    	$(document).ready(function() {
+	    		var agent = navigator.userAgent.toLowerCase();
+	     		if ( navigator.userAgent.indexOf("Trident") > -1 && "" == 1) {
+	     			if("CHN" == "KOR" || "CHN" == "" || "CHN" == undefined) {
+	     				alert('일부 웹사이트는 Internet Explorer에서 잘 작동하지 않을 수 있습니다. 다른 브라우저를 사용하여 주시기 바랍니다.') ;
+	     			} else {
+	     				alert('Some websites may not work well in Internet Explorer. Please use a different browser.') ;
+	     			}
+	    		}
+
+	    	});
+        </script>
+
+	</head>
+    <body oncontextmenu="return false">
+		<!-- skipArea -->
+		<input type="hidden" id="languageType" value="CHN"/>
+		<div id="skipArea"><a href="#gnb">메인메뉴 바로가기</a><a href="#container">본문으로 바로가기</a></div>
+
+		<div id="wrap" class="onTop">
+
+			
+<!DOCTYPE html>
+
+
+
+<!-- upper popup
+<div class="up-popup" id="up-popup">
+	<div class="container">
+		<div class="poplst" id="popSlide">
+			<div class="item"><a href="#">
+				<p class="ico"><img src="/00_common/images/T2_layout/ico_uppop01.png" alt=""></p>
+				<span>2020 Calender KF Global Center</span>
+				<strong>2020 KT 글로벌센터 사업일정</strong>
+			</a></div>
+			<div class="item"><a href="#">
+				<p class="ico"><img src="/00_common/images/T2_layout/ico_uppop02.png" alt=""></p>
+				<span>2020 하반기 PUBLIC DIPLOMACY</span>
+				<strong>공공외교 활동을 꾸는 이들을 위한 프로그램 안내서</strong>
+			</a></div>
+			<div class="item"><a href="#">
+				<p class="ico"><img src="/00_common/images/T2_layout/ico_uppop01.png" alt=""></p>
+				<span></span>
+				<strong></strong>
+			</a></div>
+		</div>
+		<div class="count">
+			<a href="#" id="uppopStop"><i class="xi-pause"></i><em class="sr-only">상단팝업 정지</em></a>
+			<a href="#" id="uppopPlay"><i class="xi-play"></i><em class="sr-only">상단팝업 재생</em></a>
+		</div>
+	</div>
+</div>-->
+
+        <!-- //바로가기 -->
+
+        	<!-- header -->
+            
+            
+            
+			     
+                 
+
+
+
+
+
+<!-- header  -->
+<header id="header" class="sub_header">
+<!-- 전환 추적 태그 삽입 start -->
+<!-- 글로벌 구글 태그 (gtag.js) 통합 코드 --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D4WVCBH82G"></script> 
+<script> window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+// GA4 설정 (디버그 모드 포함)
+gtag('config', 'G-D4WVCBH82G');
+
+// 구글 광고(AW) 설정
+//gtag('config', 'AW-482413566');
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics, Google Ads: 482413566 -->
+<script>
+
+window.onload = function(){
+	var l_from_koreana_do = $("#languageType").val();
+	console.log(l_from_koreana_do);
+
+	if(l_from_koreana_do == "CHN") {
+		$("#container").addClass('lang_cn');
+	}
+	else if(l_from_koreana_do == "JPN"){
+		$("#container").addClass('lang_cn');
+	}
+	else if(l_from_koreana_do == "VNM"){
+		$("#container").addClass('lang_vnm');
+	}
+	else if(l_from_koreana_do == "ARE"){
+		$("#container").addClass('lang_are');
+		$(".img-cap").addClass('are_imgcap');
+	}
+
+	else {
+		$("#container").removeClass('lang_cn');
+		$("#container").removeClass('lang_are');
+		$(".img-cap").removeClass('are_imgcap');
+	}
+
+}
+</script>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '4183848851733798');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=4183848851733798&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+	<script>
+		!function (w, d, t) {
+		  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+
+		  ttq.load('C3NOOKB3G487IS97LMF0');
+		  ttq.page();
+		}(window, document, 'ttq');
+	</script>
+<script src="/js/webtrends.js"></script>
+<!-- 전환 추적 태그 삽입 end   -->
+
+	<div class="header_wrap">
+		<div class="container">
+			<!-- KF logo -->
+			
+			
+				<h1><a href="javascript:" onclick="javascript:location.href='https://www.kf.or.kr/kid/ssoLoginChecker.do?rtnUrl='+encodeURIComponent('https://www.kf.or.kr/kfEng/main.do?langTy=CHN')"><img src="/00_common/images/T3_layout/kf_sub_log.jpg" alt="KF"><em>KOREA FOUNDATION</em></a></h1>
+			
+			<!--   href="/koreana/main.do"  -->
+			<div class="top_link">
+				<!-- 한영근 주임 요청으로 삭제
+				<div class="year_select">
+					<a href="javascript:void(0);" class="select_btn">back issue</a>
+					<ul>
+						<li><a href="">2021.03.</a></li>
+						<li><a href="">2021.02.</a></li>
+						<li><a href="">2021.01.</a></li>
+						<li><a href="">2020.12.</a></li>
+						<li><a href="">2020.11.</a></li>
+						<li><a href="">2020.10.</a></li>
+						<li><a href="">2020.09.</a></li>
+						<li><a href="">2020.08.</a></li>
+						<li><a href="">2020.07.</a></li>
+						<li><a href="">2020.06.</a></li>
+						<li><a href="">2020.05.</a></li>
+						<li><a href="">2020.04.</a></li>
+						<li><a href="">2020.03.</a></li>
+						<li><a href="">2020.02.</a></li>
+						<li><a href="">2020.01.</a></li>
+						<li><a href="">2019.12.</a></li>
+					</ul>
+				</div>
+				 -->
+				<ul class="linklst">
+					<li>
+						
+							<a href="javascript:" onclick="goUnityLoginPage('koreana','','CHN');">LOGIN</a>
+						
+						
+					</li>
+					<li>
+						
+						
+							<a href="javascript:;" onclick="goUnityJoinPage('koreana','')">JOIN</a>
+						
+					</li>
+					<li class="lang">
+                        <a href="javascript:void(0);">
+                        
+                        
+                        CHN
+                        
+                        </a>
+						<ul class="lst langList">
+                        <li><a href="/koreana/main.do?langTy=KOR">KOR</a></li>
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=ARE">ARE</a></li>
+                            
+                        
+                        	
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=ENG">ENG</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=ESP">ESP</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=FRA">FRA</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=GER">GER</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=IDN">IDN</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=JPN">JPN</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=RUS">RUS</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=VNM">VNM</a></li>
+                            
+                        
+						</ul>
+					</li>
+				</ul>
+				<p class="snslst">
+					<a href="https://www.facebook.com/koreafoundation" target="_blank" title="새창열기"><i class="xi-facebook"></i><em class="sr-only">페이스북 바로가기</em></a>
+					<a href="https://www.instagram.com/koreafoundation/" target="_blank" title="새창열기"><i class="xi-instagram"></i><em class="sr-only">인스타그램 바로가기</em></a>
+					<a href="https://www.youtube.com/user/TheKoreaFoundation" target="_blank" title="새창열기"><i class="xi-youtube-play"></i><em class="sr-only">유튜브 바로가기</em></a>
+					<a href="https://twitter.com/koreafoundation" target="_blank" title="새창열기" class="twitter-icon"><em class="sr-only">x(트위터)바로가기</em></a>
+				</p>
+				<div class="kfPlus">
+					<a class="hashSlide" href="#kfPlusList">KF 플러스</a>
+				</div>
+				<!-- <p class="popBtn"><a href="#" id="uppopBtn" class="on">POPUP</a></p> -->
+			</div>
+		</div>
+
+
+		<!-- logo -->
+		<h2>
+			<a href="/koreana/main.do?langTy=CHN"><img src="/images/web/koreana/main/logo.png" alt="KOREANA 웹진 - KOREAN CULTURE & ART"></a>
+		</h2>
+
+		<div id="nav">
+					<div id="gnb">
+				<!--FMENU_START-->
+						
+							<div class="dep01_tit container">
+							<ul>
+								<li><a href="/koreana/na/ntt/selectNttList.do?mi=1544&bbsId=1114"  ><span>Features</span></a></li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1113&bbsIds=1121&bbsIds=1115&bbsIds=1850&bbsIds=1125&bbsIds=1119&mi=1064"  ><span>Arts & Culture</span></a></li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1120&bbsIds=1130&bbsIds=1126&bbsIds=1116&mi=1065"  ><span>Lifestyle</span></a></li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1123&bbsIds=1122&bbsIds=1811&bbsIds=1118&bbsIds=1340&bbsIds=1117&bbsIds=1810&mi=1066"  ><span>Past Series</span></a></li>
+								<li>
+									
+										<a href="/koreana/cm/cntnts/cntntsView.do?mi=1088&cntntsId=2281"  ><span>About</span></a>
+										
+								</li>
+								<li><a href="/koreana/an/arn/selectArList.do?mi=1068"  ><span>Archive</span></a></li>
+							</ul>
+							</div>
+				<!--FMENU_END-->
+
+				<div class="wrap">
+				<!--START-->
+						
+							<ul class="dep01">
+								<li><a href="/koreana/na/ntt/selectNttList.do?mi=1544&bbsId=1114"  ><span>Features</span></a></li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1113&bbsIds=1121&bbsIds=1115&bbsIds=1850&bbsIds=1125&bbsIds=1119&mi=1064"  ><span>Arts & Culture</span></a>
+									<ul class="dep02">
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1546&bbsId=1113"  ><span>Focus</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1079&bbsId=1121"  ><span>Interview</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1069&bbsId=1115"  ><span>Guardians of Heritage</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=15630&bbsId=1850"  ><span>Brick by Brick</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1082&bbsId=1125"  ><span>Art Review</span></a></li>							
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1077&bbsId=1119"  ><span>Entertainment</span></a></li>	
+									</ul>
+								</li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1120&bbsIds=1130&bbsIds=1126&bbsIds=1116&mi=1065"  ><span>Lifestyle</span></a>
+									<ul class="dep02">
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1547&bbsId=1120"  ><span>On the Road</span></a></li>				
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1586&bbsId=1130"  ><span>Another Day</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1083&bbsId=1126"  ><span>Books & More</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1074&bbsId=1116"  ><span>K-uisine</span></a></li>
+										
+									</ul>
+								</li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1123&bbsIds=1122&bbsIds=1811&bbsIds=1118&bbsIds=1340&bbsIds=1117&bbsIds=1810&mi=1066"  ><span>Past Series</span></a>
+									<ul class="dep02">
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1078&bbsId=1123"  ><span>Lifestyle</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1081&bbsId=1122"  ><span>In Love with Korea</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=15291&bbsId=1811"  ><span>Greener Pastures</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1076&bbsId=1118"  ><span>Image of Korea</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1587&bbsId=1340"  ><span>Video</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1075&bbsId=1117"  ><span>Tales of Two Koreas</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=15290&bbsId=1810"  ><span>What&apos;s On</span></a></li>
+									</ul>
+								</li>
+							<!-- 	<li><a href="/koreana/cm/cntnts/cntntsView.do?mi=1088&cntntsId=2301"  ><span>About</span></a> -->
+								
+								<li>
+									
+										<a href="/koreana/cm/cntnts/cntntsView.do?mi=1088&cntntsId=2281"  ><span>About</span></a>
+										
+								
+								
+									<ul class="dep02">
+										<!-- <li><a href="/koreana/cm/cntnts/cntntsView.do?mi=1088&cntntsId=1400"  ><span>About Koreana</span></a></li> -->
+										   <li>
+												
+													<a href="/koreana/cm/cntnts/cntntsView.do?mi=1088&cntntsId=2281"  ><span>About Koreana</span></a>
+													
+													
+													<li>
+										
+										<li><a href="/koreana/su/subscribeView.do?mi=1548"  ><span>Subscribe</span></a></li>
+										<li><a href="/koreana/ad/cu/contactUsInsertPage.do?sysId=koreana"  ><span>Contact Us</span></a></li>
+									</ul>
+								</li>
+								<li><a href="/koreana/an/arn/selectArList.do?mi=1068"  ><span>Archive</span></a></li>
+							</ul>
+				<!--END-->
+				</div>
+				</div>
+				   <div class="gnbblind"></div>
+				</div>
+
+
+
+          <div class="top_util">
+              <!-- search -->
+              <a href="#searchFull" class="btnSrch hashSlide" id="srchOpen"><i class="xi-search"></i><em class="sr-only">통합검색열기</em></a>
+
+              <!-- fullMenu -->
+              <a href="#fullMenu" class="fullmenu" id="fullmenuOpen">전체메뉴<span></span><span></span><span></span></a>
+          </div>
+      </div>
+  </header>
+  <!-- //header -->
+
+
+            
+            
+            <!-- //header  -->
+
+	            <!-- container -->
+	            <div id="container">
+                
+
+
+
+
+
+
+
+	
+	
+
+<script>
+$(function () {
+
+	//리스트 팝업 : 보기, 취소
+	$(".viewPopListBtn").click(function(){
+		var btnTy = $(this).attr("id");
+
+		if ( btnTy == "close" ) {
+				//팝업 목록 닫기
+				$(".pop_header").hide();
+
+		} else {
+
+			$("#listPopup").dialog({
+			    autoOpen: true,
+			    modal: false,
+			    resizeable : false,
+			    title: "코리아나 팝업 목록",
+			    width: 380,
+			    height: 350,
+			    show:{
+			  		effect:"blind",
+			  		duration: 100
+			    },
+			    hide:{
+			   	 	effect:"blind",
+			   	 	duration: 100
+			    },
+			    position: {my:'left+50 top+50', at: 'left top' }
+			}).dialog('open');
+
+		}
+
+	});
+
+	//리스트 팝업 : 팝업 보기
+	$(".viewPopupBtn").click(function(){
+		var popupSn = $(this).attr("data-seq");
+		var popupTitle = $(this).attr("title");
+		var popupWidth = $("#popupData"+popupSn).attr("data-width");
+		var popupHeight = $("#popupData"+popupSn).attr("data-height");
+		var popupWidthLc = $("#popupData"+popupSn).attr("data-widthLc");
+		var popupHeightLc = $("#popupData"+popupSn).attr("data-heightLc");
+		var popupFileId = $("#popupData"+popupSn).attr("data-fileId");
+		var popupFileList = $("#popupData"+popupSn).attr("data-fileList");
+
+
+		var fileHeight = "";
+		if( popupFileId != "" && popupFileList != "" ) {
+			fileHeight = popupFileList.split("},").length;
+			popupHeight = parseInt(popupHeight) + parseInt(fileHeight)*20;
+			popupWidth = parseInt(popupWidth) + parseInt(fileHeight)*5;
+
+		}
+			$("#popupNormal"+popupSn).dialog({
+			    autoOpen: true,
+			    modal: false,
+			    resizeable : false,
+			    title: popupTitle,
+			    width: popupWidth,
+			    height: popupHeight,
+			    show:{
+			  		effect:"blind",
+			  		duration: 100
+			    },
+			    hide:{
+			   	 	effect:"blind",
+			   	 	duration: 100
+			    },
+			    position: {my:'left+'+popupWidthLc+' top+'+popupHeightLc+'', at: 'left top'}
+			}).dialog('open');
+
+	});
+
+
+
+});
+
+$(document).ready(function(){
+
+	// 리스트 팝업 호출 여부
+	var popCallAt = "";
+
+	// 팝업 호출 : 기본 창 팝업
+	if (popCallAt == "") {
+
+		
+	}
+	  
+			
+});
+
+</script>
+	
+
+				
+
+
+
+			<!-- container -->
+<section class="section section01">
+					<div class="T2_B01">
+						<!-- visual -->
+						<div class="main_visual container">
+							<div class="main_vis">
+								<div class="vislst" id="mainVis">
+									
+										
+											
+												<div class="item">
+													<a href="https://www.koreana.or.kr/koreana/main.do?langTy=ENG">
+														<img src="/upload/koreana/mn/_2ef27385-d5ea-4176-b337-ca3631f86c4d1740450072736.jpg" alt="">
+													</a>
+												</div>
+											
+												<div class="item">
+													<a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=129620&amp;bbsId=1114">
+														<img src="/upload/mn/img_c21d3d42-980d-42f6-975e-ae9a2a187f3b1736399566580.png" alt="">
+													</a>
+												</div>
+											
+												<div class="item">
+													<a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=129621&amp;bbsId=1114">
+														<img src="/upload/mn/img_0cbfbef7-a181-4940-b7eb-50b28bff20771736399588730.jpg" alt="">
+													</a>
+												</div>
+											
+												<div class="item">
+													<a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=129622&amp;bbsId=1114">
+														<img src="/upload/mn/_38536fc5-5569-4dfe-90cb-1c3286f4e17f1736399613039.jpg" alt="">
+													</a>
+												</div>
+											
+												<div class="item">
+													<a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=129623&amp;bbsId=1114">
+														<img src="/upload/mn/_76100935-f4f3-4473-a5a7-223f3f794ff81736399637736.jpg" alt="">
+													</a>
+												</div>
+											
+												<div class="item">
+													<a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=129624&amp;bbsId=1114">
+														<img src="/upload/mn/_73579dba-b285-462c-a423-41879277116c1736399664029.jpg" alt="">
+													</a>
+												</div>
+											
+										
+										
+									<!-- F -->
+								</div>
+								<div class="control">
+									<a href="#" id="visualPrev">
+										<i class="xi-arrow-up"></i><em class="sr-only">이전으로</em>
+									</a>
+									<p class="count"></p>
+									<a href="#" id="visualNext">
+										<i class="xi-arrow-down"></i><em class="sr-only">다음으로</em>
+									</a>
+								</div>
+							</div>
+
+							<div class="sub_vis" id="subVis">
+								
+									
+										
+												<div class="item">
+													<div class="txt"><a href="https://www.koreana.or.kr/koreana/main.do?langTy=ENG">
+														<span class="mt2" > </span>
+														<strong class="mt3" > </strong>
+														<p class="mt4" ></p>
+														<div class="efBox">
+															<span class="ef1 mt1"></span>
+															<span class="ef2 mt2"></span>
+															<span class="ef3 mt3"></span>
+															<span class="ef4 mt4"></span>
+														</div>
+													</a></div>
+												</div>
+										
+												<div class="item">
+													<div class="txt"><a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=129620&amp;bbsId=1114">
+														<span class="mt2" >特辑 1</span>
+														<strong class="mt3" >首尔最古老的热门景点</strong>
+														<p class="mt4" >位于景福宫西侧的西村是一个历史悠久的地方。朝鲜王朝时代（1392-1910），王族、士大夫等权贵曾在此居住，中人也曾以这里为中心开展过丰富的文化活动。近代以来，许多文人和艺术家在西村留下了他们的足迹。</p>
+														<div class="efBox">
+															<span class="ef1 mt1"></span>
+															<span class="ef2 mt2"></span>
+															<span class="ef3 mt3"></span>
+															<span class="ef4 mt4"></span>
+														</div>
+													</a></div>
+												</div>
+										
+												<div class="item">
+													<div class="txt"><a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=129621&amp;bbsId=1114">
+														<span class="mt2" >特辑 2</span>
+														<strong class="mt3" >多彩的西村展览空间</strong>
+														<p class="mt4" >西村，从景福宫西门（迎秋门）附近的通义洞到昌成洞，遍布着各种展览空间。无论是非营利替代性艺术空间，还是展示售卖当代艺术家作品的商业画廊，这片区域应有尽有。
+</p>
+														<div class="efBox">
+															<span class="ef1 mt1"></span>
+															<span class="ef2 mt2"></span>
+															<span class="ef3 mt3"></span>
+															<span class="ef4 mt4"></span>
+														</div>
+													</a></div>
+												</div>
+										
+												<div class="item">
+													<div class="txt"><a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=129622&amp;bbsId=1114">
+														<span class="mt2" >特辑 3</span>
+														<strong class="mt3" >仁王山，怀抱西村</strong>
+														<p class="mt4" >仁王山是西村的地标，风景秀丽，自古便出现在无数山水画中。朝鲜王朝时代，文人雅士曾在这里怡情抒怀。今天，仁王山成为首尔市民的登山胜地，更是深受附近居民喜爱的散步佳所。</p>
+														<div class="efBox">
+															<span class="ef1 mt1"></span>
+															<span class="ef2 mt2"></span>
+															<span class="ef3 mt3"></span>
+															<span class="ef4 mt4"></span>
+														</div>
+													</a></div>
+												</div>
+										
+												<div class="item">
+													<div class="txt"><a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=129623&amp;bbsId=1114">
+														<span class="mt2" >特辑 4</span>
+														<strong class="mt3" >慢节奏、质朴而自然的生活</strong>
+														<p class="mt4" >自2015年起，金佑定开始运营名为“家常布”的服装品牌，专注于制作简约舒适的服饰。她曾在首尔的多个街区居住，5年前选择在西村定居。很多人说，她设计的服装充满了“西村风”。</p>
+														<div class="efBox">
+															<span class="ef1 mt1"></span>
+															<span class="ef2 mt2"></span>
+															<span class="ef3 mt3"></span>
+															<span class="ef4 mt4"></span>
+														</div>
+													</a></div>
+												</div>
+										
+												<div class="item">
+													<div class="txt"><a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=129624&amp;bbsId=1114">
+														<span class="mt2" >特辑 5</span>
+														<strong class="mt3" >西村的公共韩屋</strong>
+														<p class="mt4" >与北村一样，西村也是首尔最具代表性的韩屋汇聚地。西村的公共韩屋由首尔市政府和钟路区政府共同管理，人们不仅可以在这里亲身体验传统居住文化，还能参与丰富多彩的文化艺术活动。因此，这些公共韩屋正在成为西村的最新热门打卡地。</p>
+														<div class="efBox">
+															<span class="ef1 mt1"></span>
+															<span class="ef2 mt2"></span>
+															<span class="ef3 mt3"></span>
+															<span class="ef4 mt4"></span>
+														</div>
+													</a></div>
+												</div>
+										
+									
+									
+								
+	                           
+							</div>
+						</div>
+						<!-- //visual-->
+					</div>
+					
+				</section>
+
+				<section class="section section02">
+					<div class="T2_B02">
+						<!-- Features -->
+						<div class="featureKF container">
+							<h3 class="comTit"><span>Features</span></h3>
+							<div class="gallerylst" id="ftList">
+							  
+
+                            	<div class="item">
+									<ul>
+										<li class="fst mt-act2-left"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1545&bbsId=1114&nttSn=129624">
+											<p><img src="/upload/koreana/na/bbs_1114/ntt_129624/_c5051151-d91c-4437-b6f8-db02ef98ce421736398777111.jpg" alt="西村的公共韩屋" onerror="this.src='/images/co/na/noImg.gif'"></p>
+											<div class="con">
+												<p class="info">
+													<em>Features</em>
+													<span >
+														<em>2024 WINTER</em>
+														
+													</span>
+												</p>
+												<strong class="areCheck">西村的公共韩屋</strong>
+												<span class="areCheck">与北村一样，西村也是首尔最具代表性的韩屋汇聚地。西村的公共韩屋由首尔市政府和钟路区政府共同管理，人们不仅可以在这里亲身体验传统居住文化，还能参与丰富多彩的文化艺术活动。因此，这些公共韩屋正在成为西村的最新热门打卡地。 西村休息厅的后院全景。西村休息厅由一座两层的传统韩屋改造而成，已经习惯公寓等现代生活方式的市民能够在这里亲身感受韩屋的居住文化。 © 首尔市政府</span>
+												<p class="tag">
+	                                                
+		                                              	
+	                                               
+		                                              	
+		                                                	<span>#西村</span>
+		                                               	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+                                               </p>
+
+											</div>
+										</a></li>
+
+										<li class="mt-act3-right"><a href="/koreana/na/ntt/selectNttInfo.do?mi=1545&bbsId=1114&nttSn=129623">
+											<p><img src="/upload/koreana/na/bbs_1114/ntt_129623/_4c607576-dd1f-430b-9c0c-c74e7ad40a1a1736398703329.jpg" alt="慢节奏、质朴而自然的生活" onerror="this.src='/images/co/na/noImg.gif'"></p>
+											<div class="con">
+												<p class="info">
+													<em>Features</em>
+
+													<span>
+														<em>2024 WINTER</em>
+														
+													</span>
+												</p>
+												<strong class="areCheck">慢节奏、质朴而自然的生活</strong>
+												<span class="areCheck">自2015年起，金佑定开始运营名为“家常布”的服装品牌，专注于制作简约舒适的服饰。她曾在首尔的多个街区居住，5年前选择在西村定居。很多人说，她设计的服装充满了“西村风”。 金佑定来自庆尚南道马山，20岁起开始在首尔生活，至今已搬了近20次家。作为一名服装设计师，她5年前在西村成立了工作室，从此与这里结下了不解之缘。2023年，她又搬进了可以欣赏仁王山美景的房子里，幸福地享受着西村的生活。</span>
+												<p class="tag">
+                                                
+                                              
+                                                <span>#西村</span>
+                                               
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               </p>
+											</div>
+										</a></li>
+
+										<li class="mt-act3-right"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1545&bbsId=1114&nttSn=129622">
+											<p><img src="/upload/koreana/na/bbs_1114/ntt_129622/_e9b98db0-5d88-4230-9ad2-a5175111b65d1736398582184.jpg" alt="仁王山，怀抱西村" onerror="this.src='/images/co/na/noImg.gif'"></p>
+											<div class="con">
+												<p class="info">
+													<em>Features</em>
+
+													<span>
+														<em>2024 WINTER</em>
+														
+													</span>
+												</p>
+												<strong class="areCheck">仁王山，怀抱西村</strong>
+												<span class="areCheck">仁王山是西村的地标，风景秀丽，自古便出现在无数山水画中。朝鲜王朝时代，文人雅士曾在这里怡情抒怀。今天，仁王山成为首尔市民的登山胜地，更是深受附近居民喜爱的散步佳所。 从仁王山俯瞰首尔市中心。为了保卫当时的都城——汉阳，朝鲜王朝开国君主李成桂修建了城墙，将环绕汉阳的4座山——北岳山、骆山、南山、仁王山的山脊连接起来。这段城墙的平均高度约为5-8米，总长度达18.6公里。 © 韩国旅游发展局</span>
+												<p class="tag">
+                                                 
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                                <span>#西村</span>
+                                               
+                                               
+                                                </p>
+											</div>
+										</a></li>
+									</ul>
+								</div>
+                                 
+
+                            	<div class="item">
+									<ul>
+										<li class="fst mt-act2-left"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1545&bbsId=1114&nttSn=129621">
+											<p><img src="/upload/koreana/na/bbs_1114/ntt_129621/_16059ad3-5b5d-4275-b7f3-1ebfa01695911736398503183.jpg" alt="多彩的西村展览空间" onerror="this.src='/images/co/na/noImg.gif'"></p>
+											<div class="con">
+												<p class="info">
+													<em>Features</em>
+													<span >
+														<em>2024 WINTER</em>
+														
+													</span>
+												</p>
+												<strong class="areCheck">多彩的西村展览空间</strong>
+												<span class="areCheck">西村，从景福宫西门（迎秋门）附近的通义洞到昌成洞，遍布着各种展览空间。无论是非营利替代性艺术空间，还是展示售卖当代艺术家作品的商业画廊，这片区域应有尽有。 “保安1942”2022年下半年策划的特展“对讲-机-晃动（Walkie-Talkie-Shaking）”。展览以对讲机的特性为灵感，探讨沟通的本质。“保安1942”是一个2007年开放的艺术空间，主要展览摄影、绘画、装置和影像等多种艺术形式的实验性与创造性作品。 © 高政均</span>
+												<p class="tag">
+	                                                
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+		                                                	<span>#西村</span>
+		                                               	
+	                                               
+		                                              	
+	                                               
+                                               </p>
+
+											</div>
+										</a></li>
+
+										<li class="mt-act3-right"><a href="/koreana/na/ntt/selectNttInfo.do?mi=1545&bbsId=1114&nttSn=129620">
+											<p><img src="/upload/koreana/na/bbs_1114/ntt_129620/img_75c18704-474c-4bd4-bdb7-06c6abde5a8c1736398441721.jpg" alt="首尔最古老的热门景点" onerror="this.src='/images/co/na/noImg.gif'"></p>
+											<div class="con">
+												<p class="info">
+													<em>Features</em>
+
+													<span>
+														<em>2024 WINTER</em>
+														
+													</span>
+												</p>
+												<strong class="areCheck">首尔最古老的热门景点</strong>
+												<span class="areCheck">位于景福宫西侧的西村是一个历史悠久的地方。朝鲜王朝时代（1392-1910），王族、士大夫等权贵曾在此居住，中人也曾以这里为中心开展过丰富的文化活动。近代以来，许多文人和艺术家在西村留下了他们的足迹。 照片为景福宫西侧的围墙。这段围墙从地铁景福宫站延伸至介绍韩国历届总统生平和传统文化的青瓦台舍廊坊，长约800米。围墙的中央是景福宫西门——迎秋门。</span>
+												<p class="tag">
+                                                
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                                <span>#西村</span>
+                                               
+                                               
+                                              
+                                               
+                                              
+                                               </p>
+											</div>
+										</a></li>
+
+										<li class="mt-act3-right"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1545&bbsId=1114&nttSn=127833">
+											<p><img src="/upload/koreana/na/bbs_1114/ntt_127833/img_2facaede-b490-4e42-bbe7-6ce93e4ae8be1728523377987.jpg" alt="历久弥新的弘大标志" onerror="this.src='/images/co/na/noImg.gif'"></p>
+											<div class="con">
+												<p class="info">
+													<em>Features</em>
+
+													<span>
+														<em>2024 AUTUMN</em>
+														
+													</span>
+												</p>
+												<strong class="areCheck">历久弥新的弘大标志</strong>
+												<span class="areCheck">弘大街区是首尔最具代表性的繁华地区和旅游胜地。尽管弘大一带在快速的商业化的推动下发生了很大的变化，但弘大街区有名的地标仍坚守原地，以其独有的个性彰显着弘大的特色。 好美画室位于弘大街区入口处（弘益路3街），拥有50年的历史。自1987年以来，由创始人的儿子经营，现在孙子也在参与经营。好美画室的标识是20世纪70年代末由弘益大学的一名研究生设计的，他是店里的常客，标识的寓意是“艺术是永恒的”。</span>
+												<p class="tag">
+                                                 
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                                <span>#弘大</span>
+                                               
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                </p>
+											</div>
+										</a></li>
+									</ul>
+								</div>
+                                 
+
+							</div>
+							<div class="control">
+								<a href="#" id="ftPrev"><i class="xi-arrow-left"></i><em class="sr-only">이전으로</em></a>
+								<a href="#" id="ftStop"><i class="xi-pause"></i><em class="sr-only">정지</em></a>
+								<a href="#" id="ftPlay"><i class="xi-play"></i><em class="sr-only">재생</em></a>
+								<a href="#" id="ftNext"><i class="xi-arrow-right"></i><em class="sr-only">다음으로</em></a>
+								<!-- <a href="#"><i class="xi-plus"></i><em class="sr-only">더보기</em></a> -->
+							</div>
+						</div>
+						<!-- //Features -->
+					</div>
+				</section>
+
+				<section class="section section03">
+					<div class="T2_B03">
+						<!-- Culture -->
+						<div class="cltrKF container">
+							<h3 class="comTit"><span>Arts & Culture</span></h3>
+							<div class="gallerylst" id="cltrList">
+                              
+								<div class="item"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1077&bbsId=1119&nttSn=129635">
+									<p><img src="/upload/koreana/na/bbs_1119/ntt_129635/img_32d4b6c2-d8a5-43db-ba20-8aee68f96a551736402065608.jpg" alt="林英雄和英雄时代 " onerror="this.src='/images/co/na/noImg.gif'"></p>
+									<div class="con">
+ 										<p class="info">
+											<em>Entertainment</em>
+
+											<span>
+												<em>2024 WINTER</em>
+												
+											</span>
+										</p>
+										<strong class="areCheck">林英雄和英雄时代 </strong>
+										
+										<!-- what's on 인 경우에는 내용을 표시하지 않는다. -->
+										
+											
+											
+												<span class="areCheck">林英雄的个人经历不仅是一个励志故事，更是一部成功的奋斗史。其歌曲不仅旋律优美，而且为大众的生活带来慰藉和勇气。他的粉丝行善布施，影响力遍布全社会，成为一种正向的社会价值。他们之间形成的共同体诠释了英雄的真正含义。 林英雄的粉丝大部分为中壮年女性，她们通过参与粉丝活动，组建共同体，她们积极参与各种志愿者活动和捐助活动，为社会传递正能量。 © 游鱼音乐、希杰娱乐</span>
+											
+										
+										
+										<p class="tag">
+	                                        
+	                                            
+	                                        
+	                                            
+	                                            	<span>#林英雄 </span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#英雄时代</span>
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+                                        </p>
+									</div>
+								</a></div>
+                                
+								<div class="item"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1079&bbsId=1121&nttSn=129625">
+									<p><img src="/upload/koreana/na/bbs_1121/ntt_129625/_954d9e39-b346-4894-bd06-5e44bfa433cb1736398892225.jpg" alt="重构动作片" onerror="this.src='/images/co/na/noImg.gif'"></p>
+									<div class="con">
+ 										<p class="info">
+											<em>Interview</em>
+
+											<span>
+												<em>2024 WINTER</em>
+												
+											</span>
+										</p>
+										<strong class="areCheck">重构动作片</strong>
+										
+										<!-- what's on 인 경우에는 내용을 표시하지 않는다. -->
+										
+											
+											
+												<span class="areCheck">柳昇完导演继2015年执导爆款影片《老手》之后，又推出了续篇《老手2》。该片在正义使者施用私刑的过程中，提出了关于善恶之别的问题。让我们通过戛纳电影节期间对柳昇完导演的采访，一起倾听他的讲述吧。 柳昇完导演的执导风格在于既敏锐揭露韩国社会的阴暗面和人类本性，亦未损失其大众性。尤为出色的是激烈的动作场面、紧扣角色的有力叙事，实现了传递社会信息与娱乐性的完美融合。 希杰娱乐供图</span>
+											
+										
+										
+										<p class="tag">
+	                                        
+	                                            
+	                                            	<span>#柳昇完</span>
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                            	<span>#构动作片</span>
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+                                        </p>
+									</div>
+								</a></div>
+                                
+								<div class="item"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1077&bbsId=1119&nttSn=127843">
+									<p><img src="/upload/koreana/na/bbs_1119/ntt_127843/img_4fb97e63-291a-4110-b59e-533bf39899681728524745352.jpg" alt="韩国神秘主义的世界：惊悚类型的大众化演绎" onerror="this.src='/images/co/na/noImg.gif'"></p>
+									<div class="con">
+ 										<p class="info">
+											<em>Entertainment</em>
+
+											<span>
+												<em>2024 AUTUMN</em>
+												
+											</span>
+										</p>
+										<strong class="areCheck">韩国神秘主义的世界：惊悚类型的大众化演绎</strong>
+										
+										<!-- what's on 인 경우에는 내용을 표시하지 않는다. -->
+										
+											
+											
+												<span class="areCheck">2024年，张在现执导的电影《破墓》上映并大获成功，观影人次超过了千万。近年来，韩国神秘主义电影并不一味追求将惊悚元素放大到极致，而是融入很多大众喜闻乐见的元素，同时也打破了“神秘主义即为惊悚类型”的偏见。 2024年上映的神秘主义电影《破墓》以一座怪异之墓的移葬为主线，讲述了发生在风水师、殓葬师、巫师身上的灵异事件。因在神秘主义基础上叠加了大众化、娱乐性、趣味性元素，此片被誉为韩国神秘主义的集大成之作。 © 秀博思股份有限公司</span>
+											
+										
+										
+										<p class="tag">
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                            	<span>#Entertainment </span>
+	                                            
+	                                        
+	                                            
+	                                        
+                                        </p>
+									</div>
+								</a></div>
+                                
+								<div class="item"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=15630&bbsId=1850&nttSn=127838">
+									<p><img src="/upload/koreana/na/bbs_1850/ntt_127838/img_34406bc0-0255-4f8e-86f1-053e591f82181728524314734.jpg" alt="曹敏硕，一位探索多重特质的建筑师" onerror="this.src='/images/co/na/noImg.gif'"></p>
+									<div class="con">
+ 										<p class="info">
+											<em>Brick by Brick</em>
+
+											<span>
+												<em>2024 AUTUMN</em>
+												
+											</span>
+										</p>
+										<strong class="areCheck">曹敏硕，一位探索多重特质的建筑师</strong>
+										
+										<!-- what's on 인 경우에는 내용을 표시하지 않는다. -->
+										
+											
+											
+												<span class="areCheck">曹敏硕是建筑事务所Mass Studies的首席执行官，他设计的建筑具有独特的外观和大胆的创意，让人过目难忘。面对纷繁复杂的现代社会，曹敏硕的作品体现出对差异性的包容。 在着手设计蛇形画廊展亭之前，曹敏硕考虑的并非展亭本身，而是每一个会来到这里的人。为了给人们提供全方位的体验，他没有在场地中央建造一座完整的建筑，而是巧妙设置留白，让人们可以在这里更自由地活动。 蛇形画廊提供，照片：伊万·巴恩</span>
+											
+										
+										
+										<p class="tag">
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                            	<span>#Brick by Brick</span>
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+                                        </p>
+									</div>
+								</a></div>
+                                
+								<div class="item"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1546&bbsId=1113&nttSn=127836">
+									<p><img src="/upload/koreana/na/bbs_1113/ntt_127836/img_16b6108a-7cfa-4aeb-948e-87bfbc03dcb91728524176534.jpg" alt="再次腾飞的涧松美术馆" onerror="this.src='/images/co/na/noImg.gif'"></p>
+									<div class="con">
+ 										<p class="info">
+											<em>Focus</em>
+
+											<span>
+												<em>2024 AUTUMN</em>
+												
+											</span>
+										</p>
+										<strong class="areCheck">再次腾飞的涧松美术馆</strong>
+										
+										<!-- what's on 인 경우에는 내용을 표시하지 않는다. -->
+										
+											
+											
+												<span class="areCheck">坐落于首尔城北洞的涧松美术馆是韩国首家私人美术馆。尽管历经种种艰苦磨难，涧松美术馆始终致力于对文化遗产的保护和研究，以使之传承于后人。今年，修缮工程完工后，上半年举行的重新开馆展览吸引了社会各界的广泛关注，而即将于下半年开馆的大邱涧松美术馆同样令人期待。 涧松美术馆是一家为保护和研究韩国文化遗产而设立的私人美术馆。建馆早期，主要专注于其馆藏品的研究，自1971年秋季将郑敾（1676-1759）的作品公开展示以来，每年春、秋两季都会面向公众举办定期展览。</span>
+											
+										
+										
+										<p class="tag">
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                            	<span>#Focus </span>
+	                                            
+	                                        
+                                        </p>
+									</div>
+								</a></div>
+                                
+								<div class="item"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1077&bbsId=1119&nttSn=126097">
+									<p><img src="/upload/koreana/na/bbs_1119/ntt_126097/_a2d770cf-6228-4c0a-acb8-bc16cbad3e2b1720681916576.jpg" alt="走进虚拟偶像的新世界" onerror="this.src='/images/co/na/noImg.gif'"></p>
+									<div class="con">
+ 										<p class="info">
+											<em>Entertainment</em>
+
+											<span>
+												<em>2024 SUMMER</em>
+												
+											</span>
+										</p>
+										<strong class="areCheck">走进虚拟偶像的新世界</strong>
+										
+										<!-- what's on 인 경우에는 내용을 표시하지 않는다. -->
+										
+											
+											
+												<span class="areCheck">虚拟偶像热潮正在快速兴起。这些由计算机图形创建的虚拟偶像如同现实世界中的偶像一样发行专辑，在社交媒体上分享日常生活，与粉丝互动。比起他们到底是怎样的存在，粉丝们更关注他们的音乐和舞蹈。当前，虚拟偶像正在现实世界中蓬勃发展，开创出新的主流文化生态。 © VLAST</span>
+											
+										
+										
+										<p class="tag">
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                            	<span>#Entertainment</span>
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+                                        </p>
+									</div>
+								</a></div>
+                                
+								<div class="item"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1069&bbsId=1115&nttSn=126092">
+									<p><img src="/upload/koreana/na/bbs_1115/ntt_126092/_35cb94c5-8ab6-4763-8ee0-5e1fa459d9c71720677963927.jpg" alt="以丹青重现世界" onerror="this.src='/images/co/na/noImg.gif'"></p>
+									<div class="con">
+ 										<p class="info">
+											<em>Guardians of Heritage</em>
+
+											<span>
+												<em>2024 SUMMER</em>
+												
+											</span>
+										</p>
+										<strong class="areCheck">以丹青重现世界</strong>
+										
+										<!-- what's on 인 경우에는 내용을 표시하지 않는다. -->
+										
+											
+											
+												<span class="areCheck">丹青是一种建筑美术，源于古代，旨在保护木制建筑构件，自佛教传入后得到进一步发展并延续至今。丹青专家朴根德从事文物修复工作长达20年之久，与此同时，她还基于个人视角重新定义传统丹青的图案并从事相关创作。 Goldgarden Ⅱ― Peony. 2018. Pigments and gilt on silk fabric. 25 × 38 cm. 朴根德提供</span>
+											
+										
+										
+										<p class="tag">
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                            	<span>#Guardians of Heritage</span>
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+                                        </p>
+									</div>
+								</a></div>
+                                
+								<div class="item"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1079&bbsId=1121&nttSn=126087">
+									<p><img src="/upload/koreana/na/bbs_1121/ntt_126087/_066b7f25-a044-444e-a0a8-37805ac6197d1720661900956.jpg" alt="用乐高再现文化遗产" onerror="this.src='/images/co/na/noImg.gif'"></p>
+									<div class="con">
+ 										<p class="info">
+											<em>Interview</em>
+
+											<span>
+												<em>2024 SUMMER</em>
+												
+											</span>
+										</p>
+										<strong class="areCheck">用乐高再现文化遗产</strong>
+										
+										<!-- what's on 인 경우에는 내용을 표시하지 않는다. -->
+										
+											
+											
+												<span class="areCheck">柯林·金（本名苏进镐）是一位乐高艺术家。他不仅用乐高巧妙地诠释日常物品，最近也尝试以文化遗产为主题进行乐高创作。继去年成功举办首次展览后，今年他又在驻法韩国文化院展示以韩国传统文化为主题的作品，展览将于10月结束。他表示，对家人的爱是他创作的动力。 苏进镐经过考证后再现的韩国宗庙祭礼乐。该作品仅使用市面上出售的乐高零件拼装而成，共耗时1年半。 苏进镐提供</span>
+											
+										
+										
+										<p class="tag">
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                            	<span>#Interview</span>
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+                                        </p>
+									</div>
+								</a></div>
+                                
+							</div>
+							<div class="control">
+								<a href="#" id="cltrPrev"><i class="xi-arrow-left"></i><em class="sr-only">이전으로</em></a>
+								<a href="#" id="cltrStop"><i class="xi-pause"></i><em class="sr-only">정지</em></a>
+								<a href="#" id="cltrPlay"><i class="xi-play"></i><em class="sr-only">재생</em></a>
+								<a href="#" id="cltrNext"><i class="xi-arrow-right"></i><em class="sr-only">다음으로</em></a>
+								<!-- <a href="#"><i class="xi-plus"></i><em class="sr-only">더보기</em></a> -->
+							</div>
+						</div>
+						<!--//Culture-->
+					</div>
+				</section>
+
+<section class="section section03">
+	<div class="container">
+		<div class="T2_B04">
+			<!-- People -->
+			<div class="peplKF">
+				<h3 class="comTit">
+					<span>LifeStyle</span>
+				</h3>
+				<div class="gallerylst mt-act2" id="peplList">
+					
+						<div class="item">
+							<a href="/koreana/na/ntt/selectNttInfo.do?mi=1074&bbsId=1116&nttSn=129636">
+								<p>
+									<img src="/upload/koreana/na/bbs_1116/ntt_129636/_4b52a4b6-f138-4c3b-a519-7be0490b03ea1736402153094.jpeg" alt="部队火锅，战争留下的美味" onerror="this.src='/images/co/na/noImg.gif'">
+								</p>
+								<div class="con">
+									<p class="info">
+										<em>K-uisine</em>
+
+										<span>
+											<em>2024 WINTER</em>
+											
+										</span>
+									</p>
+									<strong class="areCheck">部队火锅，战争留下的美味</strong>
+									<span class="areCheck">
+										部队火锅是朝鲜战争爆发后诞生的一道菜肴。战乱期间，不要说一日三餐，就连一餐饱饭都难以保证。部队火锅就是在那样贫困的时期出现的，它份量十足，给人们带来极大的安慰。不仅仅是份量足，西式食材用韩国人的手艺烹制出来，味道也是绝佳。 将辣白菜、辣椒酱等韩国食材与火腿、香肠、焗豆等西方食材放在一起做成的部队火锅堪称是东西方饮食文化结合的杰作。
+									</span>
+									<p class="tag">
+										
+											
+												<span>#部队火锅</span>
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+									</p>
+								</div>
+							</a>
+						</div>
+					
+						<div class="item">
+							<a href="/koreana/na/ntt/selectNttInfo.do?mi=1586&bbsId=1130&nttSn=129634">
+								<p>
+									<img src="/upload/koreana/na/bbs_1130/ntt_129634/_64677b6e-53a4-4492-933f-255c53f2a61e1736401969804.jpg" alt="宾至如归" onerror="this.src='/images/co/na/noImg.gif'">
+								</p>
+								<div class="con">
+									<p class="info">
+										<em>Another Day</em>
+
+										<span>
+											<em>2024 WINTER</em>
+											
+										</span>
+									</p>
+									<strong class="areCheck">宾至如归</strong>
+									<span class="areCheck">
+										有人说，在陌生的城市想要吃到美味不会出错的饭菜，可以问问出租车司机。他们会去任何地方，对当地物美价廉的餐厅了如指掌，而且推荐的餐厅都经过了时间的考验，所以非常值得信赖。位于首尔麻浦区延南洞的柿子树司机餐厅就深受这些熟悉美食的司机的欢迎，日夜人流不断。 柿子树司机餐厅老板张伦秀正在准备给顾客上菜。
+									</span>
+									<p class="tag">
+										
+											
+										
+											
+												<span>#Persimmon Tree Driver Restaurant</span>
+											
+										
+											
+										
+											
+										
+											
+										
+									</p>
+								</div>
+							</a>
+						</div>
+					
+						<div class="item">
+							<a href="/koreana/na/ntt/selectNttInfo.do?mi=1547&bbsId=1120&nttSn=129627">
+								<p>
+									<img src="/upload/koreana/na/bbs_1120/ntt_129627/img_ba49d060-a6f9-4c2d-a8f9-436d8d07a5331736399143627.jpg" alt="旌善，继煤炭产业之后绽放冰雪旅游生机" onerror="this.src='/images/co/na/noImg.gif'">
+								</p>
+								<div class="con">
+									<p class="info">
+										<em>On the Road</em>
+
+										<span>
+											<em>2024 WINTER</em>
+											
+										</span>
+									</p>
+									<strong class="areCheck">旌善，继煤炭产业之后绽放冰雪旅游生机</strong>
+									<span class="areCheck">
+										旌善一年四季都令人驻足流连，但寒冬更能让人感受到其真正的魅力。乌黑的煤场与皑皑的白雪相映成趣，徒步路上有云朵相伴，还有韩国规模最大的五日集，可以感受乡土气息浓厚同时最具韩国特色的山村风情。
+									</span>
+									<p class="tag">
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+												<span>#旌善</span>
+											
+										
+									</p>
+								</div>
+							</a>
+						</div>
+					
+						<div class="item">
+							<a href="/koreana/na/ntt/selectNttInfo.do?mi=1074&bbsId=1116&nttSn=127844">
+								<p>
+									<img src="/upload/koreana/na/bbs_1116/ntt_127844/img_46d3b510-a8ba-4644-be1d-5f93657044e41728524800391.jpg" alt="一只鸡，首尔特色鸡肉佳肴" onerror="this.src='/images/co/na/noImg.gif'">
+								</p>
+								<div class="con">
+									<p class="info">
+										<em>K-uisine</em>
+
+										<span>
+											<em>2024 AUTUMN</em>
+											
+										</span>
+									</p>
+									<strong class="areCheck">一只鸡，首尔特色鸡肉佳肴</strong>
+									<span class="areCheck">
+										“一只鸡”的家乡是首尔，据推测出现于20世纪60年代以后。“一只鸡”通常盛在略显粗糙的黄铜盆里，不但美味，而且新颖有趣，同时也是首尔在发展成为大都市的过程中经历过的那段熔炉般的过渡时期的产物——当时，民众不得不承受繁重的劳动。 顾名思义，“一只鸡”是用一整只鸡做成，这是一道首尔特色佳肴，将鸡与其他食材一同放入锅内煮熟后蘸上酱料食用。 © 韩国盖蒂图片社
+									</span>
+									<p class="tag">
+										
+											
+										
+											
+										
+											
+										
+											
+												<span>#K-uisine</span>
+											
+										
+											
+										
+									</p>
+								</div>
+							</a>
+						</div>
+					
+						<div class="item">
+							<a href="/koreana/na/ntt/selectNttInfo.do?mi=1083&bbsId=1126&nttSn=127842">
+								<p>
+									<img src="/upload/koreana/na/bbs_1126/ntt_127842/img_8dc158bf-c253-4e93-a64f-77bcf8744ed01728524684365.jpg" alt="重拾生活碎片" onerror="this.src='/images/co/na/noImg.gif'">
+								</p>
+								<div class="con">
+									<p class="info">
+										<em>Books & More</em>
+
+										<span>
+											<em>2024 AUTUMN</em>
+											
+										</span>
+									</p>
+									<strong class="areCheck">重拾生活碎片</strong>
+									<span class="areCheck">
+										《倾听》 金惠珍 著 张杰米 译，200页，18美元，Restless Books出版社，2024年 重拾生活碎片
+									</span>
+									<p class="tag">
+										
+											
+										
+											
+										
+											
+												<span>#书评书介</span>
+											
+										
+											
+										
+											
+										
+									</p>
+								</div>
+							</a>
+						</div>
+					
+				</div>
+				<div class="control">
+					<a href="#" id="pepPrev">
+						<i class="xi-arrow-left"></i><em class="sr-only">이전으로</em>
+					</a>
+					<a href="#" id="pepStop">
+						<i class="xi-pause"></i><em class="sr-only">정지</em>
+					</a>
+					<a href="#" id="pepPlay">
+						<i class="xi-play"></i><em class="sr-only">재생</em>
+					</a>
+					<a href="#" id="pepNext">
+						<i class="xi-arrow-right"></i><em class="sr-only">다음으로</em>
+					</a>
+					<!-- <a href="#"><i class="xi-plus"></i><em class="sr-only">더보기</em></a> -->
+				</div>
+			</div>
+			<!--//People-->
+		</div>
+		<div class="T2_B06">
+			<!-- subscript -->
+			<div class="subscript mt-act2">
+				<h3>SUBSCRIPTION</h3>
+				<p>You can check the amount by country and apply for a subscription.</p>
+				
+				<a href="/koreana/su/subscribeView.do?mi=1548" target="_self">Subscription Request</a>
+			</div>
+			<!-- //subscript-->
+		</div>
+	</div>
+</section>
+
+<section class="section fp-auto-height">
+				<!-- banner -->
+					<div class="banner">
+						<div class="control">
+							<a href="#" id="bnPrev"><i class="xi-angle-left"></i><em class="sr-only">이전으로</em></a>
+							<a href="#" id="bnStop"><i class="xi-pause"></i><em class="sr-only">정지</em></a>
+							<a href="#" id="bnPlay"><i class="xi-play"></i><em class="sr-only">재생</em></a>
+							<a href="#" id="bnNext"><i class="xi-angle-right"></i><em class="sr-only">다음으로</em></a>
+						</div>
+						<div class="bnlst" id="bnSlide">
+							
+								<div class="bn">
+									<a href="http://www.overseaschf.or.kr/"  target="_blank">
+										<img src="/upload/kf/ba/img_4d178263-3f38-48b5-a37a-0d97aad9323a1619687050116.png" alt="국외소재문화재재단 배너 이미지">
+									</a>
+								</div>
+							
+								<div class="bn">
+									<a href="http://www.koreancenter.or.kr/"  target="_blank">
+										<img src="/upload/ba/img_2d7669b1-70f2-4514-8143-c141ca978eee1682043561423.jpg" alt="연합뉴스 한민족센터 배너 이미지">
+									</a>
+								</div>
+							
+								<div class="bn">
+									<a href="https://www.nahf.or.kr/"  target="_blank">
+										<img src="/upload/kf/ba/img_f30605b4-8061-46be-b7ee-7d0863d8a9fb1619686917788.png" alt="동북아역사재단 배너 이미지">
+									</a>
+								</div>
+							
+								<div class="bn">
+									<a href="http://world.kbs.co.kr/"  target="_blank">
+										<img src="/upload/kf/ba/img_ea0f6ef6-5e31-4f27-b69e-b85616a24f261619686890020.png" alt="KBS World Radio 배너 이미지">
+									</a>
+								</div>
+							
+								<div class="bn">
+									<a href="https://www.aks.ac.kr/index.do"  target="_blank">
+										<img src="/upload/kf/ba/img_c9612e86-2362-4ef3-9f32-ae8444de19781619686857132.png" alt="한국학중앙연구원 배너 이미지">
+									</a>
+								</div>
+							
+								<div class="bn">
+									<a href="http://study.korean.net/"  target="_blank">
+										<img src="/upload/kf/ba/img_a6858474-70b7-4a82-973b-a27b47c36a001619686823489.png" alt="스터디코리안 배너 이미지">
+									</a>
+								</div>
+							
+						</div>
+					</div>
+
+		            <!-- footer -->
+		            
+	                    
+	                    
+	        			     
+
+
+
+
+<!-- footer -->
+<footer id="footer">
+	<div class="ft_wrap">
+		<div class="container">
+			<ul class="lst">
+				<li><a href="/kfEng/cm/cntnts/cntntsView.do?mi=2293&cntntsId=1750">Terms of Use</a></li>
+				<li><a href="/kfEng/cm/cntnts/cntntsView.do?mi=2294&cntntsId=1751">Privacy Policy</a></li>
+				
+                	<li><a href="/kfEng/cm/cntnts/cntntsView.do?mi=2129&cntntsId=1630">Annual Report</a></li>
+				<li><a href="/kfEng/cm/cntnts/cntntsView2.do?mi=2131">Directions</a></li>
+				
+				<!-- <li><a href="/kfEng/cm/cntnts/cntntsView.do?mi=2295&cntntsId=1749">RemoteCall Service</a></li> 210513 삭제요청 옴 -->
+			</ul>
+
+			<!-- site link -->
+			<div class="ftBtn_wrap" style="display:none">
+				<div class="ftBtn">
+					<button type="button">KF SITE<i class="xi-angle-up-thin"></i></button>
+					<div>
+						<ul>
+							<li><a href="http://www.mofa.go.kr/eng/index.do" target="_blank" title="새창으로 열기">Ministry of Forein Affairs</a>
+							<li><a href="http://www.ikorea.ac.kr/" target="_blank" title="새창으로 열기">The Center for information on Korea Culture</a>
+							<li><a href="http://www.korea.net/index.do" target="_blank" title="새창으로 열기">Dynamic Korea</a>
+							<li><a href="http://world.kbs.co.kr/korean/" target="_blank" title="새창으로 열기">KBS World Radio</a>
+							<li><a href="http://www.historyfoundation.or.kr/" target="_blank" title="새창으로 열기">Northeast Asian History Foundation</a>
+							<li><a href="http://www.acrc.go.kr/acrc/index.do" target="_blank" title="새창으로 열기">Anti-curruption &amp; Civil Rights Commission</a>
+		                    <li><a href="https://435b7558371e22c59c9daa9694fe060d2a82f555-www.googledrive.com/host/0B5eroT8pQld8V0txV0ZNZjU2amM/" target="_blank" title="새창으로 열기">Korean Collection Consortium of North America </a>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="ft_box container">
+		<a href="#" class="logo"><img src="/images/web/kfEng/main/f_logo.png" alt="KOREA FOUNDATION KF-한국교류재단"></a>
+		<div class="box_info clearfix">
+            <address>
+            
+          	  
+            	<span class="fsSCD"><!----> <em>55, Sinjung-ro, Seogwipo-si, Jeju-do, 63565, Republic of Korea</em> <em>Tel : +82-1644-7707(+82-64-804-1000)</em>   <em>Fax : +82-64-804-1274</em> <em>E-Mail : webmaster@kf.or.kr</em></span>
+            	<span><strong>[KF Global Center]</strong><!----> <em>19 Fl., Mirae Asset Center 1 West Tower, 26 Euljiro 5-gil, Jung-gu, Seoul, 04539, Republic of Korea </em> <em>Tel : +82-2-2151-6565</em> <em>Fax : +82-2-2151-6592</em> <em>E-Mail : webmaster@kf.or.kr </em></span>
+                <span><strong>[Korea-Central Asia Cooperation Forum Secretariat]</strong><!----> <em>04539 19 Fl., Mirae Asset Center 1 West Tower, 26 Euljiro 5-gil, Jung-gu, Seoul, 04539, Republic of Korea</em> <em>Tel : +82-2-2151-6565</em> <em>Fax : +82-2-2151-6592</em> <em>E-Mail : casecretariat@kf.or.kr </em></span>
+                <span><strong>[ASEAN Culture House]</strong><!----> <em>162, Jwadong-ro, Haeundae-gu, Busan, 48108, Republic of Korea</em> <em>Tel : +82-51-775-2000</em> <em>Fax : +82-51-775-2020</em> <em>E-Mail : ach@kf.or.kr</em></span>
+          	   
+            
+            	<span><!----> <strong>Business Number</strong> <em> 104-82-04473 </em>  <strong>Mail-order-sales registration number</strong>  <em>2021-제주대륜-49</em> <strong> Representative</strong> <em>Song Guido</em></span>
+            
+            	<p>Copyright ⓒ The Korea Foundation. All rights reserved. </p>
+            </address>
+            
+           
+		
+
+        </div>
+		<!-- <p>COMMENTS AND QUESTIONS TO <strong>webmaster@kf.or.kr</strong></p> -->
+
+		
+
+	</div>
+
+	<a href="#" class="moveTop"><i class="xi-arrow-up"></i><em class="sr-only">상단으로 이동</em></a>
+</footer>
+<!-- // footer -->
+
+
+
+
+	                    
+                    
+		            <!-- // footer -->
+				</section>
+
+<script>
+</script>
+                
+
+
+
+
+
+
+
+<script>
+
+//웹접근성 
+
+
+	
+	
+$(document).ready(function(){ 
+	
+	var firstDialog = $("#ui-id-1").parents('.ui-dialog')
+	var firstDialog2 = $("#ui-id-2").parents('.ui-dialog')
+	$('.ui-dialog').insertBefore('#skipArea');
+	firstDialog2.insertBefore(firstDialog);
+	
+	$('.ui-dialog').attr('tabindex','0');
+	$('.ui-dialog-titlebar .ui-dialog-titlebar-close').attr('tabindex','0').focus();
+	//2개일때  라벨 변경 
+	$("#ui-id-1").parents('.ui-dialog').find( "label[for='agree0']").attr('for', 'agree1');
+	$("#ui-id-1").parents('.ui-dialog').find("#agree0").attr('id', 'agree1')
+	
+}); 
+
+/* $(document).ready(function(){ 
+	$('.ui-dialog').attr('tabindex','0');
+	$('.ui-dialog-titlebar .ui-dialog-titlebar-close').attr('tabindex','0').focus();
+	//2개일때  라벨 변경 
+	$("#ui-id-2").parents('.ui-dialog').find( "label[for='agree0']").attr('for', 'agree1');
+	$("#ui-id-2").parents('.ui-dialog').find("#agree0").attr('id', 'agree1')
+	
+	$('.ui-dialog').insertBefore('#skipArea');
+}); 
+ */
+</script>
+
+
+	
+
+	
+		
+
+		<!-- 팝업 리스트 -->
+		
+		<!-- /팝업리스트 -->
+	
+
+				</div>
+
+            
+	            
+	            
+	            	
+
+
+
+<script src="/js/ad/ts/search2.js"></script>
+
+<!-- KF PLUS -->
+<div class="kfPluslst fixSlide kfPluslst_eng" id="kfPlusList">
+    <input type="hidden" id="loginAt" value="N" >
+	<div class="wrap">
+		<ul>
+            <li><a href="javascript:location.href='https://www.kf.or.kr/kid/ssoLoginChecker.do?rtnUrl='+encodeURIComponent('https://www.ach.or.kr/ach/main.do?langTy=CHN')" target="_self"><img src="/00_common/images/T2_layout/img_kfplus02.png" alt="아세안문화원 ASEAN CULTURE HOUSE 로고 이미지">
+                <p>Asean Culture House</p>
+            </a></li>
+            <li><a href="javascript:location.href='https://www.kf.or.kr/kid/ssoLoginChecker.do?rtnUrl='+encodeURIComponent('https://www.centralasia-korea.org/korcen/main.do?langTy=CHN')" target="_self"><img src="/00_common/images/T2_layout/img_kfplus03.png" alt="한중앙아협력포럼사무국 로고 이미지">
+                <p>Korea-Central Asia Cooperation Forum Secretariat</p>
+            </a></li>
+            <li><a href="javascript:location.href='https://www.kf.or.kr/kid/ssoLoginChecker.do?rtnUrl='+encodeURIComponent('https://www.koreana.or.kr/koreana/main.do?langTy=CHN')" target="_self"><img src="/00_common/images/T2_layout/img_kfplus08.png" alt="KOREAN 웹진 로고 이미지">
+                <p>Koreana</p>
+            </a></li>
+       
+         
+            <li><a href="javascript:location.href='https://www.kf.or.kr/kid/ssoLoginChecker.do?rtnUrl='+encodeURIComponent('https://apply.kf.or.kr/main.nkf')" target="_self"><img src="/00_common/images/T2_layout/img_kfplus10.png" alt="KF지원사업신청포털 로고 이미지">
+                <p>KF Application Portal</p>
+            </a></li>
+        
+            <li><a href="javascript:location.href='https://www.kf.or.kr/kid/ssoLoginChecker.do?rtnUrl='+encodeURIComponent('https://www.kf.or.kr/pdiplomacy/main.do?langTy=CHN')" target="_self"><img src="/00_common/images/T2_layout/img_kfplus07.png" alt="국민공공외교 로고 이미지">
+                <p>Public Diplomacy</p>
+            </a></li>
+            <li><a href="javascript:location.href='https://www.kf.or.kr/kid/ssoLoginChecker.do?rtnUrl='+encodeURIComponent('https://www.kf.or.kr/koreanstudies/koreaStudiesMap.do')" target="_self"><img src="/00_common/images/T2_layout/img_kfplus12.png" alt="KF통계센터 로고 이미지">
+                <p>KF Statistics Center</p>
+            </a></li>
+            <li><a href="javascript:location.href='https://www.kf.or.kr/kid/ssoLoginChecker.do?rtnUrl='+encodeURIComponent('https://www.kf.or.kr/archives/main/main.do?langTy=CHN')" target="_self"><img src="/00_common/images/T2_layout/img_kfplus13.png" alt="디지털아카이브 로고 이미지">
+                <p>KF Digital Archive</p>
+            </a></li>
+            
+            
+            
+ 		 <li><a href="javascript:location.href='https://www.kf.or.kr/kid/ssoLoginChecker.do?rtnUrl='+encodeURIComponent('https://www.kf.or.kr/reserve/main.do?langTy=CHN')" target="_self"><img src="/00_common/images/T2_layout/img_kfplus15.png" alt="KF글로벌 통합예약포털">
+                 <p>KF Reservation Portal</p>
+            </a></li>
+            <li>
+				<a href="javascript:location.href='https://www.kf.or.kr/kid/ssoLoginChecker.do?rtnUrl='+encodeURIComponent('https://www.kf.or.kr/kfEng/cm/cntnts/cntntsView2.do?mi=2166')" target="_self">
+					<img src="/00_common/images/T2_layout/img_kfplus16.jpg" alt="KF 글로벌센터">
+					<p>KF Global Center</p>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:location.href='https://www.kf.or.kr/kid/ssoLoginChecker.do?rtnUrl='+encodeURIComponent('https://www.kf.or.kr/metaverse')" target="_self">
+					<img src="/00_common/images/T2_layout/img_kfplus17.jpg" alt="KF 글로벌센터 메타버스">
+					<p>KF Global Center Metaverse</p>
+				</a>
+			</li>
+			
+			
+            
+            
+		</ul>
+	</div>
+	<div class="fixblind"></div>
+</div>
+
+<!-- search Full -->
+
+<div class="searchFull fixSlide" id="searchFull">
+	<div class="wrap">
+		<h3>SEARCH</h3>
+		<div class="srchForm">
+			<form name="srchForm" id="searchForm" method="post" action="/koreana/search.do" class="clearfix">
+				<input type="hidden" name="csrfToken" value="5f2c30b0-eeec-4564-96eb-2ca34502f74a"/>
+				<input type="hidden" name="langTy" value="Chinese"/>
+				<input type="hidden" name="collection" value="koreana"/>
+				<input type="hidden" name="sort" value="DATE/DESC"/>
+				<fieldset>
+					<legend>통합검색</legend>
+					<p><input type="search" name="query" id="query" title="Search word entry form" placeholder="Please enter a search word"></p>
+					<div class="search_arrow" id="autoCompleteToOn" onclick="autoOn()" style="display: none;"> <!-- onclick="autoOn()" -->
+						<a href="javascript:;" ><img src="/images/ad/ts/harrow.png" alt="arrow" /></a>
+					</div><!--search_arrow-->
+					<div class="search_arrow_off" id="autoComplete" onclick="autoOff()" style="display: none;"> <!-- onclick="autoOff()" -->
+						<a href="javascript:;" ><img src="/images/ad/ts/arrow_d.PNG" alt="arrow" /></a>
+					</div><!--search_arrow_off-->
+					<a href="javascript:koreanaSearchGo('koreana')" class="btnSrch"><i class="xi-search"></i><em class="sr-only">Integrated search button.</em></a>
+					<div id="rcmdResult">
+						<ul class="autoList">
+							<!-- <li><a href="javascript:;" onclick="hlKey('정부')" title="검색어자동완성 농어촌"><strong>정부</strong></a></li>
+							<li><a href="javascript:;" onclick="hlKey('조직')" title="검색어자동완성 농어촌용수"><strong>정부</strong>조직</a></li>
+							<li><a href="javascript:;" onclick="hlKey('업무 총괄')" title="검색어자동완성 농어촌 업무 총괄"><strong>정부</strong> 업무 총괄</a></li>
+							<li><a href="javascript:;" onclick="hlKey('농어촌 업무 총괄')" title="검색어자동완성 한국 농어촌 업무 총괄">한국<strong>정부</strong> 업무 총괄</a></li>
+							<li><a href="javascript:;" onclick="hlKey('업무 관할')" title="검색어자동완성 업무 관할 농어촌">업무 관할<strong>정부</strong></a></li> -->
+						</ul>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<!-- <p class="keyword">
+			<a href="#">#Food</a>
+			<a href="#">#Movie</a>
+			<a href="#">#BTS</a>
+			<a href="#">#Travel </a>
+		</p> -->
+		<a href="#srchOpen" class="btnClose" id="srchClose"><i class="xi-close"></i><em class="sr-only">Close the search engine</em></a>
+	</div>
+	<div class="fixblind"></div>
+</div>
+
+
+<!-- 전체메뉴 -->
+<div class="popFullmenu">
+	<div class="fullMenuBox">
+		<h3 class="sr-only">전체메뉴</h3>
+		<div class="nav"></div>
+		<a href="#fullmenuOpen" id="fullmenuClose"><i class="xi-close"></i><em class="sr-only">전체메뉴 닫기</em></a>
+	</div>
+</div>
+<!-- //전체메뉴 -->
+
+<script>
+function goPage(site){
+    var uri = document.location.href;
+    var loginAt = 'N'
+    var langTy = CHN
+    if(langTy == 'K'){
+    	langTy = ''
+    } else if (langTy == 'E'){
+    	langTy = 'ENG'
+    }
+    if(uri.indexOf("localhost") < 0 && uri.indexOf("115.94.11.18") < 0){
+        if(loginAt == "Y"){
+            if(site == "ach"){
+                location.href = "https://www.ach.or.kr/ach/ssoInfo.do?rtnUrl=https://www.ach.or.kr/ach/main.do?langTy=CHN";
+            } else if(site == "korcen"){
+                location.href = "https://www.centralasia-korea.org/korcen/ssoInfo.do?rtnUrl=https://www.centralasia-korea.org/korcen/main.do?langTy=CHN";
+            } else if(site == "koreana"){
+                location.href = "https://www.koreana.or.kr/koreana/ssoInfo.do?rtnUrl=https://www.koreana.or.kr/koreana/main.do?langTy=CHN";
+            } else if(site == "kfNewsletter"){
+                location.href = "https://www.kf.or.kr/kfNewsletter/ssoInfo.do?rtnUrl=https://www.kf.or.kr/kfNewsletter/main.do?langTy=CHN";
+            } else if(site == "achNewsletter"){
+                location.href = "https://www.ach.or.kr/achNewsletter/ssoInfo.do?rtnUrl=https://www.ach.or.kr/achNewsletter/main.do?langTy=CHN";
+            } else if(site == "apply"){
+                location.href = "https://apply.kf.or.kr/main.nkf"
+            } else if(site == "kfglobaleschool"){
+                location.href = "https://www.kf.or.kr/kfglobaleschool/ssoInfo.do?rtnUrl=https://www.kf.or.kr/kfglobaleschool/main.do?langTy=CHN";
+            } else if(site == "pdiplomacy"){
+                location.href = "https://www.kf.or.kr/pdiplomacy/ssoInfo.do?rtnUrl=https://www.kf.or.kr/pdiplomacy/main.do?langTy=CHN";
+            } else if(site == "koreanstudies"){
+                location.href = "https://www.kf.or.kr/koreanstudies/koreaStudiesMap.do"
+            } else if(site == "archives"){
+                location.href = "https://www.kf.or.kr/archives/main/main.do?langTy=CHN"
+            } else {
+                alert("sorry, Bad Request")
+            }
+        } else {
+            if(site == "ach"){
+                location.href = "https://www.ach.or.kr/ach/main.do?langTy=CHN";
+            } else if(site == "korcen"){
+                location.href = "https://www.centralasia-korea.org/korcen/main.do?langTy=CHN";
+            } else if(site == "koreana"){
+                location.href = "https://www.koreana.or.kr/koreana/main.do?langTy=CHN";
+            } else if(site == "kfNewsletter"){
+                location.href = "https://www.kf.or.kr/kfNewsletter/main.do?langTy=CHN";
+            } else if(site == "achNewsletter"){
+                location.href = "https://www.ach.or.kr/achNewsletter/main.do?langTy=CHN";
+            } else if(site == "apply"){
+                location.href = "https://apply.kf.or.kr/main.nkf"
+            } else if(site == "kfglobaleschool"){
+                location.href = "https://www.kf.or.kr/kfglobaleschool/main.do?langTy=CHN";
+            } else if(site == "pdiplomacy"){
+                location.href = "https://www.kf.or.kr/pdiplomacy/main.do?langTy=CHN";
+            } else if(site == "koreanstudies"){
+                location.href = "https://www.kf.or.kr/koreanstudies/koreaStudiesMap.do"
+            } else if(site == "archives"){
+                location.href = "https://www.kf.or.kr/archives/main/main.do?langTy=CHN"
+            } else {
+                alert("잘못된 요청입니다.")
+            }
+        }
+    } else {
+        if(site == "ach"){
+            location.href = "https://www.ach.or.kr/ach/main.do?langTy=CHN";
+        } else if(site == "korcen"){
+            location.href = "https://www.centralasia-korea.org/korcen/main.do?langTy=CHN";
+        } else if(site == "koreana"){
+            location.href = "https://www.koreana.or.kr/koreana/main.do?langTy=CHN";
+        } else if(site == "kfNewsletter"){
+            location.href = "https://www.kf.or.kr/kfNewsletter/main.do?langTy=CHN";
+        } else if(site == "achNewsletter"){
+            location.href = "https://www.ach.or.kr/achNewsletter/main.do?langTy=CHN";
+        } else if(site == "apply"){
+            location.href = "https://apply.kf.or.kr/main.nkf"
+        } else if(site == "kfglobaleschool"){
+            location.href = "https://www.kf.or.kr/kfglobaleschool/main.do?langTy=CHN";
+        } else if(site == "pdiplomacy"){
+            location.href = "https://www.kf.or.kr/pdiplomacy/main.do?langTy=CHN";
+        } else if(site == "koreanstudies"){
+            location.href = "https://www.kf.or.kr/koreanstudies/koreaStudiesMap.do"
+        } else if(site == "archives"){
+            location.href = "https://www.kf.or.kr/archives/main/main.do?langTy=CHN"
+        } else {
+            alert("잘못된 요청입니다.")
+        }
+    }
+}
+
+//추천검색어
+$("#query").keyup(function(e){
+	//비우기
+	$(".autoList").empty();
+	//추천 검색어(처음 접근 및 새로 고침 시 일간부터 보이도록)
+	if($("#rcmdResult").is(':visible') == true) { // 검색어 자동완성 div가 보임 상태일때
+		if($.trim($(this).val()) == "") { // 단어가 없으면 div 닫음
+			autoOff();
+			$("#autoList").empty();
+		}
+	} else { // 검색어 자동완성 div가 안보이는 상태일때
+		if($.trim($(this).val()) != "") { // 단어가 있으면 div 보임
+			// 검색어 자동완성 div 열기
+			autoOn();
+		}
+	}
+	$.ajax({
+		url  : "/kf/ark.do",
+		data : {
+				target : "KF_NEW",
+				convert  : "fw",
+				query  : $(this).val(),
+				datatype : "json"
+		},
+		type : "post",
+		dataType : "json",
+		async : fal

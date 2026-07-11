@@ -1,0 +1,523 @@
+{
+  "started_at": "2026-07-12T02:55:17",
+  "config": {
+    "languages": [
+      "ko",
+      "en",
+      "vi",
+      "id"
+    ],
+    "per_lang_limit": 120
+  },
+  "robots": "robots.txt 확인 — 수집 경로 차단 없음",
+  "language_probe": {
+    "ko": {
+      "KOR": {
+        "status": 200,
+        "html_lang": "ko",
+        "title": "코리아나",
+        "final_url": "https://www.koreana.or.kr/koreana/main.do?langTy=KOR"
+      }
+    },
+    "en": {
+      "ENG": {
+        "status": 200,
+        "html_lang": "ko",
+        "title": "Koreana",
+        "final_url": "https://www.koreana.or.kr/koreana/main.do?langTy=ENG"
+      },
+      "EN": {
+        "status": 200,
+        "html_lang": "ko",
+        "title": "코리아나",
+        "final_url": "https://www.koreana.or.kr/koreana/main.do?langTy=EN"
+      },
+      "(none)": {
+        "status": 200,
+        "html_lang": "ko",
+        "title": "코리아나",
+        "final_url": "https://www.koreana.or.kr/koreana/main.do"
+      }
+    },
+    "ja": {
+      "JPN": {
+        "status": 200,
+        "html_lang": "ko",
+        "title": "Koreana",
+        "final_url": "https://www.koreana.or.kr/koreana/main.do?langTy=JPN"
+      }
+    },
+    "zh": {
+      "CHN": {
+        "status": 200,
+        "html_lang": "ko",
+        "title": "Koreana",
+        "final_url": "https://www.koreana.or.kr/koreana/main.do?langTy=CHN"
+      }
+    },
+    "fr": {
+      "FRA": {
+        "status": 200,
+        "html_lang": "ko",
+        "title": "Koreana",
+        "final_url": "https://www.koreana.or.kr/koreana/main.do?langTy=FRA"
+      }
+    },
+    "de": {
+      "GER": {
+        "status": 200,
+        "html_lang": "ko",
+        "title": "Koreana",
+        "final_url": "https://www.koreana.or.kr/koreana/main.do?langTy=GER"
+      }
+    },
+    "es": {
+      "ESP": {
+        "status": 200,
+        "html_lang": "ko",
+        "title": "Koreana",
+        "final_url": "https://www.koreana.or.kr/koreana/main.do?langTy=ESP"
+      }
+    },
+    "ru": {
+      "RUS": {
+        "status": 200,
+        "html_lang": "ko",
+        "title": "Koreana",
+        "final_url": "https://www.koreana.or.kr/koreana/main.do?langTy=RUS"
+      },
+      "RUS0": {
+        "status": 200,
+        "html_lang": "ko",
+        "title": "코리아나",
+        "final_url": "https://www.koreana.or.kr/koreana/main.do?langTy=RUS0"
+      }
+    },
+    "ar": {
+      "ARE": {
+        "status": 200,
+        "html_lang": "ko",
+        "title": "Koreana",
+        "final_url": "https://www.koreana.or.kr/koreana/main.do?langTy=ARE"
+      },
+      "ARA": {
+        "status": 200,
+        "html_lang": "ko",
+        "title": "코리아나",
+        "final_url": "https://www.koreana.or.kr/koreana/main.do?langTy=ARA"
+      }
+    },
+    "id": {
+      "IDN": {
+        "status": 200,
+        "html_lang": "ko",
+        "title": "Koreana",
+        "final_url": "https://www.koreana.or.kr/koreana/main.do?langTy=IDN"
+      }
+    },
+    "vi": {
+      "VIE": {
+        "status": 200,
+        "html_lang": "ko",
+        "title": "코리아나",
+        "final_url": "https://www.koreana.or.kr/koreana/main.do?langTy=VIE"
+      },
+      "VNM": {
+        "status": 200,
+        "html_lang": "ko",
+        "title": "Koreana",
+        "final_url": "https://www.koreana.or.kr/koreana/main.do?langTy=VNM"
+      }
+    }
+  },
+  "lang_code_map": {
+    "ko": "KOR",
+    "en": "ENG",
+    "vi": "VIE",
+    "id": "IDN"
+  },
+  "boards": {
+    "ko": [
+      {
+        "bbsId": "1114",
+        "mi": "1544",
+        "label": "Features"
+      },
+      {
+        "bbsId": "1113",
+        "mi": "1546",
+        "label": "Focus"
+      },
+      {
+        "bbsId": "1121",
+        "mi": "1079",
+        "label": "Interview"
+      },
+      {
+        "bbsId": "1115",
+        "mi": "1069",
+        "label": "Guardians of Heritage"
+      },
+      {
+        "bbsId": "1850",
+        "mi": "15630",
+        "label": "Brick by Brick"
+      },
+      {
+        "bbsId": "1125",
+        "mi": "1082",
+        "label": "Art Review"
+      },
+      {
+        "bbsId": "1119",
+        "mi": "1077",
+        "label": "Entertainment"
+      },
+      {
+        "bbsId": "1120",
+        "mi": "1547",
+        "label": "On the Road"
+      },
+      {
+        "bbsId": "1130",
+        "mi": "1586",
+        "label": "Another Day"
+      },
+      {
+        "bbsId": "1126",
+        "mi": "1083",
+        "label": "Books & More"
+      },
+      {
+        "bbsId": "1116",
+        "mi": "1074",
+        "label": "K-uisine"
+      },
+      {
+        "bbsId": "1123",
+        "mi": "1078",
+        "label": "Lifestyle"
+      },
+      {
+        "bbsId": "1122",
+        "mi": "1081",
+        "label": "In Love with Korea"
+      },
+      {
+        "bbsId": "1811",
+        "mi": "15291",
+        "label": "Greener Pastures"
+      },
+      {
+        "bbsId": "1118",
+        "mi": "1076",
+        "label": "Image of Korea"
+      },
+      {
+        "bbsId": "1340",
+        "mi": "1587",
+        "label": "Video"
+      },
+      {
+        "bbsId": "1117",
+        "mi": "1075",
+        "label": "Tales of Two Koreas"
+      },
+      {
+        "bbsId": "1810",
+        "mi": "15290",
+        "label": "What's On"
+      }
+    ],
+    "en": [
+      {
+        "bbsId": "1114",
+        "mi": "1544",
+        "label": "Features"
+      },
+      {
+        "bbsId": "1113",
+        "mi": "1546",
+        "label": "Focus"
+      },
+      {
+        "bbsId": "1121",
+        "mi": "1079",
+        "label": "Interview"
+      },
+      {
+        "bbsId": "1115",
+        "mi": "1069",
+        "label": "Guardians of Heritage"
+      },
+      {
+        "bbsId": "1850",
+        "mi": "15630",
+        "label": "Brick by Brick"
+      },
+      {
+        "bbsId": "1125",
+        "mi": "1082",
+        "label": "Art Review"
+      },
+      {
+        "bbsId": "1119",
+        "mi": "1077",
+        "label": "Entertainment"
+      },
+      {
+        "bbsId": "1120",
+        "mi": "1547",
+        "label": "On the Road"
+      },
+      {
+        "bbsId": "1130",
+        "mi": "1586",
+        "label": "Another Day"
+      },
+      {
+        "bbsId": "1126",
+        "mi": "1083",
+        "label": "Books & More"
+      },
+      {
+        "bbsId": "1116",
+        "mi": "1074",
+        "label": "K-uisine"
+      },
+      {
+        "bbsId": "1123",
+        "mi": "1078",
+        "label": "Lifestyle"
+      },
+      {
+        "bbsId": "1122",
+        "mi": "1081",
+        "label": "In Love with Korea"
+      },
+      {
+        "bbsId": "1811",
+        "mi": "15291",
+        "label": "Greener Pastures"
+      },
+      {
+        "bbsId": "1118",
+        "mi": "1076",
+        "label": "Image of Korea"
+      },
+      {
+        "bbsId": "1340",
+        "mi": "1587",
+        "label": "Video"
+      },
+      {
+        "bbsId": "1117",
+        "mi": "1075",
+        "label": "Tales of Two Koreas"
+      },
+      {
+        "bbsId": "1810",
+        "mi": "15290",
+        "label": "What's On"
+      }
+    ],
+    "vi": [
+      {
+        "bbsId": "1114",
+        "mi": "1544",
+        "label": "Features"
+      },
+      {
+        "bbsId": "1113",
+        "mi": "1546",
+        "label": "Focus"
+      },
+      {
+        "bbsId": "1121",
+        "mi": "1079",
+        "label": "Interview"
+      },
+      {
+        "bbsId": "1115",
+        "mi": "1069",
+        "label": "Guardians of Heritage"
+      },
+      {
+        "bbsId": "1850",
+        "mi": "15630",
+        "label": "Brick by Brick"
+      },
+      {
+        "bbsId": "1125",
+        "mi": "1082",
+        "label": "Art Review"
+      },
+      {
+        "bbsId": "1119",
+        "mi": "1077",
+        "label": "Entertainment"
+      },
+      {
+        "bbsId": "1120",
+        "mi": "1547",
+        "label": "On the Road"
+      },
+      {
+        "bbsId": "1130",
+        "mi": "1586",
+        "label": "Another Day"
+      },
+      {
+        "bbsId": "1126",
+        "mi": "1083",
+        "label": "Books & More"
+      },
+      {
+        "bbsId": "1116",
+        "mi": "1074",
+        "label": "K-uisine"
+      },
+      {
+        "bbsId": "1123",
+        "mi": "1078",
+        "label": "Lifestyle"
+      },
+      {
+        "bbsId": "1122",
+        "mi": "1081",
+        "label": "In Love with Korea"
+      },
+      {
+        "bbsId": "1811",
+        "mi": "15291",
+        "label": "Greener Pastures"
+      },
+      {
+        "bbsId": "1118",
+        "mi": "1076",
+        "label": "Image of Korea"
+      },
+      {
+        "bbsId": "1340",
+        "mi": "1587",
+        "label": "Video"
+      },
+      {
+        "bbsId": "1117",
+        "mi": "1075",
+        "label": "Tales of Two Koreas"
+      },
+      {
+        "bbsId": "1810",
+        "mi": "15290",
+        "label": "What's On"
+      }
+    ],
+    "id": [
+      {
+        "bbsId": "1114",
+        "mi": "1544",
+        "label": "Features"
+      },
+      {
+        "bbsId": "1113",
+        "mi": "1546",
+        "label": "Focus"
+      },
+      {
+        "bbsId": "1121",
+        "mi": "1079",
+        "label": "Interview"
+      },
+      {
+        "bbsId": "1115",
+        "mi": "1069",
+        "label": "Guardians of Heritage"
+      },
+      {
+        "bbsId": "1850",
+        "mi": "15630",
+        "label": "Brick by Brick"
+      },
+      {
+        "bbsId": "1125",
+        "mi": "1082",
+        "label": "Art Review"
+      },
+      {
+        "bbsId": "1119",
+        "mi": "1077",
+        "label": "Entertainment"
+      },
+      {
+        "bbsId": "1120",
+        "mi": "1547",
+        "label": "On the Road"
+      },
+      {
+        "bbsId": "1130",
+        "mi": "1586",
+        "label": "Another Day"
+      },
+      {
+        "bbsId": "1126",
+        "mi": "1083",
+        "label": "Books & More"
+      },
+      {
+        "bbsId": "1116",
+        "mi": "1074",
+        "label": "K-uisine"
+      },
+      {
+        "bbsId": "1123",
+        "mi": "1078",
+        "label": "Lifestyle"
+      },
+      {
+        "bbsId": "1122",
+        "mi": "1081",
+        "label": "In Love with Korea"
+      },
+      {
+        "bbsId": "1811",
+        "mi": "15291",
+        "label": "Greener Pastures"
+      },
+      {
+        "bbsId": "1118",
+        "mi": "1076",
+        "label": "Image of Korea"
+      },
+      {
+        "bbsId": "1340",
+        "mi": "1587",
+        "label": "Video"
+      },
+      {
+        "bbsId": "1117",
+        "mi": "1075",
+        "label": "Tales of Two Koreas"
+      },
+      {
+        "bbsId": "1810",
+        "mi": "15290",
+        "label": "What's On"
+      }
+    ]
+  },
+  "pagination": {
+    "ko/1114": "페이지네이션 파라미터 확정: currPage",
+    "en/1114": "페이지네이션 파라미터 확정: currPage",
+    "vi/1114": "페이지네이션 파라미터 확정: currPage",
+    "id/1114": "페이지네이션 파라미터 확정: currPage"
+  },
+  "fetched": {
+    "ko": 120,
+    "en": 120,
+    "vi": 120,
+    "id": 120
+  },
+  "total_requests": 553,
+  "finished_at": "2026-07-12T03:04:30"
+}

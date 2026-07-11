@@ -1,0 +1,1751 @@
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Koreana">
+        <meta property="og:description" content="Koreana 홈페이지에 오신 것을 환영합니다.">
+        <meta property="og:image" content="/images/web/koreana/main/logo.png">
+        <meta property="og:url" content="https://www.koreana.or.kr">
+		<title>Koreana</title>
+		<meta name="keywords" content="Koreana">
+		<meta name="description" content="Koreana 홈페이지에 오신 것을 환영합니다. ">
+		<link rel="stylesheet" href="/css/web/koreana/main.css" media="all">
+		<!-- <link rel="stylesheet" href="/00_common/css/jquery.fullPage.css" media="all"> -->
+		<link rel="stylesheet" href="/00_common/js/mCustomScrollbar/jquery.mCustomScrollbar.css" media="all">
+		<script src="/00_common/js/jquery-1.11.2.min.js"></script>
+		<script src="/00_common/js/jquery-ui.min.js"></script>
+		<script src="/00_common/js/modernizr-2.6.2.min.js"></script>
+		<script src="/00_common/js/slick.min.js"></script>
+		<!-- <script src="/00_common/js/jquery.fullPage.js"></script> -->
+		<script src="/00_common/js/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
+		<script src="/00_common/js/ScrollMagic.min.js"></script>
+		<script src="/00_common/js/T3_layout.js"></script>
+		<script src="/js/web/koreana/main.js"></script>
+        <script src="/js/web/koreana/common.js"></script>
+        <script src="/00_common/js/common.js"></script>
+
+        <!-- 상단팝업 js/css -->
+        <script src="/js/common.js"></script>
+        <script src="/js/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="/css/com/jquery/jquery-ui.min.css" media="all"/>
+
+		<script type="text/javascript">
+	    	$(document).ready(function() {
+	    		var agent = navigator.userAgent.toLowerCase();
+	     		if ( navigator.userAgent.indexOf("Trident") > -1 && "" == 1) {
+	     			if("IDN" == "KOR" || "IDN" == "" || "IDN" == undefined) {
+	     				alert('일부 웹사이트는 Internet Explorer에서 잘 작동하지 않을 수 있습니다. 다른 브라우저를 사용하여 주시기 바랍니다.') ;
+	     			} else {
+	     				alert('Some websites may not work well in Internet Explorer. Please use a different browser.') ;
+	     			}
+	    		}
+
+	    	});
+        </script>
+
+	</head>
+    <body oncontextmenu="return false">
+		<!-- skipArea -->
+		<input type="hidden" id="languageType" value="IDN"/>
+		<div id="skipArea"><a href="#gnb">메인메뉴 바로가기</a><a href="#container">본문으로 바로가기</a></div>
+
+		<div id="wrap" class="onTop">
+
+			
+<!DOCTYPE html>
+
+
+
+<!-- upper popup
+<div class="up-popup" id="up-popup">
+	<div class="container">
+		<div class="poplst" id="popSlide">
+			<div class="item"><a href="#">
+				<p class="ico"><img src="/00_common/images/T2_layout/ico_uppop01.png" alt=""></p>
+				<span>2020 Calender KF Global Center</span>
+				<strong>2020 KT 글로벌센터 사업일정</strong>
+			</a></div>
+			<div class="item"><a href="#">
+				<p class="ico"><img src="/00_common/images/T2_layout/ico_uppop02.png" alt=""></p>
+				<span>2020 하반기 PUBLIC DIPLOMACY</span>
+				<strong>공공외교 활동을 꾸는 이들을 위한 프로그램 안내서</strong>
+			</a></div>
+			<div class="item"><a href="#">
+				<p class="ico"><img src="/00_common/images/T2_layout/ico_uppop01.png" alt=""></p>
+				<span></span>
+				<strong></strong>
+			</a></div>
+		</div>
+		<div class="count">
+			<a href="#" id="uppopStop"><i class="xi-pause"></i><em class="sr-only">상단팝업 정지</em></a>
+			<a href="#" id="uppopPlay"><i class="xi-play"></i><em class="sr-only">상단팝업 재생</em></a>
+		</div>
+	</div>
+</div>-->
+
+        <!-- //바로가기 -->
+
+        	<!-- header -->
+            
+            
+            
+			     
+                 
+
+
+
+
+
+<!-- header  -->
+<header id="header" class="sub_header">
+<!-- 전환 추적 태그 삽입 start -->
+<!-- 글로벌 구글 태그 (gtag.js) 통합 코드 --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D4WVCBH82G"></script> 
+<script> window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+// GA4 설정 (디버그 모드 포함)
+gtag('config', 'G-D4WVCBH82G');
+
+// 구글 광고(AW) 설정
+//gtag('config', 'AW-482413566');
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics, Google Ads: 482413566 -->
+<script>
+
+window.onload = function(){
+	var l_from_koreana_do = $("#languageType").val();
+	console.log(l_from_koreana_do);
+
+	if(l_from_koreana_do == "CHN") {
+		$("#container").addClass('lang_cn');
+	}
+	else if(l_from_koreana_do == "JPN"){
+		$("#container").addClass('lang_cn');
+	}
+	else if(l_from_koreana_do == "VNM"){
+		$("#container").addClass('lang_vnm');
+	}
+	else if(l_from_koreana_do == "ARE"){
+		$("#container").addClass('lang_are');
+		$(".img-cap").addClass('are_imgcap');
+	}
+
+	else {
+		$("#container").removeClass('lang_cn');
+		$("#container").removeClass('lang_are');
+		$(".img-cap").removeClass('are_imgcap');
+	}
+
+}
+</script>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '4183848851733798');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=4183848851733798&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+	<script>
+		!function (w, d, t) {
+		  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+
+		  ttq.load('C3NOOKB3G487IS97LMF0');
+		  ttq.page();
+		}(window, document, 'ttq');
+	</script>
+<script src="/js/webtrends.js"></script>
+<!-- 전환 추적 태그 삽입 end   -->
+
+	<div class="header_wrap">
+		<div class="container">
+			<!-- KF logo -->
+			
+			
+				<h1><a href="javascript:" onclick="javascript:location.href='https://www.kf.or.kr/kid/ssoLoginChecker.do?rtnUrl='+encodeURIComponent('https://www.kf.or.kr/kfEng/main.do?langTy=IDN')"><img src="/00_common/images/T3_layout/kf_sub_log.jpg" alt="KF"><em>KOREA FOUNDATION</em></a></h1>
+			
+			<!--   href="/koreana/main.do"  -->
+			<div class="top_link">
+				<!-- 한영근 주임 요청으로 삭제
+				<div class="year_select">
+					<a href="javascript:void(0);" class="select_btn">back issue</a>
+					<ul>
+						<li><a href="">2021.03.</a></li>
+						<li><a href="">2021.02.</a></li>
+						<li><a href="">2021.01.</a></li>
+						<li><a href="">2020.12.</a></li>
+						<li><a href="">2020.11.</a></li>
+						<li><a href="">2020.10.</a></li>
+						<li><a href="">2020.09.</a></li>
+						<li><a href="">2020.08.</a></li>
+						<li><a href="">2020.07.</a></li>
+						<li><a href="">2020.06.</a></li>
+						<li><a href="">2020.05.</a></li>
+						<li><a href="">2020.04.</a></li>
+						<li><a href="">2020.03.</a></li>
+						<li><a href="">2020.02.</a></li>
+						<li><a href="">2020.01.</a></li>
+						<li><a href="">2019.12.</a></li>
+					</ul>
+				</div>
+				 -->
+				<ul class="linklst">
+					<li>
+						
+							<a href="javascript:" onclick="goUnityLoginPage('koreana','','IDN');">LOGIN</a>
+						
+						
+					</li>
+					<li>
+						
+						
+							<a href="javascript:;" onclick="goUnityJoinPage('koreana','')">JOIN</a>
+						
+					</li>
+					<li class="lang">
+                        <a href="javascript:void(0);">
+                        
+                        
+                        IDN
+                        
+                        </a>
+						<ul class="lst langList">
+                        <li><a href="/koreana/main.do?langTy=KOR">KOR</a></li>
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=ARE">ARE</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=CHN">CHN</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=ENG">ENG</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=ESP">ESP</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=FRA">FRA</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=GER">GER</a></li>
+                            
+                        
+                        	
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=JPN">JPN</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=RUS">RUS</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=VNM">VNM</a></li>
+                            
+                        
+						</ul>
+					</li>
+				</ul>
+				<p class="snslst">
+					<a href="https://www.facebook.com/koreafoundation" target="_blank" title="새창열기"><i class="xi-facebook"></i><em class="sr-only">페이스북 바로가기</em></a>
+					<a href="https://www.instagram.com/koreafoundation/" target="_blank" title="새창열기"><i class="xi-instagram"></i><em class="sr-only">인스타그램 바로가기</em></a>
+					<a href="https://www.youtube.com/user/TheKoreaFoundation" target="_blank" title="새창열기"><i class="xi-youtube-play"></i><em class="sr-only">유튜브 바로가기</em></a>
+					<a href="https://twitter.com/koreafoundation" target="_blank" title="새창열기" class="twitter-icon"><em class="sr-only">x(트위터)바로가기</em></a>
+				</p>
+				<div class="kfPlus">
+					<a class="hashSlide" href="#kfPlusList">KF 플러스</a>
+				</div>
+				<!-- <p class="popBtn"><a href="#" id="uppopBtn" class="on">POPUP</a></p> -->
+			</div>
+		</div>
+
+
+		<!-- logo -->
+		<h2>
+			<a href="/koreana/main.do?langTy=IDN"><img src="/images/web/koreana/main/logo.png" alt="KOREANA 웹진 - KOREAN CULTURE & ART"></a>
+		</h2>
+
+		<div id="nav">
+					<div id="gnb">
+				<!--FMENU_START-->
+						
+							<div class="dep01_tit container">
+							<ul>
+								<li><a href="/koreana/na/ntt/selectNttList.do?mi=1544&bbsId=1114"  ><span>Features</span></a></li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1113&bbsIds=1121&bbsIds=1115&bbsIds=1850&bbsIds=1125&bbsIds=1119&mi=1064"  ><span>Arts & Culture</span></a></li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1120&bbsIds=1130&bbsIds=1126&bbsIds=1116&mi=1065"  ><span>Lifestyle</span></a></li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1123&bbsIds=1122&bbsIds=1811&bbsIds=1118&bbsIds=1340&bbsIds=1117&bbsIds=1810&mi=1066"  ><span>Past Series</span></a></li>
+								<li>
+									
+										<a href="/koreana/cm/cntnts/cntntsView.do?mi=1088&cntntsId=2281"  ><span>About</span></a>
+										
+								</li>
+								<li><a href="/koreana/an/arn/selectArList.do?mi=1068"  ><span>Archive</span></a></li>
+							</ul>
+							</div>
+				<!--FMENU_END-->
+
+				<div class="wrap">
+				<!--START-->
+						
+							<ul class="dep01">
+								<li><a href="/koreana/na/ntt/selectNttList.do?mi=1544&bbsId=1114"  ><span>Features</span></a></li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1113&bbsIds=1121&bbsIds=1115&bbsIds=1850&bbsIds=1125&bbsIds=1119&mi=1064"  ><span>Arts & Culture</span></a>
+									<ul class="dep02">
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1546&bbsId=1113"  ><span>Focus</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1079&bbsId=1121"  ><span>Interview</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1069&bbsId=1115"  ><span>Guardians of Heritage</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=15630&bbsId=1850"  ><span>Brick by Brick</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1082&bbsId=1125"  ><span>Art Review</span></a></li>							
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1077&bbsId=1119"  ><span>Entertainment</span></a></li>	
+									</ul>
+								</li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1120&bbsIds=1130&bbsIds=1126&bbsIds=1116&mi=1065"  ><span>Lifestyle</span></a>
+									<ul class="dep02">
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1547&bbsId=1120"  ><span>On the Road</span></a></li>				
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1586&bbsId=1130"  ><span>Another Day</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1083&bbsId=1126"  ><span>Books & More</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1074&bbsId=1116"  ><span>K-uisine</span></a></li>
+										
+									</ul>
+								</li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1123&bbsIds=1122&bbsIds=1811&bbsIds=1118&bbsIds=1340&bbsIds=1117&bbsIds=1810&mi=1066"  ><span>Past Series</span></a>
+									<ul class="dep02">
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1078&bbsId=1123"  ><span>Lifestyle</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1081&bbsId=1122"  ><span>In Love with Korea</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=15291&bbsId=1811"  ><span>Greener Pastures</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1076&bbsId=1118"  ><span>Image of Korea</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1587&bbsId=1340"  ><span>Video</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1075&bbsId=1117"  ><span>Tales of Two Koreas</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=15290&bbsId=1810"  ><span>What&apos;s On</span></a></li>
+									</ul>
+								</li>
+							<!-- 	<li><a href="/koreana/cm/cntnts/cntntsView.do?mi=1088&cntntsId=2301"  ><span>About</span></a> -->
+								
+								<li>
+									
+										<a href="/koreana/cm/cntnts/cntntsView.do?mi=1088&cntntsId=2281"  ><span>About</span></a>
+										
+								
+								
+									<ul class="dep02">
+										<!-- <li><a href="/koreana/cm/cntnts/cntntsView.do?mi=1088&cntntsId=1400"  ><span>About Koreana</span></a></li> -->
+										   <li>
+												
+													<a href="/koreana/cm/cntnts/cntntsView.do?mi=1088&cntntsId=2281"  ><span>About Koreana</span></a>
+													
+													
+													<li>
+										
+										<li><a href="/koreana/su/subscribeView.do?mi=1548"  ><span>Subscribe</span></a></li>
+										<li><a href="/koreana/ad/cu/contactUsInsertPage.do?sysId=koreana"  ><span>Contact Us</span></a></li>
+									</ul>
+								</li>
+								<li><a href="/koreana/an/arn/selectArList.do?mi=1068"  ><span>Archive</span></a></li>
+							</ul>
+				<!--END-->
+				</div>
+				</div>
+				   <div class="gnbblind"></div>
+				</div>
+
+
+
+          <div class="top_util">
+              <!-- search -->
+              <a href="#searchFull" class="btnSrch hashSlide" id="srchOpen"><i class="xi-search"></i><em class="sr-only">통합검색열기</em></a>
+
+              <!-- fullMenu -->
+              <a href="#fullMenu" class="fullmenu" id="fullmenuOpen">전체메뉴<span></span><span></span><span></span></a>
+          </div>
+      </div>
+  </header>
+  <!-- //header -->
+
+
+            
+            
+            <!-- //header  -->
+
+	            <!-- container -->
+	            <div id="container">
+                
+
+
+
+
+
+
+
+	
+	
+
+<script>
+$(function () {
+
+	//리스트 팝업 : 보기, 취소
+	$(".viewPopListBtn").click(function(){
+		var btnTy = $(this).attr("id");
+
+		if ( btnTy == "close" ) {
+				//팝업 목록 닫기
+				$(".pop_header").hide();
+
+		} else {
+
+			$("#listPopup").dialog({
+			    autoOpen: true,
+			    modal: false,
+			    resizeable : false,
+			    title: "코리아나 팝업 목록",
+			    width: 380,
+			    height: 350,
+			    show:{
+			  		effect:"blind",
+			  		duration: 100
+			    },
+			    hide:{
+			   	 	effect:"blind",
+			   	 	duration: 100
+			    },
+			    position: {my:'left+50 top+50', at: 'left top' }
+			}).dialog('open');
+
+		}
+
+	});
+
+	//리스트 팝업 : 팝업 보기
+	$(".viewPopupBtn").click(function(){
+		var popupSn = $(this).attr("data-seq");
+		var popupTitle = $(this).attr("title");
+		var popupWidth = $("#popupData"+popupSn).attr("data-width");
+		var popupHeight = $("#popupData"+popupSn).attr("data-height");
+		var popupWidthLc = $("#popupData"+popupSn).attr("data-widthLc");
+		var popupHeightLc = $("#popupData"+popupSn).attr("data-heightLc");
+		var popupFileId = $("#popupData"+popupSn).attr("data-fileId");
+		var popupFileList = $("#popupData"+popupSn).attr("data-fileList");
+
+
+		var fileHeight = "";
+		if( popupFileId != "" && popupFileList != "" ) {
+			fileHeight = popupFileList.split("},").length;
+			popupHeight = parseInt(popupHeight) + parseInt(fileHeight)*20;
+			popupWidth = parseInt(popupWidth) + parseInt(fileHeight)*5;
+
+		}
+			$("#popupNormal"+popupSn).dialog({
+			    autoOpen: true,
+			    modal: false,
+			    resizeable : false,
+			    title: popupTitle,
+			    width: popupWidth,
+			    height: popupHeight,
+			    show:{
+			  		effect:"blind",
+			  		duration: 100
+			    },
+			    hide:{
+			   	 	effect:"blind",
+			   	 	duration: 100
+			    },
+			    position: {my:'left+'+popupWidthLc+' top+'+popupHeightLc+'', at: 'left top'}
+			}).dialog('open');
+
+	});
+
+
+
+});
+
+$(document).ready(function(){
+
+	// 리스트 팝업 호출 여부
+	var popCallAt = "";
+
+	// 팝업 호출 : 기본 창 팝업
+	if (popCallAt == "") {
+
+		
+	}
+	  
+			
+});
+
+</script>
+	
+
+				
+
+
+
+			<!-- container -->
+<section class="section section01">
+					<div class="T2_B01">
+						<!-- visual -->
+						<div class="main_visual container">
+							<div class="main_vis">
+								<div class="vislst" id="mainVis">
+									
+										
+											
+												<div class="item">
+													<a href="https://www.koreana.or.kr/koreana/main.do?langTy=ENG">
+														<img src="/upload/koreana/mn/_07e5110a-07f3-436f-a5d0-c00d26eca3cb1740040700964.jpg" alt="">
+													</a>
+												</div>
+											
+												<div class="item">
+													<a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=129764&amp;bbsId=1114">
+														<img src="/upload/mn/img_22de7f43-46e7-4c2d-be58-146f1fc035561737079113060.png" alt="">
+													</a>
+												</div>
+											
+												<div class="item">
+													<a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=129767&amp;bbsId=1114">
+														<img src="/upload/mn/img_76cafd5e-b5ee-452c-a8f7-71251104b1241737079132710.jpg" alt="">
+													</a>
+												</div>
+											
+												<div class="item">
+													<a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=129768&amp;bbsId=1114">
+														<img src="/upload/mn/img_65a95a1a-0d22-4184-8852-2c45128df8451737079155204.jpg" alt="">
+													</a>
+												</div>
+											
+										
+										
+									<!-- F -->
+								</div>
+								<div class="control">
+									<a href="#" id="visualPrev">
+										<i class="xi-arrow-up"></i><em class="sr-only">이전으로</em>
+									</a>
+									<p class="count"></p>
+									<a href="#" id="visualNext">
+										<i class="xi-arrow-down"></i><em class="sr-only">다음으로</em>
+									</a>
+								</div>
+							</div>
+
+							<div class="sub_vis" id="subVis">
+								
+									
+										
+												<div class="item">
+													<div class="txt"><a href="https://www.koreana.or.kr/koreana/main.do?langTy=ENG">
+														<span class="mt2" ></span>
+														<strong class="mt3" >   </strong>
+														<p class="mt4" ></p>
+														<div class="efBox">
+															<span class="ef1 mt1"></span>
+															<span class="ef2 mt2"></span>
+															<span class="ef3 mt3"></span>
+															<span class="ef4 mt4"></span>
+														</div>
+													</a></div>
+												</div>
+										
+												<div class="item">
+													<div class="txt"><a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=129764&amp;bbsId=1114">
+														<span class="mt2" >Fitur Khusus 1</span>
+														<strong class="mt3" >Tujuan Wisata Tertua di Seoul</strong>
+														<p class="mt4" >Seochon, sebuah desa di sebelah barat Istana Gyeongbokgung, adalah wilayah yang memiliki sejarah panjang. Selama Dinasti Joseon (1392-1910), wilayah ini merupakan tempat tinggal orang-orang berkuasa seperti keluarga kerajaan dan pembesar, dan masyarakat kelas menengah (kelas yang berada di tengah-tengah antara bangsawan dan rakyat jelata) yang tinggal di sekitaran pusat wilayah. Di era modern, banyak penulis dan seniman beraktivitas di sini.</p>
+														<div class="efBox">
+															<span class="ef1 mt1"></span>
+															<span class="ef2 mt2"></span>
+															<span class="ef3 mt3"></span>
+															<span class="ef4 mt4"></span>
+														</div>
+													</a></div>
+												</div>
+										
+												<div class="item">
+													<div class="txt"><a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=129767&amp;bbsId=1114">
+														<span class="mt2" >Fitur Khusus 2</span>
+														<strong class="mt3" >Keragaman Ruang Pameran di Seochon</strong>
+														<p class="mt4" >Terletak di dekat Yongchumun, gerbang barat Istana Gyeongbokgung, wilayah Seochon yang mencakup Tongui-dong dan Changseong-dong telah menjadi sentra bagi berbagai ruang pameran, mulai dari ruang alternatif nirlaba sampai galeri komersial yang memamerkan serta menjual karya para seniman kontemporer.</p>
+														<div class="efBox">
+															<span class="ef1 mt1"></span>
+															<span class="ef2 mt2"></span>
+															<span class="ef3 mt3"></span>
+															<span class="ef4 mt4"></span>
+														</div>
+													</a></div>
+												</div>
+										
+												<div class="item">
+													<div class="txt"><a href="https://www.koreana.or.kr/koreana/na/ntt/selectNttInfo.do?nttSn=129768&amp;bbsId=1114">
+														<span class="mt2" >Fitur Khusus 3</span>
+														<strong class="mt3" >Pembukaan Hanok untuk Publik di Seochon</strong>
+														<p class="mt4" >Seochon, bersama dengan Bukchon, dikenal sebagai salah satu desa hanok paling representatif di Seoul. Di antara tempat tersebut, hanok untuk publik yang dikelola oleh Pemerintah Daerah Seoul dan Distrik Jongno-gu telah menjadi tempat populer baru yang mewakili Seochon. Pengunjung tidak hanya dapat merasakan budaya hunian tradisional tetapi juga berpartisipasi dalam berbagai program seni dan budaya yang menarik.</p>
+														<div class="efBox">
+															<span class="ef1 mt1"></span>
+															<span class="ef2 mt2"></span>
+															<span class="ef3 mt3"></span>
+															<span class="ef4 mt4"></span>
+														</div>
+													</a></div>
+												</div>
+										
+									
+									
+								
+	                           
+							</div>
+						</div>
+						<!-- //visual-->
+					</div>
+					
+				</section>
+
+				<section class="section section02">
+					<div class="T2_B02">
+						<!-- Features -->
+						<div class="featureKF container">
+							<h3 class="comTit"><span>Features</span></h3>
+							<div class="gallerylst" id="ftList">
+							  
+
+                            	<div class="item">
+									<ul>
+										<li class="fst mt-act2-left"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1545&bbsId=1114&nttSn=129768">
+											<p><img src="/upload/koreana/na/bbs_1114/ntt_129768/_8d01d233-81fc-4e64-8367-330aab7e010b1737074278616.jpg" alt="Pembukaan Hanok untuk Publik di Seochon" onerror="this.src='/images/co/na/noImg.gif'"></p>
+											<div class="con">
+												<p class="info">
+													<em>Features</em>
+													<span >
+														<em>2024 WINTER</em>
+														
+													</span>
+												</p>
+												<strong class="areCheck">Pembukaan Hanok untuk Publik di Seochon</strong>
+												<span class="areCheck">Seochon, bersama dengan Bukchon, dikenal sebagai salah satu desa hanok paling representatif di Seoul. Di antara tempat tersebut, hanok untuk publik yang dikelola oleh Pemerintah Daerah Seoul dan Distrik Jongno-gu telah menjadi tempat populer baru yang mewakili Seochon. Pengunjung tidak hanya dapat merasakan budaya hunian tradisional tetapi juga berpartisipasi dalam berbagai program seni dan budaya yang menarik. Pemandangan halaman dalam Seochon Lounge, sebuah hanok dua lantai yang telah direnovasi dan terbuka untuk umum. Pengunjung yang terbiasa tinggal di apartemen modern dapat merasakan kehidupan di rumah tradisional Korea. © Pemerintah Metropolitan Seoul</span>
+												<p class="tag">
+	                                                
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+		                                                	<span>#hanok </span>
+		                                               	
+	                                               
+		                                              	
+		                                                	<span>#Seochon</span>
+		                                               	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+                                               </p>
+
+											</div>
+										</a></li>
+
+										<li class="mt-act3-right"><a href="/koreana/na/ntt/selectNttInfo.do?mi=1545&bbsId=1114&nttSn=129767">
+											<p><img src="/upload/koreana/na/bbs_1114/ntt_129767/_4a164683-0bf5-4807-a2f5-0c79926afa261737074034555.jpg" alt="Keragaman Ruang Pameran di Seochon" onerror="this.src='/images/co/na/noImg.gif'"></p>
+											<div class="con">
+												<p class="info">
+													<em>Features</em>
+
+													<span>
+														<em>2024 WINTER</em>
+														
+													</span>
+												</p>
+												<strong class="areCheck">Keragaman Ruang Pameran di Seochon</strong>
+												<span class="areCheck">Terletak di dekat Yongchumun, gerbang barat Istana Gyeongbokgung, wilayah Seochon yang mencakup Tongui-dong dan Changseong-dong telah menjadi sentra bagi berbagai ruang pameran, mulai dari ruang alternatif nirlaba sampai galeri komersial yang memamerkan serta menjual karya para seniman kontemporer. Walkie-talkie-shaking termasuk salah satu pameran di pusat seni dan budaya BOAN1942 pada tahun 2022. Pameran ini menggali esensi komunikasi dengan menghadirkan motif-motif dari walkie-talkie. Dibuka pada tahun 2007, tempat ini yang berlokasi di Seochon menampilkan karya-karya kreatif dan eksperimental dari berbagai genre, termasuk fotografi, seni lukis, seni instalasi, dan seni video. © Goh Jeongkyun</span>
+												<p class="tag">
+                                                
+                                              
+                                               
+                                              
+                                               
+                                              
+                                                <span>#Seochon</span>
+                                               
+                                               
+                                              
+                                                <span>#éksposisi</span>
+                                               
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               </p>
+											</div>
+										</a></li>
+
+										<li class="mt-act3-right"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1545&bbsId=1114&nttSn=129764">
+											<p><img src="/upload/koreana/na/bbs_1114/ntt_129764/_5fb5a28f-7696-40d1-bcf3-c9df8d02ab521737073002752.jpg" alt="Tujuan Wisata Tertua di Seoul" onerror="this.src='/images/co/na/noImg.gif'"></p>
+											<div class="con">
+												<p class="info">
+													<em>Features</em>
+
+													<span>
+														<em>2024 WINTER</em>
+														
+													</span>
+												</p>
+												<strong class="areCheck">Tujuan Wisata Tertua di Seoul</strong>
+												<span class="areCheck">Seochon, sebuah desa di sebelah barat Istana Gyeongbokgung, adalah wilayah yang memiliki sejarah panjang. Selama Dinasti Joseon (1392-1910), wilayah ini merupakan tempat tinggal orang-orang berkuasa seperti keluarga kerajaan dan pembesar, dan masyarakat kelas menengah (kelas yang berada di tengah-tengah antara bangsawan dan rakyat jelata) yang tinggal di sekitaran pusat wilayah. Di era modern, banyak penulis dan seniman beraktivitas di sini. Seochon dikenal dengan perpaduan harmonis antara hanok modern yang dibangun pada tahun 1920-an dan 1930-an serta struktur kontemporer. Gunung Inwang, landmark kawasan ini, menjulang di latar belakang. © Choi Tae-won</span>
+												<p class="tag">
+                                                 
+                                                 
+                                                <span>#Seochon</span>
+                                               
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                </p>
+											</div>
+										</a></li>
+									</ul>
+								</div>
+                                 
+
+                            	<div class="item">
+									<ul>
+										<li class="fst mt-act2-left"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1545&bbsId=1114&nttSn=128148">
+											<p><img src="/upload/koreana/na/bbs_1114/ntt_128148/img_7b372e40-366f-416a-a8f1-a685a1be20061729477307756.jpg" alt="Ikon-Ikon Hongdae yang Tak Terkikis Waktu" onerror="this.src='/images/co/na/noImg.gif'"></p>
+											<div class="con">
+												<p class="info">
+													<em>Features</em>
+													<span >
+														<em>2024 AUTUMN</em>
+														
+													</span>
+												</p>
+												<strong class="areCheck">Ikon-Ikon Hongdae yang Tak Terkikis Waktu</strong>
+												<span class="areCheck">Area Hongdae adalah salah satu pusat keramaian dan destinasi wisata yang representatif di Seoul. Meskipun area Hongdae mengalami perubahan besar akibat komersialisasi yang cepat, tempat-tempat ikonik di sini yang tetap bertahan hingga kini terus menjaga karakter khas daerah ini dengan identitas unik mereka. Homi Art Shop berdiri sebagai saksi transformasi kawasan Hongdae selama setengah abad. Putra pendiri mengambil alih bisnis tersebut pada tahun 1987, dan kini sang cucu juga turut membantu. Logo toko tersebut dirancang pada akhir tahun 1970-an oleh seorang pelanggan tetap, yang saat itu merupakan mahasiswa pascasarjana di Universitas Hongik. Nama “Homi” berarti “seni itu abadi.”</span>
+												<p class="tag">
+	                                                
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+	                                               
+		                                              	
+		                                                	<span>#Hongdae </span>
+		                                               	
+	                                               
+		                                              	
+	                                               
+                                               </p>
+
+											</div>
+										</a></li>
+
+										<li class="mt-act3-right"><a href="/koreana/na/ntt/selectNttInfo.do?mi=1545&bbsId=1114&nttSn=128146">
+											<p><img src="/upload/koreana/na/bbs_1114/ntt_128146/img_28597b81-94aa-4c6a-928a-302f7c82da511729476648553.jpg" alt="Kekuatan Kawasan Kampus &lt;br&gt; dalam Pembentukan Tren" onerror="this.src='/images/co/na/noImg.gif'"></p>
+											<div class="con">
+												<p class="info">
+													<em>Features</em>
+
+													<span>
+														<em>2024 AUTUMN</em>
+														
+													</span>
+												</p>
+												<strong class="areCheck">Kekuatan Kawasan Kampus &lt;br&gt; dalam Pembentukan Tren</strong>
+												<span class="areCheck">Hongdae merupakan suatu wilayah yang sulit untuk didefinisikan secara sederhana atas segala keanekaragamannya. Meski begitu, ada satu karakteristik yang menonjol, yaitu keunggulannya dalam memimpin budaya kontemporer. Budaya yang muncul secara organik di Hongdae kerap menjadi tren baru yang menyebar ke wilayah lain. Ciri khas inilah yang membedakan Hongdae dari kawasan kampus lain pada umumnya. Titik awal lorong mural di seberang Taman Budaya Hongik. Mural yang dilukis di dinding Universitas Hongik ini, yang dibuat sebagai bagian dari Pameran Seni Jalanan Hongdae, baru-baru ini menghilang karena pembangunan kampus bawah tanah universitas tersebut. Namun, mural di sisi seberangnya masih ada.</span>
+												<p class="tag">
+                                                
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                               
+                                              
+                                                <span>#Hongdae</span>
+                                               
+                                               </p>
+											</div>
+										</a></li>
+
+										<li class="mt-act3-right"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1545&bbsId=1114&nttSn=128145">
+											<p><img src="/upload/koreana/na/bbs_1114/ntt_128145/img_385245b9-0270-453e-9064-40ce231b199f1729476142946.jpg" alt="Akselerasi Perkembangan Ekosistem Budaya Hongdae" onerror="this.src='/images/co/na/noImg.gif'"></p>
+											<div class="con">
+												<p class="info">
+													<em>Features</em>
+
+													<span>
+														<em>2024 AUTUMN</em>
+														
+													</span>
+												</p>
+												<strong class="areCheck">Akselerasi Perkembangan Ekosistem Budaya Hongdae</strong>
+												<span class="areCheck">Hingga tahun 1980-an, Hongdae tidak lebih dari sebuah wilayah kampus pada umumnya. Tetapi, pada tahun 1990-an, suasana terbuka dan progresif, mendorong eksperimen dan tantangan kreatif di berbagai bidang. Dalam prosesnya, lingkungan tersebut mengembangkan identitas unik yang kemudian dikenal sebagai “budaya Hongdae”. Kereta api pernah melintasi area dekat Universitas Hongik. Hanya sedikit jejak rel kereta api yang terbengkalai itu yang masih tersisa, tetapi deretan bangunan yang didirikan di sepanjang rel masih bertahan. Dikenal secara kolektif sebagai Seogyo 365, bangunan-bangunan itu mempertahankan pesona lamanya yang unik dan sekarang menjadi rumah bagi kafe, restoran, dan toko.</span>
+												<p class="tag">
+                                                 
+                                                 
+                                               
+                                                 
+                                                <span>#Hongdae</span>
+                                               
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                 
+                                               
+                                                </p>
+											</div>
+										</a></li>
+									</ul>
+								</div>
+                                 
+
+							</div>
+							<div class="control">
+								<a href="#" id="ftPrev"><i class="xi-arrow-left"></i><em class="sr-only">이전으로</em></a>
+								<a href="#" id="ftStop"><i class="xi-pause"></i><em class="sr-only">정지</em></a>
+								<a href="#" id="ftPlay"><i class="xi-play"></i><em class="sr-only">재생</em></a>
+								<a href="#" id="ftNext"><i class="xi-arrow-right"></i><em class="sr-only">다음으로</em></a>
+								<!-- <a href="#"><i class="xi-plus"></i><em class="sr-only">더보기</em></a> -->
+							</div>
+						</div>
+						<!-- //Features -->
+					</div>
+				</section>
+
+				<section class="section section03">
+					<div class="T2_B03">
+						<!-- Culture -->
+						<div class="cltrKF container">
+							<h3 class="comTit"><span>Arts & Culture</span></h3>
+							<div class="gallerylst" id="cltrList">
+                              
+								<div class="item"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1077&bbsId=1119&nttSn=129778">
+									<p><img src="/upload/koreana/na/bbs_1119/ntt_129778/_3f1117c2-cec4-42a9-92a5-ef0d779a2e901737078583877.jpg" alt="Citra Pahlawan dalam Lirik Lagu Lim Young-woong" onerror="this.src='/images/co/na/noImg.gif'"></p>
+									<div class="con">
+ 										<p class="info">
+											<em>Entertainment</em>
+
+											<span>
+												<em>2024 WINTER</em>
+												
+											</span>
+										</p>
+										<strong class="areCheck">Citra Pahlawan dalam Lirik Lagu Lim Young-woong</strong>
+										
+										<!-- what's on 인 경우에는 내용을 표시하지 않는다. -->
+										
+											
+											
+												<span class="areCheck">Kisah penyanyi Lim Young-woong bukan sekadar kisah sukses pribadi. Lagu-lagunya menghibur dan memberi semangat kepada publik, dan para penggemarnya juga menyebarkan pengaruh baik di masyarakat. Sebagian besar penggemar Lim Young-woong adalah orang-orang paruh baya yang membentuk komunitas melalui kegiatan fandom mereka. © Mulgogimusic, CJ ENM</span>
+											
+										
+										
+										<p class="tag">
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                            	<span>#Lim Young-woong</span>
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+                                        </p>
+									</div>
+								</a></div>
+                                
+								<div class="item"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=15630&bbsId=1850&nttSn=129771">
+									<p><img src="/upload/koreana/na/bbs_1850/ntt_129771/_fa69017c-22b2-4892-87b4-f3b9ae0245251737075768181.jpg" alt="Arsitek Ken Sungjin Min: Bahasa Arsitektur sebagai Representasi Kualitas Hidup" onerror="this.src='/images/co/na/noImg.gif'"></p>
+									<div class="con">
+ 										<p class="info">
+											<em>Brick by Brick</em>
+
+											<span>
+												<em>2024 WINTER</em>
+												
+											</span>
+										</p>
+										<strong class="areCheck">Arsitek Ken Sungjin Min: Bahasa Arsitektur sebagai Representasi Kualitas Hidup</strong>
+										
+										<!-- what's on 인 경우에는 내용을 표시하지 않는다. -->
+										
+											
+											
+												<span class="areCheck">Gagasan dalam benak Ken Sungjin Min, Direktur SKM Architects, selalu dipenuhi dengan proyek-proyek yang sedang berlangsung. Seperti pemain baduk yang merenungkan kembali seluruh jalannya pertandingan sebelumnya, bagian terkecil dari proyek pun diingat dan dibayangkannya. Hasil dari pemikiran panjang tersebut adalah keseimbangan antara fungsi yang efisien dan keindahan yang estetis. Memperhatikan hutan lebat di sekelilingnya dan lingkungan alam sekitar, untuk memastikan struktur yang masif tidak terasa mengintimidasi, Ken Sungjin Min merancang Ananti Club Seoul dengan menanamkan sebagian besar bangunannya ke dalam tanah. Dengan ruang yang terlapis dalam lima tingkat mengikuti kontur lahan, bangunan ini memberi kesan seolah menjadi bagian dari alam. Foto:Song Jaeyoung (SKM Architects)</span>
+											
+										
+										
+										<p class="tag">
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                            	<span>#Ken Sungjin Min</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#Arsitek </span>
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+                                        </p>
+									</div>
+								</a></div>
+                                
+								<div class="item"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1079&bbsId=1121&nttSn=129770">
+									<p><img src="/upload/koreana/na/bbs_1121/ntt_129770/_ef62ff48-9369-4d99-9cf9-4f1da2a57a391737075238728.jpg" alt="Film Laga yang Ditata Ulang" onerror="this.src='/images/co/na/noImg.gif'"></p>
+									<div class="con">
+ 										<p class="info">
+											<em>Interview</em>
+
+											<span>
+												<em>2024 WINTER</em>
+												
+											</span>
+										</p>
+										<strong class="areCheck">Film Laga yang Ditata Ulang</strong>
+										
+										<!-- what's on 인 경우에는 내용을 표시하지 않는다. -->
+										
+											
+											
+												<span class="areCheck">Film I, The Executioner karya Ryoo Seung-wan, sekuel dari film larisnya Veteran (2015), mempertanyakan perbedaan antara kebaikan dan kejahatan ketika seorang pembela keadilan mengambil alih keadilan dengan tangannya sendiri. Di sini, sang sutradara berbicara tentang film tersebut dalam sebuah wawancara di Festival Film Cannes. Ryoo Seung-wan adalah seorang sutradara terkenal yang mampu menangkap sisi gelap masyarakat Korea dan sifat manusia dengan wawasan tajam, menciptakan karya yang menggema bagi beragam audiens. Gaya khasnya menggabungkan aksi dinamis, narasi berbasis karakter yang kuat, serta perpaduan mulus antara komentar sosial dan hiburan. Foto: CJ ENM</span>
+											
+										
+										
+										<p class="tag">
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                            	<span>#Film </span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#Ryoo Seung-wan</span>
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+                                        </p>
+									</div>
+								</a></div>
+                                
+								<div class="item"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1546&bbsId=1113&nttSn=129769">
+									<p><img src="/upload/koreana/na/bbs_1113/ntt_129769/_f4f6691c-9092-4385-aba2-a3a1e98aab0b1737075101676.jpg" alt="Kim Min-ki: Legenda Musik yang Terus Hidup" onerror="this.src='/images/co/na/noImg.gif'"></p>
+									<div class="con">
+ 										<p class="info">
+											<em>Focus</em>
+
+											<span>
+												<em>2024 WINTER</em>
+												
+											</span>
+										</p>
+										<strong class="areCheck">Kim Min-ki: Legenda Musik yang Terus Hidup</strong>
+										
+										<!-- what's on 인 경우에는 내용을 표시하지 않는다. -->
+										
+											
+											
+												<span class="areCheck">Kim Min-ki memulai karier musiknya semasa kuliah, dengan menciptakan lagu-lagu ikonik yang dinyanyikan oleh seluruh rakyat Korea. Ia mendirikan Hakchon Theatre, sebuah teater kecil yang telah melahirkan banyak aktor dan musisi berbakat. Rock musikal karyanya, Subway Line 1, mencatat sejarah baru dalam dunia pertunjukan Korea. Pada musim panas 2024, wafat Kim Min-ki menjadi akhir dari sebuah era, menjadikannya legenda dalam dunia musik dan seni pertunjukan Korea. Sebuah adegan dari pementasan musikal rock Subway Line 1 pada tahun 2021. Kim Min-ki mengadaptasi pertunjukan ini pada tahun 1994 dari musikal Jerman dengan judul yang sama, yang pertama kali dipentaskan di Teater GRIPS di Berlin pada tahun 1986. Musiknya diaransemen oleh Jung Jae-il, yang juga menggubah skor untuk film pemenang penghargaan Parasite dan serial Netflix terkenal Squid Game. Subway Line 1 membuka era kejayaan produksi teater kecil di tahun 1990-an. © HAKCHON</span>
+											
+										
+										
+										<p class="tag">
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                            	<span>#Kim Min-ki</span>
+	                                            
+	                                        
+	                                            
+	                                            	<span>#HAKCHON</span>
+	                                            
+	                                        
+	                                            
+	                                        
+                                        </p>
+									</div>
+								</a></div>
+                                
+								<div class="item"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1077&bbsId=1119&nttSn=128157">
+									<p><img src="/upload/koreana/na/bbs_1119/ntt_128157/img_8368b69e-c45c-4994-a15c-7e3fdade35301729488055306.jpg" alt="Memperluas Cakupan Okultisme Korea" onerror="this.src='/images/co/na/noImg.gif'"></p>
+									<div class="con">
+ 										<p class="info">
+											<em>Entertainment</em>
+
+											<span>
+												<em>2024 AUTUMN</em>
+												
+											</span>
+										</p>
+										<strong class="areCheck">Memperluas Cakupan Okultisme Korea</strong>
+										
+										<!-- what's on 인 경우에는 내용을 표시하지 않는다. -->
+										
+											
+											
+												<span class="areCheck">Film sutradara Jang Jae-hyeon “Exhuma” (2024) dirilis tahun ini dan melampaui 10 juta penonton. Ini adalah pencapaian besar. Baru-baru ini film okultisme Korea tidak hanya memasukkan unsur horor saja. Berbagai elemen ditambahkan agar banyak orang bisa menikmatinya. Hal ini juga mematahkan prasangka bahwa okultisme adalah genre yang hanya populer bagi penggemarnya saja. Exhuma menampilkan dua dukun, seorang ahli ilmu ramal, dan seorang pengurus jenazah yang memindahkan lokasi pemakaman yang menyeramkan. Film tahun 2024 ini diakui karena menampilkan genre ilmu gaib Korea dengan memadukan elemen-elemen dari genre hiburan populer lainnya dengan mulus. © HAK CIPTA PADA SHOWBOX AND PINETOWN PRODUCTION TAHUN 2024 DILINDUNGI UNDANG-UNDANG.</span>
+											
+										
+										
+										<p class="tag">
+	                                        
+	                                            
+	                                            	<span>#Entertainment </span>
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+                                        </p>
+									</div>
+								</a></div>
+                                
+								<div class="item"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=15630&bbsId=1850&nttSn=128151">
+									<p><img src="/upload/koreana/na/bbs_1850/ntt_128151/img_ddea28e8-34f7-4eb4-8780-780cbf5785d01729478519802.jpg" alt="Arsitek Minsuk Cho: Memadukan Identitas dengan Identitas Lain" onerror="this.src='/images/co/na/noImg.gif'"></p>
+									<div class="con">
+ 										<p class="info">
+											<em>Brick by Brick</em>
+
+											<span>
+												<em>2024 AUTUMN</em>
+												
+											</span>
+										</p>
+										<strong class="areCheck">Arsitek Minsuk Cho: Memadukan Identitas dengan Identitas Lain</strong>
+										
+										<!-- what's on 인 경우에는 내용을 표시하지 않는다. -->
+										
+											
+											
+												<span class="areCheck">Bangunan-bangunan yang dirancang oleh Minsuk Cho, kepala arsitek Mass Studies, serta-merta menarik perhatian orang dengan bentuk yang unik dan pendekatan yang berani. Hal ini merupakan hasil dari bagaimana Minsuk Cho menghadapi kompleksitas masyarakat modern yang beragam dan bagaimana ia menerima serta menampilkan hal-hal yang berbeda tanpa mengubahnya. Dalam mendesain Paviliun Serpentine, Cho lebih berfokus pada pengunjung yang akan datang untuk melihatnya daripada paviliun itu sendiri. Untuk memberikan pengalaman yang komprehensif, ia memilih untuk tidak membangun bangunan yang lengkap di bagian tengah situs, tetapi malah menyisakan ruang kosong untuk mendukung pergerakan. Atas perkenan Serpentine Galleries, Foto oleh Iwan Baan</span>
+											
+										
+										
+										<p class="tag">
+	                                        
+	                                            
+	                                        
+	                                            
+	                                            	<span>#Brick by Brick</span>
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+                                        </p>
+									</div>
+								</a></div>
+                                
+								<div class="item"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1079&bbsId=1121&nttSn=128150">
+									<p><img src="/upload/koreana/na/bbs_1121/ntt_128150/img_27040ce6-293d-423c-8ed5-987acc562cbb1729477837582.jpg" alt="Menangkap Kegembiraan di Dalam Diri" onerror="this.src='/images/co/na/noImg.gif'"></p>
+									<div class="con">
+ 										<p class="info">
+											<em>Interview</em>
+
+											<span>
+												<em>2024 AUTUMN</em>
+												
+											</span>
+										</p>
+										<strong class="areCheck">Menangkap Kegembiraan di Dalam Diri</strong>
+										
+										<!-- what's on 인 경우에는 내용을 표시하지 않는다. -->
+										
+											
+											
+												<span class="areCheck">Say Sue Me adalah grup musik beranggotakan empat orang yang telah naik ke garis depan kancah musik rock Korea sejak grup tersebut terbentuk pada tahun 2012. Berasal dari pesisir Busan, para musisi tersebut kini tengah membuat gebrakan di panggung internasional. Pada bulan Oktober 2023, Say Sue Me tampil di Tiny Desk Korea, di sana mereka membawakan lagu-lagu mereka yang paling populer, termasuk “Old Town.” Program tersebut, yang tayang perdana pada bulan Agustus 2023, merupakan versi format TV internasional pertama dari serial Tiny Desk Concert yang ikonik oleh penyiar publik AS NPR dan ditayangkan di platform milik operator jaringan seluler Korea Selatan LG U+. © Tiny Desk Korea</span>
+											
+										
+										
+										<p class="tag">
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                            	<span>#Interview</span>
+	                                            
+	                                        
+                                        </p>
+									</div>
+								</a></div>
+                                
+								<div class="item"> <a href="/koreana/na/ntt/selectNttInfo.do?mi=1546&bbsId=1113&nttSn=128149">
+									<p><img src="/upload/koreana/na/bbs_1113/ntt_128149/img_59d74f42-01dd-4f3a-bf7e-e58338aae2001729477566896.jpg" alt="Loncatan Baru Museum Seni Kansong" onerror="this.src='/images/co/na/noImg.gif'"></p>
+									<div class="con">
+ 										<p class="info">
+											<em>Focus</em>
+
+											<span>
+												<em>2024 AUTUMN</em>
+												
+											</span>
+										</p>
+										<strong class="areCheck">Loncatan Baru Museum Seni Kansong</strong>
+										
+										<!-- what's on 인 경우에는 내용을 표시하지 않는다. -->
+										
+											
+											
+												<span class="areCheck">Museum Seni Kansong, yang terletak di Seongbuk-dong, Seoul, merupakan museum seni swasta pertama di Korea yang telah bertahan dalam kondisi sulit untuk meneliti dan melestarikan warisan budaya bagi generasi mendatang. Setelah selesai menjalani renovasi, pameran pembukaan yang kembali dilaksanakan pada paruh pertama tahun ini. Museum Seni Kansong didirikan untuk melindungi dan meneliti kekayaan budaya Korea. Pada tahun-tahun awalnya, museum swasta ini berfokus pada penelitian benda-benda dalam koleksinya. Pada tahun 1971, museum ini dibuka untuk pertama kalinya dengan pameran karya pelukis lanskap era Joseon, Jeong Seon. Sejak saat itu, museum ini telah menyelenggarakan pameran publik singkat setiap musim semi dan musim gugur.</span>
+											
+										
+										
+										<p class="tag">
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                            	<span>#Kansong</span>
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+	                                            
+	                                        
+                                        </p>
+									</div>
+								</a></div>
+                                
+							</div>
+							<div class="control">
+								<a href="#" id="cltrPrev"><i class="xi-arrow-left"></i><em class="sr-only">이전으로</em></a>
+								<a href="#" id="cltrStop"><i class="xi-pause"></i><em class="sr-only">정지</em></a>
+								<a href="#" id="cltrPlay"><i class="xi-play"></i><em class="sr-only">재생</em></a>
+								<a href="#" id="cltrNext"><i class="xi-arrow-right"></i><em class="sr-only">다음으로</em></a>
+								<!-- <a href="#"><i class="xi-plus"></i><em class="sr-only">더보기</em></a> -->
+							</div>
+						</div>
+						<!--//Culture-->
+					</div>
+				</section>
+
+<section class="section section03">
+	<div class="container">
+		<div class="T2_B04">
+			<!-- People -->
+			<div class="peplKF">
+				<h3 class="comTit">
+					<span>LifeStyle</span>
+				</h3>
+				<div class="gallerylst mt-act2" id="peplList">
+					
+						<div class="item">
+							<a href="/koreana/na/ntt/selectNttInfo.do?mi=1074&bbsId=1116&nttSn=129779">
+								<p>
+									<img src="/upload/koreana/na/bbs_1116/ntt_129779/_aff0ba71-b9cf-4cdf-9f2f-635c28add5371737078787708.jpeg" alt="Budaejjigae: Kelezatan Pascaperang" onerror="this.src='/images/co/na/noImg.gif'">
+								</p>
+								<div class="con">
+									<p class="info">
+										<em>K-uisine</em>
+
+										<span>
+											<em>2024 WINTER</em>
+											
+										</span>
+									</p>
+									<strong class="areCheck">Budaejjigae: Kelezatan Pascaperang</strong>
+									<span class="areCheck">
+										Budaejjigae adalah hidangan yang lahir setelah Perang Korea, masa yang penuh tantangan ketika banyak orang Korea berjuang untuk makan satu kali sehari. Masakan ini memuaskan orang-orang dengan porsinya yang banyak. Bukan hanya soal porsi, tetapi bahannya terdiri dari bahan makanan Barat yang diolah dengan cita rasa Korea juga luar biasa. Budaejjigae, hidangan yang menggabungkan bahan-bahan khas Korea seperti kimchi dan gochujang dengan bahan-bahan Barat seperti ham, sosis, dan kacang panggang, menjadi contoh perpaduan dua budaya kuliner yang berbeda.
+									</span>
+									<p class="tag">
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+												<span>#Budaejjigae</span>
+											
+										
+											
+										
+									</p>
+								</div>
+							</a>
+						</div>
+					
+						<div class="item">
+							<a href="/koreana/na/ntt/selectNttInfo.do?mi=1586&bbsId=1130&nttSn=129777">
+								<p>
+									<img src="/upload/koreana/na/bbs_1130/ntt_129777/_c53b0774-b459-4740-be14-adffba7465881737078372771.jpg" alt="Setiap Pelanggan Disambut Bagai Keluarga" onerror="this.src='/images/co/na/noImg.gif'">
+								</p>
+								<div class="con">
+									<p class="info">
+										<em>Another Day</em>
+
+										<span>
+											<em>2024 WINTER</em>
+											
+										</span>
+									</p>
+									<strong class="areCheck">Setiap Pelanggan Disambut Bagai Keluarga</strong>
+									<span class="areCheck">
+										Sering kali, cara paling pasti untuk menemukan tempat makan yang baik saat mengunjungi kota asing adalah dengan bertanya pada sopir taksi. Berkat pengetahuan mereka yang luas tentang daerah setempat, sopir taksi dapat menunjuk restoran terbaik dan terjangkau. Karena saran mereka didasarkan pada pengalamannya bertahun-tahun, biasanya ini merupakan pilihan yang aman. Gamnamujip Gisa Sikdang, yang selalu sibuk, adalah favorit di kalangan sopir taksi di Seoul. Jang Yunsu, pemilik Gamnamujip Gisa Sikdang, membawa nampan berisi hidangan segar kepada para pelanggannya.
+									</span>
+									<p class="tag">
+										
+											
+										
+											
+										
+											
+												<span>#Gisa Sikdang</span>
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+									</p>
+								</div>
+							</a>
+						</div>
+					
+						<div class="item">
+							<a href="/koreana/na/ntt/selectNttInfo.do?mi=1547&bbsId=1120&nttSn=129776">
+								<p>
+									<img src="/upload/koreana/na/bbs_1120/ntt_129776/_5ee15d6a-3a45-41fb-a18f-a1f8b23bb6cc1737078143216.jpg" alt="Jeongseon: Harta Karun Baru di Kota Tambang Batu Bara Tua" onerror="this.src='/images/co/na/noImg.gif'">
+								</p>
+								<div class="con">
+									<p class="info">
+										<em>On the Road</em>
+
+										<span>
+											<em>2024 WINTER</em>
+											
+										</span>
+									</p>
+									<strong class="areCheck">Jeongseon: Harta Karun Baru di Kota Tambang Batu Bara Tua</strong>
+									<span class="areCheck">
+										Jeongseon adalah tempat yang memukau untuk dikunjungi di setiap musim, tetapi pesonanya yang sejati paling terasa ketika musim dingin tiba. Di sini, Anda bisa mengagumi pemandangan salju yang murni dan berkilau, berpadu kontras dengan pekarangan batu bara hitam.
+									</span>
+									<p class="tag">
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+												<span>#Jeongseon</span>
+											
+										
+											
+										
+											
+												<span># kota pertambangan batu bara tua</span>
+											
+										
+									</p>
+								</div>
+							</a>
+						</div>
+					
+						<div class="item">
+							<a href="/koreana/na/ntt/selectNttInfo.do?mi=1074&bbsId=1116&nttSn=128159">
+								<p>
+									<img src="/upload/koreana/na/bbs_1116/ntt_128159/img_8e81ded8-0c06-4621-98db-ce2f9458f8b21729494735170.jpg" alt="Dakhanmari: Hidangan Ayam Khas Seoul" onerror="this.src='/images/co/na/noImg.gif'">
+								</p>
+								<div class="con">
+									<p class="info">
+										<em>K-uisine</em>
+
+										<span>
+											<em>2024 AUTUMN</em>
+											
+										</span>
+									</p>
+									<strong class="areCheck">Dakhanmari: Hidangan Ayam Khas Seoul</strong>
+									<span class="areCheck">
+										Dakhanmari adalah hidangan yang berasal dari Seoul. Hidangan ini diperkirakan muncul sejak tahun 1960-an. Dakhanmari yang disajikan dalam panci sederhana yang biasa dipakai di pedesaan ini memang merupakan hidangan yang enak dan istimewa. Di samping itu, hidangan ini juga merupakan cerminan suatu era, yaitu saat masyarakat harus menanggung kerja keras selama masa pertumbuhan kota metropolitan Seoul. Dakhanmari, hidangan klasik yang berasal dari Seoul, disiapkan dengan merebus ayam utuh dengan berbagai bahan di dalam panci besar. Dapat dinikmati dengan mencelupkan potongan kecil ayam dan bahan lainnya ke dalam saus yang dibuat khusus. © Getty Images Korea
+									</span>
+									<p class="tag">
+										
+											
+										
+											
+										
+											
+										
+											
+												<span>#K-uisine</span>
+											
+										
+											
+										
+											
+										
+											
+										
+									</p>
+								</div>
+							</a>
+						</div>
+					
+						<div class="item">
+							<a href="/koreana/na/ntt/selectNttInfo.do?mi=1586&bbsId=1130&nttSn=128156">
+								<p>
+									<img src="/upload/koreana/na/bbs_1130/ntt_128156/img_b1823054-9a48-4e6e-a989-3070147220cd1729485521561.jpg" alt="Seni Rakyat untuk Semua Orang" onerror="this.src='/images/co/na/noImg.gif'">
+								</p>
+								<div class="con">
+									<p class="info">
+										<em>Another Day</em>
+
+										<span>
+											<em>2024 AUTUMN</em>
+											
+										</span>
+									</p>
+									<strong class="areCheck">Seni Rakyat untuk Semua Orang</strong>
+									<span class="areCheck">
+										Minhwa — lukisan rakyat Korea — tidak begitu dikenal hingga tahun 1960-an. Ketika para kolektor dan peneliti mulai memperhatikannya, minat di kalangan masyarakat umum pun terpicu. Saat ini, minhwa merupakan hobi yang cukup dikenal luas. Jangkauannya pun terus berkembang melalui berbagai kompetisi, pameran seni, dan bahkan pameran galeri. Instruktur minhwa Shin Sang-mi memulai melukis sebagai hobi, tetapi sekarang ia malah mengelola studionya sendiri. Shin Sang-mi menikmati karier keduanya sebagai instruktur lukisan rakyat.
+									</span>
+									<p class="tag">
+										
+											
+												<span>#An Ordinary Day</span>
+											
+										
+											
+												<span>#Minhwa </span>
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+											
+										
+									</p>
+								</div>
+							</a>
+						</div>
+					
+				</div>
+				<div class="control">
+					<a href="#" id="pepPrev">
+						<i class="xi-arrow-left"></i><em class="sr-only">이전으로</em>
+					</a>
+					<a href="#" id="pepStop">
+						<i class="xi-pause"></i><em class="sr-only">정지</em>
+					</a>
+					<a href="#" id="pepPlay">
+						<i class="xi-play"></i><em class="sr-only">재생</em>
+					</a>
+					<a href="#" id="pepNext">
+						<i class="xi-arrow-right"></i><em class="sr-only">다음으로</em>
+					</a>
+					<!-- <a href="#"><i class="xi-plus"></i><em class="sr-only">더보기</em></a> -->
+				</div>
+			</div>
+			<!--//People-->
+		</div>
+		<div class="T2_B06">
+			<!-- subscript -->
+			<div class="subscript mt-act2">
+				<h3>SUBSCRIPTION</h3>
+				<p>You can check the amount by country and apply for a subscription.</p>
+				
+				<a href="/koreana/su/subscribeView.do?mi=1548" target="_self">Subscription Request</a>
+			</div>
+			<!-- //subscript-->
+		</div>
+	</div>
+</section>
+
+<section class="section fp-auto-height">
+				<!-- banner -->
+					<div class="banner">
+						<div class="control">
+							<a href="#" id="bnPrev"><i class="xi-angle-left"></i><em class="sr-only">이전으로</em></a>
+							<a href="#" id="bnStop"><i class="xi-pause"></i><em class="sr-only">정지</em></a>
+							<a href="#" id="bnPlay"><i class="xi-play"></i><em class="sr-only">재생</em></a>
+							<a href="#" id="bnNext"><i class="xi-angle-right"></i><em class="sr-only">다음으로</em></a>
+						</div>
+						<div class="bnlst" id="bnSlide">
+							
+								<div class="bn">
+									<a href="http://www.overseaschf.or.kr/"  target="_blank">
+										<img src="/upload/kf/ba/img_4d178263-3f38-48b5-a37a-0d97aad9323a1619687050116.png" alt="국외소재문화재재단 배너 이미지">
+									</a>
+								</div>
+							
+								<div class="bn">
+									<a href="http://www.koreancenter.or.kr/"  target="_blank">
+										<img src="/upload/ba/img_2d7669b1-70f2-4514-8143-c141ca978eee1682043561423.jpg" alt="연합뉴스 한민족센터 배너 이미지">
+									</a>
+								</div>
+							
+								<div class="bn">
+									<a href="https://www.nahf.or.kr/"  target="_blank">
+										<img src="/upload/kf/ba/img_f30605b4-8061-46be-b7ee-7d0863d8a9fb1619686917788.png" alt="동북아역사재단 배너 이미지">
+									</a>
+								</div>
+							
+								<div class="bn">
+									<a href="http://world.kbs.co.kr/"  target="_blank">
+										<img src="/upload/kf/ba/img_ea0f6ef6-5e31-4f27-b69e-b85616a24f261619686890020.png" alt="KBS World Radio 배너 이미지">
+									</a>
+								</div>
+							
+								<div class="bn">
+									<a href="https://www.aks.ac.kr/index.do"  target="_blank">
+										<img src="/upload/kf/ba/img_c9612e86-2362-4ef3-9f32-ae8444de19781619686857132.png" alt="한국학중앙연구원 배너 이미지">
+									</a>
+								</div>
+							
+								<div class="bn">
+									<a href="http://study.korean.net/"  target="_blank">
+										<img src="/upload/kf/ba/img_a6858474-70b7-4a82-973b-a27b47c36a001619686823489.png" alt="스터디코리안 배너 이미지">
+									</a>
+								</div>
+							
+						</div>
+					</div>
+
+		            <!-- footer -->
+		            
+	                    
+	                    
+	        			     
+
+
+
+
+<!-- footer -->
+<footer id="footer">
+	<div class="ft_wrap">
+		<div class="container">
+			<ul class="lst">
+				<li><a href="/kfEng/cm/cntnts/cntntsView.do?mi=2293&cntntsId=1750">Terms of Use</a></li>
+				<li><a href="/kfEng/cm/cntnts/cntntsView.do?mi=2294&cntntsId=1751">Privacy Policy</a></li>
+				
+                	<li><a href="/kfEng/cm/cntnts/cntntsView.do?mi=2129&cntntsId=1630">Annual Report</a></li>
+				<li><a href="/kfEng/cm/cntnts/cntntsView2.do?mi=2131">Directions</a></li>
+				
+				<!-- <li><a href="/kfEng/cm/cntnts/cntntsView.do?mi=2295&cntntsId=1749">RemoteCall Service</a></li> 210513 삭제요청 옴 -->
+			</ul>
+
+			<!-- site link -->
+			<div class="ftBtn_wrap" style="display:none">
+				<div class="ftBtn">
+					<button type="button">KF SITE<i class="xi-angle-up-thin"></i></button>
+					<div>
+						<ul>
+							<li><a href="http://www.mofa.go.kr/eng/index.do" target="_blank" title="새창으로 열기">Ministry of Forein Affairs</a>
+							<li><a href="http://www.ikorea.ac.kr/" target="_blank" title="새창으로 열기">The Center for information on Korea Culture</a>
+							<li><a href="http://www.korea.net/index.do" target="_blank" title="새창으로 열기">Dynamic Korea</a>
+							<li><a href="http://world.kbs.co.kr/korean/" target="_blank" title="새창으로 열기">KBS World Radio</a>
+							<li><a href="http://www.historyfoundation.or.kr/" target="_blank" title="새창으로 열기">Northeast Asian History Foundation</a>
+							<li><a href="http://www.acrc.go.kr/acrc/index.do" target="_blank" title="새창으로 열기">Anti-curruption &amp; Civil Rights Commission</a>
+		                    <li><a href="https://435b7558371e22c59c9daa9694fe060d2a82f555-www.googledrive.com/host/0B5eroT8pQld8V0txV0ZNZjU2amM/" target="_blank" title="새창으로 열기">Korean Collection Consortium of North America </a>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="ft_box container">
+		<a href="#" class="logo"><img src="/images/web/kfEng/main/f_logo.png" alt="KOREA FOUNDATION KF-한국교류재단"></a>
+		<div class="box_info clearfix">
+            <address>
+            
+          	  
+            	<span class="fsSCD"><!----> <em>55, Sinjung-ro, Seogwipo-si, Jeju-do, 63565, Republic of Korea</em> <em>Tel : +82-1644-7707(+82-64-804-1000)</em>   <em>Fax : +82-64-804-1274</em> <em>E-Mail : webmaster@kf.or.kr</em></span>
+            	<span><strong>[KF Global Center]</strong><!----> <em>19 Fl., Mirae Asset Center 1 West Tower, 26 Euljiro 5-gil, Jung-gu, Seoul, 04539, Republic of Korea </em> <em>Tel : +82-2-2151-6565</em> <em>Fax : +82-2-2151-6592</em> <em>E-Mail : webmaster@kf.or.kr </em></span>
+                <span><strong>[Korea-Central Asia Cooperation Forum Secretariat]</strong><!----> <em>04539 19 Fl., Mirae Asset Center 1 West Tower, 26 Euljiro 5-gil, Jung-gu, Seoul, 04539, Republic of Korea</em> <em>Tel : +82-2-2151-6565</em> <em>Fax : +82-2-2151-6592</em> <em>E-Mail : casecretariat@kf.or.kr </em></span>
+                <span><strong>[ASEAN Culture House]</strong><!----> <em>162, Jwadong-ro, Haeundae-gu, Busan, 48108, Republic of Korea</em> <em>Tel : +82-51-775-2000</em> <em>Fax : +82-51-775-2020</em> <em>E-Mail : ach@kf.or.kr</em></span>
+          	   
+            
+            	<span><!----> <strong>Business Number</strong> <em> 104-82-04473 </em>  <strong>Mail-order-sales registration number</strong>  <em>2021-제주대륜-49</em> <strong> Representative</strong> <em>Song Guido</em></span>
+            
+            	<p>Copyright ⓒ The Korea Foundation. All rights reserved. </p>
+            </address>
+            
+           
+		
+
+        </div>
+		<!-- <p>COMMENTS AND QUESTIONS TO <strong>webmaster@kf.or.kr</strong></p> -->
+
+		
+
+	</div>
+
+	<a href="#" class="moveTop"><i class="xi-arrow-up"></i><em class="sr-only">상단으로 이동</em></a>
+</footer>
+<!-- // footer -->
+
+
+
+
+	                    
+                    
+		            <!-- // footer -->
+				</section>
+
+<script>
+</script>
+                
+
+
+
+
+
+
+
+<script>
+
+//웹접근성 
+
+
+	
+	
+$(document).ready(function(){ 
+	
+	var firstDialog = $("#ui-id-1").parents('.ui-dialog')
+	var firstDialog2 = $("#ui-id-2").parents('.ui-dialog')
+	$('.ui-dialog').insertBefore('#skipArea');
+	firstDialog2.insertBefore(firstDialog);
+	
+	$('.ui-dialog').attr('tabindex','0');
+	$('.ui-dialog-titlebar .ui-dialog-titlebar-close').attr('tabindex','0').focus();
+	//2개일때  라벨 변경 
+	$("#ui-id-1").parents('.ui-dialog').find( "label[for='agree0']").attr('for', 'agree1');
+	$("#ui-id-1").parents('.ui-dialog').find("#agree0").attr('id', 'agree1')
+	
+}); 
+
+/* $(document).ready(function(){ 
+	$('.ui-dialog').attr('tabindex','0');
+	$('.ui-dialog-titlebar .ui-dialog-titlebar-close').attr('tabindex','0').focus();
+	//2개일때  라벨 변경 
+	$("#ui-id-2").parents('.ui-dialog').find( "label[for='agree0']").attr('for', 'agree1');
+	$("#ui-id-2").parents('.ui-dialog').find("#agree0").attr('id', 'agree1')
+	
+	$('.ui-dialog').insertBefore('#skipArea');
+}); 
+ */
+</script>
+
+
+	
+
+	
+		
+
+		<!-- 팝업 리스트 -->
+		
+		<!-- /팝업리

@@ -1,0 +1,1409 @@
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="ko">
+
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Koreana-Features</title>
+		<meta name="keywords" content="Features">
+		<meta name="description" content="Features 홈페이지에 오신 것을 환영합니다. ">
+		<link rel="stylesheet" href="/css/web/koreana/sub_cnt.css" media="all">
+		<link rel="stylesheet" href="/00_common/css/dgtl.css" media="all">
+		<link rel="stylesheet" href="/00_common/css/ntt.css" media="all">
+		<link rel="stylesheet" href="/00_common/js/mCustomScrollbar/jquery.mCustomScrollbar.css" media="all">
+
+		<link rel="image_src" href="https://www.kf.or.kr/images/web/kf/main/f_logo.png" />
+		<meta property="og:type" content="website">
+        <meta property="og:title" content="한국국제교류재단 KF"/>
+        <meta property="og:description" content="한국국제교류재단은 대한민국의 대표 공공기관으로서 외국과의 교류사업을 통해 한국에 대한 이해를 제고하고 국제적 우호친선을 증진">
+        <meta id="meta-url" property="og:url" content="">
+		<meta property="og:image" content="https://www.kf.or.kr/images/web/kf/main/f_logo.png">
+
+		<script src="/00_common/js/jquery-1.11.2.min.js"></script>
+		<script src="/00_common/js/jquery-ui.min.js"></script>
+		<script src="/js/jquery.form.min.js"></script>
+
+		<script src="/00_common/js/modernizr-2.6.2.min.js"></script>
+		<script src="/00_common/js/slick.min.js"></script>
+		<!-- <script src="/00_common/js/jquery.fullPage.js"></script> -->
+		<script src="/00_common/js/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
+		<script src="/00_common/js/ScrollMagic.min.js"></script>
+		<script src="/00_common/js/T3_layout.js"></script>
+		<script src="/00_common/js/con_com.js"></script>
+		<script src="/00_common/js/board.js"></script>
+
+		<script src="/00_common/js/common.js"></script>
+        <script src="/js/web/koreana/common.js"></script>
+		<script src="/js/web/koreana/sub.js"></script>
+
+		
+			
+			
+				<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+				<script src="https://ssl.pstatic.net/share/js/naver_sharebutton.js"></script>
+			
+		
+
+		<script type="text/javascript">
+	    	$(document).ready(function() {
+	    		var agent = navigator.userAgent.toLowerCase();
+	     		if ( navigator.userAgent.indexOf("Trident") > -1 && "" == 1) {
+	     			if("ENG" == "KOR" || "ENG" == "" || "ENG" == undefined) {
+	     				alert('일부 웹사이트는 Internet Explorer에서 잘 작동하지 않을 수 있습니다. 다른 브라우저를 사용하여 주시기 바랍니다.') ;
+	     			} else {
+	     				alert('Some websites may not work well in Internet Explorer. Please use a different browser.') ;
+	     			}
+	    		}
+
+	    	});
+        </script>
+
+	</head>
+    <body oncontextmenu="return false">
+
+	<!-- skipArea -->
+		<input type="hidden" id="languageType" value="ENG"/>
+		<div id="skipArea"><a href="#gnb">메인메뉴 바로가기</a><a href="#container">본문으로 바로가기</a></div>
+
+		<div id="wrap">
+        	<!-- header  -->
+            
+
+
+
+
+
+<!-- header  -->
+<header id="header" class="sub_header">
+<!-- 전환 추적 태그 삽입 start -->
+<!-- 글로벌 구글 태그 (gtag.js) 통합 코드 --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D4WVCBH82G"></script> 
+<script> window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+// GA4 설정 (디버그 모드 포함)
+gtag('config', 'G-D4WVCBH82G');
+
+// 구글 광고(AW) 설정
+//gtag('config', 'AW-482413566');
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics, Google Ads: 482413566 -->
+<script>
+
+window.onload = function(){
+	var l_from_koreana_do = $("#languageType").val();
+	console.log(l_from_koreana_do);
+
+	if(l_from_koreana_do == "CHN") {
+		$("#container").addClass('lang_cn');
+	}
+	else if(l_from_koreana_do == "JPN"){
+		$("#container").addClass('lang_cn');
+	}
+	else if(l_from_koreana_do == "VNM"){
+		$("#container").addClass('lang_vnm');
+	}
+	else if(l_from_koreana_do == "ARE"){
+		$("#container").addClass('lang_are');
+		$(".img-cap").addClass('are_imgcap');
+	}
+
+	else {
+		$("#container").removeClass('lang_cn');
+		$("#container").removeClass('lang_are');
+		$(".img-cap").removeClass('are_imgcap');
+	}
+
+}
+</script>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '4183848851733798');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=4183848851733798&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+	<script>
+		!function (w, d, t) {
+		  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+
+		  ttq.load('C3NOOKB3G487IS97LMF0');
+		  ttq.page();
+		}(window, document, 'ttq');
+	</script>
+<script src="/js/webtrends.js"></script>
+<!-- 전환 추적 태그 삽입 end   -->
+
+	<div class="header_wrap">
+		<div class="container">
+			<!-- KF logo -->
+			
+			
+				<h1><a href="javascript:" onclick="javascript:location.href='https://www.kf.or.kr/kid/ssoLoginChecker.do?rtnUrl='+encodeURIComponent('https://www.kf.or.kr/kfEng/main.do?langTy=ENG')"><img src="/00_common/images/T3_layout/kf_sub_log.jpg" alt="KF"><em>KOREA FOUNDATION</em></a></h1>
+			
+			<!--   href="/koreana/main.do"  -->
+			<div class="top_link">
+				<!-- 한영근 주임 요청으로 삭제
+				<div class="year_select">
+					<a href="javascript:void(0);" class="select_btn">back issue</a>
+					<ul>
+						<li><a href="">2021.03.</a></li>
+						<li><a href="">2021.02.</a></li>
+						<li><a href="">2021.01.</a></li>
+						<li><a href="">2020.12.</a></li>
+						<li><a href="">2020.11.</a></li>
+						<li><a href="">2020.10.</a></li>
+						<li><a href="">2020.09.</a></li>
+						<li><a href="">2020.08.</a></li>
+						<li><a href="">2020.07.</a></li>
+						<li><a href="">2020.06.</a></li>
+						<li><a href="">2020.05.</a></li>
+						<li><a href="">2020.04.</a></li>
+						<li><a href="">2020.03.</a></li>
+						<li><a href="">2020.02.</a></li>
+						<li><a href="">2020.01.</a></li>
+						<li><a href="">2019.12.</a></li>
+					</ul>
+				</div>
+				 -->
+				<ul class="linklst">
+					<li>
+						
+							<a href="javascript:" onclick="goUnityLoginPage('koreana','','ENG');">LOGIN</a>
+						
+						
+					</li>
+					<li>
+						
+						
+							<a href="javascript:;" onclick="goUnityJoinPage('koreana','')">JOIN</a>
+						
+					</li>
+					<li class="lang">
+                        <a href="javascript:void(0);">
+                        
+                        
+                        ENG
+                        
+                        </a>
+						<ul class="lst langList">
+                        <li><a href="/koreana/main.do?langTy=KOR">KOR</a></li>
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=ARE">ARE</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=CHN">CHN</a></li>
+                            
+                        
+                        	
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=ESP">ESP</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=FRA">FRA</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=GER">GER</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=IDN">IDN</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=JPN">JPN</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=RUS">RUS</a></li>
+                            
+                        
+                        	
+                            	<li><a href="/koreana/main.do?langTy=VNM">VNM</a></li>
+                            
+                        
+						</ul>
+					</li>
+				</ul>
+				<p class="snslst">
+					<a href="https://www.facebook.com/koreafoundation" target="_blank" title="새창열기"><i class="xi-facebook"></i><em class="sr-only">페이스북 바로가기</em></a>
+					<a href="https://www.instagram.com/koreafoundation/" target="_blank" title="새창열기"><i class="xi-instagram"></i><em class="sr-only">인스타그램 바로가기</em></a>
+					<a href="https://www.youtube.com/user/TheKoreaFoundation" target="_blank" title="새창열기"><i class="xi-youtube-play"></i><em class="sr-only">유튜브 바로가기</em></a>
+					<a href="https://twitter.com/koreafoundation" target="_blank" title="새창열기" class="twitter-icon"><em class="sr-only">x(트위터)바로가기</em></a>
+				</p>
+				<div class="kfPlus">
+					<a class="hashSlide" href="#kfPlusList">KF 플러스</a>
+				</div>
+				<!-- <p class="popBtn"><a href="#" id="uppopBtn" class="on">POPUP</a></p> -->
+			</div>
+		</div>
+
+
+		<!-- logo -->
+		<h2>
+			<a href="/koreana/main.do?langTy=ENG"><img src="/images/web/koreana/main/logo.png" alt="KOREANA 웹진 - KOREAN CULTURE & ART"></a>
+		</h2>
+
+		<div id="nav">
+					<div id="gnb">
+				<!--FMENU_START-->
+						
+							<div class="dep01_tit container">
+							<ul>
+								<li><a href="/koreana/na/ntt/selectNttList.do?mi=1544&bbsId=1114"  ><span>Features</span></a></li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1113&bbsIds=1121&bbsIds=1115&bbsIds=1850&bbsIds=1125&bbsIds=1119&mi=1064"  ><span>Arts & Culture</span></a></li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1120&bbsIds=1130&bbsIds=1126&bbsIds=1116&mi=1065"  ><span>Lifestyle</span></a></li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1123&bbsIds=1122&bbsIds=1811&bbsIds=1118&bbsIds=1340&bbsIds=1117&bbsIds=1810&mi=1066"  ><span>Past Series</span></a></li>
+								<li>
+									
+										<a href="/koreana/cm/cntnts/cntntsView.do?mi=1088&cntntsId=2281"  ><span>About</span></a>
+										
+								</li>
+								<li><a href="/koreana/an/arn/selectArList.do?mi=1068"  ><span>Archive</span></a></li>
+							</ul>
+							</div>
+				<!--FMENU_END-->
+
+				<div class="wrap">
+				<!--START-->
+						
+							<ul class="dep01">
+								<li><a href="/koreana/na/ntt/selectNttList.do?mi=1544&bbsId=1114"  ><span>Features</span></a></li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1113&bbsIds=1121&bbsIds=1115&bbsIds=1850&bbsIds=1125&bbsIds=1119&mi=1064"  ><span>Arts & Culture</span></a>
+									<ul class="dep02">
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1546&bbsId=1113"  ><span>Focus</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1079&bbsId=1121"  ><span>Interview</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1069&bbsId=1115"  ><span>Guardians of Heritage</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=15630&bbsId=1850"  ><span>Brick by Brick</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1082&bbsId=1125"  ><span>Art Review</span></a></li>							
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1077&bbsId=1119"  ><span>Entertainment</span></a></li>	
+									</ul>
+								</li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1120&bbsIds=1130&bbsIds=1126&bbsIds=1116&mi=1065"  ><span>Lifestyle</span></a>
+									<ul class="dep02">
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1547&bbsId=1120"  ><span>On the Road</span></a></li>				
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1586&bbsId=1130"  ><span>Another Day</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1083&bbsId=1126"  ><span>Books & More</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1074&bbsId=1116"  ><span>K-uisine</span></a></li>
+										
+									</ul>
+								</li>
+								<li><a href="/koreana/na/ntt/multiNttList.do?bbsIds=1123&bbsIds=1122&bbsIds=1811&bbsIds=1118&bbsIds=1340&bbsIds=1117&bbsIds=1810&mi=1066"  ><span>Past Series</span></a>
+									<ul class="dep02">
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1078&bbsId=1123"  ><span>Lifestyle</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1081&bbsId=1122"  ><span>In Love with Korea</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=15291&bbsId=1811"  ><span>Greener Pastures</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1076&bbsId=1118"  ><span>Image of Korea</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1587&bbsId=1340"  ><span>Video</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=1075&bbsId=1117"  ><span>Tales of Two Koreas</span></a></li>
+										<li><a href="/koreana/na/ntt/selectNttList.do?mi=15290&bbsId=1810"  ><span>What&apos;s On</span></a></li>
+									</ul>
+								</li>
+							<!-- 	<li><a href="/koreana/cm/cntnts/cntntsView.do?mi=1088&cntntsId=2301"  ><span>About</span></a> -->
+								
+								<li>
+									
+										<a href="/koreana/cm/cntnts/cntntsView.do?mi=1088&cntntsId=2281"  ><span>About</span></a>
+										
+								
+								
+									<ul class="dep02">
+										<!-- <li><a href="/koreana/cm/cntnts/cntntsView.do?mi=1088&cntntsId=1400"  ><span>About Koreana</span></a></li> -->
+										   <li>
+												
+													<a href="/koreana/cm/cntnts/cntntsView.do?mi=1088&cntntsId=2281"  ><span>About Koreana</span></a>
+													
+													
+													<li>
+										
+										<li><a href="/koreana/su/subscribeView.do?mi=1548"  ><span>Subscribe</span></a></li>
+										<li><a href="/koreana/ad/cu/contactUsInsertPage.do?sysId=koreana"  ><span>Contact Us</span></a></li>
+									</ul>
+								</li>
+								<li><a href="/koreana/an/arn/selectArList.do?mi=1068"  ><span>Archive</span></a></li>
+							</ul>
+				<!--END-->
+				</div>
+				</div>
+				   <div class="gnbblind"></div>
+				</div>
+
+
+
+          <div class="top_util">
+              <!-- search -->
+              <a href="#searchFull" class="btnSrch hashSlide" id="srchOpen"><i class="xi-search"></i><em class="sr-only">통합검색열기</em></a>
+
+              <!-- fullMenu -->
+              <a href="#fullMenu" class="fullmenu" id="fullmenuOpen">전체메뉴<span></span><span></span><span></span></a>
+          </div>
+      </div>
+  </header>
+  <!-- //header -->
+
+
+            <!-- //header  -->
+
+	         <!-- container -->
+			<div id="container" class="subCntBody clearfix">
+
+				<div class="subLocation">
+					<div class="sub_container">
+						
+
+
+
+
+<script>
+
+	
+		
+function subtopMenuGo(cnncId, obj,ty){
+	if(cnncId != ''){
+		
+		$.ajax({
+			
+			url     : "/{ctx}/mn/menu/selectMenuCnncUrl.do",
+			async   :false,
+			datatype:"json",
+			data    :{
+						cnncId : cnncId,
+						menuTy : ty
+			},
+			success : function(data){
+				var url;	
+
+						
+				if(data.menuTy == 'MENU'){
+					url = '#';
+				}else if(data.menuTy == 'BBS'){
+					url = data.menuUrl+"?mi="+data.menuId+"&bbsId="+data.cntntsId;
+				}else if(data.menuTy == 'SUB'){
+					url = data.menuUrl+"?mi="+data.menuId+"&cntntsId="+data.cntntsId;
+				}else{
+					url = data.menuUrl+"?mi="+data.menuId;
+				}
+				location.href = url;	
+			}
+			
+		});
+		//ajax 끝
+	
+	}else{ // 연결 메뉴가 없는 메뉴일 경우
+		if($(obj).attr('data-param') != ''){
+			var data_param = $(obj).attr('data-param');
+			
+			let firstIndex = data_param.indexOf('?');
+			if(firstIndex !== -1){
+				let secondIndex = data_param.indexOf('?', firstIndex + 1);
+				if(secondIndex !== -1){
+					location.href = $(obj).attr('data-param').replaceAll('?mi','&mi');					
+				}else{
+					location.href = $(obj).attr('data-param');
+				}
+			}			
+		}
+		
+	}	
+}						
+
+ 
+</script>
+<nav id="lnb"> 
+	<span class="home"><i class="xi-home"></i><em class="sr-only">HOME</em></span>
+	<ul class="lnb">
+
+		
+		
+		
+			
+			
+				
+			
+			
+			
+		
+
+		
+			
+				<li class="active"><a href="javascript:" ><span>Features</span></a>
+					<ul class="lnb_dep02">
+						
+					</ul>
+				</li>										
+			
+			
+			
+			
+				
+	
+		
+		
+			
+			
+			
+			
+				
+					
+						
+					
+					
+				
+			
+		
+
+		
+			
+			
+			
+				<li><a href="javascript:" onclick="subtopMenuGo('',this,'h')" data-param="/koreana/na/ntt/multiNttList.do?bbsIds=1113&bbsIds=1121&bbsIds=1115&bbsIds=1850&bbsIds=1125&bbsIds=1119&mi=1064"  ><span>Arts &amp; Culture</span></a></li>
+			
+			
+				
+	
+		
+		
+			
+			
+			
+			
+				
+					
+						
+					
+					
+				
+			
+		
+
+		
+			
+			
+			
+				<li><a href="javascript:" onclick="subtopMenuGo('',this,'h')" data-param="/koreana/na/ntt/multiNttList.do?bbsIds=1120&bbsIds=1130&bbsIds=1126&bbsIds=1116&mi=1065"  ><span>Lifestyle</span></a></li>
+			
+			
+				
+	
+		
+		
+			
+			
+			
+			
+				
+					
+						
+					
+					
+				
+			
+		
+
+		
+			
+			
+			
+				<li><a href="javascript:" onclick="subtopMenuGo('',this,'h')" data-param="/koreana/na/ntt/multiNttList.do?bbsIds=1123&bbsIds=1122&bbsIds=1811&bbsIds=1118&bbsIds=1340&bbsIds=1117&bbsIds=1810&mi=1066"  ><span>Past Series</span></a></li>
+			
+			
+				
+	
+		
+		
+			
+			
+			
+			
+				
+					
+						
+					
+					
+				
+			
+		
+
+		
+			
+			
+			
+				<li><a href="javascript:" onclick="subtopMenuGo('',this,'h')" data-param="/koreana/cm/cntnts/cntntsView.do?mi=1067&cntntsId=2301"  ><span>About</span></a></li>
+			
+			
+				
+	
+		
+		
+			
+			
+			
+			
+				
+					
+					
+						
+					
+				
+			
+		
+
+		
+			
+			
+			
+				<li><a href="javascript:" onclick="subtopMenuGo('',this,'h')" data-param="/koreana/an/arn/selectArList.do?mi=1068"  ><span>Archive</span></a></li>
+			
+			
+				
+	
+
+
+
+
+ </ul>
+</nav>
+
+
+
+
+						
+
+
+
+<!-- sns -->
+<div class="snsBox">
+	<button type="button" class="btnShare" title="공유하기"><i class="xi-share-alt-o"></i><em class="sr-only">SNS 공유</em></button>
+	<div class="sns_more">
+		<a href="#" title="네이버 바로가기"><i class="xi-naver"></i><em class="sr-only">네이버 공유</em></a>
+		<a href="javascript:sendLink()" id="kakao-link-btn" title="카카오 바로가기"><i class="xi-kakaotalk"></i><em class="sr-only">카카오 공유</em></a>
+		<a href="#"  title="트위터/ 새 창 열림" class="s-twitter-icon"><em class="sr-only">트위터 공유</em></a>
+		<a href="#" title="페이스북 바로가기"><i class="xi-facebook"></i><em class="sr-only">페이스북 공유</em></a>
+		<a href="javascript:fn_shareCopyLink()" title="URL 복사"><i class="xi-link"></i><em class="sr-only">URL 복사</em></a>
+	</div>
+	<button type="button" class="btnPrint" title="인쇄" onclick="kf_Print()"><i class="xi-print"></i><em class="sr-only">인쇄</em></button>
+</div>
+<!-- //sns -->
+					</div>
+				</div>
+
+		   	  <!-- sub content -->
+		   	  <!-- <section id="subContent"> -->
+              <div id="sub_content">
+                    <div class="title_area sub_container">
+                        <h2>Features</h2>
+                    </div>
+                    <div id="cntntsView">
+                        <div class="sub_container">
+                            
+
+
+
+<div>
+   <!--START-->
+										
+    <!--END-->
+</div>
+	
+
+
+
+
+                        </div>
+                        
+
+
+
+
+ <form name="srchForm" id="srchForm" method="post">
+ 	<input type="hidden" name="csrfToken" value="5f2c30b0-eeec-4564-96eb-2ca34502f74a"/>
+ 	<input type="hidden" name="mi"  value="1544"/>
+	<input type="hidden" name="nttSn" id="nttSn">
+	<input type="hidden" name="bbsId" id="bbsId">
+
+	<!-- 관리자 페이지 접속시 -->
+	
+	<!-- //관리자 페이지 접속시 -->
+</form>
+
+
+<div class="sub_container">
+	
+	<section class="section section01">
+		<div class="gallerylst" id="cltrList">
+		
+			
+				<div class="item"><a href="/koreana/na/ntt/selectNttInfo.do?nttSn=138482&bbsId=1114"  data-url="/koreana/na/ntt/selectNttInfo.do" data-nm="nttSn" data-param="138482" class="black nttInfoBtn">
+						<p>
+							<img src="/upload/koreana/na/bbs_1114/ntt_138482/_0e0b2e52-e46c-448d-b567-869726850b961783647876011.jpg" width="329px;" height="200px;" onerror="this.src='/images/co/na/noImg.gif'" alt="Fermenting Future Success in Hansik">
+						</p>
+						<div class="con">
+							<p class="info">
+								<em>Features</em>
+
+								<span>
+									<em>2026 SUMMER</em>
+									
+								</span>
+							</p>
+							<strong class="areCheck">Fermenting Future Success in Hansik</strong>
+							
+							<span class="areCheck">Choi Jung-yoon is one of the foremost advocates for Korean cuisine on the global stage. In 2023, she founded the nonprofit NANRO Foundation to help build a sustainable ecosystem for Korean food, and in 2025 she was appointed Korea chair of the World’s 50 Best Restaurants organization. At a traditional teahouse in Seoul’s historic Bukchon Hanok Village, she discussed the future of Korean fine dining. 
+  
+ 
+  
+  Choi Jung-yoon, chair of the NANRO Foundation, is committed to building a sustainable future for Korea’s gastronomic culture through education, research, and collaboration.  
+  
+  When the weather turned cold in the tenth lunar month, scholars of the Joseon Dynasty (1392–1910) gathered around charcoal braziers to grill meat, compose poetry, and enjoy one another’s company. This convivial custom, which was popular in Hanyang (present-day Seoul) in the 18th century, was known as nanrohoe, with nanro meaning “brazier” and hoe meaning “gathering.” Inspired by the tradition, Choi Jung-yoon launched Community NANRO, a gastronomic gathering, in 2022.  
+ Community NANRO is devoted to exploring Korean cuisine. Its members include some of Korea’s most respected chefs and specialists from a wide range of fields. Since its founding, it has hosted more than forty gatherings and welcomed over six hundred participants, becoming a platform for examining the current state of Korean cuisine and envisioning its future. In 2023, Choi established the NANRO Foundation to cultivate the next generation of Korean culinary talent and promote international exchange.  
+ That same year, Choi co-authored The Korean Cookbook with Chef Jung-hyun Park, who runs the two-Michelin-star restaurant Atomix in Manhattan’s NoMad neighborhood together with his wife Ellia Park. Published by Phaidon Press, the internationally renowned arts publisher, the book was the culmination of a decade of research and helped introduce Korean cuisine to a wider global readership.  
+ In 2024, the NANRO Academy was launched as one of the foundation’s programs. In 2025, Choi was appointed Korea chair of the World’s 50 Best Restaurants, a list and award by British media company William Reed. While the Michelin Guide is known for its rigorous and relatively conservative evaluation standards, the World’s 50 Best Restaurants places greater emphasis on establishments that shape trends and influence the direction of contemporary gastronomy.  
+ These achievements represent the latest chapter in Choi’s decades-long engagement with Korean cuisine and fine dining. After working in restaurants at The Westin Josun Seoul and Hyatt Regency Perth, she moved to Spain in 2007, where she gained experience at the legendary three-Michelin-starred El Bulli restaurant on the Costa Brava and the Alícia Foundation, a leading culinary research institute in Catalonia. There, she developed a systematic approach to analyzing ingredients and cuisine with scientific precision.  
+ From 2010 until the spring of 2025, Choi led the Culinary Research Center of Sempio, Korea’s oldest food brand, where she devoted herself to reinterpreting jang — the traditional fermented sauces and pastes at the heart of Korean cuisine — for the contemporary era. Through rigorous scientific research, the center approaches Korean cuisine from multiple perspectives, seeking to bridge tradition and innovation.  
+ We met at Heon, a teahouse set up in a renovated traditional house at Bukchon Hanok Village in Seoul’s Jongno District, to hear her thoughts on the current state of Korean cuisine and where it may be headed next.  
+ 
+ What factors have driven the rise of fine dining in Korea over the last decade? 
+ There is a pattern to how economies develop: once incomes reach a certain level, people start spending on experiences rather than material things. Korea’s GDP crossed the thirty-thousand-dollar mark in 2017, and the Seoul edition of the Michelin Guide appeared around the same time. That timing speaks volumes. But the ambition of the chefs was just as important. International travel was tightly controlled through the 1980s. After those restrictions were lifted in 1989, chefs who had studied abroad or worked in leading restaurants outside of Korea came home and set out to build something from the ground up. It demanded extraordinary effort.  
+  
+ 
+ Why is Korean fine dining attracting so much global attention today? 
+ Korea possesses a long-standing culinary asset: fermentation. When discussing Korean food, fermentation is the topic that most captivates leading chefs and international gourmands. Fermentation isn’t uniquely Korean, but few cultures have built it into daily life the way Korea has, where making kimchi at home isn’t some project; it’s simply a given. In the early 2010s, acidity came to the forefront of global gastronomy, and that aligns precisely with the qualities that fermentation brings to food. When I was at El Bulli and the Alícia Foundation, some of Spain’s finest chefs said something that stayed with me: Korean fermentation was exactly what I should be studying. Coming back to Korea and joining Sempio was part of that. I needed to understand fermentation properly from the inside out.  
+  
+ 
+ What aspects of Korean cuisine resonate most strongly with international chefs? 
+ Different things, as it turns out. European chefs tend to approach fermentation like researchers. Japanese chefs recognize the Korean reverence for ingredients but are caught off guard by the boldness and deliberate rusticity of Korean cuisine. Southeast Asian chefs, on the other hand, find their footing quickly. Fermentation and spice are a shared language, so the conversation starts almost immediately.  
+  
+ 
+ How should Korean cuisine adapt to local tastes in other countries? 
+ Start in a different place. A restaurant survives by being loved, so what the guest wants is what matters. Culture isn’t fixed; it grows from how people live with it. Consider gochujangjjigae [red pepper paste stew]. Is that Korean food? Scholars from the Joseon Dynasty probably wouldn’t have thought so. Koreans are generally believed to have begun widely consuming red pepper paste only around the 19th century. And yet today, gochujang, ramyeon [instant noodles], and tteokbokki [spicy rice cakes] sit at the very center of what people associate with Korean food.  
+ Localization works the same way. A cuisine that refuses change, growth, and new combinations eventually loses relevance. It becomes isolated and, over time, risks disappearing. Right now, gochujang and ramyeon are having their moment, but the spicy side of Korean food is only its starting point. Get someone in through the spicy side, and Korean cuisine has a way of drawing them further in unexpectedly.  
+ 
+   
+   The NANRO Academy educates restaurant professionals on hansik traditions. Pictured are meju — fermented soybean blocks essential for soy sauce and pastes — crafted at the Kim Myung-sung Fermentation Research Institute. Courtesy of the NANRO Foundation  
+  
+  
+ 
+ Can the contrast between Korean food culture and Western fine dining be reconciled? 
+ Fine dining runs on precision — precision in temperature, timing, and the chef’s creative intent. Increasingly, restaurants are finding ways to apply that precision without sacrificing what makes Korean cuisine distinctive. Onjium, ranked fourteenth on the 2026 Asia’s 50 Best Restaurants list, offers a compelling example. The main dish is served for sharing, and each course comes with specifically paired kimchi. It demonstrates that a meal unfolding course by course can coexist with the communal nature of the Korean dining customs. In fact, Western fine dining is already moving in this direction, loosening its grip on strict sequential service in favor of sharing and collective dining experiences. Get it right — the simultaneity and abundance of the Korean table — and fine dining has considerably more room to breathe.  
+  
+ 
+ What is the most pressing challenge facing Korean fine dining today? 
+ The biggest issue is a severe labor shortage, though improving the treatment of foreign workers is also urgent. This isn’t just about solving a staffing problem; it may be one of the most effective ways for Korean cuisine to spread internationally. It isn’t uncommon for foreign workers who have trained in Korean restaurants to go home and open their own places. When we say Korean food is thriving, we’re measuring it in two ways: whether younger generations continue to embrace it and whether it’s being enjoyed beyond Korea’s borders. Both matter.  
+ A second challenge is regional representation. Korean fine dining needs to represent food cul¬tures beyond Seoul. Put simply, the rest of the country deserves a place at the table. In countries where fine dining has taken root, distinct region¬al food cultures form the broader gastronomic foundation. Korea isn’t there yet. Busan’s addition to the MichelinGuide’s coverage in 2024 is a reason for cautious optimism. One of the chefs at Restaurant SAN, which ranked fifty-fourth on the Asia’s 50 Best Restaurants list, is from Busan, and the menu includes dwaeji gukbap, the city’s signature dish of pork and rice in a milky pork bone broth. We need more chefs willing to draw on their own regional identity and elevate it to an international level. Freshness and spectacle defined the past decade of Korean fine dining. The next decade must be about depth and substance. Sustainability is the defining challenge.  
+  
+ 
+ You established the NANRO Foundation and oversee a range of initiatives. What is its primary mission? 
+ Seven out of ten chef-owned restaurants eventually close. Cooking and running a business are entirely different disciplines, and that disconnect is where most chefs stumble. For that reason, mentoring is at the heart of the NANRO Foundation’s mission. Programs bring chefs into conversation with experts in finance, marketing, and branding — fields rarely touched by culinary training. The academy is also meant to be a platform where different cultural industries feed into each other. In France, gastronomy has spent two centuries weaving itself into fashion, film, wine, and luxury goods. Japanese food developed alongside design, craft, and content. No cuisine can truly thrive in isolation. The NANRO Foundation aims to help build the ecosystem necessary for Korean cuisine to endure and thrive.  
+ 
+   
+   Invited by the NANRO Foundation in 2025, Chef Ferran Adrià joined local chefs at Cheonjinam Hermitage in Jangseong. Pictured here, the group listens to Venerable Jeong Kwan’s explanation of traditional Korean fermentation culture. Courtesy of the NANRO Foundation</span>
+							
+							<!-- <p class="tag"><span>#Bean Sprouts</span><span>#korea</span><span>#kongnamul</span><span>#Bean Sprouts</span><span>#korea</span><span>#kongnamul</span></p> -->
+						</div>
+					</a>
+				</div>
+			
+				<div class="item"><a href="/koreana/na/ntt/selectNttInfo.do?nttSn=138481&bbsId=1114"  data-url="/koreana/na/ntt/selectNttInfo.do" data-nm="nttSn" data-param="138481" class="black nttInfoBtn">
+						<p>
+							<img src="/upload/koreana/na/bbs_1114/ntt_138481/_e4ef92ff-ada1-4ada-9e57-c0a44a9884b61783646754086.jpg" width="329px;" height="200px;" onerror="this.src='/images/co/na/noImg.gif'" alt="Royal Banquets of Joseon: The Origins of Fine Dining">
+						</p>
+						<div class="con">
+							<p class="info">
+								<em>Features</em>
+
+								<span>
+									<em>2026 SUMMER</em>
+									
+								</span>
+							</p>
+							<strong class="areCheck">Royal Banquets of Joseon: The Origins of Fine Dining</strong>
+							
+							<span class="areCheck">The multi-course meal — consisting of appetizers, main courses, and dessert — is commonly associated with French fine dining. Emerging in aristocratic circles and elite restaurants in early nineteenth-century Paris, it became standard practice by the middle of the century. Yet records of royal banquets from the Joseon Dynasty (1392–1910) reveal a striking parallel. As early as the 15th century, the royal court had established an elaborate banquet tradition featuring a succession of carefully prepared courses, the finest ingredients sourced from across the country, and a highly specialized group of professional chefs. 
+  
+ 
+  
+ “Painting of the Royal Banquet in the Musin Year” (Musin-nyeon jinchan dobyeong). 1848. Color on paper. 141.5 × 49.5 cm (each panel).  This eight-panel screen illustrates King Heonjong’s 1848 Changdeok Palace banquet, honoring the birthdays of his grandmother, Queen Dowager Sunwon, and mother, Queen Dowager Sinjeong. © The National Museum of Korea  
+  
+  The grand banquets of the Joseon royal court were known as jinyeon or jinchan. Held to celebrate the birthdays of the king, queen dowager (widow of the late king), or queen, these occasions ranked among the most lavish events of court life, with jinyeon exceeding jinchan in scale. By the 18th century, however, the distinction had largely disappeared, and all such celebrations came to be referred to as jinchan. Still, not every royal birthday warranted a banquet. For kings, these events were typically reserved for major milestones, including the 20th, 30th, and 40th anniversaries of accession and decennial birthdays. Another important occasion was the king’s admission to Giroso, the Association of Elder Statesmen, usually reserved for elder civil officials over the age of seventy. Membership was regarded as one of the highest honors available to a civil servant.  
+ These banquets required enormous expenditures of labor, materials, and funds. In keeping with court convention, the king would initially decline the first two petitions to hold such an event, reluctantly granting approval only after officials submitted a third request. This ritualized reluctance reflected the Confucian ideal of royal modesty and restraint.  
+ Once approval was secured, a temporary administrative body composed of officials from various government offices was established to oversee preparations. This body determined every aspect of the event, from the schedule and attendee list to seating arrangements and table settings.  
+ 
+ PLANNING A ROYAL FEAST 
+ 
+   
+   A reconstructed royal banquet table at the National Palace Museum of Korea. Folding screens, flower arrangements, and ceremonial furnishings recreate the elegant setting of a Joseon court banquet. Courtesy of the National Palace Museum of Korea  
+  
+ Even the royal court faced logistical challenges when organizing large-scale banquets, which were held at least once a decade. One difficulty was the absence of a sufficiently large palace kitchen. The palace contained facilities such as the Sojubang, the central royal kitchen complex, and the Saenggwabang, which specialized in refreshments and desserts such as rice cakes and honey cookies. Neither, however, was capable of producing the massive quantities of food required for a royal event. This arrangement reflected the Confucian social order of the time. The king and queen occupied separate living quarters and typically ate alone. Small kitchens were attached to their individual residential areas, eliminating the need for a centralized kitchen. Consequently, whenever a royal banquet was scheduled, a temporary outdoor kitchen was constructed near the venue.  
+ Food preparation fell to male chefs known as suksu, who belonged to the Saongwon, the office that managed the court cuisine. Their work was organized in accordance with a highly specialized hierarchy. At the top stood jaebu, who supervised all aspects of royal cuisine. Seonbu were responsible for the king’s daily meals, jobu handled seasoning, imbu were in charge of rice and porridge, and paengbu were tasked with boiling meat and vegetables. Beneath them worked specialists responsible for grilled dishes, rice and soups, alcoholic beverages, and rice cakes and confectionery. Food was prepared through a strict division of labor.  
+ The venue itself presented another challenge. Neither Gyeongbok Palace nor Changdeok Palace possessed an indoor hall large enough to accommodate hundreds of guests. Banquets were therefore often held in the jeongjeon, the main hall for state affairs, or the naejeon, the residential quarters of the queen dowager and queen. When additional space was required, temporary structures were erected by extending wooden flooring from the main hall into the courtyard. To ensure safety and stability, large teams of royal carpenters were mobilized, with work sometimes beginning as much as six months in advance.  
+ 
+   
+  Sinseollo, or yeolgujatang, was among the most elaborate dishes served at Joseon royal banquets. Prepared in a brazier-equipped vessel with a charcoal chamber at its center, the dish is made by simmering meat, seafood, vegetables, and other ingredients in a rich broth. This contemporary version debuted at Korea House earlier this year. Courtesy of Korea House, Korea Heritage Agency  
+  
+  
+ 
+ THE CEREMONY OF SERVICE 
+ A royal banquet typically involved five separate gatherings. These included a banquet for male officials, a banquet for royal women, an evening gathering for royal relatives, a banquet honoring those who organized the event, and a concluding evening celebration. The highlight of the festivities was the jinjak ceremony, during which participants formally presented wine or other beverages to the guest of honor. The number of jinjak rounds depended on the scale of the banquet and was generally an odd number to reflect the auspicious yang energy of a joyous occasion, with nine being the maximum. In practice, however, Joseon monarchs often limited that to a conservative five or seven rounds in keeping with ideals of frugality.  
+ Participation in the jinjak ceremony was strictly regulated. The first offering was made by the highest-ranking attendee below the guest of honor, who presented the drink together with formal words of congratulation. A court lady then brought forward a table set with accompaniments specially selected to complement the beverage. The number and variety of dishes depended on the scale of the event.  
+ After accepting the offering, the guest of honor expressed gratitude, addressed the assembled guests, and ordered food and drink to be served. Throughout the proceedings, court musicians performed while dancers presented carefully choreographed performances.  
+ The banquet concluded with a dessert course featuring tea, fruit, and confections. Typical sweets included dasik, confections made by combining powdered grains, chestnuts, or beans with honey or grain syrup and pressing the mix into delicate shapes. Other examples included jeonggwa — sliced fruits, ginger, lotus root, or ginseng, for instance, candied in honey or malt syrup — and yumilgwa, confections fried in oil and glazed with honey. Po, thin dried strips of abalone, pheasant, or octopus, was also served.  
+ As the festivities drew to a close, the guest of honor distributed food and gifts to attendees, officials, and workers who had contributed to the event. The banquet formally ended upon the honoree’s departure.  
+ 
+   
+   A Joseon court spoon-and-chopstick case made of embroidered red silk. It features colorful longevity motifs, including deer and pine trees, alongside auspicious inscriptions wishing for prosperity. Courtesy of the National Palace Museum of Korea  
+  
+ 
+   
+   This silver ewer, used during Joseon royal banquets and ancestral rites, features engravings of a mythical three-legged crow (samjogo) and a moon rabbit pounding rice. Height: 29 cm; base diameter: 9.5 cm. Courtesy of the National Palace Museum of Korea  
+  
+  
+ 
+ PRESENTATION AND PRESTIGE 
+ Presentation is among the defining features of fine dining, conveying culinary excellence through the arrangement of food, tableware, and setting. In this respect, Joseon royal banquets demonstrated remarkable sophistication.  
+ In addition to the dishes served during the jinjak ceremonies, lavishly arranged tables were placed before the guest of honor and principal attendees. At a banquet held at Changdeok Palace in 1829 to celebrate the 40th birthday of King Sunjo (r. 1800–1834) and the 30th anniversary of his reign, the king was served forty-six different delicacies. The queen received thirty-four dishes, while the crown prince and his consort each received thirty-one, and the princess twenty-five. The number of dishes reflected the strict hierarchy of the royal household.  
+ The banquet menus displayed notable variety. Meat, seafood, and vegetables were combined in well-balanced compositions. At the banquet held in 1902 to commemorate the admission of Emperor Gojong (r. 1863–1907) to Giroso, sixty-three dishes were presented, no two sharing the same principal ingredient or cooking method. Following each event, detailed records were compiled documenting ingredients, preparation methods, quantities, and serving arrangements. These accounts were preserved in several volumes of uigwe, the royal protocols that recorded major state ceremonies for posterity. More than administrative s, these volumes functioned as invaluable records of Joseon culinary culture, preserving recipes and banquet practices in remarkable detail.  
+ Joseon royal banquets shared many of the hallmarks associated with modern fine dining: exceptional ingredients, specialized culinary professionals, multi-course service, and carefully differentiated levels of formality. Yet the comparison has its limits. Joseon banquets were ceremonial expressions of Confucian propriety and royal authority, whereas modern fine dining emerged within a commercial gastronomic culture.  
+ The elaborate tradition of royal banquets ultimately disappeared with the fall of the Korean Empire (1897–1910). Yet its legacy challenges the assumption that fine dining is an exclusively Western concept. Joseon royal banquets testify to a culinary tradition of remarkable sophistication that developed its own systems of service, presentation, and ceremonial dining centuries before fine dining became established in Europe. The dishes, beverages, and elaborate rituals of these lavish state events are more than historical curiosities; they stand as evidence of Korea’s long and highly refined culinary heritage.  
+ 
+   
+   Recreating one of nine courses from Emperor Gojong’s 1892 birthday banquet, this anju table displays delicacies made with ingredients such as ginkgo nuts, mussels, and abalone. Courtesy of the National Palace Museum of Korea</span>
+							
+							<!-- <p class="tag"><span>#Bean Sprouts</span><span>#korea</span><span>#kongnamul</span><span>#Bean Sprouts</span><span>#korea</span><span>#kongnamul</span></p> -->
+						</div>
+					</a>
+				</div>
+			
+				<div class="item"><a href="/koreana/na/ntt/selectNttInfo.do?nttSn=138480&bbsId=1114"  data-url="/koreana/na/ntt/selectNttInfo.do" data-nm="nttSn" data-param="138480" class="black nttInfoBtn">
+						<p>
+							<img src="/upload/koreana/na/bbs_1114/ntt_138480/_e08cfe0e-31f7-431a-bfb3-d59bf4d4360c1783646182494.jpg" width="329px;" height="200px;" onerror="this.src='/images/co/na/noImg.gif'" alt="Tradition at a New Table">
+						</p>
+						<div class="con">
+							<p class="info">
+								<em>Features</em>
+
+								<span>
+									<em>2026 SUMMER</em>
+									
+								</span>
+							</p>
+							<strong class="areCheck">Tradition at a New Table</strong>
+							
+							<span class="areCheck">Another milestone followed through Jung-hyun ‘JP’ Park, who previously worked at Jungsik New York before opening Atomix in Manhattan’s NoMad neighborhood in 2018. The restaurant went on to earn two Michelin stars and was named No. 1 on North America’s 50 Best Restaurants list in 2025. 
+  
+ 
+  
+ Chef Kwon Woo-joong named Kwonsooksoo after suksu, chefs of the Joseon royal court. The dishes are served on traditional soban, reflecting the restaurant’s respect for Korean culinary heritage. Courtesy of Kwonsooksoo  
+  
+ Western fine dining began taking root in Korea in the early 2000s. Rising incomes and growing interest in gastronomy broadened public engagement with food culture, while chefs who had trained abroad returned to open independent restaurants. This heralded the dawn of the country’s high-end restaurant culture.  
+ Although Korea’s history of fine dining is relatively short, it has evolved rapidly. Today, an increasing number of Korean restaurants appear in international rankings and guides, including the Michelin Guide, Asia’s 50 Best Restaurants, and La Liste, the algorithmic, data-based French culinary index.  
+ 
+  
+ Venerable Jeong Kwan prepares bamboo shoots. Internationally acclaimed for her mastery of Korean temple cuisine, she has introduced its philosophy of seasonal, plant-based cooking to chefs around the world. © Véronique Hoegger, Courtesy of Will Books Publishing Co.  
+  
+ 
+ A NEW CULINARY LANGUAGE 
+ A flourishing fine dining scene inevitably produces star chefs, and Chef Kang Mingoo stands as a prominent example. He is the only chef in Korea to have earned three Michelin stars for two consecutive years (2025 and 2026) with his restaurant Mingles. After graduating from the Department of Culinary Arts at Gyeonggi University, Kang honed his craft at acclaimed restaurants in the United States, the Bahamas, France, and Spain. Upon his return to Korea, he immersed himself in the country’s culinary traditions, laying the groundwork for the opening of Mingles in 2014.  
+ When the restaurant opened its doors, gourmands were initially skeptical about a menu so deeply anchored in traditional Korean cuisine. They wondered whether such an approach could distinguish itself from existing models that relied more heavily on Western culinary frameworks. Early pioneers, including Chef Jungsik Yim, had already begun pairing traditional dishes like bibimbap (rice mixed with seasoned vegetables) with Western-style plating. Yet the question remained: Could Korean ingredients themselves become the foundation of a fine dining language?  
+ Mingles helped quell those doubts. “Jang Trio,” a dessert utilizing jang — the traditional fermented pastes that form the backbone of Korean cuisine — became an instant and enduring signature. By infusing a French crème brûlée with jang and chili powder, Kang combined seemingly incompatible ingredients to create a dish with a perfect harmony.  
+ While his early tasting menus offered a hint of Korean influence, they lacked the cuisine’s deep, authentic flavors. In an interview, Kang confessed, “I realized I lacked the proper knowledge and experience as I prepared to launch a Korean fine dining restaurant.” Hungry for deeper insight, he sought out mentors to teach him the essence of hansik (Korean cuisine). Fortune favored his dedication; he encountered Chef Cho Hee-sook, hailed as the “Godmother of Hansik,” and Venerable Jeong Kwan, a Buddhist nun known for her mastery of Korean temple cuisine. Originally a middle school home economics teacher, Cho transitioned into professional kitchens, eventually leading the Korean restaurants of five-star hotels in Seoul and serving as resident chef for Korea’s Ambassador in the United States. As global appreciation for hansik grew, so did her international renown; in 2020, she was named Asia’s Best Female Chef by the Asia’s 50 Best Restaurants Academy, and the following year, the chef-owner of the Michelin-starred Hansikgonggan in Seoul received the inaugural Michelin Mentor Chef Award.  
+ Kang implored Cho to organize a study group for himself and his fellow chefs, and the bond they formed back then remains unbroken to this day. Meanwhile, his encounter with Jeong Kwan elevated his culinary depth to a whole new level. Featured on the acclaimed Netflix docu-series Chef’s Table and selected as one of the Plant-Forward Global 50 chefs by EAT Forum and the Culinary Institute of America, Jeong is a master who introduced Korean temple cuisine to the world stage. Its grounding philosophy holds that food should nourish more than the body. As a medium through which history, culture, and human relationships are carried forward, food embodies values that transcend sustenance. Through Jeong, Kang came to recognize one of the fundamental principles underlying Korean cuisine.  
+ Today, Mingles stands as a mature expression of Kang’s vision for contemporary Korean gastronomy. He proactively champions locally sourced ingredients, such as carrots from Gujwa, a town on the northeastern side of Jeju Island, known for their deep fragrance and high sugar content, alongside sesame oil, premium Korean beef, plum-infused gochujang (chili paste), omija (magnolia berries), and glutinous rice, all of which captivate international diners. In one signature dish, perfectly grilled West Sea prawns are paired with glutinous rice and elevated by a refined sauce crafted from traditional makgeolli (fermented rice-based alcohol). Similarly, a tender Korean beef steak is served with sundae, a blood sausage traditionally eaten during cultural festivities and large familial gatherings but today fondly enjoyed as street food. While the early iterations of Mingles merely brushed Western cuisine with a touch of Korean influence, it now allows sophisticated elements of Korean cuisine to shine through as the true protagonists. This path has profoundly reshaped Korea’s culinary scene, inspiring a new generation of chefs.  
+ 
+   
+  True to its name, Mingles brings diverse culinary traditions into harmony. Chef Kang Mingoo combines the essence of hansik with contemporary techniques to create a distinctive style of fine dining. © HUBLOT  
+  
+  
+ 
+ LOCALITY AND TRADITION 
+ Kwonsooksoo, helmed by Chef Kwon Woo-joong, is a contemporary Korean restaurant that has steadfastly weathered the turbulent tides of the fine dining industry. From its inception, Kwon accentuated the traditional allure of Korean food by serving his tasting courses on individual soban — beautifully crafted traditional dining trays. His ambition is “to be a genuine hansik chef,” and this means remaining unswayed by fleeting culinary fads. Kwon’s commitment is evident; he crafts all his jang from scratch. On the day he prepares the annual batch at his grandfather’s ancestral home, his staff joins him in a festive ritual, as the success of the restaurant’s entire year hinges on the flavor of this batch. They prepare over eighty blocks of meju, the alpha and omega of jang, by mashing boiled soybeans in a mortar, shaping the mash into solid blocks, and then fermenting and aging them to create the core ingredients for soybean paste, soy sauce, and chili paste.  
+ One cannot overlook The Green Table, run by owner-chef Kim Eun-hee. Although the number of women culinary professionals in Korea has grown, their representation remains relatively low. In an industry where Korean culinary TV shows have predominantly featured men, Kim continues to stand out as a resilient figure. Her career began firmly rooted in Western gastronomy. When her restaurant debuted in 2009, it showcased the refined French techniques she had honed at the Culinary Institute of America. However, the establishment underwent a profound transformation a few years ago, when Kim relocated it from bustling Gangnam to Wonseo-dong, a quaint neighborhood in Jongno District.  
+ Her restaurant’s dining room commands a serene view of Changgyeong Palace, making it a highly sought-after destination where international tourists can savor fine cuisine alongside Korea’s rich architectural heritage. Her current menu bridges her classical training with local roots, featuring vibrant salads that celebrate seasonal vegetables, rich soups crafted in the style of traditional guk (which grow more savory the longer they simmer), and delicate, bite-sized lotus root pickles. This evolution was no accident; for years, Kim had studied at Hyangjeoksegye, the Institute of Korean Temple Cuisine operated by the Jogye Order of Korean Buddhism, and ultimately became a certified temple cuisine chef.  
+ A new wave of contemporary Korean fine dining is now capturing the spotlight, led by trailblazing establishments like JUEUN, BIUM, SOLBAM, Eatanic Garden, and Table for Four. The defining thread uniting them is their proactive embrace of regional traditions. Whether sourcing hyper-seasonal local ingredients or reviving overlooked regional recipes, these restaurants express a distinctly Korean sensibility, from the food itself to the tableware and interior design.  
+ At JUEUN, which earned its first Michelin star this year under Chef Park Ju-eun, guests are greeted by traditional ceramics and media art featuring Korean landscapes. Meanwhile, Chef Kim Dae-chun, who previously commanded global attention after his restaurant 7th Door maintained a multi-year streak on the Asia’s 50 Best Restaurants list, has opened BIUM. This vegan-concept sanctuary embodies a minimalist aesthetic so profoundly that stepping inside feels akin to wandering through a historic royal palace. Securing a table at SOLBAM, led by chef-owner Taejun Eom, remains challenging largely because industry peers compete for reservations to study the menu. Eom’s labor-intensive courses flow with precision. They feature dishes like koji-aged blackthroat seaperch and grilled abalone glazed with hapjajang. Even within Korea, this legendary artisanal sauce from the coastal city of Tongyeong remains a hidden treasure; it is crafted by repeatedly boiling and reducing indigenous Korean mussels to extract a concentrated umami essence.  
+ At Eatanic Garden, Chef Son Jong-won commands the kitchen. His celebrity status has soared following high-profile appearances on the second season of Netflix’s Culinary Class Wars and JTBC’s popular variety show Chef & My Fridge. Son is deeply fascinated by historic culinary techniques, infusing ancient methods with modern soul. A prime example is his reinvention of japchae (stir-fried glass noodles with vegetables), elegantly shaped into bite-sized rounds. Similarly, Chef Kim Sung-woon, who shared the spotlight alongside Son on Culinary Class Wars, uses his restaurant, Table for Four, as a canvas to illustrate the bountiful harvest of Taean, his coastal hometown in South Chungcheong Province.  
+ 
+   
+  An amuse-bouche rests on a geometric vessel by woodcraft artist Jaeha Lee. Soigné’s Chef Jun Lee collaborated on this tableware to complement his vision of dining as a memorable, theatrical performance. © Dong-min Shin  
+  
+ 
+   
+  Chef Son Jong-won’s Squash japchae reimagines the classic Korean stir-fried glass noodle dish, elegantly shaped into bite-sized rounds with summer squash and blossoms to celebrate seasonal flavors. © Josun Palace, a Luxury Collection Hotel, Seoul Gangnam  
+  
+  
+ 
+ FLAVORS REVEALED THROUGH TIME 
+ While the landscape of Korean fine dining undergoes rapid changes, a distinct group of restaurants has held their ground, remaining unaffected by passing trends. For international visitors, they offer a meaningful introduction to the depth, continuity, and refinement of Korea’s culinary heritage. A premier example is Onjium, nestled in Seoul’s historic Seochon District. It has become a cultural hub for travelers and trendsetters seeking novelty and originality. Positioned directly across from the stone walls of Gyeongbok Palace, Onjium is co-led by Chefs Cho Eun-hee and Park Sung-bae. Their food tastes as though it has been tailored with the elegance of hanbok (traditional Korean attire). At first glance, menu items like bangpung juk (herbal rice porridge), tangpyeongchae (chilled mung bean jelly salad), Jinju-style braised beef short ribs, and bom namul (spring greens) bibimbap may sound understated. Yet, the moment one tastes them, the complexity of flavor is astonishing. Onjium’s chefs intentionally refuse to lean on pretentious culinary neologisms or forced buzzwords; instead, they firmly believe the essence of Korean cuisine is found within the unadorned names of its simplest dishes.  
+ Bongraeheon, the Mayfield Hotel’s signature Korean royal cuisine restaurant, champions traditional food with a devotion rivaling that of Onjium. The kitchen is run by Lee Geum-hee, widely recognized as Korea’s first woman executive chef at a 5-star luxury hotel, who is an industry pioneer and has been honing her mastery since the late 1980s. For travelers seeking an unadulterated archetype of Korean cuisine — such as gujeolpan (a platter of nine seasonal delicacies wrapped in delicate crepes), seasoned namul (greens), and savory jeon (pan-fried delicacies) — Bongraeheon is the prime destination. Similarly, Korea House in Seoul’s Jung District offers an equally memorable encounter with classic Korean dishes. Following a seven-month renovation, it reopened in March of this year. Cho Hee-sook, its lead culinary advisor, and her team continue to present dishes defined by timeless grace and balance.  
+ The essence of Korean flavors reveals itself when savored slowly, as fundamental ingredients like jang and kimchi are shaped by the transfor¬mative power of fermentation and time. Enhanced by impeccable service, Korean fine dining restau¬rants offer an entirely new and compelling culi¬nary experience.  
+ 
+   
+  Plated together here, Onjium’s dishes draw inspiration from historic cookbooks. By preserving the purity of its ingredients, the restaurant crafts distinctly original cuisine that emphasizes clean, understated, and enduring flavors. © Onjium  
+  
+ 
+   
+  BIUM, Chef Kim Dae-chun’s vegan fine dining restaurant, harmonizes humanity and nature. This lunch box features healthy multigrain rice and wild greens sourced from Ulleung Island, Mt. Jiri, and Jeju Island. Courtesy of BIUM</span>
+							
+							<!-- <p class="tag"><span>#Bean Sprouts</span><span>#korea</span><span>#kongnamul</span><span>#Bean Sprouts</span><span>#korea</span><span>#kongnamul</span></p> -->
+						</div>
+					</a>
+				</div>
+			
+				<div class="item"><a href="/koreana/na/ntt/selectNttInfo.do?nttSn=138479&bbsId=1114"  data-url="/koreana/na/ntt/selectNttInfo.do" data-nm="nttSn" data-param="138479" class="black nttInfoBtn">
+						<p>
+							<img src="/upload/koreana/na/bbs_1114/ntt_138479/_4e5862a5-7933-4d4e-9bb7-059d41bbe5551783645827467.jpg" width="329px;" height="200px;" onerror="this.src='/images/co/na/noImg.gif'" alt="The Rise and Redefinition of Korean Fine Dining">
+						</p>
+						<div class="con">
+							<p class="info">
+								<em>Features</em>
+
+								<span>
+									<em>2026 SUMMER</em>
+									
+								</span>
+							</p>
+							<strong class="areCheck">The Rise and Redefinition of Korean Fine Dining</strong>
+							
+							<span class="areCheck">Korea’s modern history is, by almost any measure, a story of acceleration. In the span of a few decades, the country rebuilt itself from the devastation of war, underwent rapid industrialization and democratization, and emerged as a global force in culture and technology. Its food culture has followed a similarly restless trajectory. Fine dining, once the preserve of a privileged few, has steadily expanded its reach, attracting broader public interest and establishing itself as a visible part of contemporary cultural life. 
+  
+ 
+  
+ Chef Sungjae Anh’s MOSU Seoul, awarded three Michelin stars in 2023, is celebrated for its sensuous expression of ingredient nuances. Pictured is the restaurant’s signature amuse-bouche: a delicate caviar rice tart. Courtesy of MOSU  
+  
+ Fine dining is a relatively recent development in Korea’s culinary history. A decade ago, the term itself may have drawn blank stares from most outside the restaurant industry. Today, however, Korea boasts more than forty Michelin-starred restaurants, while Korean chefs are gaining recognition alongside some of the most respected figures on the global culinary stage.  
+  Unlike European countries, whose traditions of haute cuisine were shaped over centuries, Korea’s fine dining culture emerged over a comparatively short period. This rapid development, driven by ambitious chefs and broader social change, has reshaped the culinary landscape.  
+ 
+ HAUTE CUISINE IN THE HOTEL ERA 
+ 
+   
+  The dining room at Mingles in Cheongdam-dong, Seoul, visually reflects Chef Kang Mingoo’s culinary philosophy. The interior seamlessly blends traditional Korean sensibilities with contemporary design, elevating the overall fine dining experience. © Mingles  
+  
+ The origins of modern fine dining in Korea can be traced to the country’s luxury hotels. During the 1970s and ’80s, as the tourism and hospitality sectors expanded, restaurants at flagship establishments in Seoul such as The Shilla, The Westin Josun, and Lotte Hotel introduced French cuisine and Western-style tasting menus to Korean diners. Their clientele remained limited; they primarily served business functions, diplomatic gatherings, and other formal occasions, placing them beyond the reach of most Koreans. Nevertheless, the foundation was laid for modern upscale dining in Korea.  
+  
+ 
+ THE ERA OF THE AUTEUR CHEF 
+ A more profound shift emerged in the early 2000s. Young Korean chefs who had been trained at some of the world’s most prestigious culinary institutions — Le Cordon Bleu in France, the Culinary Institute of America in the United States, the Tsuji Culinary Institute in Japan — began returning home and opening restaurants of their own.  
+ What they brought back was more than technique. They returned with a sharper eye for seasonal ingredients, a sense of how to compose meals with a narrative arc, and a cultural conviction that chefs deserve to be recognized as artists.  
+ Increasingly, chefs sought spaces where they could express a personal culinary philosophy rather than work within the standardized structures of hotel kitchens.  
+ Neighborhoods in Seoul’s posh Gangnam District, such as Cheongdam-dong and the area around Dosan Park, emerged as centers of a new restaurant scene. Diners became less concerned with which hotel housed a restaurant and more interested in the chef as auteur, whose reputation became the establishment’s defining asset.  
+ Another turning point came in November 2016 with the publication of the first Seoul edition of the Michelin Guide. Its arrival provided both recognition and incentive. For chefs, Michelin stars offered an internationally recognized benchmark that heightened attention to ingredients, technique, and service. For restaurants that made the cut, it became a powerful marketing tool. For diners, the guide provided a trusted framework for navigating the increasingly complex dining landscape.  
+ This shift invigorated the domestic fine dining ecosystem. What was once largely defined by French, Italian, and Japanese cuisine expanded considerably, with modern Korean, contemporary, and vegan approaches each finding a place within the market. As a result, the scene has grown not only in scale and sophistication but also in something arguably more interesting: genuine diversity.  
+  
+ 
+ KOREA’S GLOBAL TABLE 
+ As the domestic scene matured, Korean chefs began attracting international attention. Among the most influential figures in this development is chef Jungsik Yim. After opening Jungsik Seoul in 2009, he expanded to New York two years later, at a time when Korean cuisine occupied only a limited place in the global fine dining conversation.  
+ The move proved significant. Jungsik New York earned its first and second Michelin stars within the first two years of its opening. In 2024, it became the first Korean establishment in the US to join the elite tier of three-Michelin-starred restaurants, and the following year, Yim received the James Beard Award for Outstanding Chef. These achievements demonstrated that Korean cuisine could compete at the highest levels of international gastronomy while retaining a distinct cultural identity.  
+ Another milestone followed through Jung-hyun ‘JP’ Park, who previously worked at Jungsik New York before opening Atomix in Manhattan’s NoMad neighborhood in 2018. The restaurant went on to earn two Michelin stars and was named No. 1 on North America’s 50 Best Restaurants list in 2025.  
+ These successes coincided with a growing global interest in Korean culture. As K-pop, K-dramas, Korean cinema, and other cultural content reached ever-wider audiences, curiosity about Korean food increased as well. This broader momentum created new opportunities for Korean chefs and helped elevate Korean cuisine on the global stage.  
+ 
+   
+  Holding two Michelin stars ever since the inaugural 2016 Michelin Guide Seoul, Kwonsooksoo has played a leading role in elevating Korean fine dining and establishing its chefs within international culinary culture. Courtesy of Kwonsooksoo  
+  
+  
+ 
+ FINE DINING GOES MAINSTREAM 
+ 
+   
+  At Soigné, Chef Jun Lee’s open kitchen invites guests to watch the creative process unfold. Here, tasting menus featuring seasonal ingredients and refined sensibilities are presented like chapters in an engaging story. © Hong Ki-woong  
+  
+ Perhaps the clearest indication that Korean fine dining had crossed into global pop culture arrived in 2024, in the form of a Netflix competition series. Culinary Class Wars, which pitted Michelin-starred chefs against lesser-known contenders, became a genuine global hit. Restaurants associated with participants saw reservations surge, while the chefs themselves became recognizable public figures. The phenomenon reflected a broader cultural shift. Fine dining was no longer a niche interest confined to industry professionals and dedicated enthusiasts. It had become part of the mainstream cultural conversation.  
+ Today, Seoul hosts one of Asia’s most dynamic dining scenes. French, Italian, Japanese, modern Asian, and Mexican fine dining restaurants coexist alongside increasingly confident Korean culinary establishments. Drawing on local ingredients, time-honored fermentation techniques, and contemporary culinary thinking, Korean chefs are assembling a gastronomic identity that is rooted in place and open to global influences.  
+ The generation leading this movement has evolved as well. While earlier chefs focused on mastering and adapting techniques acquired abroad, many young up-and-comers are turning their attention to local stories, seasonal ingredients, and direct relationships with producers. Traditional cooking methods are being reinterpreted through contemporary perspectives, creating new possibilities for Korean cuisine. The next chapter of Korean fine dining is already beginning to take shape.  
+ 
+   
+  At EVETT in Seoul’s Gangnam District, Australian chef Joseph Lidgerwood reinterprets regional Korean ingredients. Pictured: yellowtail paired with Hamyang’s Solsongju pine liquor, harmonizing the forest's scent with flavors of the sea. Courtesy of EVETT  
+  
+ 
+   
+  Since opening in 1979, Palsun at The Shilla Seoul has been regarded as one of Korea’s premier Chinese restaurants. Shown is a seasonal dish inspired by classic Cantonese cuisine. © The Shilla Seoul</span>
+							
+							<!-- <p class="tag"><span>#Bean Sprouts</span><span>#korea</span><span>#kongnamul</span><span>#Bean Sprouts</span><span>#korea</span><span>#kongnamul</span></p> -->
+						</div>
+					</a>
+				</div>
+			
+				<div class="item"><a href="/koreana/na/ntt/selectNttInfo.do?nttSn=136840&bbsId=1114"  data-url="/koreana/na/ntt/selectNttInfo.do" data-nm="nttSn" data-param="136840" class="black nttInfoBtn">
+						<p>
+							<img src="/upload/koreana/na/bbs_1114/ntt_136840/_34ee6a5e-d6ce-4aae-872c-786b7ddf3c141774832066290.jpg" width="329px;" height="200px;" onerror="this.src='/images/co/na/noImg.gif'" alt="Artists Add New Pages to Hanji’s Rich History">
+						</p>
+						<div class="con">
+							<p class="info">
+								<em>Features</em>
+
+								<span>
+									<em>2026 SPRING</em>
+									
+								</span>
+							</p>
+							<strong class="areCheck">Artists Add New Pages to Hanji’s Rich History</strong>
+							
+							<span class="areCheck">Hanji has secured a vital place as an expressive medium in contemporary craft and design. It imposes no limits on form or detail, conveying artists’ intentions with a flexibility that few materials can match. Transcending its status as a cultural inheritance, hanji has been reinterpreted by contemporary artists to beautifully permeate the rhythms of modern everyday life. 
+  
+ 
+  
+ Hanji products created through a collaboration between ONJIUM and the graphic design firm studio fnt. Traditional Korean textile motifs were first transformed into digital patterns and then printed onto hanji using a silkscreen technique. Courtesy of ONJIUM, Photo by Kim Jandee 
+  
+ In studios and workshops across the country, it’s hard not to notice that hanji has quietly made a comeback. The simplest explanation is that the paper is an extraordinary medium and material. Examining its production reveals an unparalleled level of devotion. Paper mulberry trees (dak) are planted and regularly pruned, and separate crops are cultivated solely to produce the lye water used in processing. As winter approaches, the harvested mulberry bark is steamed, dried, boiled, and rinsed, condensing a season’s worth of labor into a single sheet of paper.  
+ Every material an artist works with carries the “soul of its substance” on its surface, and hanji is no exception. Run your hands across it and study it with your eyes; its quiet dignity speaks for itself, stirring an urge to create something worthy of it.  
+ 
+ INFINITE POTENTIAL  
+ 
+   
+  Released in 2026 by lifestyle brand hinok in collaboration with textile artist Ko Somi, this New Year edition features a hanji fabric basket made from layered sheets to create a sturdy and flexible texture. The accompanying Wish Stone, crafted from shaped hanji, draws inspiration from the traditional Korean custom of stacking stones to wish for happiness and good health. Courtesy of hinok 
+  
+ Ko Somi is among the artists most effectively demonstrating hanji’s expansive possibilities. Her diverse portfolio includes screens, lighting, objects, and textile paintings, a range that might seem surprising for a medium most people associate with rectangular, neatly pressed sheets. This versatility rests on hanji yarn — a thread spun from paper of her own invention. Ko first cuts the paper into long strips along the grain of its fibers, then hooks them onto a spinning wheel and carefully spins them into thread. Initially, the thread frequently snapped, but by applying natural starch and spinning slowly, she gradually coaxed the strips into a durable yarn. She named the resulting thread “Somi-sa,” combining her name and the hanja (Chinese characters used in Korean) for “thread.”  
+ The works Ko creates are remarkably varied, with her lighting pieces telling examples. She begins by bending and twisting wire into spherical forms and then laces them densely with Somi-sa. In the next step, this wire-and-thread skeleton is dipped into a vat of dissolved dak fiber, and every gap between the two different materials is filled with a soft paper pulp. Repeated several times, the process builds up a substantial “skin” of paper over the spherical body; once a bulb is placed inside, it emits a warm, subdued light.  
+ The paper thread also finds its way into curtains, painstakingly crocheted into panels. Architect Byoung Soo Cho, known for his affinity for earthy, warm textures, is an admirer and has incorporated many of them into his projects. Compared to curtains of linen or silk, they are decidedly thicker and more intimate with a pleasantly rough texture. Textile painting is another hallmark of Ko’s practice. She builds canvases by layering thick sheets of hanji onto wooden boards, then covers them with crocheted “sweaters” made from the same spun thread. When parts of these sweaters are painted with blue pigment or traditional ink, the colors harmonize naturally with the mellow, undyed paper underneath.  
+ More recently, Ko has expanded into installation art. At the 2025 Cheongju Craft Biennale, she drew considerable attention for a piece featuring Somi-sa twisted with silver thread — traditionally used for embroidery on hanbok — to create a dancing “fiber coat,” displayed atop a broad sheet of traditional floor paper.  
+ “There are no limits to what you can make with this material,” Ko says. “You can stand it upright like a tree or hang it on a wall like a painting. Add silver thread, and it sparkles. The possibilities are simply endless.”  
+ 
+   
+  Inspired by Hangeul, Namgwon Lyu reinterprets the distinctive typography of modern Korean publications onto lacquered surfaces. These jitae chilgi works are made by applying lacquer to hanji, creating objects that are lightweight yet highly water resistant. Courtesy of Namgwon Lyu 
+ 
+  
+ 
+ FROM FLAT TO SOLID  
+ 
+   
+  Presented in the YÉOL Foundation’s Nature, As It Is exhibition, “The Magpie and Tiger Incense Burner” is a playful piece by master artisan Park Gap-soon. Inspired by the classic magpie and tiger motifs of traditional Korean folk paintings, the burner is cleverly designed to release incense smoke directly from the tiger’s mouth. Courtesy of YÉOL 
+  
+ While Ko has successfully expanded what hanji can do in two — and occasionally three — dimensions, Jungin Lee works with the material entirely in three dimensions. Lee studied woodworking and furniture design at Hongik University, and her recent work “A Soft Landscape” takes the form of a sofa that, at first glance, resembles carved white marble.  
+ She began by tearing sheets of hanji into approximately three hundred small pieces, which were then bonded together with flour paste, before she stacked and pressed over a hundred of these composite paper panels into the shape of a sofa. The resulting work, sturdy enough to comfortably seat a muscular athlete, was shortlisted for the 2025 Loewe Foundation Craft Prize.  
+ This unexpected strength counters a common misconception about hanji. In historical K-dramas, characters frequently poke holes through papered doors to peek inside, leading many viewers to assume that hanji is fragile, which is far from the case. Bonding even two or three layers together significantly increases its strength, making it highly resistant to tearing and flexing. This exceptional durability is linked to its production method. Unlike Japanese washi, made primarily with the twin-screen method (ssangbal in Korean) to form two sheets simultaneously, hanji relies on the single-screen method (oebal). By shaking the frame in all four directions, fibers are laid in a grid-like pattern resulting in paper that withstands rigorous use. 
+  
+ 
+ LACQUERED AESTHETIC  
+ 
+   
+  Inspired by the paper-covered windows of hanok (traditional Korean houses), lighting designer Jungmo Kwon creates illumination works using hanji, which is well-suited for expressing subtle gradations of light and shadow. As seen in “LF03_em,” Kwon expertly alters the paper’s translucency and light diffusion by folding it into pleated patterns or carefully layering sheets. Courtesy of Jungmo Kwon 
+  
+ Park Gap-soon’s works exude a whimsical charm that would make them perfectly suited as props in an animated film like KPop Demon Hunters. Frogs, pumpkins, insects, and tigers — familiar motifs from minhwa (folk paintings) or chochungdo (paintings featuring plants and insects) — are brought to life as small figurines.  
+ Park, who discovered traditional hanji craft in 1999, gathers discarded books or hanji scraps to serve as her base material. She boils the paper in lye water, rinses it clean, and then either tears it finely or pounds it in a mortar, mixing it with whole-wheat paste to create a sticky pulp. From this mixture she builds the form, applying layer upon layer of paper pulp over armatures or molds to achieve the desired shape. Natural materials like persimmon tannin and agar seaweed provide the color, and lacquer is often added as the finishing touch. It was works like these that earned Park the title of Artisan of the Year in the 2025 YÉOL × Chanel Project awards for craft excellence.  
+ When used in conjunction with hanji, lacquer opens up an entirely different set of aesthetic and functional possibilities. Lighting designer Jungmo Kwon delicately folds hanji into rhythmic, flowing forms, or coats it in black lacquer, combining the resulting paper with various metal armatures. Each completed piece transforms into a lighting fixture that transmits light differently, depending on the treatment of the paper.  
+ Namgwon Lyu is another notable artist who works in a field called jitae chilgi, a technique where objects are formed from hanji and then finished with lacquer. The repeated application and drying of lacquer creates unexpected textures and profound, mysterious shade variations. With their rich, layered colors, his pieces have become highly sought after by contemporary craft collectors.  
+ Through the boundless imagination of contemporary artists, hanji continues to evolve far beyond its traditional use, adding new pages to its already rich history.</span>
+							
+							<!-- <p class="tag"><span>#Bean Sprouts</span><span>#korea</span><span>#kongnamul</span><span>#Bean Sprouts</span><span>#korea</span><span>#kongnamul</span></p> -->
+						</div>
+					</a>
+				</div>
+			
+				<div class="item"><a href="/koreana/na/ntt/selectNttInfo.do?nttSn=136839&bbsId=1114"  data-url="/koreana/na/ntt/selectNttInfo.do" data-nm="nttSn" data-param="136839" class="black nttInfoBtn">
+						<p>
+							<img src="/upload/koreana/na/bbs_1114/ntt_136839/_ae132bac-2163-4e86-a5a9-7f2ba9f852f71774832018728.jpg" width="329px;" height="200px;" onerror="this.src='/images/co/na/noImg.gif'" alt="Paper that Preserves Time and Memories">
+						</p>
+						<div class="con">
+							<p class="info">
+								<em>Features</em>
+
+								<span>
+									<em>2026 SPRING</em>
+									
+								</span>
+							</p>
+							<strong class="areCheck">Paper that Preserves Time and Memories</strong>
+							
+							<span class="areCheck">Hanji appeals to both the senses of sight and touch. Its most defining quality, however, only reveals itself over time. Unlike ordinary paper, which weakens as it ages, well-made hanji grows more durable as its fibers stabilize. The epithet “thousand-year paper” is not poetic hyperbole but a testament to a measurable reality: Hanji is a material that endures and even improves under the weight of time.
+  
+ 
+  
+ Hanji is produced in workshops across several regions of Korea by families preserving time-honored methods. Regional variations in climate, soil, and local production techniques result in paper with distinct physical properties and uses. Courtesy of the Korea Craft and Design Foundation  
+  
+ Paper is weak, or so people think. It crumples in a clenched fist, disintegrates upon contact with water, and turns to ash in an instant when lit on fire. Yet, humanity has recorded its history, preserved its art, and safeguarded its memory on this vulnerable medium. Paper may be fragile, but it remains one of the most enduring materials people have ever used. Within the world of paper, however, hanji occupies a unique position. Thanks to its physical qualities, it defies the simple classification of “traditional Korean paper.” At the fingertips, one feels the deep grain, the texture of densely interwoven fibers, the way it gently filters light as if holding it within, and the resilience that allows it to be folded and unfolded without tearing.  
+ Recently, hanji has attracted attention at cultural heritage restoration sites across Europe. For decades, Japanese washi has been regarded as the industry standard in the international conservation paper market. However, as the range of artifacts requiring restoration expands and techniques become more refined, the interaction between the repair paper and the artifact — and especially the paper’s physical properties — is subject to increasingly rigorous scrutiny. In this shifting landscape, Korean handmade paper is emerging not merely as an alternative but as a viable option and a candidate for a new global benchmark. In the inherently conservative field of restoration, hanji is proving its worth.  
+ 
+ CRITERIA FOR RESTORATION  
+ In cultural heritage restoration, paper is used as more than just a reinforcement. Conservation paper must support the original artifact without overshadowing it. If the paper is too strong, it risks dominating and damaging the original; if it’s too weak, it fails in its supportive function. The demands are manifold and exacting: tensile strength paired with flexibility, a stable fiber structure, compatibility with adhesives, resistance to acidification, and the capacity for delicate manipulation during the restoration process. The list of requirements is long, with virtually no margin for error.  
+ 
+   
+  Master artisan Jang Sung-woo of Jangjibang, a fourth-generation family workshop in Gapyeong, Gyeonggi Province, demonstrates the traditional single-screen method of making hanji. By gently shaking a suspended screen from side to side while repeatedly scooping and draining water, the papermaker ensures the mulberry fibers settle evenly, producing paper of uniform thickness and exceptional strength, one sheet at a time. Courtesy of the Korea Craft and Design Foundation  
+  
+ Hanji achieves a rare balance among such strict parameters. Made from long, resilient mulberry fibers, it has a tightly interwoven internal structure. This allows hanji to maintain high tensile strength even when fashioned into extremely thin sheets, and to resist disintegration when folded or moistened. When applied over an original artifact, it performs its necessary function without asserting its presence. Moreover, the microscopic pores formed between fibers absorb and release moisture, acting as a “breathing” buffer between disparate materials — paper, wood, textiles, and pigment layers. In climates where seasonal humidity fluctuates significantly, this quality is particularly valuable.  
+ The material properties of hanji are now being empirically examined and documented in active restoration settings. Gruppo 130°, a network of Italian conservation specialists, has conducted comparative studies applying hanji alongside Japanese washi in the restoration of artworks. Their evaluations have focused on wet strength, flexibility, surface characteristics, and workability. In this context, hanji is being treated not as an unconventional traditional Asian paper but as a functional material subjected to the rigorous technical standards of conservation science.  
+ At the Vatican Museums, hanji has entered the academic sphere as a new material for training conservation specialists. The proliferation of symposia and official programs dedicated to this Korean paper demonstrates that it is no longer a subject of fleeting interest but has entered the institutional discourse. Gone are the times when hanji was an unfamiliar name in European conservation circles; it is now increasingly recognized as a material comparable to established conservation papers. This development raises the question whether the traditional techniques of hanji production are being transferred alongside export of the paper itself.  
+  
+ 
+ TECHNOLOGY TRANSFER  
+ The key to expanding hanji’s presence in the global restoration market is surprisingly obvious: it’s not enough to sell the paper; knowledge of how to use it must also be shared. A sheet of conservation paper does not fulfill its purpose through the material alone; it requires hands that understand it. The conservator must know how to mix the mulberry paste to the right consistency, when to apply moisture and when to withhold it, when to lift a damaged layer, when to press surfaces together, and how to fine-tune color and texture.  
+ Japanese materials have remained the international standard for conservation not only for their quality but in the cultivation of a washi-specific network of conservators through long-term training. For hanji to follow a similar path, not only the material properties of conservation-grade traditional paper but also the techniques for handling it must be systematically transferred.  
+ To tackle this issue, in 2025 the workshop “Traditional Korean Method of Paper Dyeing” was held for conservation specialists, linking the Vatican Museums with the Fabriano Paper and Watermark Museum in Italy. It sought to move beyond the mere supply of hanji to transferring related technology, so that conservators can independently produce and apply natural pigments. Particular emphasis was placed using natural materials to reliably reproduce the brown tones most frequently required in restoration settings using natural materials.  
+ The process involves creating colors that harmonize with the discoloration of the artifacts being restored, using locally available materials such as alder bark, onion skins, acorns, and gallnuts. This is more than straightforward dyeing instruction; it is a process of recreating materials that can age gracefully alongside the artifacts themselves.  
+ 
+   
+  Experimental studies demonstrating the exceptional durability of hanji have drawn international attention to its potential as a conservation material. In Europe, particularly in Italy and the Vatican, this traditional Korean paper is increasingly being used to restore cultural heritage objects, such as this sample housed at the Vatican Museums. Courtesy of Lee Seung Chul  
+  
+  
+ 
+ REGIONAL TRADITIONS  
+ Hanji is not one single type of paper but a collective term for sheets of varying qualities produced across different regions, each shaped by distinct climates, water sources, raw materials, and techniques. While major domestic production centers such as Uiryeong, Mungyeong, Goesan, and Jeonju all utilize the same raw material — mulberry fibers — centuries of tradition have resulted in papers with significantly different textures and grains.  
+ Thanks to the knowledge of local artisans bestowed with National Intangible Cultural Heritage titles, Uiryeong, Mungyeong, and Goesan continue to produce hanji with distinct regional characteristics in terms of physical properties and strength. Meanwhile, Jeonju has cultivated a broader hanji culture by linking the paper with industry, tourism, and craft. Andong emphasizes the versatility of hanji and its connection to traditional lifestyle crafts. This regional diversity is a distinct advantage in the field of conservation. Because artifacts requiring restoration vary widely in condition and composition, no single type of paper can solve every problem. The availability of materials with differing physical properties provides conservators with a broader spectrum of choices.  
+  
+ 
+ COLORED HANJI  
+ 
+   
+  Naturally dyed hanji imbued with a deep blue hue. After the mulberry bark is thoroughly steamed in a cauldron and the outer bark is removed, the fibers are immersed in indigo dye to produce this colored paper. Courtesy of Lee Seung Chul  
+  
+ Traditionally, hanji was colored through natural dyeing. In this context, color was not merely decoration but an intrinsic quality. The way hanji fibers retain pigment, the depth with which they filter light, and the grain that remains visible on the surface make colored hanji a complete material in itself. However, the production of authentic colored hanji has become increasingly difficult in modern times. Natural dyeing typically follows one of two methods: seonyeom (pre-dyeing), in which the raw fibers are steeped in color before the sheet of paper is formed; and huyeom (post-dyeing), where the paper is dyed after the finished sheets are made. Of these, the pre-dyeing method has all but disappeared. This has created a paradoxical situation where papermakers often lack knowledge of natural dyeing, and dyers are unfamiliar with the craft of hanji. Consequently, colored hanji is often made through chemical post-dyeing — an imperfect substitute for natural processes.  
+ Nevertheless, colored hanji is the realm where the paper’s expansive potential is most evident. For instance, if the natural brown tones required in cultural heritage restoration can be accurately reproduced, colored hanji could transform from a decorative material into an integral component of restoration practice.  
+ Today, hanji occupies a modest position in the global conservation paper market. Yet its tangible attributes — its regional diversity and capacity for long-term preservation — are undeniable advantages on the international stage. That hanji is now being employed in restoration, one of the most cautious and rigorous fields, is evidence of its technical potential.  
+ Perhaps the path forward for hanji lies not in discovering a new role but in returning to its oldest mission: to protect records and artifacts through its time-tested endurance. When it can properly fulfill that role once again, hanji could be chosen as the paper that preserves the world’s memories.  
+ 
+   
+  The city of Wonju has long been recognized as a major center of hanji production, celebrated especially for its wide variety of colored papers. Wonju Hanji, a third-generation family enterprise, has developed over 230 kinds of naturally dyed paper, significantly contributing to the preservation and broader appreciation of this traditional craft. Courtesy of the Korea Craft and Design Foundation</span>
+							
+							<!-- <p class="tag"><span>#Bean Sprouts</span><span>#korea</span><span>#kongnamul</span><span>#Bean Sprouts</span><span>#korea</span><span>#kongnamul</span></p> -->
+						</div>
+					</a>
+				</div>
+			
+				<div class="item"><a href="/koreana/na/ntt/selectNttInfo.do?nttSn=136838&bbsId=1114"  data-url="/koreana/na/ntt/selectNttInfo.do" data-nm="nttSn" data-param="136838" class="black nttInfoBtn">
+						<p>
+							<img src="/upload/koreana/na/bbs_1114/ntt_136838/_9bf1e6a6-625f-463c-b5b1-6b2b82e04e8d1774831965505.jpg" width="329px;" height="200px;" onerror="this.src='/images/co/na/noImg.gif'" alt="Hanji: A Language of Art">
+						</p>
+						<div class="con">
+							<p class="info">
+								<em>Features</em>
+
+								<span>
+									<em>2026 SPRING</em>
+									
+								</span>
+							</p>
+							<strong class="areCheck">Hanji: A Language of Art</strong>
+							
+							<span class="areCheck">Hanji has moved beyond its role as a traditional material to become a vital medium for contemporary artistic experimentation. For artists seeking to articulate their distinctly Korean identity, hanji offered an essential methodology for realizing artistic philosophies that are not based on Western frameworks. With a history spanning a thousand years, it continues to command attention as an expressive language that affirms the contemporaneity of Korean art in an era marked by rapidly shifting aesthetic sensibilities and artistic values.
+  
+ 
+  
+ “Opening 21.” Jungjin Lee. 2016. Archival pigment print on hanji. 145.5 × 76.5 cm. ed. 10+3AP. Courtesy of the artist and PKM Gallery  
+  
+ 
+  
+ “Wind 07-95.” Jungjin Lee. 2007. Photograph on hand-coated hanji. 75.5 × 144.5 cm. Courtesy of the artist and PKM Gallery  
+  
+ The active incorporation of traditional paper into contemporary Korean art is hardly a recent development. One need only consider Dansaekhwa, the monochrome movement that marked the global rise of Korean art. For these artists, hanji was far more than a traditional material; it was a medium that embodied the raison d’être of their work. Whereas, traditionally, the Western canvas largely serves a supporting role — receiving and sustaining paint as the primary material — hanji assumes a far more autonomous presence in Dansaekhwa. In Park Seo-Bo’s renowned “Écriture” series, for instance, the artist’s physicality and mental discipline are inscribed through the repeated act of pressing lines or grooves into wet paper. Similarly, Kwon Young-Woo tore and pierced the surface of the paper, transforming its physical presence to expand the very definition of painting.  
+ Layered with human labor, time, history, and memory, hanji continues to be reinterpreted by contemporary artists as something that exceeds mere materiality. It has emerged not only as an innovative formal language and a site for diverse experimentation but also as a medium of discipline, contemplation, and inspiration. At the intersection of form and thought, hanji acquires new meaning through each artist’s distinctive approach. In this process, the boundaries between photography, painting, and sculpture begin to dissolve, broadening the spectrum of artistic expression and allowing past and present to resonate with one another.  
+ 
+ DEPTH OF IMMERSION  
+ 
+   
+  “Mountain.” Minjung Kim. 2022. Ink and watercolor on hanji. 189 × 130 cm. Courtesy of the artist  
+  
+ For more than three decades, the New York-based photographer Jungjin Lee has captured landscapes that elude photography’s conventional function as a medium of representation or documentation. From the vast deserts of the North American continent and the elemental forms of earth and rock to Korea’s ancient stone pagodas and even everyday objects such as postage stamps, Lee’s images — reminiscent of ink wash paintings — convey a poetic sensibility shaped by emotion and intuition.  
+ The power of her photographs, now recognized worldwide and held in the collection of the Metropolitan Museum of Art in New York, among others, is heightened through analog prints rooted in hanji. In the late 1980s, the artist developed a distinctive method of brushing photosensitive emulsion onto the surface of traditional hanji and then printing the image directly onto it. This handcrafted process — that may rightly be described as artisanal — redefined the traditionally reproducible nature of photography, foregrounding instead its materiality, painterly qualities, and temporality. Imbued with the characteristically coarse texture of hanji, the images engage not only the eye but also the sense of touch. This quality remains palpable even in the artist’s more recent works, which combine analog printing with digital techniques.  
+ Lee’s photographs feel less like landscapes of this world and more like intimate portraits. This effect is heightened by her use of hanji, whose rough, hand-torn edges are preserved as an integral part of the works. Her intention to allow the images to “breathe” lends the black-and-white photographs a quiet depth, enabling them to transcend time and space and assert a timeless presence. As a result, Lee’s images feel liberated; rather than being confined and fossilized within a frame, they radiate an expansive freedom that seems to extend infinitely outward. For Lee, hanji serves not only as a conduit through which viewers can viscerally experience her sensations and perceptions but also as a vital collaborator — one that overcomes the limitations of photography and deepens the viewer’s immersion.  
+  
+ 
+ OBJECT OF CONTEMPLATION  
+ While hanji symbolizes the breath of life for Jungjin Lee, for calligraphist and painter Minjung Kim it becomes a medium of contemplation. In her serene studio in Saint-Paul-de-Vence in southeastern France, she draws upon the traditions of East Asian calligraphy, ink wash painting, and Eastern philosophy, translating them onto hanji. Kim regards hanji as an independent entity, both fragile and resilient, capable of withstanding the passage of time.  
+ Since the early 2000s, Kim has employed a meticulous process of cutting and layering hanji to create form. By singeing the edges of the paper with candles or incense sticks, she produces organic, spontaneous effects reminiscent of the natural bleeding of ink or watercolors. This uncontrollable collaboration between the paper and nature (fire) gives rise to ethereal landscapes that defy artificial reproduction. Under the artist’s fingertips, fragments of hanji shift in color, shape, and texture, culminating in a novel approach to abstraction with subtle dimensionality. Her style is defined by an experimental approach that dissolves boundaries — between Eastern artistic sensibilities and Western abstract visual language, and between painting and sculpture.  
+ To Kim, hanji is more than just a familiar everyday material; it is an ontological object as intimate as her own skin. It is also a stage where the meditative practices of patience, restraint, and the cyclical principles of Zen and Dao take visible form. As she burns the paper, she steadies her breath in a meditative rhythm, spending hours delicately layering the fragments gained through such intense concentration. Her work emerges only through destruction and is made complete by the act of emptying. When these reflections, having permeated layers of hanji, are finally sublimated into art, viewers experience a profound sense of healing.  
+  
+ 
+ MEMORIES OF TIME  
+ For Chun Kwang Young, hanji is a medium of memory. At the heart of his artistic world lies a scene from his childhood: his uncle, a practitioner of traditional medicine, meticulously wrapping medicinal herbs in hanji. Chun reimagines this memory by wrapping triangular pieces of Styrofoam in pages torn from old books, binding them with string to mimic the form of traditional herbal medicine parcels. These fragments — resembling small gifts wrapped in bojagi, cloths traditionally used to wrap, store, or carry items — serve as the fundamental units and primary visual language of his work.  
+ Thousands, sometimes tens of thousands, of these parcels are meticulously affixed to panels to form “Aggregation,” Chun’s most celebrated and defining series. The irregularly protruding units lend the relief-like surface a breathing, rhythmic vitality. The artist eventually expanded his scope further, creating monumental sculptures that amplify this organic movement. Exhibited in Venice and around the world, his works blur the boundary between two- and three-dimensional space, intuitively giving form to his declared desire to “contain the soul and spirit of the Korean people.”  
+ Chun’s primary materials — old books and their faded hanji pages — carry the collective memories of past generations. Traces of printed characters and markers of time embedded in his work preserve the essence of their daily lives, history, and scholarly records. These hanji-clad fragments collide or achieve a powerful harmony, forming a new visual order. At times, they offer a critique of the modern world; at other times, they convey hope through vibrant hues derived from natural dyes. In Chun’s hands, hanji honors its origins while embodying profound sentiments, holding within it stories that seem to surpass imagination.  
+ 
+   
+  “Aggregation 13-MA008.” Chun Kwang Young. 2013. Mixed media with hanji. 250 × 200 cm.  © Chun Kwang Young & CKY Studio  
+  
+  
+ 
+ RESONANCE OF MATERIAL AND SPIRIT  
+ 
+   
+  “Splashing Volcano Ash Gaze – Mesmerizing Mesh #140.” Haegue Yang. 2022. Hanji on Alu-Dibond, framed. 62 × 62 cm. Courtesy of the artist, Photo by Studio Haegue Yang  
+  
+ In the work of sculptor and installation artist Haegue Yang, hanji serves as a thread linking human civilizations. Throughout her career, she has explored the intricate relationship between materiality and spirituality. “Mesmerizing Mesh,” a series she has pursued since 2020, centers on collage-based works rooted in her research into paper ritual implements used in shamanic tradition. For these rituals, hanji is folded and cut in specific ways to create neokjeon (literally “soul sheets”), which are intended to house the spirits of the deceased. The belief that paper objects symbolize the interplay between the material and the spiritual is not unique to Korea. Sacred paper objects associated with shamanic, folk, or pagan traditions have been handed down for generations across cultures, crafted from materials such as hanji, Japanese washi, and Chinese chupizhi (mulberry bark paper). In “Mesmerizing Mesh,” Yang channels the spiritual resonance of paper found in these diverse cultures into a contemporary artistic language.  
+ Although Yang is primarily known for her sculptures and installations, she has long maintained an affinity for two-dimensional formats. Engaging with flatness is for her an act of folding, cutting, gluing, and layering materials. “Mesmerizing Mesh” likewise builds abstract layers and overlapping surfaces through a variety of motifs and decorative elements, extending the artist’s earlier methods of transforming materials such as venetian blinds, artificial straw, and bells. Whereas her sculptures and installations shape physical space, these two-dimensional works — produced by “flattening” — paradoxically contain even denser and more varied strata. Folded and compressed, “Mesmerizing Mesh” enters a realm of abstraction that transcends the dichotomy of flatness and volume. For both the artist and the viewers, the paper itself — specifically hanji — is the gateway and the key to this world.</span>
+							
+							<!-- <p class="tag"><span>#Bean Sprouts</span><span>#korea</span><span>#kongnamul</span><span>#Bean Sprouts</span><span>#korea</span><span>#kongnamul</span></p> -->
+						</div>
+					</a>
+				</div>
+			
+				<div class="item"><a href="/koreana/na/ntt/selectNttInfo.do?nttSn=136837&bbsId=1114"  data-url="/koreana/na/ntt/selectNttInfo.do" data-nm="nttSn" data-param="136837" class="black nttInfoBtn">
+						<p>
+							<img src="/upload/koreana/na/bbs_1114/ntt_136837/_f00854ee-3b4c-4ceb-b884-eb851b6abae51774831899931.jpg" width="329px;" height="200px;" onerror="this.src='/images/co/na/noImg.gif'" alt="Korean Life as Permeated by Hanji">
+						</p>
+						<div class="con">
+							<p class="info">
+								<em>Features</em>
+
+								<span>
+									<em>2026 SPRING</em>
+									
+								</span>
+							</p>
+							<strong class="areCheck">Korean Life as Permeated by Hanji</strong>
+							
+							<span class="areCheck">Hanji, traditional Korean paper made from the bark of the paper mulberry tree (dak), was once an inextricable part of Korean life. Its wide range of uses — from paintings and calligraphy to books, household items, and furniture — led to the development of diverse hanji crafts. As a material used for a variety of purposes in traditional homes, it also became deeply embedded in Korea’s residential culture.
+  
+ 
+  
+ Featured in Encountering Spring Days: A Special Exhibition of Paper Through the Ages, held at the National Folk Museum of Korea in Paju in 2024, these two moon jars and the 153 cm long woven screen were created by master craftsperson Kim Seonae. The pieces showcase jiseung, a craft where hanji is cut into strips, hand-twisted into cords, and woven into vessels and other objects. Courtesy of the National Folk Museum of Korea  
+  
+ Over a decade ago, I visited the Deutsches Museum in Munich, one of the world’s largest museums of science and technology, and had an unexpected encounter with a hanbok (traditional Korean garment) made entirely of hanji. It was my first time seeing everyday clothing made from Korean mulberry paper. Having previously only read about such garments in historical texts, I stood transfixed before it, overcome with emotion upon seeing one in a distant country.  
+ Historically, hanji was used to make burial shrouds and garments for religious ceremonies. Annals of the Joseon Dynasty (Joseon wangjo sillok) frequently mention winter military uniforms stuffed with hanji, rather than cotton, being distributed to troops. Reportedly, King Sukjong (r. 1674–1720) even ordered that hanji clothes be supplied to itinerants so they could weather the freezing winters, a testament to the material’s surprising insulating properties. One might wonder about clothes made of paper, but considering that fabrics and socks woven from mulberry fibers are still sold today, hanji garments are an invaluable heritage reflecting the wisdom of earlier generations.  
+ 
+  
+ In the past, jiseung garments were sometimes worn to stay cool during the hot summer months. This piece, measuring 42 × 133.5 cm, is believed to have been produced after 1945. ⓒ Wonju History Museum  
+  
+ 
+ ROOTED IN EVERYDAY LIFE  
+ 
+   
+  This hapjukseon, a folding fan historically used by the yangban elite of the Joseon Dynasty, was created by master artisan Kim Dong-sik. Designated a National Intangible Cultural Heritage title holder for fan-making in 2015, Kim is a fourth-generation artisan producing traditional fans using time-honored techniques. Courtesy of Soluna Living  
+  
+ Making clothes with paper entails a significantly higher level of technical skill than using it for bookbinding and other crafts. While cutting and shaping fixed forms is relatively straightforward, designing garments that must both envelop the body and allow freedom of movement involves many complex considerations. Thus, the very existence of hanji garments attests to the unique qualities of traditional Korean paper, which far surpass those of ordinary paper. The sheer range of hanji’s utility is staggering; it was even used to fashion armor, with multiple layers of the durable paper providing sturdy protection that could stop arrows.  
+ The applications of hanji extend far beyond conventional expectations. From birth to burial, it accompanied Koreans through every momentous life event. Previous generations were born in rooms with hanji-covered floors, lived in spaces with papered windows and doors, studied from paper books, and, after living a full life, were wrapped in paper to be interred. Before a marriage, the groom’s birth date and time details (saju) were written on hanji and sent to the bride’s home to formalize the betrothal. At funerals, the bier was adorned with paper flowers in five colors; paper spirit tablets and ritual prayers were fixtures of ancestral rites; and spaces for shamanic rituals were richly decorated with paper flowers. Among hanji’s diverse applications, its use in making paper umbrellas is particularly astonishing. The paradox of crafting an umbrella from a material inherently vulnerable to water perfectly captures the versatile and audacious nature of this paper.  
+  
+ 
+ ENDURING RESILIENCE  
+ 
+   
+  This traditional paper umbrella, made from fine bamboo ribs covered in hanji treated with perilla oil, was created by master artisan Yoon Gyusang and installed at Daewoo Engineering & Construction’s brand experience space SUMMIT Gallery in Seoul. Designated an Intangible Cultural Heritage artisan of North Jeolla Province in 2011, Yoon is Korea’s only remaining paper umbrella master, continuing the tradition with his son and successor, Yoon Seongho. ⓒ SUMMIT Gallery, Daewoo E&C  
+  
+ Paper was introduced to Korea during the Three Kingdoms period (c. 57 BCE–668 CE) and evolved into high-quality, mulberry-based hanji during the subsequent Unified Silla and Goryeo dynasties. In China, where paper was first invented before the Common Era, coarse sheets were initially made from old rags or fishing nets. During the Tang Dynasty (618–907), Chinese artisans developed fine-textured Xuan paper (xuanzhi) from a mix of blue sandalwood bark and rice straw, a tradition that continues today. Hanji and xuanzhi differ not only in their base materials but also in their manufacturing methods. When making hanji, artisans distribute the mulberry fibers evenly in a crisscross pattern in a water vat, weaving them together like warp and weft threads. In contrast, xuanzhi fibers run in a single direction, similar to traditional Japanese washi.  
+ There is good reason why, starting from the Song Dynasty (960–1279), China consistently sought out paper from Goryeo, referring to it as goryeoji. The hanji-making process involves an essential step called dochim, where the finished sheets are pounded with a wooden roller. This technique gives hanji its characteristically smooth texture and exceptional durability. The Northern Song poet Su Shi (1037–1101) and the Ming Dynasty painter Dong Qichang (1555– 1636), for instance, prized goryeoji for its quality; the Yuan Dynasty (1271–1368) even requisitioned 100,000 sheets; and the interior of the Forbidden City in Beijing was entirely papered with it.  
+ Many hanji varieties exist, classified by material and purpose. Thanks to its great utility, people across the Korean peninsula planted paper mulberry trees wherever clean water flowed, making a living through paper production. The area around Segeomjeong, a pavilion outside Changuimun (also known as Jahamun), one of the four smaller gates of the Seoul City Wall, was particularly renowned for high-end hanji. Paper mills densely lined the banks of streams flowing through the valleys of Mt. Bugak. As the royal palace and government offices were nearby, master artisans from across the country flocked to the area, which also housed the government bureau overseeing paper production for official use. However, this thriving community of artisans was abruptly dismantled when modern paper factories were established during the Japanese colonial period.  
+ 
+   
+  Installation view of Shapes in Mountains, a 2025 special exhibition at Hanji House, featuring pieces by contemporary craft artists who explore the boundless possibilities of hanji sourced from Goesan, Jeonju, and Andong. Located in Bukchon Hanok Village in downtown Seoul, Hanji House is a cultural complex operated by the Korea Craft and Design Foundation since 2020 to promote the excellence and diverse applications of traditional Korean paper. Courtesy of the Korea Craft and Design Foundation  
+  
+ Hanji’s foremost strength lies in its durability: it is able to withstand repeated folding and unfolding. In an experiment by the National Research Institute of Cultural Heritage conducted in 2022, standard Western paper tore after approximately twenty folds, whereas hanji endured more than eight hundred folds. While this test utilized machine-manufactured hanji, traditional hand-pounded hanji, with its tightly compacted fibers, would likely perform even better. Given such lasting quality, even worn scraps were not carelessly discarded. Records from the Joseon Dynasty (1392–1910) reveal that paper used for drafting historical annals was repeatedly washed to remove the ink and then reused. Nakpokji, the answer sheets of those who failed the civil service examinations, were repurposed into household goods, clothing, and shoes, or woven into conical bamboo hats. The use of recycled hanji was so commonplace that it earned the moniker hwanji, “returned paper.” The paper gave its all until it was completely worn out.  
+ Scrap paper from books found still other uses. Long strips of paper were twisted by hand into cords, which were then tightly woven to create household goods such as sewing baskets and storage boxes — a craft known as jiseung. Objects made in this way radiate a warm charm and are eco-friendly. When coated with lacquer, they become even more durable, further enhancing their utility. For example, a pottery terrapin bottle fastened to a horse’s saddle could be safely wrapped in lacquered paper cords to prevent breakage, ensuring travelers would not go thirsty on long journeys.  
+ 
+   
+  A piece from textile artist Eum Yoon Na’s “Baek Mi” (The Distinguished) series, featured in the Encountering Spring Days exhibition. Created by stacking and machine-stitching strands of paper cord one by one, the work demonstrates the vast possibilities of contemporary hanji crafts. Courtesy of the National Folk Museum of Korea  
+  
+  
+ 
+ THE ART OF RECYCLING  
+ 
+   
+  Hanji has long been used in hanok (traditional Korean houses) for flooring, window, and wall coverings. Designed by SUNJAE architects to enhance natural lighting and ventilation, this newly built hanok in Jeongeup, North Jeolla Province, illustrates a modern architectural application of these traditional materials. Courtesy of SUNJAE architects, Photo by Park Young-chae  
+  
+ In 2025, hanji artist Park Gap-soon was named Artisan of the Year by YÉOL, a foundation devoted to preserving Korean cultural heritage. A master of jiho — so-called “paper-paste craft” — her works were showcased at the exhibition Nature, As It Is, held as part of the 2025 YÉOL × Chanel Project at YÉOL Bukchon-ga, the foundation’s multipurpose cultural complex in Seoul. Her pieces received an overwhelmingly enthusiastic response for their heartwarming charm.  
+ Jiho has humble origins as a folk craft in which hanji pulp is kneaded with paste and hardened in molds to create various types of vessels, in a manner similar to papier-mâché. In the same vein as using scraps of fabric to make bojagi (traditional Korean wrapping cloths), it reflects the frugal spirit that treasures hanji as if it were fine silk. Repurposing materials for entirely new uses requires special skill and ingenuity. While jiho is similar to jiseung in its reliance on scrap paper, it has no limitations regarding the size of the objects that can be made, from small gourd dippers to massive storage jars. Among these, households that could barely afford standard earthenware favored paper jars, which they primarily used to store rice and other grains.  
+ Valuing materials, conserving them, and extending their lifespans is the starting point of a sustainable life. The jiho craft embodies these virtues of humility and restraint. Modern civilization, however, has moved in a different direction: the relentless pursuit of material abundance has spurred a global climate crisis. Confronted with this reality, hanji can teach us to be more mindful of our environment.  
+ Even so, an outstanding cultural heritage can struggle against the currents of time. Despite a growing public appreciation for the value of hanji, its disconnect from daily life casts a shadow over the work of today’s artisans. Many of us would struggle to remember the last time we wrote a letter by hand. An effective antidote to this disconnect is to recognize the value of slowness. Though inconvenient, incorporating small unhurried acts into our daily routines may provide the stepping stone needed to carry the invaluable heritage of hanji into the future.  
+  
+  
+ Choi Gongho  Former Professor, Korea National University of Heritage</span>
+							
+							<!-- <p class="tag"><span>#Bean Sprouts</span><span>#korea</span><span>#kongnamul</span><span>#Bean Sprouts</span><span>#korea</span><span>#kongnamul</span></p> -->
+						</div>
+					</a>
+				</div>
+			
+				<div class="item"><a href="/koreana/na/ntt/selectNttInfo.do?nttSn=135463&bbsId=1114"  data-url="/koreana/na/ntt/selectNttInfo.do" data-nm="nttSn" data-param="135463" class="black nttInfoBtn">
+						<p>
+							<img src="/upload/koreana/na/bbs_1114/ntt_135463/_f001ffef-f7b0-41ec-8953-5124b4fd56111766449236354.jpg" width="329px;" height="200px;" onerror="this.src='/images/co/na/noImg.gif'" alt="Paju’s Trinity of Pristine Flavors">
+						</p>
+						<div class="con">
+							<p class="info">
+								<em>Features</em>
+
+								<span>
+									<em>2025 WINTER</em>
+									
+								</span>
+							</p>
+							<strong class="areCheck">Paju’s Trinity of Pristine Flavors</strong>
+							
+							<span class="areCheck">Located at the confluence of the Imjin and Han rivers, Paju benefits from fertile soil, clean water, and wide day-night temperature swings — conditions that produce exceptional crops. The region’s rice was once presented at the royal court during the Joseon Dynasty, and its pristine environment continues to yield healthful staples such as ginseng and Jangdan beans. 
+  
+ 
+  
+ Meju is the base ingredient in Korean condiments such as ganjang (soy sauce), doenjang (soybean paste), and gochujang (red pepper paste). Traditionally, it is made by boiling soybeans, shaping them into blocks, then tying the blocks with rice straw and hanging them on racks to dry and slowly ferment. Since the 1960s, many producers have added starter cultures to simplify this process, but in Paju, meju is still made the traditional way to ensure a deep, richly layered flavor. © Korea Tourism Organization  
+  
+ Global enthusiasm for Korean content — from Bong Joon-ho’s film Parasite and the Netflix original series Squid Game to K-pop icons BTS and BLACKPINK — has naturally extended to Korean cuisine. The appeal goes well beyond familiar favorites like bulgogi (barbecued marinated beef), bibimbap (rice mixed with seasoned vegetables and beef), and Korean-style fried chicken, with increasing numbers of international travelers seeking out regional specialties through culinary tours. More recently, the sweeping popularity of the Netflix animated film KPop Demon Hunters has drawn global attention to bunsik (Korean snack foods). Social media feeds are filled with mukbang (literally “eating broadcast”) videos featuring gimbap (seaweed rice rolls), ramyeon (instant noodles), and tteokbokki (spicy rice cakes), all devoured by the film’s three heroines. It seems Korean cuisine is no longer just for food aficionados but has firmly entered the mainstream.  
+ At the foundation of Korean cuisine is bap (steamed rice), the staple that anchors every meal. Its centrality explains why so many Korean expressions contain the word, which often stands for “meal.” For example, “Are you eating bap well?” is a way of asking how a person is doing;“Let’s eat bap sometime” means catching up for a meal; and “I’ll treat you to bap next time” is an expression of gratitude. Steamed rice is made from hulled rice grains, and while the cooking method is important, its flavor mainly depends on the quality of the rice.  
+ 
+ PREMIUM NATIVE RICE 
+ With clean water, fertile soil, and fresh air, Paju is ideal for rice cultivation. Korea has numerous region-specific rice brands — Gomatnaru rice from Gongju, Misojinmi from Yecheon, Odae rice from Cheorwon, and Eosajinmi from Hoengseong — but Paju’s own Hansuwi stands out for its flavor. Its distinction derives from its cultivar, Chamdream, which was registered with the Korea Seed & Variety Service in 2016.  
+ 
+   
+   The Imjin River flows through northwestern Paju before joining the Han River, underpinning the region’s growth as an agricultural hub. Its periodic flooding and nutrient-rich sediment produce fertile soil, while its steady water supply enables large-scale rice cultivation. © Korea Copyright Commission  
+  
+ A premium native variety, Chamdream was developed by the Gyeonggi Agricultural Research & Extension Services through a long, meticulous crossbreeding process. A key figure behind the project is Jung-hee Jang, a rice tasting expert and head of the crop breeding team, who has dedicated over twenty years to rice breeding research. “It takes around ten to twelve years to develop a new variety, followed by an additional three to four years for its distribution to farms,” he explains. “It’s an arduous, painstaking process that requires perseverance, sweat, and commitment.”  
+ Jang notes that 80 percent of rice farms in Gyeonggi Province, where Paju is located, once relied on foreign varieties, making the development of a local rice cultivar a priority. His view aligns with the traditional principle of sintoburi (literally “body and soil are one”) — that food grown in one’s local soil best suits one’s constitution. This idea is not unique to Korea. In countries with a thriving culinary culture, locally sourced ingredients are considered a foundation of wellness.  
+ Chamdream rice is soft and glutinous, with lower levels of protein and amylose (a polysaccharide) than many other varieties, factors that yield a cleaner, sweeter flavor. It also maintains its taste longer after cooking. According to Jang, the climate of Paju and the broader region helped shape the rice cultivar’s development: “Being a high-latitude area, autumn harvest periods are characterized by large day-night temperature differences. This enhances the quality and sweetness of the rice.”  
+ Another new Paju rice variety was introduced in August 2025. Pyeongwon rice, developed by the Rural Development Administration, is a crossbreed of Jinbu 19 from the Republic of Korea and Samjiyeon 4 from the Democratic People’s Republic of Korea (DPRK). The name of this first South-North hybrid aptly conveys the meaning “rice longing for peace.” With a glutinous texture and nutty flavor profile, it was initially developed in Cheorwon, Gangwon Province, but after several test cultivations, it proved better suited to Paju. Today it is grown in Daeseongdong Village, the only civilian settlement within the southern side of the Demilitarized Zone, and sold under the name Pyeonghwa Miso, which means “smile of peace.”  
+  
+ 
+ THE LEGACY OF KAESONG GINSENG 
+ Makgeolli is a traditional Korean alcoholic beverage made from fermented rice, and Paju is home to several notable breweries. Paju Takju, in business for nearly ninety years, now makes makgeolli using Hansuwi rice as its main ingredient. Dovan Brewery’s Paju Makgeolli, likewise made with Hansuwi, is marked by its nine percent alcohol content and a refined balance of slight carbonation and acidity. Unjeong Brewery, established to revive the tradition of home-brewed liquors, also uses Paju rice but in a higher proportion than standard makgeolli to enhance sweetness. Its major products include Unjeong Makgeolli and Paju Kaesong Ginseng Makgeolli. Despite the brewery’s relatively short eight-year history, it has already won several major awards.  
+ The term “Kaesong ginseng” on the label recalls a distinguished heritage. Ginseng from the Goryeo era (918–1392) was renowned for its exceptional medicinal qualities, and from that time forward, all ginseng grown on the Korean peninsula came to be known as Goryeo ginseng. During the Joseon Dynasty (1392–1910), it earned wider recognition and was exported to China and Japan. Kaesong, now in the DPRK, was historically the main cultivation center. The legacy of Kaesong ginseng, prized for its superior efficacy, continues in Paju, which borders Kaesong. For generations, the two cities were regarded as Korea’s premier ginseng production sites, and even today Paju’s harvest is known as Paju Kaesong ginseng. It was only natural, then, for Unjeong Brewery to incorporate ginseng into its makgeolli. Paju’s pride in this heritage is evident at the annual Paju Kaesong Ginseng Festival, held each October; the vibrant event marked its 20th anniversary this year.  
+  
+ 
+ JANGDAN BEANS 
+ Another celebration of a local specialty is the Paju Jangdan Soybean Festival, held each November. Beans are an essential protein source, especially for vegans and vegetarians, and Jangdan beans hold a notable place in Paju’s agricultural history. The term does not refer to a specific variety but to indigenous beans traditionally cultivated in Jangdan, a township of Paju. With well-draining sandy soil and the large daily temperature swings, the area provides optimal conditions for cultivation. Production ceased during the Korean War but resumed in the 1970s; today, Jangdan beans encompass all beans produced throughout Paju.  
+ Historically, Jangdan beans, Imjin River rice, and Kaesong ginseng were once served together at the king’s table. Collectively known as Jangdan sambaek — denoting “the three clean, white agricultural products of Jangdan” — they symbolize the purity and abundance of the region. Jangdan beans are large and rich in protein, plant-based fats, calcium, and iron. According to the Korea Food Research Institute, they also have high anthocyanin levels, believed to contain antiaging properties.  
+ Many restaurants across Paju now specialize in dishes made with Jangdan beans. The oldest among them is Tongil Dongsan Dubu Maeul, established in 2001, where everything on the menu features the beans, including kongbiji jjigae (soy pulp stew), cheonggukjang (fast fermented soybean paste stew), and dubu boseot jeongol (bean curd mushroom hot pot). “Jangdan beans are the origin of Korean beans,” explains Cha Guk-je. When he opened his restaurant, few others in Paju served bean-based dishes. “People came, tasted our food, and said it was delicious. Word spread and other Jangdan bean restaurants began popping up in the area,” he recalls. The restaurant’s palm-sized steamed bean curd has a clean, nutty flavor — the kind that evokes the Korean adjective dambak, meaning “pure-hearted, without greed.”  
+ Together, Paju’s three signature staples demonstrate how regional ingredients continue to influence the development of Korean cuisine.  
+ 
+   
+   With well-draining soil, clean water, and protection from late frosts, Paju’s Jangdan area offers ideal conditions for soybean farming. A local specialty, Jangdan soybeans are large and glossy. They contain more isoflavones than other varieties and are prized for their rich, nutty flavor. Today, some seven hundred farms grow Jangdan soybeans across 1,100 hectares. Courtesy of Paju City, Photo by Joowon Kim</span>
+							
+							<!-- <p class="tag"><span>#Bean Sprouts</span><span>#korea</span><span>#kongnamul</span><span>#Bean Sprouts</span><span>#korea</span><span>#kongnamul</span></p> -->
+						</div>
+					</a>
+				</div>
+			
+				<div class="item"><a href="/koreana/na/ntt/selectNttInfo.do?nttSn=135462&bbsId=1114"  data-url="/koreana/na/ntt/selectNttInfo.do" data-nm="nttSn" data-param="135462" class="black nttInfoBtn">
+						<p>
+							<img src="/upload/koreana/na/bbs_1114/ntt_135462/_3dff0b12-500d-4119-8b25-1290de3dae361766449204797.jpg" width="329px;" height="200px;" onerror="this.src='/images/co/na/noImg.gif'" alt="Encounters with Joseon in Paju">
+						</p>
+						<div class="con">
+							<p class="info">
+								<em>Features</em>
+
+								<span>
+									<em>2025 WINTER</em>
+									
+								</span>
+							</p>
+							<strong class="areCheck">Encounters with Joseon in Paju</strong>
+							
+							<span class="areCheck">Paju is a city with a remarkably long and layered history. The abundance of Paleolithic artifacts along with dolmen sites and remains of Bronze Age dwellings attests to millennia of continuous habitation. Once a major transportation hub linking the northern and southern parts of the Korean peninsula, it also bears the indelible traces of influential figures of the Joseon Dynasty, forming a landscape where history still speaks. 
+  
+ 
+  
+  “Imjin seomun” is a painting by Kim Yang-gi, son of Kim Hong-do, one of the greatest painters of the late Joseon period. In the lower left, the work vividly depicts the Imjin ferry landing, once a vital transportation hub, as well as Jinseomun, a fortress gate destroyed during the Korean War. © The Academy of Korean Studies  
+  
+ The place name “Paju” first appears in Veritable Records of King Sejo (Sejo wangjo sillok) from the Joseon Dynasty (1392–1910). According to an entry for 1459, King Sejo (r. 1455–1468) renamed Queen Consort Jeonghui’s hometown of Wonpyeong to Paju and elevated its administrative status by one level. Later, during the reign of Gwanghaegun (r. 1608–1623), officials even proposed relocating the capital to the city, based on pungsu jiriseol, the theory of geomancy, which identifies auspicious sites by interpreting landforms and directional energies.  
+ During the Joseon era, Uijudaero was a vital artery — a major road that began in Hanyang (modern-day Seoul) and continued through Uiju on its way to China. As one of the principal gateways on this route, Paju has a remarkable number of cultural relics, many hidden in plain sight, as well as numerous historical sites commemorating individuals who played defining roles in shaping the course of Joseon.  
+ Paju also ranks alongside Guri, Goyang, and Namyangju for its high concentration of Joseon royal tombs. These include Jangneung, the tomb of King Injo (r. 1623–1649) and Queen Inyeol, frequently portrayed in historical TV series and films such as MBC’s My Dearest (2023) or Hwang Donghyuk’s epic The Fortress (2017). Here, too, lie the tombs collectively referred to as Paju Samneung (Three Royal Tombs) as well as the resting places of royal concubines who bore sons who later ascended the throne.  
+ 
+ HOMETOWN OF A GREAT SCHOLAR 
+ Yi I (1537–1584) stands alongside Yi Hwang (1501–1570) as one of the two most influential thinkers of the Joseon period, which earned him a place on today’s 5,000 Korean won notes. Though born at Ojukheon, his maternal grandparents’ home in Gangneung, he returned at age six to his father’s home in Yulgok-ri, Paju. He adopted the name of his hometown as his pen name, Yulgok, meaning “chestnut valley” — a clear affirmation of his roots.  
+ 
+   
+   Two Rock-carved Standing Buddhas in Yongmi-ri, Paju, located on the grounds of Yongam Temple, are Goryeo Dynasty (918–1392) Buddhist images carved into a massive natural rock face. The figure on the left wears a round hat and the one on the right a square hat, together exuding a distinctly folk aesthetic. © Gyeonggi Tourism Organization  
+  
+ Traces of Yulgok’s early years are still evident in Paju. Just above the Imjin River ferry landing stands Hwaseokjeong, a pavilion where a plaque displays Palsebusi, a poem Yulgok is said to have composed at the age of eight. Often cited as evidence of his precocious talent, the poem describes an autumn evening along the river.  
+ Yulgok died in 1584 at the age of forty-seven and was laid to rest in the family burial grounds in Paju. In 1615, local literati established a seowon (private Confucian academy) to honor his scholarship and exemplary character. His spirit tablet and portrait were enshrined there, and in 1650 the academy received a royal plaque conferring the name Jaun, meaning “purple cloud.” Later scholars who carried forward his academic legacy were enshrined alongside him.  
+ To the left of Jaun Seowon, along the ridge, lies a cluster of 13 family graves belonging to the Yi clan, including those of Yulgok’s parents as well as Yulgok and his wife, Lady No, which occupy the highest point of the burial area. The practice of forming family graveyards reflects the influence of Family Rites of Zhu Xi (Juja garye), the authoritative twelfth-century Chinese text for Confucian ceremonies such as coming-of-age ceremonies, weddings, funerals, and ancestral rituals. Such collective burial sites were common in this period, and the Paju burial cluster exemplifies this tradition.  
+ 
+   
+   Jaun Seowon is a Confucian academy established to honor the learning and virtues of Yi I, a leading Neo-Confucian scholar of the Joseon period. Yi authored many influential works, including Essentials of Sage Learning (Seonghak jipyo), which distills the core principles of Neo-Confucianism, and The Secret of Expelling Ignorance (Gyeongmong yogyeol), an educational text for children. © Korea Tourism Organization  
+  
+  
+ 
+ THE PAVILION OF SEAGULLS 
+ Paju is also deeply associated with Hwang Hui (1363–1452), one of the most esteemed prime ministers of the Joseon Dynasty. Historical records paint him as a man of profound discernment, unwavering integrity, and exemplary filial piety and loyalty. His learning and wisdom were so great that he earned the trust of the kings he served. Under King Sejong (r. 1418–1450), the visionary monarch who created Hangeul, the Korean writing system, Hwang rose to the highest government office and contributed significantly to what historians regard as a golden age.  
+ Bangujeong, whose name means “pavilion befriending seagulls,” marks the place where Hwang spent his final years after retiring from court service. Like Yulgok’s Hwaseokjeong, it stands dramatically atop craggy cliffs overlooking the Imjin River. After falling into ruin following Hwang’s death, the pavilion was rebuilt in the 17th century by his descendants, who commissioned the scholar-official Heo Mok (1596–1682) to compose a commemorative inscription.  
+ Calling Bangujeong “the pavilion of Hwang Hui, the great minister of a past golden age,” Heo wrote: “When he withdrew to spend his remaining days in nature with the seagulls and egrets, he forgot the world, regarding high office as nothing more than drifting clouds. This is precisely how the excellence of a great man should manifest itself.” Noting that Bangujeong stands on the banks of the Imjin River, about six kilometers west of Paju, Heo remarked, “Whenever the tide recedes and the tidal flats emerge, seagulls gather in flocks,” underscoring the pavilion’s proximity to the sea.  
+ It is said that on clear days, Mt. Songak in Kaesong (now in the Democratic People’s Republic of Korea), is visible from Bangujeong. For Hwang Hui, who was born in Kaesong but spent most of his life in Hanyang, the view must have offered a comforting sense of connection to home.  
+ 
+   
+   Bangujeong is the pavilion where Hwang Hui, a renowned scholar-official and prime minister of early Joseon, spent his final years after retiring from government service. Below Bangujeong stands a shrine where Hwang’s descendants conduct memorial rites to honor his legacy. © Korea Tourism Organization  
+  
+  
+ 
+ WHERE KINGS AND QUEENS LAY 
+ In 2009, forty Joseon royal tombs were inscribed on the UNESCO World Heritage List. Four of them are located in Paju, most notably Jangneung, the tomb of King Injo (r. 1623–1649). After Injo’s death, his second son and successor, King Hyojong (r. 1649–1659), oversaw the construction of his father’s tomb in Uncheon-ri, Paju. The choice of location was not arbitrary: Queen Inyeol, Injo’s consort who had passed away earlier, was already interred there under the same tomb name, Jangneung, and it was natural for Injo to be buried beside her. Moreover, it was a site that Injo had selected himself during his lifetime, and Hyojong emphasized that he was honoring his father’s wishes.  
+ 
+   
+   Majang Lake, one of Paju’s best-known tourist destinations, was created as an agricultural reservoir in 2001 and reopened by Paju City as an urban theme park in 2018. It is famous for its 220-meterlong, 1.5-meter-wide suspension bridge. During the Joseon Dynasty, the surrounding area served as a military horse-training ground — majang. © Korea Tourism Organization  
+  
+ However, the tomb did not remain at its original place. Recurring fires and the presence of snakes and scorpions among the stone monuments — regarded as ill omens — eventually led to its relocation to its current site in Tanhyeon-myeon, Paju.  
+ Jangneung features 12 retaining stones encircling the base of the burial mound, surrounded by a stone balustrade. Two stone ritual tables (sangseok) are placed before the mound, indicating that two individuals are interred there. A stone lantern stands in the center in front of the tables, flanked by high octagonal pillars (mangjuseok) that signify a sacred burial ground. Below them are paired civil official statues (muninseok) and military official statues (muinseok). The peony and lotus motifs carved on the retaining stones and lantern exemplify the refined, decorative style of 17th-century Joseon stonework.  
+ Another notable burial site is Paju Samneung, a group of three royal tombs: Gongneung, Sunneung, and Yeongneung. Gongneung is the tomb of Queen Jangsun (1445–1461), first consort of King Yejong (r. 1468–1469), who died at the age of sixteen from postpartum complications while still crown princess. Although she was posthumously elevated to queen, her tomb remains smaller than most royal tombs and lacks some of the customary stone decorations.  
+ Sunneung is the tomb of Queen Gonghye (1456–1474), principal consort of King Seongjong (r. 1469–1494) who succeeded Yejong. She was formally invested as queen after Seongjong’s accession but died a few years later at the age of eighteen. Unlike Gongneung, built for a crown princess, Sunneung was constructed according to full royal protocols, befitting her status as queen.  
+ Remarkably, both Queen Jangsun and Queen Gonghye were daughters of Han Myeonghoe (1415–1487), a powerful official who held numerous high-ranking posts in the early Joseon period. His extraordinary influence is evident in the fact that two of his daughters became queens, and their tombs in Paju tie his legacy to the region.  
+ Yeongneung is the tomb of Crown Prince Hyojang (1719–1728), eldest son of King Yeongjo (r. 1724–1776), Joseon’s longest-reigning monarch. The young prince died at the age of nine while still heir apparent, but his status was posthumously elevated and his tomb likewise upgraded, from a crown prince’s burial to one meeting the standards of a royal tomb. His consort, Queen Hyosun, who died at thirty-five, rests beside him.  
+ Beyond these principal sites, tombs of concubines who bore future kings can also be found in Paju. Taken together, they demonstrate the city of Paju’s deep and enduring ties to the Joseon royal family.  
+ 
+   
+   Jangneung is the royal tomb of King Injo and Queen Inyeol. The queen’s tomb was first built in 1635, and after the king’s death the two tombs were arranged as twin burial mounds. Relocated and combined into a single joint tomb in 1731, the site allows visitors to observe the style of royal stone sculptures from both the 17th and 18th centuries. © Royal Palaces and Tombs Center</span>
+							
+							<!-- <p class="tag"><span>#Bean Sprouts</span><span>#korea</span><span>#kongnamul</span><span>#Bean Sprouts</span><span>#korea</span><span>#kongnamul</span></p> -->
+						</div>
+					</a>
+				</div>
+			
+				<div class="item"><a href="/koreana/na/ntt/selectNttInfo.do?nttSn=135461&bbsId=1114"  data-url="/koreana/na/ntt/selectNttInfo.do" data-nm="nttSn" data-param="135461" class="black nttInfoBtn">
+						<p>
+							<img src="/upload/koreana/na/bbs_1114/ntt_135461/_cd128581-4775-4ffe-8ae9-197d77500fce1766449172091.jpg" width="329px;" height="200px;" onerror="this.src='/images/co/na/noImg.gif'" alt="Heyri: Art Etched into Nature’s Canvas">
+						</p>
+						<div class="con">
+							<p class="info">
+								<em>Features</em>
+
+								<span>
+									<em>2025 WINTER</em>
+									
+								</span>
+							</p>
+							<strong class="areCheck">Heyri: Art Etched into Nature’s Canvas</strong>
+							
+							<span class="areCheck">A little over an hour northwest of Seoul, a drive along Jayu-ro allows you to leave the bustle of the city behind. The skyline recedes into the broad Han River estuary and the surrounding fields, and at the edge of this quiet landscape lies Heyri Art Valley, a village where art and nature gently converge. 
+  
+ 
+  
+  Concino Concrete is a spacious music listening room. Each floor is proportioned for optimal acoustics, allowing visitors to experience sound at its fullest, while large windows frame sweeping views of the Imjin River. © Kim Jong Oh  
+  
+ Heyri Art Valley stands on what was once farmland where rice and vegetables were grown. Its transformation began in the late 1990s, when more than three hundred writers, architects, filmmakers, musicians, and other artists came together with a shared vision. They dreamed of creating a nature-friendly environment where they could find inspiration, focus on their work, and form a close-knit artistic community. In 1997, that vision became the Heyri Project, set in motion the following year with the formation of an organizing body.  
+ The name “Heyri” comes from “Heyri sori,” a traditional farming song passed down in the Paju region in Gyeonggi Province, where the village is now located. Farmers sang it while planting rice seedlings, keeping time with a simple yet powerful rhythm. That the village takes its name from the song reflects its emphasis on cooperation and harmony. The artists chose it to symbolize their new community and their conviction to plant art upon agricultural land.  
+ In postwar Korea, which underwent rapid industrialization, the idea of an artists’ village was almost unheard of. Yet the artists who gathered here paid little attention to the era’s obsession with economic growth and urban development. Instead, they set out to experiment with a way of living true to the spirit of art. Heyri was not the result of urban planning but of a shared artistic ethos.  
+ 
+  
+  YONALUKY is a cultural complex with meditation and spa facilities, a gallery, and a bar. Created as an amenity for the growing number of visitors to Heyri Art Valley, it was designed by architect Byoung Soo Cho and completed in 2011. © Hwang Woo-seob  
+  
+ 
+ BIRTH OF AN ART VILLAGE 
+ Anyone visiting Heyri for the first time is struck by the order within disorder — the roads wind and curve rather than running straight, and the buildings vary widely in materials and color. Yet there is a single guiding principle: to preserve the natural landscape and topography as much as possible. Instead of planning around urban blocks, Heyri was organized around the patterns of daily life so that living, working, creating, and resting are carried out in the same space.  
+ To achieve this, much of the village’s 150,000-pyeong (495,900-square-meter) site was left as green space, and all buildings were limited to a height of 12 meters, so the surrounding hills would remain visible, their contours intact. Unlike in most cities, where the sky is obscured by high-rises, here you need only lift your head to see it. Fences are prohibited, so trees and plants define property boundaries instead, allowing people and spaces to connect naturally, without barriers.  
+ 
+   
+   Opened in 2004, the Dalki Theme Park & Shop played a major role in bringing Heyri Art Valley to public attention with its distinctive architectural design and imaginative exhibition content. Featured at the 9th Venice Biennale International Architecture Exhibition, the building was unfortunately demolished in 2024. Even so, for many people, this is still the first place that comes to mind when they think of Heyri. © Gyeonggi Tourism Organization  
+  
+ Another rule stipulates that at least 60 percent of every building be dedicated to cultural facilities. This is why Heyri, filled with galleries, studios, and art shops, often feels like an open-air museum when you stroll through it. Performances, exhibitions, workshops, and lectures take place year-round across its cultural spaces, some of which have become trendy destinations for younger visitors.  
+ One such venue is the Kim Jung Gi Museum, which honors the creative world of its namesake artist. Kim Jung Gi (1975–2022) was renowned for drawing images from memory, often completing canvases tens of meters long in a single, continuous flow. Inside the museum, visitors find his drawing tools, sketches that cover entire walls, and interview footage from his lifetime. His philosophy — “a drawing is made with the mind, not the hand” — continues to inspire Heyri’s artists and visitors alike.  
+ The Han Hyang Lim Ceramic Museum features a wide range of contemporary ceramic art from Korea and other countries. Its founder, Han Hyang Lim, describes ceramics as “a form in which earth and humans are reunited.” Even everyday objects such as teacups, plates, or bottles carry an artistic sensibility, while the fine cracks in glazed surfaces, known as crazing, resemble the imperfections of life and give off a sense of warmth. Nestled into a hillside, the museum building is a work of art itself and received the Excellence Award at the 2020 Korean Architecture Awards.  
+ Music Space Camerata — a long concrete box inspired by barns in rural Montana — houses a residence, gallery, and music cafe, a combination that perfectly captures the spirit of the art village. Created by broadcaster Hwang In-yong, who spent decades working in both television and radio, it offers a quiet refuge for music lovers. “Listening to music all the time,” he says, “is like having a place to lean on, somewhere to cry when you’re lonely.” Visitors settle into their seats surrounded by walls lined with artworks and massive analog speakers, listening to Hwang’s vast collection of vinyl records, boosted by vintage vacuum-tube amplifiers. In this space, sound — rather than light — fills the room, a sensory experience that reminds us that art extends beyond the visual.  
+ The same village ethos carries into Heyri Cinema, an intimate theater devoted to Korean independent and art films. The small auditorium features a space for Q&A sessions between directors and audiences. Post-screening discussions often unfold here, sometimes blossoming into new projects. The idea of the audience as co-creator reflects the spirit of Heyri that art is not a one-way process but shaped through interaction and shared emotion.  
+  
+ 
+ BEYOND THE VILLAGE 
+ With the shifting light of day and turning of the seasons, Heyri never looks quite the same. In spring, azaleas and cherry blossoms come into bloom; in summer, vines and aquatic plants spread wide; in autumn, ginkgo leaves flutter down and silver grass sways in the wind; and in winter, soft snow blankets the landscape, blurring the buildings’ outlines. Here, the word “vegetation” feels more fitting than “landscaping.” Grasses and trees grow on rooftops, and rainwater is absorbed by the soil rather than being channeled away by artificial drains. The natural environment at Heyri is not a backdrop but part of the architecture itself.  
+ When night falls, the village is lit not by streetlights but by the glow coming from its buildings. Light spills softly through glass walls and washes over the streets, giving the village a gentle radiance. Here, night is not darkness — it becomes another artistic scene. This sensibility continues beyond the village. Ten minutes away by car, at the edge of Paju Book City, stands the Mimesis Art Museum. Designed by Portuguese architect Alvaro Siza, the museum is a graceful structure of white concrete curves. Its exterior has not a single decorative line, yet changing sunlight transforms the building’s appearance throughout the day. Inside, diagonal shafts of natural light descend from the ceilings, guiding the gaze of visitors as they explore exhibitions spanning painting, sculpture, architecture, photography, and design. Mimesis is a Greek term meaning “imitation” or “representation,” a fundamental principle of artistic creation, but at Heyri imitation is about learning the order and rhythm of nature.  
+ 
+   
+   Music Space Camerata, run by broadcaster Hwang In-yong, is one of Paju’s signature music listening venues, alongside Concino Concrete. Its interior is styled like a concert hall, with a grand piano at the front and vintage speakers positioned just behind it. © Lee Min-hee  
+  
+ Also close by is Concino Concrete, a listening lounge and multicultural space that is popular among classical music lovers. Its soaring ceiling and massive concrete interior are striking, and the deep, majestic sound that pours from five enormous speakers — made in Germany in the 1930s — is overwhelming. Sitting there, one feels almost transported back to an earlier era, as if music were carrying time itself.  
+  
+ 
+ COMMUNITY AND SUSTAINABILITY 
+ At the heart of Heyri Art Valley is a simple tenet: It’s always about people. The artists here do more than create. They eat together, help with their respective exhibitions, and look after each other’s children, forming a warm, loosely structured community. The cafe owner is a former sculptor, the bookstore owner is a novelist, and a local ceramic artist collects clay from nearby fields. Everyone is both an artist and a resident.  
+ Another pillar of the village is its commitment to sustainability. Every structure is designed with energy efficiency in mind, and many buildings feature rainwater-reuse systems or solar panels. Recently, a variety of children’s educational programs have been introduced to teach young visitors about soil, plants, insects, and the water cycle. As art and ecology come together, Heyri transforms from a collection of exhibition spaces into a living classroom.  
+ As they leave, visitors may ask themselves, “Is this a museum or a village?” Created by artists, Heyri is both, offering an alternative to conventional urban planning and quietly posing a question about how people choose to live. Here, art is not something to be owned or consumed but rather a way of being. This is a place where the boundaries between art and everyday life dissolve and where nature and people coexist.  
+ By day, winter migratory birds such as gr
