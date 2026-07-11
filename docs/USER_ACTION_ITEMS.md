@@ -1,0 +1,62 @@
+# 사용자 준비 사항 (USER ACTION ITEMS)
+
+Claude Code가 자율 개발을 진행하기 위해 **사용자만 할 수 있는 일**들입니다.
+우선순위 순서로 정리했습니다. 완료하면 체크하고 커밋해 주세요.
+
+## 🔴 P0 — 즉시 (마감 존재)
+
+### 1. 공모 접수 — **마감 2026-07-13(월) 18:00**
+- 제출처: 국민생각함(epeople.go.kr) 또는 이메일 `opendata@kf.or.kr`
+- 제출물 (공고 붙임 양식):
+  - [ ] 붙임1 참가신청서 (참가분야: **제품 또는 서비스 개발** 체크, 활용데이터 란에
+        data.go.kr 등록 데이터셋명을 **정확한 명칭으로** 기재 — DEV_SPEC §4.2의 표 참조)
+  - [ ] 붙임3 제품(서비스) 기획서 (10p 이내 — 기존 컴팩트 기획서를 공고 목차
+        1~6번에 맞춰 재구성. 3번 "공공데이터 활용 방안"에 출처·내용·획득방법·지속성 필수 기재)
+  - [ ] 붙임4 개인정보 수집·이용 동의서
+- 문의: 02-2100-7163, 064-804-1021
+
+### 2. API 키 발급 → 저장소 루트에 `.env` 생성 (`.env.example` 복사)
+- [ ] **Anthropic API 키** → `ANTHROPIC_API_KEY` (console.anthropic.com, 결제수단 등록.
+      개발 전체 기간 LLM 비용 추정 $50~120 — DEV_SPEC §7)
+- [ ] **공공데이터포털 인증키** → `DATA_GO_KR_API_KEY`
+      1. data.go.kr 회원가입(본인인증 필요 — 사용자만 가능)
+      2. DEV_SPEC §4.2의 각 오픈API 상세페이지에서 [활용신청] 클릭 (대부분 자동승인)
+      3. 마이페이지 → 인증키(일반 인증키 Encoding) 복사
+- [ ] (선택, 벤치마크용) **OpenAI API 키** → `OPENAI_API_KEY` — "GPT vs K-Rosetta" 직접 비교에
+      필요. 미제공 시 베이스라인을 'Claude 바닐라 번역'으로 대체하고 발표에서 명시
+- [ ] (선택) **Google Cloud Translation API 키** → `GOOGLE_TRANSLATE_API_KEY`
+
+## 🟡 P1 — 개발 초반 (M1, ~7/16)
+
+### 3. 크롤러 로컬 실행 (원격 환경이 한국 사이트 접속 차단 시)
+- 이 원격 개발 환경은 koreana.or.kr / data.go.kr 접속이 차단되어 있을 수 있습니다.
+- Claude Code가 크롤러를 완성해 두면, 사용자 PC에서 실행:
+  ```bash
+  git pull
+  cd shiver && pip install -r pipeline/requirements.txt
+  python scripts/run_crawler.py --langs ko,en,vi,id,ar,ru --since 2016
+  # 완료 후 산출물 업로드 방법은 scripts/README.md 안내를 따름
+  ```
+- [ ] 크롤링 산출물 공유 방법 결정 (git LFS는 비권장 — 클라우드 드라이브 링크 or 세션에 파일 업로드)
+
+### 4. 확인 요청 응답
+- `docs/PROGRESS.md` 상단 "⚠️ 사용자 확인 필요" 섹션을 주기적으로 확인하고 답변 남기기
+  (새 세션에서 "PROGRESS 확인하고 계속 진행해줘" 라고 지시하면 됩니다)
+
+## 🟢 P2 — 발표 준비 단계 (M5, ~7월 말)
+
+- [ ] 발표평가 일정·형식 통보 받으면 공유 (개별통보라 사용자만 수신)
+- [ ] 배포 여부 결정: 로컬 데모(기본) vs 클라우드 배포(Vercel/Railway 등 — 계정 필요)
+- [ ] 발표자료 검토: `docs/BENCHMARK_REPORT.md` 결과 기반 슬라이드 초안을 Claude Code에 요청 가능
+- [ ] (권장) KF에 Koreana 데이터 활용 관련 사전 문의 메일 — 저작권 리스크 §4.4 방어 +
+      "주최기관과 협의 진행 중" 이라는 발표 포인트 확보
+
+## 자율 개발 세션 운영법 (참고)
+
+자는 동안 개발을 진행시키려면:
+1. `.env` 준비 후, Claude Code 세션에서:
+   *"CLAUDE.md와 docs/PROGRESS.md 읽고, 다음 미완료 마일스톤을 이어서 개발해줘.
+   막히면 PROGRESS에 기록하고 다음 태스크로 넘어가줘."*
+2. 웹 Claude Code라면 세션이 백그라운드에서 계속 진행됩니다. 아침에 PROGRESS.md와
+   커밋 로그를 확인하고, "사용자 확인 필요" 항목에 답하면 됩니다.
+3. 한 세션에 마일스톤 1개 단위로 요청하는 것이 품질·검증 면에서 안전합니다.

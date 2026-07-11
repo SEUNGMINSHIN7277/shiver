@@ -1,0 +1,31 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# data (크롤링 원본/정제 산출물은 커밋 금지)
+data/raw/
+data/processed/
+data/cache/
+*.sqlite3
+*.db
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+dist/
+*.egg-info/
+
+# node
+node_modules/
+.next/
+out/
+coverage/
+
+# misc
+.DS_Store
+*.log
