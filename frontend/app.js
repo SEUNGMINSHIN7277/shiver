@@ -188,12 +188,12 @@ async function loadBenchmark() {
   const byLang = Object.entries(s.vanilla_fidelity_by_lang)
     .map(([lg, v]) => `${LANG_LABEL[lg] || lg} ${Math.round(v * 100)}%`)
     .join(" · ");
-  $("#bench-method").textContent = `문화 용어 ${d.n_cases}건 × 4개 언어 — 공공데이터 공인 표준 대비 충실도 비교 (${d.version} · ${d.created})`;
+  $("#bench-method").textContent = `문화 용어 ${d.n_cases}건 × 4개 언어 — 한국 공인 표준 표기 준수율 비교 (${d.version} · ${d.created})`;
   $("#bench-summary").innerHTML =
-    `일반 번역기의 표준 용어 충실도는 평균 <b>${Math.round(s.vanilla_fidelity * 100)}%</b>` +
+    `일반 번역기가 한국의 공인 표준 표기(공공데이터 기준)를 따르는 비율은 평균 <b>${Math.round(s.vanilla_fidelity * 100)}%</b>` +
     ` — 언어별로 ${byLang}. <b>저자원 언어일수록 급락</b>합니다.` +
-    ` 용어사전을 강제한 <b class="ours">K-Rosetta는 전 언어 ${Math.round(s.krosetta_fidelity * 100)}%</b>.` +
-    ` <span class="muted">— 동일 조건 ablation. 방법론: ${esc(d.methodology)}</span>`;
+    ` K-Rosetta는 공공데이터 표준을 강제하므로 <b class="ours">전 언어 ${Math.round(s.krosetta_fidelity * 100)}%</b> 준수.` +
+    ` <span class="muted">— 방법론: ${esc(d.methodology)}</span>`;
   renderBenchRows("all");
 }
 

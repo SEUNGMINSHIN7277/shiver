@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 import json
-from pathlib import Path
 
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
@@ -10,7 +9,7 @@ from pydantic import BaseModel, Field
 from ..config import REPO_ROOT, get_settings
 from ..db import get_db
 from ..services.llm import engine
-from ..services.retrieval.search import search_corpus
+from ..services.retrieval.search import expand_query, search_corpus
 from ..services.termdetect import detect_terms
 
 router = APIRouter(prefix="/api")
@@ -69,6 +68,7 @@ def _term_card(t: dict) -> dict:
             "kf_food": "KF 한국음식정보 (공공데이터포털 15044203)",
             "koica_oda": "KOICA ODA 용어사전 (공공데이터포털 15052909)",
             "curated_v0": "K-Rosetta 문화용어 (Koreana 근거 연결)",
+            "univ_korname": "KF 해외대학 표준국문명칭 (공공데이터포털 15075335)",
         }.get(t["source"], t["source"]),
     }
 
@@ -106,17 +106,9 @@ def chat(req: ChatReq) -> dict:
     con = get_db()
     lang = engine.detect_lang(req.message)
     preset = engine.cached_chat(req.message)
-    # 용어사전 역인덱스: 질문 속 로마자 용어(pansori 등)를 한국어 용어로 확장해 검색 recall 확보
-    extra = []
-    q_lower = req.message.lower()
-    for row in con.execute(
-        "SELECT t.term_ko, r.rendering FROM glossary_terms t JOIN glossary_renderings r ON r.term_id=t.id"
-        " WHERE t.domain='culture' AND r.lang='en'"
-    ):
-        head = row["rendering"].split("(")[0].strip().lower()
-        if head and head in q_lower:
-            extra.append(row["term_ko"])
-    hits = search_corpus(con, req.message, extra_terms=extra, k=4)
+    # 검색은 search_corpus가 다국어 용어사전 기반 질의 확장을 내장(로마자·현지어→한국어 표제어)
+    extra = expand_query(con, req.message)
+    hits = search_corpus(con, req.message, k=4)
     citations = [
         {"title": h["title"], "snippet": h["snippet"], "source": h["source"],
          "published": h["published"], "url": h["url"]}
@@ -215,4 +207,15 @@ def country(q: str = "", limit: int = 30) -> dict:
         " WHERE name_ko LIKE ? OR name_en LIKE ? OR iso2 LIKE ? LIMIT ?",
         (like, like, q.upper(), limit),
     ).fetchall()
-    return {"available": True, "count": n, "results": [dict(r) for r in rows]}
+    out = []
+    for r in rows:
+        d = dict(r)
+        # 외교부 국가코드 + KOICA-KF 융합 사업정보 결합 (국가별 공공외교·ODA 사업)
+        d["projects"] = [
+            dict(p) for p in con.execute(
+                "SELECT kor_name, eng_name, year, agency FROM oda_projects"
+                " WHERE country_iso=? OR country_ko=? LIMIT 5", (r["iso2"], r["name_ko"])
+            ).fetchall()
+        ]
+        out.append(d)
+    return {"available": True, "count": n, "results": out}

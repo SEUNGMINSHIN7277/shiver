@@ -11,7 +11,6 @@ import json
 import re
 import unicodedata
 from functools import lru_cache
-from pathlib import Path
 
 from ...config import REPO_ROOT, get_settings
 

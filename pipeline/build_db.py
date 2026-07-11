@@ -29,6 +29,8 @@ DROP TABLE IF EXISTS glossary_terms;
 DROP TABLE IF EXISTS glossary_renderings;
 DROP TABLE IF EXISTS corpus_docs;
 DROP TABLE IF EXISTS glossary_evidence;
+DROP TABLE IF EXISTS countries;
+DROP TABLE IF EXISTS oda_projects;
 DROP TABLE IF EXISTS opendata_provenance;
 DROP TABLE IF EXISTS corpus_fts;
 
@@ -81,6 +83,10 @@ CREATE TABLE opendata_provenance (
 );
 CREATE TABLE countries (
   iso2 TEXT, iso3 TEXT, name_ko TEXT, name_en TEXT
+);
+CREATE TABLE oda_projects (
+  country_ko TEXT, country_iso TEXT, continent TEXT,
+  kor_name TEXT, eng_name TEXT, year TEXT, agency TEXT
 );
 """
 
@@ -362,21 +368,65 @@ def load_opendata_api(con: sqlite3.Connection) -> dict:
             except Exception:  # noqa: BLE001
                 items = []
             status[key] = ("live", len(items))
-            if key == "country_code" and items:
-                for it in items:
-                    if not isinstance(it, dict):
-                        continue
-                    g = lambda *ks: next((str(it[k]) for k in ks if it.get(k)), "")  # noqa: E731
-                    con.execute(
-                        "INSERT INTO countries(iso2, iso3, name_ko, name_en) VALUES(?,?,?,?)",
-                        (g("iso_alp2", "isoAlp2", "iso2", "country_iso_alp2"),
-                         g("iso_alp3", "isoAlp3", "iso3"),
-                         g("country_nm", "countryNm", "korNm", "name_ko"),
-                         g("country_eng_nm", "countryEngNm", "engNm", "name_en"))
-                    )
+            _load_api_items(con, key, items)
         else:
             status[key] = ("approved_pending", 0)
     return status
+
+
+# 국가 ISO2 → 서비스 지원 언어 (현지어 대역 부여용)
+_ISO2_LANG = {"VN": "vi", "ID": "id", "RU": "ru"}
+
+
+def _load_api_items(con: sqlite3.Connection, key: str, items: list) -> None:
+    def g(it, *ks):
+        return next((str(it[k]).strip() for k in ks if it.get(k)), "")
+
+    if key == "country_code":
+        for it in items:
+            if isinstance(it, dict):
+                con.execute(
+                    "INSERT INTO countries(iso2, iso3, name_ko, name_en) VALUES(?,?,?,?)",
+                    (g(it, "country_iso_alp2", "iso_alp2"), g(it, "iso_alp3"),
+                     g(it, "country_nm"), g(it, "country_eng_nm")))
+    elif key == "univ_korname":
+        # 해외대학 표준 국문명칭 → 기관명 번역 정규화 용어로 편입(도메인=institution)
+        for it in items:
+            if not isinstance(it, dict):
+                continue
+            ko = g(it, "univ_nm")          # 껀터대학교
+            en = g(it, "univ_eng_nm")      # Can Tho University
+            loc = g(it, "univ_loc_nm")     # Trường Đại học Cần Thơ (현지어)
+            iso2 = g(it, "country_iso_alp2")
+            country = g(it, "country_nm")
+            if not ko or not en:
+                continue
+            cur = con.execute(
+                "INSERT OR IGNORE INTO glossary_terms(term_ko, category, domain, definition_ko, source)"
+                " VALUES(?,?,?,?,?)",
+                (ko, f"기관명({country})", "institution",
+                 f"{country} 소재 대학의 외교부·KF 표준 국문명칭", "univ_korname"))
+            tid = cur.lastrowid or con.execute(
+                "SELECT id FROM glossary_terms WHERE term_ko=?", (ko,)).fetchone()[0]
+            con.execute(
+                "INSERT INTO glossary_renderings(term_id, lang, rendering, strategy, gloss, source)"
+                " VALUES(?,?,?,?,?,?)",
+                (tid, "en", en, "kf_standard", "", "univ_korname"))
+            lang = _ISO2_LANG.get(iso2)
+            if lang and loc:
+                con.execute(
+                    "INSERT INTO glossary_renderings(term_id, lang, rendering, strategy, gloss, source)"
+                    " VALUES(?,?,?,?,?,?)",
+                    (tid, lang, loc, "local_official", "", "univ_korname"))
+    elif key == "oda_business":
+        for it in items:
+            if isinstance(it, dict):
+                con.execute(
+                    "INSERT INTO oda_projects(country_ko, country_iso, continent, kor_name, eng_name, year, agency)"
+                    " VALUES(?,?,?,?,?,?,?)",
+                    (g(it, "country_nm"), g(it, "country_iso_alp2"), g(it, "continent_nm"),
+                     g(it, "kor_business_nm"), g(it, "eng_business_nm"),
+                     g(it, "business_year"), g(it, "business_type_cd_nm")))
 
 
 def koreana_parallel_stats(con: sqlite3.Connection) -> dict:

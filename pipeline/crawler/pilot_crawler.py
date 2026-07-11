@@ -19,7 +19,7 @@ import json
 import re
 import time
 import urllib.parse
-from dataclasses import dataclass, field, asdict
+from dataclasses import dataclass, field
 from pathlib import Path
 
 import httpx
