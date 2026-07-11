@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>K-Rosetta — 한국 문화를 세계 언어로, 정확하게</title>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <span class="brand-mark">K</span>
+      <span class="brand-name">K-Rosetta</span>
+    </div>
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-view="translate">번역</button>
+      <button class="tab" data-view="chat">문화 챗봇</button>
+      <button class="tab" data-view="benchmark">벤치마크</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ============ 번역 ============ -->
+  <section id="view-translate" class="view active">
+    <div class="hero">
+      <h1>한국 문화를 세계 언어로, <em>정확하게.</em></h1>
+      <p class="sub">KF 39년 다국어 발간 자산과 공공데이터 표준 용어로 문화 용어의 충실도를 지키는 번역</p>
+    </div>
+
+    <div class="panel">
+      <div class="row between">
+        <div class="seg" id="lang-seg">
+          <button class="seg-btn active" data-lang="en">English</button>
+          <button class="seg-btn" data-lang="vi">Tiếng Việt</button>
+          <button class="seg-btn" data-lang="id">Indonesia</button>
+          <button class="seg-btn" data-lang="ar">العربية</button>
+        </div>
+        <label class="switch-label"><input type="checkbox" id="compare-toggle"/> 일반 번역기와 비교</label>
+      </div>
+
+      <div class="chips" id="preset-chips" aria-label="예시 문장"></div>
+
+      <textarea id="src-text" rows="3" placeholder="한국어 문장을 입력하세요 — 예: 판소리는 소리꾼이 고수의 북장단에 맞춰…"></textarea>
+      <div class="row end">
+        <button class="btn primary" id="btn-translate">번역</button>
+      </div>
+    </div>
+
+    <div id="translate-result" class="hidden">
+      <div class="result-grid" id="result-grid"></div>
+      <h3 class="section-title">문화 용어 카드 <span class="muted" id="term-count"></span></h3>
+      <div class="cards" id="term-cards"></div>
+    </div>
+  </section>
+
+  <!-- ============ 챗봇 ============ -->
+  <section id="view-chat" class="view">
+    <div class="hero small">
+      <h1>어떤 언어로 물어도, 근거와 함께.</h1>
+      <p class="sub">KF 공공데이터 코퍼스를 검색해 출처를 인용하는 다국어 문화 설명</p>
+    </div>
+    <div class="panel chat-panel">
+      <div class="chips" id="chat-chips">
+        <button class="chip" data-q="판소리가 뭐야?">판소리가 뭐야?</button>
+        <button class="chip" data-q="What is pansori?">What is pansori?</button>
+        <button class="chip" data-q="Hanji là gì?">Hanji là gì?</button>
+        <button class="chip" data-q="Apa itu gimjang?">Apa itu gimjang?</button>
+      </div>
+      <div id="chat-log" class="chat-log"></div>
+      <div class="row chat-input">
+        <input id="chat-text" type="text" placeholder="아무 언어로나 질문해 보세요"/>
+        <button class="btn primary" id="btn-chat">보내기</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 벤치마크 ============ -->
+  <section id="view-benchmark" class="view">
+    <div class="hero small">
+      <h1>표준을 아는 번역과 모르는 번역.</h1>
+      <p class="sub" id="bench-method"></p>
+    </div>
+    <div class="panel">
+      <p class="bench-summary" id="bench-summary"></p>
+      <div class="table-wrap">
+        <table id="bench-table">
+          <thead><tr>
+            <th>용어</th><th>공인 표준 / 관례 대역</th><th>일반 번역기 (용어사전 미적용)</th><th>판정</th><th>K-Rosetta</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="badges" id="provenance-badges"></div>
+  <p class="fineprint">K-Rosetta는 공공데이터포털(data.go.kr)에 등록된 외교부 산하기관 개방데이터를 서비스 핵심 기능에 활용합니다 ·
+  데이터: 한국국제교류재단 《Koreana》 다국어 아카이브(정렬 진행 중) · 2026 외교 공공데이터·AI 활용 경진대회 출품작</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

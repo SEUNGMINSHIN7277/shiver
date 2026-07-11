@@ -30,6 +30,20 @@
 
 ## 세션 로그 (최신이 위)
 
+### 2026-07-12 — 세션 2 (S0-A/B: 데모 v0 풀스택 구축) ✅
+- 사용자 제공물 통합: 오픈API 3종 승인 확인(엔드포인트 실측 기록), CSV 3종 수령
+  → `data/pilot/opendata/` (UTF-8 변환 커밋), serviceKey는 `.env`(git 제외)
+- DB 빌드: **용어 1,129 / 대역 1,290 / 코퍼스 1,014문서** (`pipeline/build_db.py`)
+  - KF 한국음식정보 691 + KOICA ODA 용어 419 + KF 아카이브 기사 278 + 큐레이션 문화용어 45(en/vi/id/ar)
+- 백엔드(FastAPI): /api/translate(용어탐지+캐시드 번역+비교), /api/chat(FTS5 RAG+인용),
+  /api/glossary/search, /api/benchmark/summary, /api/health(provenance) — **pytest 11건 통과**
+- 벤치마크 v0: 28케이스 — vanilla 충실도 33.9% vs K-Rosetta 100% (ablation, 정직 채점:
+  일반 번역기 정답 사례 3건 포함) (`pipeline/build_benchmark.py`)
+- 프론트: 애플 스타일 SPA 3화면 (번역+비교/챗봇/벤치마크, 공공데이터 출처 배지 상시 노출)
+- 데모 자산: `docs/demo_assets/` 스크린샷 3장 (Playwright 실브라우저 캡처)
+- 실행: `make demo` → http://localhost:8777
+- 다음(S0-C): Koreana 파일럿 데이터 수신 → 용어사전 근거 연결, 기획서(붙임3) 초안
+
 ### 2026-07-11 — 세션 1 (초기 셋업 + 데이터 검증 리서치)
 - 공고문(HWP) 파싱, 필수요건 분석 완료: data.go.kr 등록 데이터 1건 이상 필수, 마감 7/13 18:00
 - CLAUDE.md, .gitignore, PROGRESS.md, DEV_SPEC.md, USER_ACTION_ITEMS.md, .env.example 작성

@@ -1,0 +1,84 @@
+{
+  "_meta": {
+    "note": "DEMO_MODE=cached 프리셋. krosetta = 용어사전 제약 적용, vanilla = 동일 조건에서 용어사전 미적용(일반 번역기의 전형적 출력). 생성: Claude Code 세션(2026-07-12), 비용 0원 원칙.",
+    "match": "공백 정규화 후 완전일치"
+  },
+  "scenarios": [
+    {
+      "id": "hanji",
+      "label": "공예 — 한지",
+      "source": "한지는 닥나무 껍질로 만든 한국 전통 종이로, 천 년이 지나도 변하지 않는다고 알려져 있다.",
+      "targets": {
+        "en": {
+          "krosetta": "Hanji (traditional Korean paper handmade from mulberry bark) is Korea's time-honored paper, known to last a thousand years without deteriorating.",
+          "vanilla": "Korean paper, made from the bark of the paper mulberry tree, is a traditional paper that is said to remain unchanged even after a thousand years."
+        },
+        "vi": {
+          "krosetta": "Hanji (giấy truyền thống Hàn Quốc làm thủ công từ vỏ cây dâu) là loại giấy lâu đời của Hàn Quốc, được biết đến với độ bền cả nghìn năm mà không hư hỏng.",
+          "vanilla": "Giấy Hàn Quốc, làm từ vỏ cây dâu giấy, là loại giấy truyền thống được cho là không thay đổi dù cả nghìn năm trôi qua."
+        },
+        "id": {
+          "krosetta": "Hanji (kertas tradisional Korea buatan tangan dari kulit pohon murbei) adalah kertas warisan Korea yang dikenal tahan hingga seribu tahun tanpa rusak.",
+          "vanilla": "Kertas Korea, yang dibuat dari kulit pohon murbei kertas, adalah kertas tradisional yang konon tidak berubah meski seribu tahun berlalu."
+        }
+      }
+    },
+    {
+      "id": "tteokguk",
+      "label": "음식 — 설날 떡국",
+      "source": "설날 아침에는 가래떡을 어슷하게 썰어 넣고 끓인 떡국을 먹으며 새해 첫날을 맞이한다.",
+      "targets": {
+        "en": {
+          "krosetta": "On the morning of Seollal (Korean Lunar New Year), Koreans greet the first day of the year with a bowl of Sliced Rice Pasta Soup (tteokguk), made by simmering diagonally sliced Cylindrical Rice Pasta (garae-tteok) — following the official KF standard nomenclature.",
+          "vanilla": "On New Year's morning, people eat rice cake soup made with diagonally sliced rice cakes to welcome the first day of the new year."
+        },
+        "vi": {
+          "krosetta": "Sáng Seollal (Tết âm lịch Hàn Quốc), người Hàn đón ngày đầu năm với bát tteokguk — canh bánh gạo thái lát (chuẩn danh mục KF: Sliced Rice Pasta Soup), nấu từ garae-tteok (bánh gạo hình trụ) thái chéo.",
+          "vanilla": "Vào sáng ngày Tết, người ta ăn canh bánh gạo được nấu với bánh gạo thái chéo để đón ngày đầu tiên của năm mới."
+        },
+        "id": {
+          "krosetta": "Pada pagi hari Seollal (Tahun Baru Imlek Korea), orang Korea menyambut hari pertama tahun dengan semangkuk tteokguk — sup irisan kue beras (nomenklatur standar KF: Sliced Rice Pasta Soup) yang dimasak dari garae-tteok (kue beras silinder) yang diiris serong.",
+          "vanilla": "Pada pagi tahun baru, orang makan sup kue beras yang dimasak dengan kue beras yang diiris miring untuk menyambut hari pertama tahun baru."
+        }
+      }
+    },
+    {
+      "id": "pansori",
+      "label": "공연 — 판소리",
+      "source": "판소리는 소리꾼이 고수의 북장단에 맞춰 긴 이야기를 노래와 말과 몸짓으로 풀어내는 한국의 전통 예술이다.",
+      "targets": {
+        "en": {
+          "krosetta": "Pansori (Korean traditional narrative singing performed by a vocalist and a drummer) is a traditional Korean art in which a sorikkun (pansori singer) unfolds a long tale through song, speech, and gesture to the rhythms of a gosu (accompanying drummer).",
+          "vanilla": "Pansori is a traditional Korean art in which a singer tells a long story through songs, words, and gestures to the beat of a drummer's drum."
+        },
+        "vi": {
+          "krosetta": "Pansori (nghệ thuật hát kể chuyện truyền thống Hàn Quốc với một ca sĩ và một tay trống) là loại hình nghệ thuật trong đó sorikkun (nghệ sĩ hát pansori) kể một câu chuyện dài bằng lời ca, lời nói và cử chỉ theo nhịp trống của gosu (người đánh trống đệm).",
+          "vanilla": "Pansori là một nghệ thuật truyền thống của Hàn Quốc, trong đó ca sĩ kể một câu chuyện dài bằng bài hát, lời nói và cử chỉ theo nhịp trống."
+        },
+        "id": {
+          "krosetta": "Pansori (seni bercerita lewat nyanyian tradisional Korea oleh penyanyi dan penabuh gendang) adalah seni tradisional Korea di mana sorikkun (penyanyi pansori) membawakan kisah panjang lewat nyanyian, tutur, dan gerak mengikuti irama gendang gosu (penabuh gendang pengiring).",
+          "vanilla": "Pansori adalah seni tradisional Korea di mana seorang penyanyi menceritakan kisah panjang melalui lagu, kata-kata, dan gerakan mengikuti irama gendang."
+        }
+      }
+    },
+    {
+      "id": "gimjang",
+      "label": "문화 — 김장과 옹기",
+      "source": "김장을 마친 가족들은 김치를 옹기에 담아 겨우내 마당에 묻어 두었다.",
+      "targets": {
+        "en": {
+          "krosetta": "After gimjang (communal kimchi-making for the winter), families would pack the kimchi into onggi (breathable Korean earthenware used for fermentation and storage) and bury the jars in the yard through the winter.",
+          "vanilla": "After making kimchi, families would put the kimchi in pottery jars and bury them in the yard throughout the winter."
+        },
+        "vi": {
+          "krosetta": "Sau gimjang (tục muối kimchi tập thể chuẩn bị cho mùa đông), các gia đình cho kimchi vào onggi (đồ gốm truyền thống 'biết thở' của Hàn Quốc) rồi chôn trong sân suốt mùa đông.",
+          "vanilla": "Sau khi muối kimchi, các gia đình cho kimchi vào chum gốm và chôn trong sân suốt mùa đông."
+        },
+        "id": {
+          "krosetta": "Setelah gimjang (tradisi membuat kimchi bersama untuk musim dingin), keluarga menyimpan kimchi dalam onggi (gerabah tradisional Korea yang berpori untuk fermentasi) lalu menguburnya di halaman sepanjang musim dingin.",
+          "vanilla": "Setelah membuat kimchi, keluarga memasukkan kimchi ke dalam guci tembikar dan menguburnya di halaman selama musim dingin."
+        }
+      }
+    }
+  ]
+}

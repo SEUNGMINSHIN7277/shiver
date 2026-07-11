@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "note": "챗봇 프리셋 (DEMO_MODE=cached). 프리셋 외 질문은 FTS 검색 기반 추출형 응답으로 폴백. 생성: Claude Code 세션(2026-07-12).",
+    "match": "소문자·공백 정규화 후 완전일치 또는 핵심 키워드 매칭"
+  },
+  "presets": [
+    {
+      "id": "pansori_en",
+      "match_keywords": ["what is pansori", "pansori?"],
+      "lang": "en",
+      "question": "What is pansori?",
+      "answer": "Pansori is a Korean traditional narrative art in which a single vocalist — the sorikkun — unfolds an epic story lasting several hours through song (chang), speech (aniri), and gesture (ballim), accompanied only by a gosu, a drummer who sets the rhythm and shouts words of encouragement called chuimsae. Five classic story cycles (madang) survive today, including Chunhyangga and Simcheongga. UNESCO inscribed pansori on the Representative List of the Intangible Cultural Heritage of Humanity in 2003. The term itself combines pan (a public arena) and sori (sound or song) — 'the song of the open stage.'",
+      "term_refs": ["판소리", "소리꾼", "고수"]
+    },
+    {
+      "id": "pansori_ko",
+      "match_keywords": ["판소리가 뭐야", "판소리란", "판소리가 무엇"],
+      "lang": "ko",
+      "question": "판소리가 뭐야?",
+      "answer": "판소리는 소리꾼 한 명이 고수의 북장단에 맞춰 노래(창)·말(아니리)·몸짓(발림)으로 몇 시간에 걸친 긴 서사를 풀어내는 한국 전통 성악 예술입니다. '판(여러 사람이 모인 마당)'과 '소리(노래)'가 합쳐진 말로, 춘향가·심청가 등 다섯 마당이 전승되고 있습니다. 2003년 유네스코 인류무형문화유산으로 등재되었습니다. 고수가 넣는 '추임새'는 공연을 함께 완성하는 관객 참여 문화의 뿌리이기도 합니다.",
+      "term_refs": ["판소리", "소리꾼", "고수"]
+    },
+    {
+      "id": "hanji_vi",
+      "match_keywords": ["hanji là gì"],
+      "lang": "vi",
+      "question": "Hanji là gì?",
+      "answer": "Hanji là giấy truyền thống của Hàn Quốc, được làm thủ công từ vỏ trong của cây dâu (닥나무, dak). Nhờ sợi dài và bền, hanji nổi tiếng với câu nói 'giấy nghìn năm' — nhiều văn thư cổ của Hàn Quốc in trên hanji vẫn còn nguyên vẹn sau hàng thế kỷ. Hanji không chỉ dùng để viết và in, mà còn để dán cửa sổ nhà hanok, làm quạt, đèn lồng và các đồ thủ công mỹ nghệ. Ngày nay hanji còn được ứng dụng trong bảo tồn di sản, thời trang và thiết kế hiện đại.",
+      "term_refs": ["한지", "한옥"]
+    },
+    {
+      "id": "gimjang_id",
+      "match_keywords": ["apa itu gimjang"],
+      "lang": "id",
+      "question": "Apa itu gimjang?",
+      "answer": "Gimjang adalah tradisi tahunan masyarakat Korea membuat kimchi dalam jumlah besar secara bersama-sama menjelang musim dingin, biasanya pada akhir musim gugur. Keluarga, kerabat, dan tetangga berkumpul untuk menggarami sawi, membumbui, lalu menyimpan kimchi — secara tradisional di dalam onggi (gerabah berpori) yang dikubur di tanah agar fermentasi berjalan stabil. Lebih dari sekadar mengawetkan makanan, gimjang adalah wujud budaya berbagi dan gotong royong Korea, dan pada 2013 UNESCO menetapkannya sebagai Warisan Budaya Takbenda Kemanusiaan.",
+      "term_refs": ["김장", "옹기", "김치"]
+    }
+  ]
+}
