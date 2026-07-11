@@ -19,9 +19,16 @@ def main() -> None:
 
         # 1) 번역: 프리셋(떡국) 실행 + 비교 토글
         page.check("#compare-toggle")
-        page.click("#preset-chips .chip:nth-child(2)")
+        page.click("#preset-chips .chip:nth-child(4)")  # 음식 — 설날 떡국
         page.wait_for_selector(".term-card")
         page.screenshot(path=str(OUT / "01_translate_compare.png"), full_page=True)
+
+        # 1b) 자막 모드: 드라마 대사 (베트남어)
+        page.click('#lang-seg .seg-btn[data-lang="vi"]')
+        page.click("#preset-chips .chip:nth-child(1)")  # 드라마 자막
+        page.wait_for_selector(".term-card")
+        page.screenshot(path=str(OUT / "04_subtitle_mode_vi.png"), full_page=True)
+        page.click('#lang-seg .seg-btn[data-lang="en"]')
 
         # 2) 챗봇: 프리셋 2개 질문
         page.click(".tab[data-view=chat]")

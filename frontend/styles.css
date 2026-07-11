@@ -64,6 +64,15 @@ main { max-width: 980px; margin: 0 auto; padding: 20px 22px 60px; }
 .hero h1 { font-size: clamp(30px, 5vw, 46px); font-weight: 700; letter-spacing: -0.022em; }
 .hero h1 em { font-style: normal; background: linear-gradient(90deg, #0a84ff, #5e5ce6); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .hero .sub { color: var(--text-2); font-size: 17px; margin-top: 10px; }
+.hero-stats {
+  margin-top: 14px; font-size: 13px; color: var(--text-2);
+  display: inline-block; border: 1px solid var(--line); border-radius: 999px;
+  padding: 6px 16px; background: var(--surface);
+}
+mark.term-hl {
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  color: var(--accent); font-weight: 600; border-radius: 4px; padding: 0 3px;
+}
 
 .panel {
   background: var(--surface); border: 1px solid var(--line);

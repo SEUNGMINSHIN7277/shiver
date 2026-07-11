@@ -5,6 +5,46 @@
   },
   "scenarios": [
     {
+      "id": "drama_line",
+      "label": "🎬 드라마 자막 — 회식과 호칭",
+      "domain": "subtitle",
+      "source": "선배, 오늘 회식 끝나고 치맥 어때요? — 좋지. 막내도 데려가자.",
+      "targets": {
+        "en": {
+          "krosetta": "Seonbae*, how about chimaek* after tonight's hoesik*? — Sure. Let's bring our maknae* too.\n*seonbae: my senior · chimaek: fried chicken & beer · hoesik: team dinner · maknae: the youngest",
+          "vanilla": "Sunbae, how about some chicken and beer after the company dinner tonight? — Sure. Let's take the youngest one too."
+        },
+        "vi": {
+          "krosetta": "Seonbae*, tan hoesik* tối nay đi chimaek* nhé? — Được. Rủ cả maknae* đi.\n*seonbae: tiền bối · hoesik: liên hoan công ty · chimaek: gà rán + bia · maknae: em út của nhóm",
+          "vanilla": "Tiền bối, tối nay liên hoan xong đi ăn gà uống bia nhé? — Được. Dẫn cả em út đi."
+        },
+        "id": {
+          "krosetta": "Seonbae*, habis hoesik* malam ini kita chimaek*, yuk? — Boleh. Ajak maknae* kita juga.\n*seonbae: senior · hoesik: makan malam tim · chimaek: ayam goreng & bir · maknae: anggota termuda",
+          "vanilla": "Kak, habis makan malam kantor nanti kita makan ayam sama bir, yuk? — Boleh. Ajak si bungsu juga."
+        }
+      }
+    },
+    {
+      "id": "webtoon_line",
+      "label": "📱 웹툰 대사 — 재벌과 갑질",
+      "domain": "subtitle",
+      "source": "재벌 3세가 갑질이라니… 대박. 눈치도 없이 반말이야?",
+      "targets": {
+        "en": {
+          "krosetta": "A third-gen chaebol* heir pulling gapjil*… Daebak*. And banmal* — with zero nunchi*?\n*chaebol: family-run conglomerate · gapjil: power abuse · daebak: unbelievable · banmal: casual speech to a stranger · nunchi: social radar",
+          "vanilla": "A third-generation conglomerate heir abusing his power... Amazing. Talking down to me so cluelessly?"
+        },
+        "vi": {
+          "krosetta": "Cháu đích tôn chaebol* mà chơi trò gapjil*… Daebak*. Còn nói banmal* mà chẳng có chút nunchi* nào?\n*chaebol: tập đoàn gia đình trị · gapjil: cậy quyền ức hiếp · daebak: hết hồn · banmal: nói trống không · nunchi: tinh ý nhìn sắc mặt",
+          "vanilla": "Cháu tập đoàn đời thứ ba mà lại ức hiếp người khác... Kinh thật. Còn vô ý nói trống không nữa à?"
+        },
+        "id": {
+          "krosetta": "Cucu chaebol* generasi ketiga main gapjil*… Daebak*. Pakai banmal* pula, tanpa nunchi* sedikit pun?\n*chaebol: konglomerat keluarga · gapjil: sewenang-wenang pada bawahan · daebak: gila keren/parah · banmal: bahasa akrab tanpa sopan · nunchi: kepekaan situasi",
+          "vanilla": "Cucu konglomerat generasi ketiga menindas orang... Luar biasa. Bicara seenaknya tanpa peka pula?"
+        }
+      }
+    },
+    {
       "id": "hanji",
       "label": "공예 — 한지",
       "source": "한지는 닥나무 껍질로 만든 한국 전통 종이로, 천 년이 지나도 변하지 않는다고 알려져 있다.",

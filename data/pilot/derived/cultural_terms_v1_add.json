@@ -1,0 +1,394 @@
+{
+  "_meta": {
+    "version": "v1-add",
+    "created": "2026-07-12",
+    "method": "Claude Code 세션 큐레이션. K-콘텐츠(웹툰·드라마·K-pop) 로컬라이제이션 실무에서 일반 번역기가 가장 자주 깨지는 호칭·사회문화·현대문화 용어를 우선 수록. 자막 관례: 첫 등장 '음차+간결 설명', 재등장 음차만.",
+    "languages": ["en", "vi", "id", "ar", "ru"]
+  },
+  "terms": [
+    {"term_ko": "오빠", "category": "호칭·관계", "definition_ko": "여성이 손위 남성(친오빠 또는 친근한 연상 남성)을 부르는 호칭. 연인 사이 애칭으로도 쓰인다.",
+     "renderings": {
+       "en": {"text": "oppa (a woman's term for an older brother or close older male)", "strategy": "translit_gloss"},
+       "vi": {"text": "oppa (cách phụ nữ gọi anh trai hoặc người nam lớn tuổi thân thiết)", "strategy": "translit_gloss"},
+       "id": {"text": "oppa (sapaan perempuan untuk kakak laki-laki atau pria akrab yang lebih tua)", "strategy": "translit_gloss"},
+       "ar": {"text": "أوبّا (نداء تستخدمه المرأة للأخ الأكبر أو رجل أكبر مقرّب)", "strategy": "translit_gloss"},
+       "ru": {"text": "оппа (обращение девушки к старшему брату или близкому мужчине постарше)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "언니", "category": "호칭·관계", "definition_ko": "여성이 손위 여성을 부르는 호칭.",
+     "renderings": {
+       "en": {"text": "eonni (a woman's term for an older sister or close older female)", "strategy": "translit_gloss"},
+       "vi": {"text": "eonni (cách phụ nữ gọi chị gái hoặc người nữ lớn tuổi thân thiết)", "strategy": "translit_gloss"},
+       "id": {"text": "eonni (sapaan perempuan untuk kakak perempuan atau wanita akrab yang lebih tua)", "strategy": "translit_gloss"},
+       "ar": {"text": "أونّي (نداء تستخدمه المرأة للأخت الكبرى أو امرأة أكبر مقرّبة)", "strategy": "translit_gloss"},
+       "ru": {"text": "онни (обращение девушки к старшей сестре или близкой женщине постарше)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "누나", "category": "호칭·관계", "definition_ko": "남성이 손위 여성을 부르는 호칭.",
+     "renderings": {
+       "en": {"text": "nuna (a man's term for an older sister or close older female)", "strategy": "translit_gloss"},
+       "vi": {"text": "nuna (cách nam giới gọi chị gái hoặc người nữ lớn tuổi thân thiết)", "strategy": "translit_gloss"},
+       "id": {"text": "nuna (sapaan laki-laki untuk kakak perempuan atau wanita akrab yang lebih tua)", "strategy": "translit_gloss"},
+       "ar": {"text": "نونا (نداء يستخدمه الرجل للأخت الكبرى أو امرأة أكبر مقرّبة)", "strategy": "translit_gloss"},
+       "ru": {"text": "нуна (обращение мужчины к старшей сестре или близкой женщине постарше)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "선배", "category": "호칭·관계", "definition_ko": "학교·직장에서 먼저 들어온 손위 동료를 부르는 호칭. 서열 문화의 핵심 어휘.",
+     "renderings": {
+       "en": {"text": "seonbae (one's senior at school or work)", "strategy": "translit_gloss"},
+       "vi": {"text": "seonbae (tiền bối — người vào trường/công ty trước mình)", "strategy": "translit_gloss"},
+       "id": {"text": "seonbae (senior di sekolah atau tempat kerja)", "strategy": "translit_gloss"},
+       "ar": {"text": "سونبيه (الزميل الأقدم في الدراسة أو العمل)", "strategy": "translit_gloss"},
+       "ru": {"text": "сонбэ (старший по учёбе или работе)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "후배", "category": "호칭·관계", "definition_ko": "학교·직장에 나중에 들어온 손아래 동료.",
+     "renderings": {
+       "en": {"text": "hubae (one's junior at school or work)", "strategy": "translit_gloss"},
+       "vi": {"text": "hubae (hậu bối — người vào trường/công ty sau mình)", "strategy": "translit_gloss"},
+       "id": {"text": "hubae (junior di sekolah atau tempat kerja)", "strategy": "translit_gloss"},
+       "ar": {"text": "هوبيه (الزميل الأحدث في الدراسة أو العمل)", "strategy": "translit_gloss"},
+       "ru": {"text": "хубэ (младший по учёбе или работе)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "막내", "category": "호칭·관계", "definition_ko": "가족·팀에서 가장 어린 사람. K-pop 그룹 문화의 필수 어휘.",
+     "renderings": {
+       "en": {"text": "maknae (the youngest member of a family or group)", "strategy": "translit_gloss"},
+       "vi": {"text": "maknae (thành viên nhỏ tuổi nhất trong gia đình hoặc nhóm)", "strategy": "translit_gloss"},
+       "id": {"text": "maknae (anggota termuda dalam keluarga atau grup)", "strategy": "translit_gloss"},
+       "ar": {"text": "ماكنيه (أصغر أفراد العائلة أو الفرقة)", "strategy": "translit_gloss"},
+       "ru": {"text": "макне (самый младший в семье или группе)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "아저씨", "category": "호칭·관계", "definition_ko": "중년 남성을 부르는 일반 호칭. 친족이 아니어도 쓴다.",
+     "renderings": {
+       "en": {"text": "ajeossi (a middle-aged man; a common way to address one)", "strategy": "translit_gloss"},
+       "vi": {"text": "ajeossi (chú/ông trung niên — cách gọi thông dụng)", "strategy": "translit_gloss"},
+       "id": {"text": "ajeossi (pria paruh baya; sapaan umum)", "strategy": "translit_gloss"},
+       "ar": {"text": "أجوشي (رجل في منتصف العمر؛ نداء شائع)", "strategy": "translit_gloss"},
+       "ru": {"text": "ачжосси (мужчина средних лет; обычное обращение)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "아줌마", "category": "호칭·관계", "definition_ko": "중년 여성을 부르는 일반 호칭.",
+     "renderings": {
+       "en": {"text": "ajumma (a middle-aged woman; a common way to address one)", "strategy": "translit_gloss"},
+       "vi": {"text": "ajumma (cô/bà trung niên — cách gọi thông dụng)", "strategy": "translit_gloss"},
+       "id": {"text": "ajumma (wanita paruh baya; sapaan umum)", "strategy": "translit_gloss"},
+       "ar": {"text": "أجوما (امرأة في منتصف العمر؛ نداء شائع)", "strategy": "translit_gloss"},
+       "ru": {"text": "ачжума (женщина средних лет; обычное обращение)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "존댓말", "category": "호칭·관계", "definition_ko": "상대를 높이는 격식체 말투. 한국어 경어 체계의 근간.",
+     "renderings": {
+       "en": {"text": "jondaetmal (formal, honorific speech in Korean)", "strategy": "translit_gloss"},
+       "vi": {"text": "jondaetmal (kính ngữ — lối nói trang trọng trong tiếng Hàn)", "strategy": "translit_gloss"},
+       "id": {"text": "jondaetmal (ragam bahasa hormat dalam bahasa Korea)", "strategy": "translit_gloss"},
+       "ar": {"text": "جونديتمال (أسلوب الكلام التبجيلي الرسمي في الكورية)", "strategy": "translit_gloss"},
+       "ru": {"text": "чондэмаль (вежливая, почтительная речь в корейском)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "반말", "category": "호칭·관계", "definition_ko": "친밀하거나 손아래에게 쓰는 비격식 말투. 관계 전환의 극적 장치로 쓰인다.",
+     "renderings": {
+       "en": {"text": "banmal (casual, informal speech used between close peers)", "strategy": "translit_gloss"},
+       "vi": {"text": "banmal (lối nói thân mật, không kính ngữ)", "strategy": "translit_gloss"},
+       "id": {"text": "banmal (ragam bahasa akrab tanpa bentuk hormat)", "strategy": "translit_gloss"},
+       "ar": {"text": "بانمال (أسلوب الكلام غير الرسمي بين المقرّبين)", "strategy": "translit_gloss"},
+       "ru": {"text": "панмаль (неформальная речь между близкими)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "재벌", "category": "사회·경제", "definition_ko": "가족 지배의 대기업 집단. K-드라마의 대표 소재.",
+     "renderings": {
+       "en": {"text": "chaebol (a family-controlled Korean conglomerate)", "strategy": "translit_gloss"},
+       "vi": {"text": "chaebol (tập đoàn gia đình tài phiệt Hàn Quốc)", "strategy": "translit_gloss"},
+       "id": {"text": "chaebol (konglomerat keluarga khas Korea)", "strategy": "translit_gloss"},
+       "ar": {"text": "تشيبول (تكتّل شركات كوري تسيطر عليه عائلة)", "strategy": "translit_gloss"},
+       "ru": {"text": "чеболь (южнокорейский семейный конгломерат)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "전세", "category": "사회·경제", "definition_ko": "목돈 보증금을 맡기고 월세 없이 거주하는 한국 고유의 임대 제도.",
+     "renderings": {
+       "en": {"text": "jeonse (Korea's lump-sum deposit housing lease with no monthly rent)", "strategy": "translit_gloss"},
+       "vi": {"text": "jeonse (chế độ thuê nhà đặt cọc lớn không trả tiền hằng tháng, chỉ có ở Hàn Quốc)", "strategy": "translit_gloss"},
+       "id": {"text": "jeonse (sistem sewa rumah khas Korea dengan deposit besar tanpa sewa bulanan)", "strategy": "translit_gloss"},
+       "ar": {"text": "جونسيه (نظام إيجار كوري بوديعة كبيرة دون أجرة شهرية)", "strategy": "translit_gloss"},
+       "ru": {"text": "чонсэ (корейская аренда жилья с крупным залогом без ежемесячной платы)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "회식", "category": "사회·경제", "definition_ko": "직장 동료들과의 단체 회식 문화. 조직 결속의 장치로 여겨진다.",
+     "renderings": {
+       "en": {"text": "hoesik (a Korean company team dinner, often with drinks)", "strategy": "translit_gloss"},
+       "vi": {"text": "hoesik (buổi liên hoan công ty kiểu Hàn, thường kèm rượu)", "strategy": "translit_gloss"},
+       "id": {"text": "hoesik (makan malam tim ala perusahaan Korea, biasanya dengan minuman)", "strategy": "translit_gloss"},
+       "ar": {"text": "هويسيك (عشاء جماعي لزملاء العمل على الطريقة الكورية)", "strategy": "translit_gloss"},
+       "ru": {"text": "хвесик (корейский корпоративный ужин с коллегами)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "체면", "category": "정서·가치", "definition_ko": "남 앞에서 지켜야 할 위신과 체통.",
+     "renderings": {
+       "en": {"text": "chemyeon (social face; one's dignity in others' eyes)", "strategy": "translit_gloss"},
+       "vi": {"text": "chemyeon (thể diện trước người khác)", "strategy": "translit_gloss"},
+       "id": {"text": "chemyeon (menjaga muka atau martabat di depan orang lain)", "strategy": "translit_gloss"},
+       "ar": {"text": "تشيميون (ماء الوجه والهيبة أمام الآخرين)", "strategy": "translit_gloss"},
+       "ru": {"text": "чемён (репутация, «лицо» перед окружающими)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "애교", "category": "정서·가치", "definition_ko": "귀엽게 구는 몸짓·말투. K-pop·연애 문화의 상징 어휘.",
+     "renderings": {
+       "en": {"text": "aegyo (a cutesy, charming display of affection)", "strategy": "translit_gloss"},
+       "vi": {"text": "aegyo (cử chỉ nũng nịu đáng yêu)", "strategy": "translit_gloss"},
+       "id": {"text": "aegyo (tingkah imut yang menggemaskan)", "strategy": "translit_gloss"},
+       "ar": {"text": "إيغيو (تصرفات ولطافة طفولية للتودد)", "strategy": "translit_gloss"},
+       "ru": {"text": "эгё (нарочито милое, кокетливое поведение)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "화병", "category": "정서·가치", "definition_ko": "억눌린 분노가 쌓여 생기는 심신의 병. 한국 문화 특유의 증후군으로 알려져 있다.",
+     "renderings": {
+       "en": {"text": "hwabyeong (a Korean culture-bound syndrome of suppressed anger)", "strategy": "translit_gloss"},
+       "vi": {"text": "hwabyeong (chứng bệnh do uất ức dồn nén, đặc trưng văn hóa Hàn)", "strategy": "translit_gloss"},
+       "id": {"text": "hwabyeong (sindrom khas Korea akibat amarah yang dipendam)", "strategy": "translit_gloss"},
+       "ar": {"text": "هوابيونغ (متلازمة كورية ناجمة عن كبت الغضب)", "strategy": "translit_gloss"},
+       "ru": {"text": "хвабён (корейский синдром подавленного гнева)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "빨리빨리", "category": "사회·경제", "definition_ko": "'빨리빨리' 문화 — 속도와 효율을 중시하는 한국인의 기질을 이르는 말.",
+     "renderings": {
+       "en": {"text": "ppalli-ppalli ('hurry hurry' — Korea's speed-driven culture)", "strategy": "translit_gloss"},
+       "vi": {"text": "ppalli-ppalli ('nhanh nhanh' — văn hóa tốc độ của Hàn Quốc)", "strategy": "translit_gloss"},
+       "id": {"text": "ppalli-ppalli ('cepat-cepat' — budaya serba cepat Korea)", "strategy": "translit_gloss"},
+       "ar": {"text": "بالي-بالي («بسرعة بسرعة» — ثقافة السرعة الكورية)", "strategy": "translit_gloss"},
+       "ru": {"text": "палли-палли («быстро-быстро» — корейская культура скорости)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "고시원", "category": "사회·경제", "definition_ko": "본래 고시 준비생용이던 초소형 원룸 주거 시설.",
+     "renderings": {
+       "en": {"text": "gosiwon (a tiny one-room dwelling originally for exam takers)", "strategy": "translit_gloss"},
+       "vi": {"text": "gosiwon (phòng trọ siêu nhỏ, vốn dành cho sĩ tử ôn thi)", "strategy": "translit_gloss"},
+       "id": {"text": "gosiwon (kamar sewa mungil, awalnya untuk pelajar ujian)", "strategy": "translit_gloss"},
+       "ar": {"text": "غوشيون (غرفة سكن صغيرة جدًا كانت أصلًا لطلاب الامتحانات)", "strategy": "translit_gloss"},
+       "ru": {"text": "косивон (крошечная комната, изначально для готовящихся к экзаменам)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "학원", "category": "사회·경제", "definition_ko": "방과 후 사교육 기관. 한국 교육 문화의 핵심.",
+     "renderings": {
+       "en": {"text": "hagwon (a private cram school)", "strategy": "translit_gloss"},
+       "vi": {"text": "hagwon (trung tâm học thêm tư nhân)", "strategy": "translit_gloss"},
+       "id": {"text": "hagwon (bimbingan belajar swasta)", "strategy": "translit_gloss"},
+       "ar": {"text": "هاغوون (معهد دراسي خاص بعد المدرسة)", "strategy": "translit_gloss"},
+       "ru": {"text": "хагвон (частные курсы дополнительного обучения)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "수능", "category": "사회·경제", "definition_ko": "대학수학능력시험. 인생을 좌우한다고 여겨지는 국가 대입 시험.",
+     "renderings": {
+       "en": {"text": "Suneung (Korea's national college entrance exam, the CSAT)", "strategy": "translit_gloss"},
+       "vi": {"text": "Suneung (kỳ thi đại học quốc gia của Hàn Quốc)", "strategy": "translit_gloss"},
+       "id": {"text": "Suneung (ujian masuk perguruan tinggi nasional Korea)", "strategy": "translit_gloss"},
+       "ar": {"text": "سونونغ (امتحان القبول الجامعي الوطني في كوريا)", "strategy": "translit_gloss"},
+       "ru": {"text": "сунын (общенациональный вступительный экзамен в вузы Кореи)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "찜질방", "category": "현대문화", "definition_ko": "한증막·수면실·식당을 갖춘 24시간 대중 사우나.",
+     "renderings": {
+       "en": {"text": "jjimjilbang (a 24-hour Korean bathhouse and sauna complex)", "strategy": "translit_gloss"},
+       "vi": {"text": "jjimjilbang (nhà tắm hơi kiểu Hàn mở 24 giờ)", "strategy": "translit_gloss"},
+       "id": {"text": "jjimjilbang (pemandian dan sauna Korea 24 jam)", "strategy": "translit_gloss"},
+       "ar": {"text": "جيمجيلبانغ (حمّام وساونا كوري يعمل على مدار الساعة)", "strategy": "translit_gloss"},
+       "ru": {"text": "чимчильбан (круглосуточная корейская баня-сауна)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "노래방", "category": "현대문화", "definition_ko": "노래 부르는 개별방 시설. 한국식 가라오케.",
+     "renderings": {
+       "en": {"text": "noraebang (a Korean karaoke room)", "strategy": "translit_gloss"},
+       "vi": {"text": "noraebang (phòng karaoke kiểu Hàn)", "strategy": "translit_gloss"},
+       "id": {"text": "noraebang (ruang karaoke ala Korea)", "strategy": "translit_gloss"},
+       "ar": {"text": "نوريبانغ (غرفة كاريوكي كورية)", "strategy": "translit_gloss"},
+       "ru": {"text": "норэбан (корейское караоке)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "포장마차", "category": "현대문화", "definition_ko": "밤거리의 천막 포장 주점·간이식당.",
+     "renderings": {
+       "en": {"text": "pojangmacha (a street food tent bar)", "strategy": "translit_gloss"},
+       "vi": {"text": "pojangmacha (quán lều vỉa hè bán đồ ăn và rượu về đêm)", "strategy": "translit_gloss"},
+       "id": {"text": "pojangmacha (warung tenda kaki lima khas Korea)", "strategy": "translit_gloss"},
+       "ar": {"text": "بوجانغماتشا (خيمة طعام وشراب في الشارع ليلًا)", "strategy": "translit_gloss"},
+       "ru": {"text": "почжанмача (уличная палатка-закусочная)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "치맥", "category": "현대문화", "definition_ko": "치킨+맥주 조합. 한류 드라마로 세계에 퍼진 먹거리 문화.",
+     "renderings": {
+       "en": {"text": "chimaek (fried chicken with beer)", "strategy": "translit_gloss"},
+       "vi": {"text": "chimaek (gà rán kèm bia)", "strategy": "translit_gloss"},
+       "id": {"text": "chimaek (ayam goreng dengan bir)", "strategy": "translit_gloss"},
+       "ar": {"text": "تشيمِك (دجاج مقلي مع الجعة)", "strategy": "translit_gloss"},
+       "ru": {"text": "чимэк (жареная курица с пивом)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "먹방", "category": "현대문화", "definition_ko": "먹는 모습을 보여주는 방송 콘텐츠. 세계로 수출된 한국산 장르.",
+     "renderings": {
+       "en": {"text": "mukbang (an eating-show broadcast)", "strategy": "translit_gloss"},
+       "vi": {"text": "mukbang (chương trình vừa ăn vừa phát sóng)", "strategy": "translit_gloss"},
+       "id": {"text": "mukbang (siaran makan dalam jumlah besar)", "strategy": "translit_gloss"},
+       "ar": {"text": "موكبانغ (بث لتناول الطعام أمام المشاهدين)", "strategy": "translit_gloss"},
+       "ru": {"text": "мокпан (шоу, где ведущий ест перед камерой)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "혼밥", "category": "현대문화", "definition_ko": "혼자 먹는 밥. 1인 가구 시대의 신조어.",
+     "renderings": {
+       "en": {"text": "honbap (eating alone)", "strategy": "translit_gloss"},
+       "vi": {"text": "honbap (ăn một mình)", "strategy": "translit_gloss"},
+       "id": {"text": "honbap (makan sendirian)", "strategy": "translit_gloss"},
+       "ar": {"text": "هونباب (تناول الطعام منفردًا)", "strategy": "translit_gloss"},
+       "ru": {"text": "хонбап (еда в одиночку)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "대박", "category": "현대문화", "definition_ko": "'큰 성공', '엄청나다'는 뜻의 감탄사.",
+     "renderings": {
+       "en": {"text": "daebak (awesome; a jackpot)", "strategy": "translit_gloss"},
+       "vi": {"text": "daebak (tuyệt vời; trúng lớn)", "strategy": "translit_gloss"},
+       "id": {"text": "daebak (luar biasa; sukses besar)", "strategy": "translit_gloss"},
+       "ar": {"text": "ديباك (رائع؛ نجاح ساحق)", "strategy": "translit_gloss"},
+       "ru": {"text": "тэбак (потрясающе; крупная удача)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "한류", "category": "현대문화", "definition_ko": "한국 대중문화의 세계적 유행.",
+     "renderings": {
+       "en": {"text": "Hallyu (the Korean Wave)", "strategy": "translit_gloss"},
+       "vi": {"text": "Hallyu (làn sóng văn hóa Hàn Quốc)", "strategy": "translit_gloss"},
+       "id": {"text": "Hallyu (gelombang budaya Korea)", "strategy": "translit_gloss"},
+       "ar": {"text": "هاليو (الموجة الكورية)", "strategy": "translit_gloss"},
+       "ru": {"text": "халлю (корейская волна)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "최애", "category": "현대문화", "definition_ko": "가장 사랑하는 대상(주로 아이돌 멤버). 팬덤 필수 어휘.",
+     "renderings": {
+       "en": {"text": "choeae (one's most beloved member; one's 'bias')", "strategy": "translit_gloss"},
+       "vi": {"text": "choeae (thành viên yêu thích nhất; 'bias')", "strategy": "translit_gloss"},
+       "id": {"text": "choeae (member paling disayang; 'bias')", "strategy": "translit_gloss"},
+       "ar": {"text": "تشْوِيه (العضو المفضّل الأول لدى المعجب)", "strategy": "translit_gloss"},
+       "ru": {"text": "чвээ (самый любимый участник; «биас»)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "덕질", "category": "현대문화", "definition_ko": "좋아하는 대상에 몰입해 즐기는 팬 활동.",
+     "renderings": {
+       "en": {"text": "deokjil (devoted fandom activity)", "strategy": "translit_gloss"},
+       "vi": {"text": "deokjil (hoạt động đam mê thần tượng)", "strategy": "translit_gloss"},
+       "id": {"text": "deokjil (kegiatan fandom yang tekun)", "strategy": "translit_gloss"},
+       "ar": {"text": "دوكجيل (نشاط المعجبين المتفانين)", "strategy": "translit_gloss"},
+       "ru": {"text": "токчиль (увлечённая фанатская деятельность)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "응원봉", "category": "현대문화", "definition_ko": "팬덤별 고유 디자인의 콘서트 응원 라이트.",
+     "renderings": {
+       "en": {"text": "eungwonbong (a fandom's official light stick)", "strategy": "translit_gloss"},
+       "vi": {"text": "eungwonbong (gậy cổ vũ phát sáng của fandom)", "strategy": "translit_gloss"},
+       "id": {"text": "eungwonbong (light stick resmi fandom)", "strategy": "translit_gloss"},
+       "ar": {"text": "أونغوونبونغ (عصا الإضاءة الرسمية لمعجبي الفرقة)", "strategy": "translit_gloss"},
+       "ru": {"text": "ынвонбон (официальный светящийся жезл фандома)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "갑질", "category": "사회·경제", "definition_ko": "우월한 지위를 이용한 횡포. 사회 비판 드라마의 단골 소재.",
+     "renderings": {
+       "en": {"text": "gapjil (abuse of power by those in a superior position)", "strategy": "translit_gloss"},
+       "vi": {"text": "gapjil (thói cậy quyền ức hiếp kẻ dưới)", "strategy": "translit_gloss"},
+       "id": {"text": "gapjil (kesewenang-wenangan pihak yang berkuasa)", "strategy": "translit_gloss"},
+       "ar": {"text": "غابجيل (تعسّف أصحاب النفوذ بمن دونهم)", "strategy": "translit_gloss"},
+       "ru": {"text": "капчиль (злоупотребление властью вышестоящих)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "오지랖", "category": "정서·가치", "definition_ko": "남의 일에 지나치게 참견하는 태도.",
+     "renderings": {
+       "en": {"text": "ojirap (nosy meddling in others' affairs)", "strategy": "translit_gloss"},
+       "vi": {"text": "ojirap (thói hay xen vào chuyện người khác)", "strategy": "translit_gloss"},
+       "id": {"text": "ojirap (suka ikut campur urusan orang lain)", "strategy": "translit_gloss"},
+       "ar": {"text": "أوجيراب (التدخل الزائد في شؤون الآخرين)", "strategy": "translit_gloss"},
+       "ru": {"text": "очжирап (чрезмерное вмешательство в чужие дела)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "인맥", "category": "사회·경제", "definition_ko": "사회 생활을 좌우하는 인적 연결망.",
+     "renderings": {
+       "en": {"text": "inmaek (one's personal network of connections)", "strategy": "translit_gloss"},
+       "vi": {"text": "inmaek (mạng lưới quan hệ cá nhân)", "strategy": "translit_gloss"},
+       "id": {"text": "inmaek (jaringan relasi pribadi)", "strategy": "translit_gloss"},
+       "ar": {"text": "إنميك (شبكة العلاقات الشخصية)", "strategy": "translit_gloss"},
+       "ru": {"text": "инмэк (личная сеть связей и знакомств)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "양반", "category": "역사·전통", "definition_ko": "조선 시대 지배 신분층. 오늘날 점잖은 사람을 이르기도 한다.",
+     "renderings": {
+       "en": {"text": "yangban (the aristocratic scholar-official class of Joseon)", "strategy": "translit_gloss"},
+       "vi": {"text": "yangban (tầng lớp quý tộc sĩ đại phu thời Joseon)", "strategy": "translit_gloss"},
+       "id": {"text": "yangban (kelas bangsawan cendekiawan era Joseon)", "strategy": "translit_gloss"},
+       "ar": {"text": "يانغبان (طبقة النبلاء العلماء في عصر جوسون)", "strategy": "translit_gloss"},
+       "ru": {"text": "янбан (аристократическое сословие учёных-чиновников Чосона)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "선비", "category": "역사·전통", "definition_ko": "학문과 지조를 닦는 유교적 지식인상.",
+     "renderings": {
+       "en": {"text": "seonbi (a virtuous Confucian scholar)", "strategy": "translit_gloss"},
+       "vi": {"text": "seonbi (nho sĩ đức độ theo Nho giáo)", "strategy": "translit_gloss"},
+       "id": {"text": "seonbi (cendekiawan Konfusian yang berbudi)", "strategy": "translit_gloss"},
+       "ar": {"text": "سونبي (عالِم كونفوشي فاضل)", "strategy": "translit_gloss"},
+       "ru": {"text": "сонби (добродетельный конфуцианский учёный)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "무당", "category": "역사·전통", "definition_ko": "굿을 주관하며 신과 인간을 잇는 한국 무속의 사제.",
+     "renderings": {
+       "en": {"text": "mudang (a Korean shaman, usually female)", "strategy": "translit_gloss"},
+       "vi": {"text": "mudang (bà đồng — pháp sư trong tín ngưỡng dân gian Hàn Quốc)", "strategy": "translit_gloss"},
+       "id": {"text": "mudang (dukun perempuan dalam kepercayaan rakyat Korea)", "strategy": "translit_gloss"},
+       "ar": {"text": "مودانغ (كاهنة شامانية كورية)", "strategy": "translit_gloss"},
+       "ru": {"text": "мудан (корейская шаманка)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "굿", "category": "역사·전통", "definition_ko": "무당이 노래·춤·의식으로 신을 모시는 무속 의례.",
+     "renderings": {
+       "en": {"text": "gut (a Korean shamanic ritual of song, dance and offering)", "strategy": "translit_gloss"},
+       "vi": {"text": "gut (nghi lễ shaman Hàn Quốc với hát, múa và cúng tế)", "strategy": "translit_gloss"},
+       "id": {"text": "gut (ritual shamanisme Korea dengan nyanyian, tarian, dan sesaji)", "strategy": "translit_gloss"},
+       "ar": {"text": "غوت (طقس شاماني كوري بالغناء والرقص والقرابين)", "strategy": "translit_gloss"},
+       "ru": {"text": "кут (корейский шаманский обряд с песнями и танцами)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "부적", "category": "역사·전통", "definition_ko": "액운을 막기 위해 붉은 글씨로 그린 종이 주술물.",
+     "renderings": {
+       "en": {"text": "bujeok (a talisman drawn in red to ward off evil)", "strategy": "translit_gloss"},
+       "vi": {"text": "bujeok (lá bùa vẽ chữ đỏ trừ tà)", "strategy": "translit_gloss"},
+       "id": {"text": "bujeok (jimat bertinta merah penolak bala)", "strategy": "translit_gloss"},
+       "ar": {"text": "بوجوك (تعويذة بحبر أحمر لدرء الشر)", "strategy": "translit_gloss"},
+       "ru": {"text": "пучжок (талисман с красными знаками от злых сил)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "사주", "category": "역사·전통", "definition_ko": "생년월일시로 운명을 풀이하는 명리학.",
+     "renderings": {
+       "en": {"text": "saju (Korean fortune-telling based on one's birth date and hour)", "strategy": "translit_gloss"},
+       "vi": {"text": "saju (bói tứ trụ dựa trên ngày giờ sinh)", "strategy": "translit_gloss"},
+       "id": {"text": "saju (ramalan nasib Korea berdasar tanggal dan jam lahir)", "strategy": "translit_gloss"},
+       "ar": {"text": "ساجو (قراءة الطالع الكورية بتاريخ وساعة الميلاد)", "strategy": "translit_gloss"},
+       "ru": {"text": "саджу (корейское гадание по дате и часу рождения)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "궁합", "category": "역사·전통", "definition_ko": "두 사람의 사주로 보는 어울림 점.",
+     "renderings": {
+       "en": {"text": "gunghap (marital compatibility read from two people's saju)", "strategy": "translit_gloss"},
+       "vi": {"text": "gunghap (xem hợp tuổi đôi lứa theo saju)", "strategy": "translit_gloss"},
+       "id": {"text": "gunghap (kecocokan jodoh berdasar saju kedua pihak)", "strategy": "translit_gloss"},
+       "ar": {"text": "غونغهاب (توافق الزواج وفق طالع الطرفين)", "strategy": "translit_gloss"},
+       "ru": {"text": "кунхап (совместимость пары по саджу)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "막걸리", "category": "음식문화", "definition_ko": "쌀을 발효시킨 뿌연 빛깔의 한국 전통 탁주.",
+     "renderings": {
+       "en": {"text": "makgeolli (Korean milky rice wine)", "strategy": "translit_gloss"},
+       "vi": {"text": "makgeolli (rượu gạo đục truyền thống Hàn Quốc)", "strategy": "translit_gloss"},
+       "id": {"text": "makgeolli (arak beras keruh tradisional Korea)", "strategy": "translit_gloss"},
+       "ar": {"text": "ماكغولي (نبيذ أرز كوري تقليدي حليبي اللون)", "strategy": "translit_gloss"},
+       "ru": {"text": "макколли (традиционное корейское мутное рисовое вино)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "소맥", "category": "현대문화", "definition_ko": "소주와 맥주를 섞은 폭탄주.",
+     "renderings": {
+       "en": {"text": "somaek (a soju-and-beer mixed drink)", "strategy": "translit_gloss"},
+       "vi": {"text": "somaek (rượu pha soju với bia)", "strategy": "translit_gloss"},
+       "id": {"text": "somaek (campuran soju dan bir)", "strategy": "translit_gloss"},
+       "ar": {"text": "سوميك (مزيج السوجو والجعة)", "strategy": "translit_gloss"},
+       "ru": {"text": "сомэк (коктейль из сочжу и пива)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "동갑", "category": "호칭·관계", "definition_ko": "같은 나이. 한국에서는 나이가 같아야 바로 친구가 될 수 있다는 관념이 있다.",
+     "renderings": {
+       "en": {"text": "donggap (someone of the same age — a basis for instant friendship in Korea)", "strategy": "translit_gloss"},
+       "vi": {"text": "donggap (người bằng tuổi — cơ sở để làm bạn thân ở Hàn Quốc)", "strategy": "translit_gloss"},
+       "id": {"text": "donggap (orang seumuran — dasar pertemanan di Korea)", "strategy": "translit_gloss"},
+       "ar": {"text": "دونغاب (شخص من نفس العمر — أساس الصداقة في كوريا)", "strategy": "translit_gloss"},
+       "ru": {"text": "тонгап (ровесник — в Корее основа для дружбы)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "명절", "category": "의례·명절", "definition_ko": "설날·추석 등 온 가족이 모이는 전통 명절.",
+     "renderings": {
+       "en": {"text": "myeongjeol (major Korean traditional holidays such as Seollal and Chuseok)", "strategy": "translit_gloss"},
+       "vi": {"text": "myeongjeol (các dịp lễ truyền thống lớn như Seollal, Chuseok)", "strategy": "translit_gloss"},
+       "id": {"text": "myeongjeol (hari raya tradisional besar Korea seperti Seollal dan Chuseok)", "strategy": "translit_gloss"},
+       "ar": {"text": "ميونغجول (الأعياد الكورية التقليدية الكبرى كسوللال وتشوسوك)", "strategy": "translit_gloss"},
+       "ru": {"text": "мёнджоль (главные традиционные праздники Кореи — Соллаль, Чхусок)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "상차림", "category": "음식문화", "definition_ko": "격식에 따라 상을 차리는 방식.",
+     "renderings": {
+       "en": {"text": "sangcharim (the traditional Korean table setting)", "strategy": "translit_gloss"},
+       "vi": {"text": "sangcharim (cách bày mâm cỗ truyền thống Hàn Quốc)", "strategy": "translit_gloss"},
+       "id": {"text": "sangcharim (tata penyajian meja tradisional Korea)", "strategy": "translit_gloss"},
+       "ar": {"text": "سانغتشاريم (طريقة إعداد المائدة الكورية التقليدية)", "strategy": "translit_gloss"},
+       "ru": {"text": "санчхарим (традиционная корейская сервировка стола)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "이모", "category": "호칭·관계", "definition_ko": "본래 어머니의 자매. 식당 여주인 등을 친근하게 부르는 호칭으로 확장되었다.",
+     "renderings": {
+       "en": {"text": "imo (lit. 'aunt' — an affectionate way to address, e.g., a restaurant owner)", "strategy": "translit_gloss"},
+       "vi": {"text": "imo (nghĩa gốc 'dì' — cách gọi thân mật với cô chủ quán)", "strategy": "translit_gloss"},
+       "id": {"text": "imo (harfiah 'bibi' — sapaan akrab, misalnya kepada ibu pemilik warung)", "strategy": "translit_gloss"},
+       "ar": {"text": "إيمو (حرفيًا «خالة» — نداء ودود لصاحبة مطعم مثلًا)", "strategy": "translit_gloss"},
+       "ru": {"text": "имо (букв. «тётя» — тёплое обращение, напр. к хозяйке закусочной)", "strategy": "translit_gloss"}
+     }},
+    {"term_ko": "웃어른", "category": "호칭·관계", "definition_ko": "공경해야 할 손윗사람.",
+     "renderings": {
+       "en": {"text": "us-eoreun (one's elders, to be treated with respect)", "strategy": "translit_gloss"},
+       "vi": {"text": "us-eoreun (bậc bề trên cần được kính trọng)", "strategy": "translit_gloss"},
+       "id": {"text": "us-eoreun (orang yang dituakan dan harus dihormati)", "strategy": "translit_gloss"},
+       "ar": {"text": "أوسورون (الكبار الواجب توقيرهم)", "strategy": "translit_gloss"},
+       "ru": {"text": "усорын (старшие, к которым положено почтение)", "strategy": "translit_gloss"}
+     }}
+  ]
+}

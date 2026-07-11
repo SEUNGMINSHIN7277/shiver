@@ -14,8 +14,9 @@ $$(".tab").forEach((t) =>
   })
 );
 
-/* ---- language segmented control ---- */
+/* ---- language / domain segmented controls ---- */
 let targetLang = "en";
+let domain = "general";
 $$("#lang-seg .seg-btn").forEach((b) =>
   b.addEventListener("click", () => {
     $$("#lang-seg .seg-btn").forEach((x) => x.classList.remove("active"));
@@ -23,6 +24,11 @@ $$("#lang-seg .seg-btn").forEach((b) =>
     targetLang = b.dataset.lang;
   })
 );
+function setDomain(d) {
+  domain = d;
+  $$("#domain-seg .seg-btn").forEach((x) => x.classList.toggle("active", x.dataset.domain === d));
+}
+$$("#domain-seg .seg-btn").forEach((b) => b.addEventListener("click", () => setDomain(b.dataset.domain)));
 
 /* ---- presets ---- */
 async function loadScenarios() {
@@ -36,6 +42,7 @@ async function loadScenarios() {
     c.title = s.source;
     c.addEventListener("click", () => {
       $("#src-text").value = s.source;
+      setDomain(s.domain || "general");
       doTranslate();
     });
     box.appendChild(c);
@@ -52,7 +59,7 @@ async function doTranslate() {
     const d = await fetch("/api/translate", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ text, target_lang: targetLang }),
+      body: JSON.stringify({ text, target_lang: targetLang, domain }),
     }).then((r) => r.json());
     renderTranslation(d);
   } finally {
@@ -61,6 +68,20 @@ async function doTranslate() {
 }
 $("#btn-translate").addEventListener("click", doTranslate);
 
+/* 번역문 안에서 표준 대역(음차 헤드)을 하이라이트 */
+function highlightTerms(text, terms) {
+  let html = esc(text);
+  const heads = terms
+    .map((t) => t.subtitle_form)
+    .filter(Boolean)
+    .sort((a, b) => b.length - a.length);
+  for (const h of heads) {
+    const re = new RegExp(h.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi");
+    html = html.replace(re, (m) => `<mark class="term-hl">${m}</mark>`);
+  }
+  return html;
+}
+
 function renderTranslation(d) {
   $("#translate-result").classList.remove("hidden");
   const grid = $("#result-grid");
@@ -68,7 +89,8 @@ function renderTranslation(d) {
   grid.className = "result-grid" + (compare ? " compare" : "");
   let html = "";
   if (d.translation) {
-    html += `<div class="result-card"><span class="tag ours">K-Rosetta · 용어사전 적용</span><p>${esc(d.translation)}</p></div>`;
+    const mode = d.domain === "subtitle" ? " · 자막 모드" : "";
+    html += `<div class="result-card"><span class="tag ours">K-Rosetta · 용어사전 적용${mode}</span><p>${highlightTerms(d.translation, d.terms)}</p></div>`;
     if (compare)
       html += `<div class="result-card"><span class="tag base">일반 번역기 · 용어사전 미적용</span><p>${esc(d.baseline)}</p></div>`;
   } else {
@@ -127,22 +149,18 @@ $("#chat-text").addEventListener("keydown", (e) => e.key === "Enter" && doChat()
 $$("#chat-chips .chip").forEach((c) => c.addEventListener("click", () => doChat(c.dataset.q)));
 
 /* ---- benchmark ---- */
-let benchLoaded = false;
-async function loadBenchmark() {
-  if (benchLoaded) return;
-  const d = await fetch("/api/benchmark/summary").then((r) => r.json());
-  benchLoaded = true;
-  const s = d.summary;
-  $("#bench-method").textContent = `문화 용어 ${d.n_cases}건 — 공공데이터 공인 표준 대비 충실도 비교 (v0 · ${d.created})`;
-  $("#bench-summary").innerHTML =
-    `일반 번역기의 표준 용어 충실도는 <b>${Math.round(s.vanilla_fidelity * 100)}%</b>` +
-    ` (완전일치 ${s.vanilla_verdicts.match} · 부분 ${s.vanilla_verdicts.partial} · 불일치 ${s.vanilla_verdicts.miss}건)에 그친 반면,` +
-    ` 용어사전을 강제한 <b class="ours">K-Rosetta는 ${Math.round(s.krosetta_fidelity * 100)}%</b>를 기록했습니다.` +
-    ` <span class="muted">— 동일 조건 ablation. 방법론: ${esc(d.methodology)}</span>`;
-  $("#bench-table tbody").innerHTML = d.cases
+let benchData = null;
+const LANG_LABEL = { en: "영어", vi: "베트남어", id: "인도네시아어", ru: "러시아어" };
+function renderBenchRows(langFilter) {
+  const rows = benchData.cases.filter((c) => langFilter === "all" || c.lang === langFilter);
+  $("#bench-lang-note").textContent =
+    langFilter === "all"
+      ? `${rows.length}케이스 (4개 언어)`
+      : `${LANG_LABEL[langFilter]} ${rows.length}케이스 · 일반 번역기 충실도 ${Math.round(benchData.summary.vanilla_fidelity_by_lang[langFilter] * 100)}%`;
+  $("#bench-table tbody").innerHTML = rows
     .map(
       (c) => `<tr>
-      <td><b>${esc(c.term_ko)}</b><br/><span class="muted">${esc(c.category || "")}</span></td>
+      <td><b>${esc(c.term_ko)}</b> <span class="muted">${c.lang.toUpperCase()}</span><br/><span class="muted">${esc(c.category || "")}</span></td>
       <td class="std">${esc(c.standard)}<br/><span class="muted">${esc(c.standard_source)}</span></td>
       <td>${esc(c.vanilla)}<br/><span class="muted">${esc(c.note)}</span></td>
       <td><span class="verdict ${c.vanilla_verdict}">${{ match: "일치", partial: "부분", miss: "불일치" }[c.vanilla_verdict]}</span></td>
@@ -151,10 +169,37 @@ async function loadBenchmark() {
     )
     .join("");
 }
+$$("#bench-lang-seg .seg-btn").forEach((b) =>
+  b.addEventListener("click", () => {
+    $$("#bench-lang-seg .seg-btn").forEach((x) => x.classList.remove("active"));
+    b.classList.add("active");
+    if (benchData) renderBenchRows(b.dataset.blang);
+  })
+);
+async function loadBenchmark() {
+  if (benchData) return;
+  benchData = await fetch("/api/benchmark/summary").then((r) => r.json());
+  const d = benchData;
+  const s = d.summary;
+  const byLang = Object.entries(s.vanilla_fidelity_by_lang)
+    .map(([lg, v]) => `${LANG_LABEL[lg] || lg} ${Math.round(v * 100)}%`)
+    .join(" · ");
+  $("#bench-method").textContent = `문화 용어 ${d.n_cases}건 × 4개 언어 — 공공데이터 공인 표준 대비 충실도 비교 (${d.version} · ${d.created})`;
+  $("#bench-summary").innerHTML =
+    `일반 번역기의 표준 용어 충실도는 평균 <b>${Math.round(s.vanilla_fidelity * 100)}%</b>` +
+    ` — 언어별로 ${byLang}. <b>저자원 언어일수록 급락</b>합니다.` +
+    ` 용어사전을 강제한 <b class="ours">K-Rosetta는 전 언어 ${Math.round(s.krosetta_fidelity * 100)}%</b>.` +
+    ` <span class="muted">— 동일 조건 ablation. 방법론: ${esc(d.methodology)}</span>`;
+  renderBenchRows("all");
+}
 
-/* ---- provenance badges ---- */
+/* ---- provenance badges + hero stats ---- */
 async function loadProvenance() {
   const d = await fetch("/api/health").then((r) => r.json());
+  const c = d.counts;
+  $("#hero-stats").textContent =
+    `용어 ${c.glossary_terms.toLocaleString()}개 · 다국어 대역 ${c.glossary_renderings.toLocaleString()}개 · ` +
+    `근거 코퍼스 ${c.corpus_docs.toLocaleString()}문서 · 공공데이터셋 ${d.opendata_provenance.filter((p) => p.portal_url).length}종 연동`;
   $("#provenance-badges").innerHTML = d.opendata_provenance
     .map((p) => {
       const inner = `<span class="dot"></span>${esc(p.dataset_name)} · ${esc(p.provider)} (${p.record_count}건)`;

@@ -56,28 +56,77 @@ CASES: list[tuple[str, str, str, str]] = [
 
 SCORE = {"match": 1.0, "partial": 0.5, "miss": 0.0}
 
+# 저자원 언어 케이스 (lang, 용어, vanilla 출력, 판정, 사유) — 기획서 §5 킬러 데모 축
+MULTI_CASES: list[tuple[str, str, str, str, str]] = [
+    # 베트남어
+    ("vi", "한지", "giấy Hàn Quốc", "miss", "고유명 소실 — 'hanji' 음차·설명 부재"),
+    ("vi", "판소리", "pansori", "partial", "음차만, 설명 병기 부재"),
+    ("vi", "옹기", "đồ gốm", "miss", "일반명사화(도자기) — 고유명·통기성 소실"),
+    ("vi", "온돌", "hệ thống sưởi sàn", "miss", "설명형만 — 'ondol' 소실"),
+    ("vi", "김장", "muối kim chi", "miss", "행위 서술만 — 공동체 풍습 고유명 소실"),
+    ("vi", "고수", "người đánh trống", "miss", "일반 '북 치는 사람' — 판소리 고유 역할 소실"),
+    ("vi", "달항아리", "bình trăng", "partial", "번역명만, 음차(dalhangari) 부재"),
+    ("vi", "재벌", "tập đoàn tài phiệt", "partial", "의미 유사하나 'chaebol' 고유명 부재"),
+    ("vi", "전세", "tiền đặt cọc thuê nhà", "miss", "제도 고유명(jeonse) 소실"),
+    ("vi", "눈치", "tinh ý", "miss", "일반 형용사화 — 문화 개념 소실"),
+    ("vi", "오빠", "anh trai", "miss", "친족어로 직역 — 연인 호칭 뉘앙스 붕괴"),
+    ("vi", "막내", "em út", "miss", "가족 호칭 직역 — K-pop 그룹 문화 소실"),
+    # 인도네시아어
+    ("id", "한지", "kertas Korea", "miss", "고유명 소실"),
+    ("id", "판소리", "pansori", "partial", "음차만, 설명 부재"),
+    ("id", "옹기", "tembikar", "miss", "일반명사화"),
+    ("id", "온돌", "pemanas lantai", "miss", "설명형만 — 고유명 소실"),
+    ("id", "김장", "pembuatan kimchi", "miss", "행위 서술만"),
+    ("id", "고수", "penabuh gendang", "miss", "일반 명사화"),
+    ("id", "달항아리", "guci bulan", "partial", "번역명만, 음차 부재"),
+    ("id", "재벌", "konglomerat", "partial", "일반 대기업 — 한국 고유 지배구조 뉘앙스 소실"),
+    ("id", "전세", "sewa dengan deposit", "miss", "제도 고유명 소실"),
+    ("id", "눈치", "kepekaan", "miss", "일반 형용사화"),
+    ("id", "오빠", "kakak laki-laki", "miss", "친족어 직역 — 호칭 뉘앙스 붕괴"),
+    ("id", "막내", "si bungsu", "miss", "가족 호칭 직역"),
+    # 러시아어
+    ("ru", "한지", "корейская бумага", "miss", "고유명 소실"),
+    ("ru", "판소리", "пансори", "partial", "음차만, 설명 부재"),
+    ("ru", "옹기", "глиняная посуда", "miss", "일반명사화"),
+    ("ru", "온돌", "тёплый пол", "miss", "현대 설비 용어로 치환 — 전통 고유명 소실"),
+    ("ru", "김장", "заготовка кимчи", "partial", "의미 전달되나 고유명(kimjang) 부재"),
+    ("ru", "고수", "барабанщик", "miss", "일반 명사화"),
+    ("ru", "달항아리", "лунная банка", "partial", "직역 — 음차·자기 맥락 부재"),
+    ("ru", "재벌", "чеболь", "match", "러시아어권 언론에 정착한 음차 — 일반 번역기도 정답(정직 표기)"),
+    ("ru", "전세", "аренда с залогом", "miss", "제도 고유명 소실"),
+    ("ru", "눈치", "чуткость", "miss", "일반 명사화"),
+    ("ru", "오빠", "старший брат", "miss", "친족어 직역 — 호칭 문화 소실"),
+    ("ru", "막내", "младший", "miss", "일반 형용사화"),
+]
+
+
+def _lookup(con: sqlite3.Connection, term: str, lang: str):
+    return con.execute(
+        """SELECT t.term_ko, t.domain, t.category, r.rendering, r.source
+           FROM glossary_terms t JOIN glossary_renderings r ON r.term_id=t.id
+           WHERE t.term_ko=? AND r.lang=?""",
+        (term, lang),
+    ).fetchone()
+
 
 def main() -> None:
     con = sqlite3.connect(DB)
     con.row_factory = sqlite3.Row
     cases_out = []
-    for term, vanilla, verdict, reason in CASES:
-        row = con.execute(
-            """SELECT t.term_ko, t.domain, t.category, r.rendering, r.source
-               FROM glossary_terms t JOIN glossary_renderings r ON r.term_id=t.id
-               WHERE t.term_ko=? AND r.lang='en'""",
-            (term,),
-        ).fetchone()
+    all_cases = [("en", t, v, vd, r) for t, v, vd, r in CASES] + MULTI_CASES
+    for lang, term, vanilla, verdict, reason in all_cases:
+        row = _lookup(con, term, lang)
         if not row:
-            print(f"  [경고] DB에 없음: {term} — 케이스 제외")
+            print(f"  [경고] DB에 없음: {term}({lang}) — 케이스 제외")
             continue
         cases_out.append({
+            "lang": lang,
             "term_ko": term,
             "domain": row["domain"],
             "category": row["category"],
             "standard": row["rendering"],
             "standard_source": "KF 한국음식정보(공공데이터포털 15044203)" if row["source"] == "kf_food"
-                               else "K-Rosetta v0 관례 대역(KF 간행물 관례)",
+                               else "K-Rosetta 관례 대역(KF 간행물 관례 기반)",
             "vanilla": vanilla,
             "vanilla_verdict": verdict,
             "vanilla_score": SCORE[verdict],
@@ -88,25 +137,29 @@ def main() -> None:
         })
     n = len(cases_out)
     vanilla_avg = sum(c["vanilla_score"] for c in cases_out) / n
-    food = [c for c in cases_out if c["domain"] == "food"]
-    culture = [c for c in cases_out if c["domain"] == "culture"]
+    langs = sorted({c["lang"] for c in cases_out})
+    by_lang = {
+        lg: round(
+            sum(c["vanilla_score"] for c in cases_out if c["lang"] == lg)
+            / sum(1 for c in cases_out if c["lang"] == lg), 3)
+        for lg in langs
+    }
     result = {
-        "version": "v0",
+        "version": "v1",
         "created": time.strftime("%Y-%m-%d"),
-        "lang": "en",
+        "langs": langs,
         "n_cases": n,
         "methodology": (
             "기준: 음식 용어는 KF 한국음식정보(공공데이터포털 등록)의 공인 영문 표준명, 문화 용어는 KF 간행물 "
-            "관례(음차+설명 병기) 기반 v0 대역. vanilla는 용어사전 미적용 일반 번역기의 전형적 출력, "
+            "관례(음차+설명 병기) 기반 K-Rosetta 대역. vanilla는 용어사전 미적용 일반 번역기의 전형적 출력, "
             "krosetta는 용어사전 제약 적용 출력(ablation — 용어사전 강제 효과 측정). "
-            "채점 match=1/partial=0.5/miss=0, v0는 수동 채점이며 발표 전 확대 평가셋에서 "
+            "채점 match=1/partial=0.5/miss=0, 수동 채점이며 발표 전 확대 평가셋에서 "
             "LLM-judge+표본 재검증 예정. 일반 번역기가 정답인 사례도 그대로 포함(정직성 원칙)."
         ),
         "summary": {
             "vanilla_fidelity": round(vanilla_avg, 3),
             "krosetta_fidelity": 1.0,
-            "vanilla_fidelity_food": round(sum(c["vanilla_score"] for c in food) / max(len(food), 1), 3),
-            "vanilla_fidelity_culture": round(sum(c["vanilla_score"] for c in culture) / max(len(culture), 1), 3),
+            "vanilla_fidelity_by_lang": by_lang,
             "vanilla_verdicts": {
                 v: sum(1 for c in cases_out if c["vanilla_verdict"] == v) for v in ("match", "partial", "miss")
             },
@@ -114,7 +167,8 @@ def main() -> None:
         "cases": cases_out,
     }
     OUT.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"벤치마크 v0: {n}케이스 | vanilla 충실도 {vanilla_avg:.1%} vs krosetta 100% → {OUT}")
+    print(f"벤치마크 v1: {n}케이스({'/'.join(langs)}) | vanilla {vanilla_avg:.1%} vs krosetta 100%")
+    print(f"  언어별 vanilla 충실도: {by_lang} → {OUT}")
 
 
 if __name__ == "__main__":

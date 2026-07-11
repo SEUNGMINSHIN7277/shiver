@@ -38,7 +38,8 @@ def _chats() -> dict:
 
 def demo_scenarios() -> list[dict]:
     return [
-        {"id": s["id"], "label": s["label"], "source": s["source"], "targets": sorted(s["targets"].keys())}
+        {"id": s["id"], "label": s["label"], "source": s["source"],
+         "domain": s.get("domain", "general"), "targets": sorted(s["targets"].keys())}
         for s in _translations()["scenarios"]
     ]
 
@@ -48,7 +49,8 @@ def cached_translation(text: str, target_lang: str) -> dict | None:
     for s in _translations()["scenarios"]:
         if _norm(s["source"]) == key and target_lang in s["targets"]:
             t = s["targets"][target_lang]
-            return {"translation": t["krosetta"], "baseline": t.get("vanilla"), "scenario_id": s["id"]}
+            return {"translation": t["krosetta"], "baseline": t.get("vanilla"),
+                    "scenario_id": s["id"], "domain": s.get("domain", "general")}
     return None
 
 
@@ -61,12 +63,20 @@ def cached_chat(question: str) -> dict | None:
 
 
 def detect_lang(text: str) -> str:
-    if re.search(r"[가-힣]", text):
-        return "ko"
+    # 한글 용어가 섞인 외국어 질문("Что такое 온돌?")이 흔하므로 비한글 문자를 먼저 판정
     if re.search(r"[؀-ۿ]", text):
         return "ar"
+    if re.search(r"[А-яЁё]", text):
+        return "ru"
+    hangul = len(re.findall(r"[가-힣]", text))
+    latin = len(re.findall(r"[A-Za-z]", text))
+    if hangul and hangul >= latin:
+        return "ko"
     if re.search(r"[ăâđêôơưĂÂĐÊÔƠƯàáảãạằắẳẵặầấẩẫậèéẻẽẹềếểễệìíỉĩịòóỏõọồốổỗộờớởỡợùúủũụừứửữựỳýỷỹỵ]", text):
         return "vi"
+    words = set(re.findall(r"[a-z]+", text.lower()))
+    if words & {"apa", "yang", "adalah", "bagaimana", "kenapa", "dimana", "siapa"}:
+        return "id"
     return "en"
 
 

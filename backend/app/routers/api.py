@@ -15,22 +15,31 @@ from ..services.termdetect import detect_terms
 
 router = APIRouter(prefix="/api")
 
-SUPPORTED_TARGETS = ["en", "vi", "id", "ar"]
+SUPPORTED_TARGETS = ["en", "vi", "id", "ar", "ru"]
 
 
 class TranslateReq(BaseModel):
     text: str = Field(min_length=1, max_length=3000)
     target_lang: str = "en"
+    domain: str = "general"  # general | subtitle (자막·대사 모드: 첫 등장 음차+주석, 재등장 음차만)
 
 
 class ChatReq(BaseModel):
     message: str = Field(min_length=1, max_length=1000)
 
 
+def _subtitle_form(rendering: str | None) -> str | None:
+    """자막 모드: 재등장 시 사용할 짧은 형태(음차 헤드)를 추출."""
+    if not rendering:
+        return None
+    return rendering.split("(")[0].strip()
+
+
 def _term_card(t: dict) -> dict:
     r = t.get("rendering") or {}
     return {
         "term_ko": t["term_ko"],
+        "subtitle_form": _subtitle_form(r.get("rendering")),
         "category": t["category"],
         "domain": t["domain"],
         "definition_ko": t["definition_ko"],
@@ -109,10 +118,21 @@ def chat(req: ChatReq) -> dict:
                           "position": 0, "fallback_to_en": False})
     if terms:
         t0 = terms[0]
-        lead = t0["definition_ko"] if lang == "ko" else (t0.get("rendering") or {}).get("rendering", "")
+        if lang == "ko":
+            lead = t0["definition_ko"]
+        else:
+            # 질문 언어의 대역(음차+현지어 설명)을 우선 사용 — 다국어 카드 응답
+            q_lang = lang if lang in SUPPORTED_TARGETS else "en"
+            rends = {
+                r["lang"]: r["rendering"]
+                for r in con.execute(
+                    "SELECT lang, rendering FROM glossary_renderings WHERE term_id=?", (t0["id"],)
+                )
+            } if "id" in t0 else {}
+            lead = rends.get(q_lang) or (t0.get("rendering") or {}).get("rendering", "")
         answer = (
             f"'{t0['term_ko']}' — {lead}"
-            + ("" if lang == "ko" else f" · {t0['definition_ko']}")
+            + ("" if lang == "ko" else f"\n({t0['definition_ko']})")
             + "\n\n(추출형 응답 — 아래 근거 문서를 함께 확인하세요. 자유 질문 생성형 답변은 라이브 모드에서 제공됩니다.)"
         )
     elif citations:

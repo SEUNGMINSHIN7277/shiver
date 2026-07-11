@@ -196,13 +196,23 @@ def load_archive(con: sqlite3.Connection) -> int:
 
 
 def load_curated(con: sqlite3.Connection) -> int:
-    f = DERIVED / "cultural_terms_v0.json"
-    if not f.exists():
+    files = [DERIVED / "cultural_terms_v0.json", DERIVED / "cultural_terms_v1_add.json"]
+    terms: list[dict] = []
+    for f in files:
+        if f.exists():
+            terms += json.loads(f.read_text(encoding="utf-8"))["terms"]
+    if not terms:
         print("  [skip] 큐레이션 용어 없음")
         return 0
-    data = json.loads(f.read_text(encoding="utf-8"))
+    # ru 패치 병합 (v0 용어에 러시아어 대역 추가)
+    patch_f = DERIVED / "ru_patch_v1.json"
+    if patch_f.exists():
+        patch = json.loads(patch_f.read_text(encoding="utf-8"))["renderings"]
+        for t in terms:
+            if "ru" not in t["renderings"] and t["term_ko"] in patch:
+                t["renderings"]["ru"] = {"text": patch[t["term_ko"]], "strategy": "translit_gloss"}
     n = 0
-    for t in data["terms"]:
+    for t in terms:
         cur = con.execute(
             "INSERT OR IGNORE INTO glossary_terms(term_ko, category, domain, definition_ko, source)"
             " VALUES(?,?,?,?,?)",

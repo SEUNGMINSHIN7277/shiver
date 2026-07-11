@@ -65,3 +65,47 @@ def test_benchmark_summary():
 def test_glossary_search():
     d = client.get("/api/glossary/search", params={"q": "판소리", "lang": "vi"}).json()
     assert any("pansori" in r["rendering"] for r in d["results"])
+
+
+def test_subtitle_mode_preset():
+    d = client.post("/api/translate", json={
+        "text": "선배, 오늘 회식 끝나고 치맥 어때요? — 좋지. 막내도 데려가자.",
+        "target_lang": "en", "domain": "subtitle"}).json()
+    assert d["mode"] == "cached" and d["domain"] == "subtitle"
+    assert "maknae" in d["translation"]
+    detected = {t["term_ko"] for t in d["terms"]}
+    assert {"선배", "회식", "치맥", "막내"} <= detected
+    t = next(x for x in d["terms"] if x["term_ko"] == "선배")
+    assert t["subtitle_form"] == "seonbae"  # 자막 재등장용 짧은 형태
+
+
+def test_russian_renderings():
+    d = client.post("/api/translate", json={"text": "한옥의 온돌", "target_lang": "ru"}).json()
+    t = next(x for x in d["terms"] if x["term_ko"] == "온돌")
+    assert "ондоль" in t["rendering"]
+
+
+def test_kcontent_terms_five_langs():
+    from backend.app.db import get_db
+    con = get_db()
+    for term in ("오빠", "재벌", "눈치"):
+        langs = {r["lang"] for r in con.execute(
+            "SELECT r.lang FROM glossary_terms t JOIN glossary_renderings r ON r.term_id=t.id WHERE t.term_ko=?",
+            (term,))}
+        assert {"en", "vi", "id", "ar", "ru"} <= langs, f"{term}: {langs}"
+
+
+def test_benchmark_multilingual():
+    d = client.get("/api/benchmark/summary").json()
+    assert d["n_cases"] >= 60
+    by = d["summary"]["vanilla_fidelity_by_lang"]
+    assert set(by) == {"en", "vi", "id", "ru"}
+    # 기획서 핵심 주장: 저자원 언어일수록 일반 번역기 충실도 하락
+    assert by["vi"] < by["en"] and by["id"] < by["en"]
+
+
+def test_detect_lang_mixed_script():
+    from backend.app.services.llm.engine import detect_lang
+    assert detect_lang("Что такое 온돌?") == "ru"
+    assert detect_lang("Apa itu gimjang?") == "id"
+    assert detect_lang("판소리가 뭐야?") == "ko"
