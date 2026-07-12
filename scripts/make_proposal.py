@@ -33,6 +33,8 @@ img.shot{display:block;margin:10px auto;max-width:100%;max-height:440px;width:au
 .metric .m{display:table-cell;text-align:center;background:#f2f6fc;border:1px solid #cdddf3;border-radius:6px;padding:12px 6px;}
 .metric .m b{display:block;font-size:17pt;color:#12305c;}
 .metric .m span{font-size:9pt;color:#555;}
+.chg{color:#d40000;}
+.chg-note{text-align:center;color:#d40000;font-size:9.5pt;margin:2px 0 14px;}
 """
 
 def bar(pct, color="#1a5fb4"):
@@ -45,6 +47,7 @@ HTML = f"""<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><title>K-R
 <h1>K-Rosetta</h1>
 <div class="subtitle">공공데이터 기반 한국 문화용어 AI 번역 서비스<br>
 <span class="small">2026 외교 공공데이터·AI 활용 경진대회 · 제품 또는 서비스 개발 부문</span></div>
+<p class="chg-note">※ <span class="chg">빨간 글자</span>는 '개발(제품·서비스)' 부문에 맞춰 수정한 부분입니다 (제출 시 검정으로 되돌리세요).</p>
 
 <h2>기본 정보</h2>
 <table>
@@ -78,7 +81,7 @@ HTML = f"""<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><title>K-R
 <img class="shot" src="{figs['fig_translate']}">
 <div class="figcap">[그림 1] 번역 화면 — 왼쪽은 K-Rosetta(용어사전 적용), 오른쪽은 일반 번역기. 각 용어의 뜻과 공공데이터 출처를 함께 표시합니다.</div>
 
-<h2>1. 제품·서비스 개발 배경, 동기 및 필요성</h2>
+<h2>1. <span class="chg">제품·서비스 개발 배경</span>, 동기 및 필요성</h2>
 <h3>가. 배경과 필요성</h3>
 <ul>
 <li>한국 콘텐츠 수출이 늘어나면서 번역 품질이 중요한 과제가 되었습니다. 문화용어가 잘못 번역되면 한국 문화가 실제와 다르게 전달되고(대외 이미지 문제), 콘텐츠의 완성도도 떨어집니다(수출 품질 문제).</li>
@@ -88,7 +91,7 @@ HTML = f"""<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><title>K-R
 <h3>나. 동기와 목적</h3>
 <p>문제도 뚜렷하고 그것을 풀 자료도 공공에 마련되어 있지만, 둘을 잇는 서비스가 없었습니다. K-Rosetta는 이 빈자리에서 출발합니다. 활용되지 않던 외교부 산하기관의 공공데이터를 번역에 직접 적용하여, 한국 문화가 여러 언어로 정확히 전달되도록 하고 한국 콘텐츠 현지화의 품질을 높이는 것이 목적입니다.</p>
 
-<h2>2. 제품·서비스의 핵심 기술, 기능, 구성 및 특징</h2>
+<h2>2. <span class="chg">제품·서비스의</span> 핵심 기술, 기능, 구성 및 특징</h2>
 <h3>가. 핵심 처리 방식</h3>
 <p>K-Rosetta는 다음 순서로 번역을 처리합니다.</p>
 <div class="flow">
@@ -136,9 +139,9 @@ HTML = f"""<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><title>K-R
 <li><b>화면 표시:</b> 서비스 화면 하단에 사용한 데이터셋 이름·건수·포털 링크를 항상 표시합니다.</li>
 </ul>
 
-<h2>4. 제품·서비스 개발 현황 및 사업화 방안</h2>
-<h3>가. 개발 현황 및 완성도</h3>
-<p>K-Rosetta는 계획 단계에 머문 구상이 아니라, 이미 동작하는 시제품으로 구현되어 있습니다.</p>
+<h2>4. <span class="chg">제품·서비스 개발 현황 및 사업화 방안</span></h2>
+<h3>가. <span class="chg">개발 현황 및 완성도</span></h3>
+<p>K-Rosetta는 계획 단계에 머문 <span class="chg">구상이</span> 아니라, 이미 동작하는 시제품으로 구현되어 있습니다.</p>
 <ul>
 <li>네 가지 핵심 기능(문화용어 번역, 자막·대사 모드, 문화 설명 챗봇, 품질 비교)이 실제로 동작하며, 발표 심사에서 직접 시연할 수 있습니다.</li>
 <li>공공데이터 7종을 실제로 연동해 사용하고 있으며, 화면에 데이터 출처를 함께 표시합니다.</li>
@@ -146,7 +149,7 @@ HTML = f"""<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><title>K-R
 </ul>
 <p>확장에 필요한 작업(용어사전 규모 확대, 지원 언어 확대, 운영 환경 구성)도 새로 시작하는 것이 아니라 기존 파이프라인 위에서 이어서 진행할 수 있습니다.</p>
 
-<h3>나. 시장성 및 실제 사업 가능성, 활용성</h3>
+<h3>나. <span class="chg">시장성 및 실제 사업 가능성, 활용성</span></h3>
 <p>K-Rosetta는 구글 번역·파파고·DeepL 같은 범용 번역기와 정면으로 경쟁하지 않습니다. 범용 번역의 품질·속도·언어 커버리지는 이미 대형 플랫폼의 영역이며, 후발 주자가 그 분야에서 앞서기는 어렵습니다. K-Rosetta가 다루는 것은 한국어 문화 자료와 공공데이터 표준을 기준으로 문화·전통·역사 용어를 정확히 옮기고 검수하는 일입니다. 범용 번역 결과 위에서 공인 표기를 맞추어 주는 역할이며, 더 나은 번역기가 아니라 정확성이 꼭 필요한 곳을 위한 검수·표준화 도구로 시장을 정의합니다.</p>
 <p><b>목표 시장과 진입 순서</b></p>
 <table>
