@@ -34,6 +34,7 @@ img.shot{display:block;margin:10px auto;max-width:100%;max-height:440px;width:au
 .metric .m b{display:block;font-size:17pt;color:#12305c;}
 .metric .m span{font-size:9pt;color:#555;}
 .chg{color:#d40000;}
+.chg a{color:#d40000;text-decoration:underline;}
 .chg-note{text-align:center;color:#d40000;font-size:9.5pt;margin:2px 0 14px;}
 """
 
@@ -47,7 +48,7 @@ HTML = f"""<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><title>K-R
 <h1>K-Rosetta</h1>
 <div class="subtitle">공공데이터 기반 한국 문화용어 AI 번역 서비스<br>
 <span class="small">2026 외교 공공데이터·AI 활용 경진대회 · 제품 또는 서비스 개발 부문</span></div>
-<p class="chg-note">※ <span class="chg">빨간 글자</span>는 '개발(제품·서비스)' 부문에 맞춰 수정한 부분입니다 (제출 시 검정으로 되돌리세요).</p>
+<p class="chg-note">※ <span class="chg">빨간 글자</span>는 개발(제품·서비스) 부문에 맞춰 <b>수정·보완·추가</b>한 부분입니다 (온라인 데모·GitHub 링크, 창업 계획 등 포함 / 제출 시 검정으로 되돌리세요).</p>
 
 <h2>기본 정보</h2>
 <table>
@@ -78,6 +79,7 @@ HTML = f"""<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><title>K-R
 <p>K-Rosetta는 한국국제교류재단과 한국국제협력단이 공개한 공공데이터의 표준 용어를 활용하여, 문화용어를 정해진 표기에 맞게 번역하는 서비스입니다. 입력 문장에서 문화용어를 자동으로 찾아 공공데이터에 정리된 공인 표기를 적용하고, 번역의 근거가 되는 자료를 함께 보여 줍니다. 서비스가 사용하는 자료는 모두 공공데이터와 「Koreana」 관례에서 나온 것으로, 문화·전문 용어 1,211개(한국음식정보 691개, 개발협력 용어 393개, 문화용어 93개, 해외대학 기관명 34개)와 이를 여러 언어로 옮긴 표준 대역 1,643개, 그리고 번역의 근거로 삼는 문서 1,542건(「Koreana」 기사 480건 포함)으로 이루어져 있습니다.</p>
 <p>이 자료를 바탕으로 문화용어 64개를 4개 언어에서 비교 측정했습니다. 일반 번역기가 한국의 공인 표준 표기를 따르는 비율은 평균 23.4%였고, 저자원 언어인 베트남어와 인도네시아어에서는 12.5%까지 낮아졌습니다. K-Rosetta는 공공데이터의 표준 표기를 그대로 적용하기 때문에 같은 기준에서 100%를 기록했습니다. 여기서 중요한 것은 K-Rosetta의 100%보다도, 일반 번역기가 공공 표준을 23% 정도밖에 따르지 못한다는 점입니다. 나아가 이것은 표기를 맞히는 문제에 그치지 않습니다. 문화는 결국 언어를 통해 전달되므로, 말에 담긴 맥락까지 정확히 옮길 때 한국의 문화와 고유한 가치가 왜곡 없이 전해질 수 있습니다. K-Rosetta가 목표로 하는 것이 바로 이 정확한 전달이며, 이는 한국 문화를 세계에 올바르게 알리는 공공외교의 기본과도 맞닿아 있습니다.</p>
 <p>본 서비스는 현재 핵심 기능이 실제로 동작하는 시제품(데모) 형태로 개발되어 있으며, 발표 심사에서 직접 시연할 수 있습니다.</p>
+<p class="chg"><b>온라인 데모</b>(설치 없이 브라우저에서 실행) : <a href="https://claude.ai/code/artifact/026e7b9a-4d87-44da-b9ba-dc82db698e3b">https://claude.ai/code/artifact/026e7b9a-4d87-44da-b9ba-dc82db698e3b</a><br><b>개발 저장소</b>(GitHub) : <a href="https://github.com/SEUNGMINSHIN7277/shiver">https://github.com/SEUNGMINSHIN7277/shiver</a></p>
 <img class="shot" src="{figs['fig_translate']}">
 <div class="figcap">[그림 1] 번역 화면 — 왼쪽은 K-Rosetta(용어사전 적용), 오른쪽은 일반 번역기. 각 용어의 뜻과 공공데이터 출처를 함께 표시합니다.</div>
 
@@ -167,6 +169,11 @@ HTML = f"""<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><title>K-R
 <tr><td>2단계<br>(2027 상반기)<br>B2B 유료화</td><td>웹툰·자막 업체·번역업체 대상 용어 검수 API·구독 서비스를 출시합니다. 1단계의 공공 도입 실적을 신뢰 근거로 영업하며, 예비창업 지원 사업과 연계합니다.</td></tr>
 <tr><td>3단계<br>(2027 하반기~)<br>규모화</td><td>플랫폼·OTT 납품 업체로 고객을 넓히고, 문화용어 데이터 라이선스와 재외문화원 네트워크를 통한 해외 진출을 추진합니다. (기창업자의 경우: 기존 콘텐츠·번역 사업에 본 엔진을 결합하여 저자원 언어권 수출을 확대합니다.)</td></tr>
 </table>
+<p class="chg"><b>참가 유형별 창업(사업화) 계획</b></p>
+<ul class="chg">
+<li><b>예비창업자</b> — 이미 개발한 K-Rosetta를 기반으로 로컬라이제이션 용어 검수 SaaS·API 사업을 창업합니다. 1단계 공공기관 도입 실적을 초기 레퍼런스로 삼아 B2B로 확장하며, 예비창업패키지·글로벌 진출 지원사업과 연계해 초기 자금과 판로를 확보합니다.</li>
+<li><b>기창업자</b> — 기존 콘텐츠·번역 사업에 K-Rosetta의 용어 엔진을 결합해 현지화 라인을 신설합니다. 저자원 언어권(동남아·중동·러시아어권) 현지화 수주를 확대해 매출을 늘리고, 문화용어 데이터 자산을 축적해 경영을 성장시킵니다.</li>
+</ul>
 <p><b>경쟁 우위</b></p>
 <ul>
 <li>공공데이터의 공인 표준과 한국국제교류재단의 39년 다국어 자료를 결합한 기반은 후발 주자가 단기간에 갖추기 어렵습니다.</li>
