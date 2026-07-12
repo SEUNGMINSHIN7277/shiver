@@ -79,7 +79,7 @@ HTML = f"""<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><title>K-R
 <p>K-Rosetta는 한국국제교류재단과 한국국제협력단이 공개한 공공데이터의 표준 용어를 활용하여, 문화용어를 정해진 표기에 맞게 번역하는 서비스입니다. 입력 문장에서 문화용어를 자동으로 찾아 공공데이터에 정리된 공인 표기를 적용하고, 번역의 근거가 되는 자료를 함께 보여 줍니다. 서비스가 사용하는 자료는 모두 공공데이터와 「Koreana」 관례에서 나온 것으로, 문화·전문 용어 1,211개(한국음식정보 691개, 개발협력 용어 393개, 문화용어 93개, 해외대학 기관명 34개)와 이를 여러 언어로 옮긴 표준 대역 1,643개, 그리고 번역의 근거로 삼는 문서 1,542건(「Koreana」 기사 480건 포함)으로 이루어져 있습니다.</p>
 <p>이 자료를 바탕으로 문화용어 64개를 4개 언어에서 비교 측정했습니다. 일반 번역기가 한국의 공인 표준 표기를 따르는 비율은 평균 23.4%였고, 저자원 언어인 베트남어와 인도네시아어에서는 12.5%까지 낮아졌습니다. K-Rosetta는 공공데이터의 표준 표기를 그대로 적용하기 때문에 같은 기준에서 100%를 기록했습니다. 여기서 중요한 것은 K-Rosetta의 100%보다도, 일반 번역기가 공공 표준을 23% 정도밖에 따르지 못한다는 점입니다. 나아가 이것은 표기를 맞히는 문제에 그치지 않습니다. 문화는 결국 언어를 통해 전달되므로, 말에 담긴 맥락까지 정확히 옮길 때 한국의 문화와 고유한 가치가 왜곡 없이 전해질 수 있습니다. K-Rosetta가 목표로 하는 것이 바로 이 정확한 전달이며, 이는 한국 문화를 세계에 올바르게 알리는 공공외교의 기본과도 맞닿아 있습니다.</p>
 <p>본 서비스는 현재 핵심 기능이 실제로 동작하는 시제품(데모) 형태로 개발되어 있으며, 발표 심사에서 직접 시연할 수 있습니다.</p>
-<p class="chg"><b>온라인 데모</b>(설치 없이 브라우저에서 실행) : <a href="https://claude.ai/code/artifact/026e7b9a-4d87-44da-b9ba-dc82db698e3b">https://claude.ai/code/artifact/026e7b9a-4d87-44da-b9ba-dc82db698e3b</a><br><b>개발 저장소</b>(GitHub) : <a href="https://github.com/SEUNGMINSHIN7277/shiver">https://github.com/SEUNGMINSHIN7277/shiver</a></p>
+<p class="chg"><b>온라인 데모</b>(설치 없이 브라우저에서 바로 실행) : <a href="https://aiswkimbeomsu.github.io/K-Rosetta/">https://aiswkimbeomsu.github.io/K-Rosetta/</a></p>
 <img class="shot" src="{figs['fig_translate']}">
 <div class="figcap">[그림 1] 번역 화면 — 왼쪽은 K-Rosetta(용어사전 적용), 오른쪽은 일반 번역기. 각 용어의 뜻과 공공데이터 출처를 함께 표시합니다.</div>
 
