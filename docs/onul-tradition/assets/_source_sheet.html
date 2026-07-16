@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<style>
+  :root{
+    --surface:#ffffff;
+    --wash:#faf8f5;        /* barely-warm page ground */
+    --panel:#f4f2ee;       /* warm off-white panel */
+    --panel2:#efeae2;
+    --hair:#e7e3dc;        /* warm hairline */
+    --hair2:#d9d3c8;
+    --ink:#1c1b19;         /* warm near-black */
+    --ink2:#6b6862;
+    --ink3:#a29c91;
+    --amber:#9a5b2b;       /* single accent — aged soy */
+    --amber-deep:#7c4820;
+    --amber-soft:#c68a55;
+    --amber-tint:#f0e5d8;
+    --amber-wash:#f8f1e8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--wash);color:var(--ink);
+    font-family:'Pretendard','Pretendard Variable',system-ui,-apple-system,sans-serif;
+    -webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+  .sheet{width:1240px;margin:0 auto}
+  .fig{background:var(--surface);padding:72px 76px;position:relative}
+  .fig+.fig{border-top:1px solid var(--hair)}
+  .eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.22em;color:var(--amber);
+    text-transform:uppercase;margin-bottom:14px}
+  .h{font-size:33px;font-weight:700;letter-spacing:-.02em;line-height:1.12;text-wrap:balance}
+  .sub{font-size:16px;font-weight:400;color:var(--ink2);margin-top:12px;line-height:1.6;max-width:58ch}
+  .tnum{font-variant-numeric:tabular-nums}
+  .amber{color:var(--amber)}
+
+  /* ---------- HERO ---------- */
+  #hero{padding:84px 76px 68px}
+  .hero-top{display:flex;align-items:flex-start;justify-content:space-between;gap:40px}
+  .mark{width:76px;height:76px;flex:none}
+  .wordmark{font-size:76px;font-weight:900;letter-spacing:-.03em;line-height:.9}
+  .latin{font-size:19px;font-weight:600;letter-spacing:.42em;color:var(--ink3);margin-top:16px;padding-left:3px}
+  .tag{font-size:23px;font-weight:600;color:var(--ink);margin-top:30px;letter-spacing:-.01em}
+  .tag-en{font-size:15px;font-weight:400;color:var(--ink2);margin-top:7px;font-style:italic;letter-spacing:.01em}
+  .oneliner{font-size:15.5px;color:var(--ink2);line-height:1.65;margin-top:26px;max-width:64ch}
+  .creds{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+  .cred{background:var(--amber-wash);border:1px solid var(--hair);border-radius:14px;padding:18px 18px 17px}
+  .cred .k{font-size:12px;font-weight:600;color:var(--amber-deep);letter-spacing:.02em;display:flex;align-items:center;gap:7px}
+  .cred .v{font-size:15px;font-weight:600;color:var(--ink);margin-top:9px;line-height:1.35;letter-spacing:-.01em}
+  .cred .n{font-size:12.5px;color:var(--ink2);margin-top:5px}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--amber);flex:none}
+
+  /* ---------- POSITIONING ---------- */
+  .map-wrap{margin-top:34px;display:flex;gap:36px;align-items:stretch}
+  .map{position:relative;width:660px;height:470px;flex:none;background:
+      linear-gradient(var(--hair),var(--hair)) center/1px 100% no-repeat,
+      linear-gradient(var(--hair),var(--hair)) center/100% 1px no-repeat;
+    border:1px solid var(--hair);border-radius:16px;overflow:hidden}
+  .quad-hl{position:absolute;right:0;top:0;width:50%;height:50%;background:var(--amber-tint);opacity:.55}
+  .quad-lbl{position:absolute;right:20px;top:16px;font-size:12px;font-weight:600;color:var(--amber-deep);letter-spacing:.03em}
+  .ax{position:absolute;font-size:12.5px;font-weight:600;color:var(--ink3);letter-spacing:.04em}
+  .ax.l{left:16px;top:50%;transform:translateY(-50%)}
+  .ax.r{right:16px;top:50%;transform:translateY(-50%);color:var(--amber-deep)}
+  .ax.b{bottom:12px;left:50%;transform:translateX(-50%)}
+  .ax.t{top:12px;left:50%;transform:translateX(-50%);color:var(--amber-deep)}
+  .pt{position:absolute;transform:translate(-50%,-50%);text-align:center}
+  .pt .d{width:16px;height:16px;border-radius:50%;margin:0 auto;background:var(--ink3);
+    box-shadow:0 0 0 4px var(--surface)}
+  .pt .l{font-size:12.5px;font-weight:600;color:var(--ink2);margin-top:8px;line-height:1.25;white-space:nowrap}
+  .pt.me .d{width:30px;height:30px;background:var(--amber);
+    box-shadow:0 0 0 5px var(--surface),0 0 0 7px var(--amber-soft)}
+  .pt.me .l{font-size:16px;font-weight:800;color:var(--amber-deep);margin-top:11px}
+  .pt.me .l small{display:block;font-size:11.5px;font-weight:600;color:var(--amber);letter-spacing:.02em;margin-top:2px}
+  .map-side{flex:1;align-self:center}
+  .map-side .row{padding:16px 0;border-top:1px solid var(--hair)}
+  .map-side .row:first-child{border-top:0}
+  .map-side .rk{font-size:14.5px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px}
+  .map-side .rv{font-size:13.5px;color:var(--ink2);margin-top:5px;line-height:1.5}
+  .sq{width:11px;height:11px;border-radius:3px;flex:none}
+
+  /* ---------- PRODUCTS ---------- */
+  .prod{margin-top:36px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .card{background:var(--wash);border:1px solid var(--hair);border-radius:18px;padding:26px 24px 24px;display:flex;flex-direction:column}
+  .pkg{height:132px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:20px}
+  .role{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--amber-deep);
+    background:var(--amber-tint);padding:5px 10px;border-radius:20px;text-transform:uppercase}
+  .card h4{font-size:18px;font-weight:700;margin-top:14px;letter-spacing:-.01em}
+  .card p{font-size:13.5px;color:var(--ink2);margin-top:8px;line-height:1.55}
+
+  /* ---------- ROADMAP ---------- */
+  .road{margin-top:44px;position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .road:before{content:"";position:absolute;left:0;right:0;top:11px;height:2px;background:var(--hair2)}
+  .stage{position:relative;padding-top:44px}
+  .node{position:absolute;top:3px;left:0;width:22px;height:22px;border-radius:50%;background:var(--surface);
+    border:2px solid var(--amber);display:flex;align-items:center;justify-content:center}
+  .node:after{content:"";width:9px;height:9px;border-radius:50%;background:var(--amber)}
+  .stage .st{font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--amber-deep)}
+  .stage .sd{font-size:12.5px;color:var(--ink3);font-weight:600;margin-top:3px}
+  .stage h5{font-size:16.5px;font-weight:700;margin-top:12px;letter-spacing:-.01em}
+  .stage ul{margin-top:10px;list-style:none}
+  .stage li{font-size:13px;color:var(--ink2);line-height:1.5;padding-left:14px;position:relative;margin-top:4px}
+  .stage li:before{content:"";position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--amber-soft)}
+  .road-end{margin-top:26px;font-size:14px;color:var(--ink2);display:flex;align-items:center;gap:10px}
+  .road-end b{color:var(--amber-deep);font-weight:700}
+
+  /* ---------- STATS ---------- */
+  .stats{margin-top:36px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .stat{background:var(--panel);border-radius:18px;padding:28px 26px}
+  .stat .n{font-size:40px;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--ink)}
+  .stat .n .u{font-size:22px;font-weight:700;color:var(--amber-deep)}
+  .stat .bar{height:5px;border-radius:3px;background:var(--hair2);margin:16px 0 14px;overflow:hidden}
+  .stat .bar i{display:block;height:100%;background:var(--amber);border-radius:3px}
+  .stat .lab{font-size:14px;font-weight:600;color:var(--ink);letter-spacing:-.01em}
+  .stat .ctx{font-size:12.5px;color:var(--ink2);margin-top:5px;line-height:1.45}
+  .foot{padding:26px 76px 30px;font-size:11.5px;color:var(--ink3);line-height:1.6;background:var(--surface);border-top:1px solid var(--hair)}
+  .foot b{color:var(--ink2);font-weight:600}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <!-- ============ HERO ============ -->
+  <section class="fig" id="hero">
+    <div class="hero-top">
+      <div>
+        <div class="wordmark">씨간</div>
+        <div class="latin">SSIGAN</div>
+        <div class="tag">대를 잇는 발효, 세계의 식탁으로.</div>
+        <div class="tag-en">Time-brewed Korean fermentation.</div>
+      </div>
+      <svg class="mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <!-- minimal onggi (fermentation jar) mark -->
+        <path d="M50 12c-7 0-13 3-13 7 0 2 2 4 5 5-14 4-24 15-24 33 0 18 15 30 32 30s32-12 32-30c0-18-10-29-24-33 3-1 5-3 5-5 0-4-6-7-13-7z"
+              stroke="#9a5b2b" stroke-width="3.4" fill="#f8f1e8"/>
+        <ellipse cx="50" cy="57" rx="24" ry="9" stroke="#c68a55" stroke-width="2.4" fill="none" opacity=".8"/>
+      </svg>
+    </div>
+    <div class="oneliner">UNESCO 인류무형문화유산 ‘한국의 장 담그기’와 종가·명인의 수백 년 씨간장을, 세계의 ‘발효 = 장(腸)건강·풍미’ 웰니스 수요에 맞춘 프리미엄 발효식품으로 번역해 글로벌 직판(D2C)하는 한국 발효 헤리티지 브랜드.</div>
+    <div class="creds">
+      <div class="cred"><div class="k"><span class="dot"></span>UNESCO 인류무형문화유산</div><div class="v">한국의 장 담그기 문화</div><div class="n">2024년 12월 등재 · 김장 이후 두 번째</div></div>
+      <div class="cred"><div class="k"><span class="dot"></span>국가무형유산</div><div class="v">제137호 지정</div><div class="n">2018년 · 전 국민 생활문화</div></div>
+      <div class="cred"><div class="k"><span class="dot"></span>식품명인 · 종가</div><div class="v">약 370년 씨간장</div><div class="n">대물림 발효 헤리티지</div></div>
+      <div class="cred"><div class="k"><span class="dot"></span>검증된 미식 레퍼런스</div><div class="v">2017 국빈만찬 메인 소스</div><div class="n">미슐랭 3스타 셰프 실수요</div></div>
+    </div>
+  </section>
+
+  <!-- ============ POSITIONING ============ -->
+  <section class="fig" id="pos">
+    <div class="eyebrow">Market Positioning</div>
+    <div class="h">아무도 없는 사분면 — 프리미엄 × 명인 헤리티지 × 글로벌</div>
+    <div class="sub">세계 시장엔 대량·저가 매스 브랜드와 명인이 아닌 교포 수제 브랜드만 있다. ‘정부 인증 명인 × 종가 수백 년 × UNESCO × 웰니스 × 글로벌 D2C’를 결합한 브랜드는 부재하다.</div>
+    <div class="map-wrap">
+      <div class="map">
+        <div class="quad-hl"></div>
+        <div class="quad-lbl">화이트스페이스</div>
+        <div class="ax l">대량 · 저가</div>
+        <div class="ax r">프리미엄 · 헤리티지</div>
+        <div class="ax t">명인 · 무형유산 서사</div>
+        <div class="ax b">범용 · 비(非)명인</div>
+        <div class="pt" style="left:24%;top:70%"><div class="d"></div><div class="l">대상 O’Food<br>CJ Bibigo</div></div>
+        <div class="pt" style="left:63%;top:62%"><div class="d"></div><div class="l">Mother-in-Law’s<br>KPOP Foods</div></div>
+        <div class="pt" style="left:33%;top:34%"><div class="d"></div><div class="l">국내 명인몰</div></div>
+        <div class="pt me" style="left:78%;top:24%"><div class="d"></div><div class="l">씨간<small>SSIGAN</small></div></div>
+      </div>
+      <div class="map-side">
+        <div class="row"><div class="rk"><span class="sq" style="background:var(--ink3)"></span>매스 프리미엄</div><div class="rv">대상 O’Food·CJ Bibigo — 대량·저가, 헤리티지 서사 없음</div></div>
+        <div class="row"><div class="rk"><span class="sq" style="background:var(--ink3)"></span>교포 수제</div><div class="rv">Mother-in-Law’s·KPOP — 프리미엄이나 정부 인증 명인·종가 아님</div></div>
+        <div class="row"><div class="rk"><span class="sq" style="background:var(--ink3)"></span>국내 명인몰</div><div class="rv">명인 장 판매는 있으나 글로벌 D2C·브랜딩 미비</div></div>
+        <div class="row"><div class="rk"><span class="sq" style="background:var(--amber)"></span>씨간</div><div class="rv"><b>검증 자산</b>(UNESCO·명인·국빈만찬)으로 빈 사분면을 선점</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCTS ============ -->
+  <section class="fig" id="prod">
+    <div class="eyebrow">Product Line</div>
+    <div class="h">하나의 유산, 네 개의 접점</div>
+    <div class="sub">히어로 제품으로 브랜드를 세우고, 반복구매·웰니스·기프팅으로 매출을 확장한다. 모두 상온 유통(shelf-stable) — 글로벌 배송에 유리.</div>
+    <div class="prod">
+      <div class="card">
+        <div class="pkg">
+          <svg width="60" height="128" viewBox="0 0 60 128" fill="none">
+            <rect x="24" y="4" width="12" height="20" rx="3" fill="#c68a55"/>
+            <path d="M16 30c0-4 3-6 14-6s14 2 14 6v88c0 4-3 6-14 6s-14-2-14-6z" fill="#9a5b2b"/>
+            <rect x="18" y="58" width="24" height="40" rx="3" fill="#f8f1e8"/>
+            <rect x="22" y="66" width="16" height="3" rx="1.5" fill="#9a5b2b"/>
+            <rect x="24" y="74" width="12" height="2" rx="1" fill="#c68a55"/>
+          </svg>
+        </div>
+        <span class="role">Hero</span>
+        <h4>프리미엄 씨간장</h4>
+        <p>단일 종가·빈티지·소량. 발사믹처럼 선물·미식·컬렉션 포지션.</p>
+      </div>
+      <div class="card">
+        <div class="pkg">
+          <svg width="86" height="120" viewBox="0 0 86 120" fill="none">
+            <rect x="34" y="6" width="18" height="14" rx="3" fill="#c68a55"/>
+            <rect x="14" y="24" width="58" height="88" rx="14" fill="#9a5b2b"/>
+            <rect x="22" y="52" width="42" height="40" rx="6" fill="#f8f1e8"/>
+            <rect x="30" y="62" width="26" height="3.5" rx="1.75" fill="#9a5b2b"/>
+            <rect x="34" y="72" width="18" height="2.5" rx="1.25" fill="#c68a55"/>
+          </svg>
+        </div>
+        <span class="role">Repeat</span>
+        <h4>발효 시즌잉·소스</h4>
+        <p>장 기반 우마미 시즌잉·발효 핫소스·다시. 서구 홈쿡 재구매 라인.</p>
+      </div>
+      <div class="card">
+        <div class="pkg">
+          <svg width="70" height="122" viewBox="0 0 70 122" fill="none">
+            <path d="M12 16h46l-4 96c-.3 6-4 8-19 8s-18.7-2-19-8z" fill="#9a5b2b"/>
+            <rect x="12" y="10" width="46" height="10" rx="3" fill="#c68a55"/>
+            <rect x="20" y="44" width="30" height="52" rx="5" fill="#f8f1e8"/>
+            <path d="M27 62h16M27 72h16M27 82h10" stroke="#9a5b2b" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="role">Wellness</span>
+        <h4>장건강 발효식품</h4>
+        <p>청국장·된장 기반 프로바이오틱 스틱·수프. gut-health 트렌드.</p>
+      </div>
+      <div class="card">
+        <div class="pkg">
+          <svg width="112" height="120" viewBox="0 0 112 120" fill="none">
+            <rect x="16" y="34" width="80" height="74" rx="8" fill="#9a5b2b"/>
+            <rect x="16" y="34" width="80" height="74" rx="8" fill="#9a5b2b"/>
+            <rect x="50" y="34" width="12" height="74" fill="#c68a55"/>
+            <path d="M56 34c-8-14-26-10-22 0M56 34c8-14 26-10 22 0" stroke="#c68a55" stroke-width="4" fill="none"/>
+            <rect x="28" y="56" width="24" height="4" rx="2" fill="#f8f1e8"/>
+          </svg>
+        </div>
+        <span class="role">Gifting</span>
+        <h4>프리미엄 기프트세트</h4>
+        <p>명절·미식 선물 수요. 높은 객단가·재구매의 헤리티지 서사.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ROADMAP ============ -->
+  <section class="fig" id="road">
+    <div class="eyebrow">Go-to-Market</div>
+    <div class="h">공장 없이 시작해 세계로 — 단계별 사업화</div>
+    <div class="sub">‘유통전문판매업 + 명인 OEM 위탁’으로 저자본 착수. 크라우드펀딩으로 검증하고 글로벌 D2C로 확장한다.</div>
+    <div class="road">
+      <div class="stage"><div class="node"></div>
+        <div class="st">STAGE 0</div><div class="sd">0–3개월 · 준비</div>
+        <h5>기반 세팅</h5>
+        <ul><li>명인·종가 MOU / 의향서</li><li>유통전문판매업 신고</li><li>브랜드·패키지·MVP 레시피</li></ul>
+      </div>
+      <div class="stage"><div class="node"></div>
+        <div class="st">STAGE 1</div><div class="sd">3–6개월 · 검증</div>
+        <h5>크라우드펀딩 론칭</h5>
+        <ul><li>Kickstarter·와디즈 선주문</li><li>명인 OEM 초도 생산</li><li>시장 검증 + 초기 자본</li></ul>
+      </div>
+      <div class="stage"><div class="node"></div>
+        <div class="st">STAGE 2</div><div class="sd">6–12개월 · 확장</div>
+        <h5>글로벌 D2C</h5>
+        <ul><li>자사몰 + Amazon US</li><li>FDA 등록·FSVP 수출요건</li><li>구독·재주문 도입</li></ul>
+      </div>
+      <div class="stage"><div class="node"></div>
+        <div class="st">STAGE 3</div><div class="sd">1–2년 · 스케일</div>
+        <h5>B2B · 셰프 채널</h5>
+        <ul><li>스페셜티·파인푸드 홀세일</li><li>셰프 콜라보·라이선싱</li><li>라인 확장</li></ul>
+      </div>
+    </div>
+    <div class="road-end">→ <b>오늘전통 초기창업 보육(최대 3년·평균 1억원)·‘선도(글로벌)’ 단계</b>와 연계해 성장 사다리 완성</div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="fig" id="stats">
+    <div class="eyebrow">Traction & Market</div>
+    <div class="h">시장은 이미 열려 있다</div>
+    <div class="sub">한국 발효식품은 냉정한 수출 데이터상 ‘해외 확장성 유일 강(强)’ 카테고리다. 원형 그대로의 공예·체험이 아니라 제품화된 전통이 세계로 나간다.</div>
+    <div class="stats">
+      <div class="stat"><div class="n tnum">130.3<span class="u">억$</span></div><div class="bar"><i style="width:100%"></i></div><div class="lab">2024 K-Food+ 수출</div><div class="ctx">역대 최대 · 미국이 1위 시장($15.9억)</div></div>
+      <div class="stat"><div class="n tnum">3.99<span class="u">억$</span></div><div class="bar"><i style="width:78%"></i></div><div class="lab">2024 소스류 수출</div><div class="ctx">역대 최대 · 139개국 · 최대시장 미국</div></div>
+      <div class="stat"><div class="n tnum">6.2천<span class="u">→15천+</span></div><div class="bar"><i style="width:92%"></i></div><div class="lab">美 고추장 소매 SKU</div><div class="ctx">2019 → 2025 · 2.4배 급증</div></div>
+      <div class="stat"><div class="n tnum">1,150<span class="u">억$</span></div><div class="bar"><i style="width:70%"></i></div><div class="lab">프로바이오틱스 시장</div><div class="ctx">2030 전망 · 장건강 메가트렌드</div></div>
+    </div>
+  </section>
+
+  <div class="foot">
+    <b>씨간(SSIGAN)</b> · 2026 오늘전통 청년 예비창업아이디어 공모전 · 브랜드·전략 비주얼 시트 &nbsp;|&nbsp;
+    출처: 농림축산식품부(K-Food·소스류 수출, 2024) · 국가유산청/korea.net(UNESCO 장 담그기 등재, 2024) · 시장조사기관(고추장·프로바이오틱스, 범위 인용). 매출 수치는 목표 아님, 시장 근거.
+  </div>
+
+</div>
+</body>
+</html>
