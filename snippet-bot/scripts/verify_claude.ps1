@@ -1,5 +1,9 @@
-# 1단계 검증 (§12-1): Claude Code 헤드리스 모드가 "구독 인증"으로 동작하는지 확인.
+﻿# 1단계 검증 (§12-1): Claude Code 헤드리스 모드가 "구독 인증"으로 동작하는지 확인.
 # 일반 PowerShell에서 실행: powershell -ExecutionPolicy Bypass -File scripts\verify_claude.ps1
+
+# 한글 출력을 위해 콘솔 인코딩을 UTF-8로 전환
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+$OutputEncoding = [System.Text.Encoding]::UTF8
 
 Write-Host "== 1) ANTHROPIC_API_KEY 존재 여부 확인 ==" -ForegroundColor Cyan
 $found = $false

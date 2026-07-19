@@ -1,8 +1,12 @@
-# Windows 작업 스케줄러 등록 (§9) — 관리자 PowerShell에서 실행:
+﻿# Windows 작업 스케줄러 등록 (§9) — 관리자 PowerShell에서 실행:
 #   powershell -ExecutionPolicy Bypass -File scripts\register_scheduler.ps1
 #
 # schtasks를 /ru 없이 사용하므로 두 작업 모두 "현재 로그인한 사용자" 계정으로,
 # "사용자가 로그온한 경우에만 실행"으로 등록된다 → Claude Code 로그인 세션을 공유한다.
+
+# 한글 출력을 위해 콘솔 인코딩을 UTF-8로 전환
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+$OutputEncoding = [System.Text.Encoding]::UTF8
 
 $Base   = "C:\snippet-bot"
 $Python = Join-Path $Base "venv\Scripts\python.exe"
