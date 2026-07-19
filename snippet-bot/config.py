@@ -31,6 +31,8 @@ if load_dotenv is not None:
 
 SITE_TOKEN = os.getenv("SNIPPET_SITE_TOKEN", "")
 SITE_BASE_URL = os.getenv("SNIPPET_SITE_BASE_URL", "").rstrip("/")
+# Bearer 토큰이 거부될 때만 쓰는 폴백: 브라우저 session 쿠키 값 (site_api.py 참고)
+SITE_SESSION = os.getenv("SNIPPET_SITE_SESSION", "")
 
 # claude -p 호출 타임아웃(초) — 개발명세서 §5
 CLAUDE_TIMEOUT_SECONDS = 180
@@ -46,6 +48,8 @@ def mask_secret(text: str) -> str:
         return text
     if SITE_TOKEN:
         text = text.replace(SITE_TOKEN, "***TOKEN***")
+    if SITE_SESSION:
+        text = text.replace(SITE_SESSION, "***SESSION***")
     return text
 
 

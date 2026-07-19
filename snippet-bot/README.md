@@ -15,10 +15,8 @@ Windows 자동화 파이프라인입니다.
 | `config.py` / `notify.py` | ✅ 완료 (토큰 마스킹, ANTHROPIC_API_KEY 제거 가드, 재시도 유틸, 토스트 알림) |
 | `generate.py` | ✅ 완료 (`claude -p` 호출, 180초 타임아웃, 3회 재시도, 본문 추출) |
 | `daily.py` / `weekly.py` | ✅ 완료 (`--dry-run` 포함) |
-| `site_api.py` | ⚠️ **시그니처만 구현** — 사이트 Network 탭 캡처 수령 후 실제 구현 (아래 §사이트 API 참고) |
+| `site_api.py` | ✅ **캡처 기반 구현 완료** — 사용자 PC에서 라이브 검증 필요 (`scripts\test_site_api.py`, 아래 §사이트 API 참고) |
 | 스케줄러 등록 스크립트 | ✅ `scripts/register_scheduler.ps1` |
-
-`site_api.py`가 구현되기 전까지는 `--dry-run`으로 스니펫 생성까지만 동작합니다.
 
 ## 설치 (Windows)
 
@@ -71,24 +69,33 @@ venv\Scripts\python weekly.py
 - 실패 시(생성 실패·로그인 만료·한도 초과·API 오류) Windows 토스트 알림이 뜹니다.
   LLM 생성이 실패하면 **업로드하지 않습니다**(불완전한 내용 업로드 금지).
 
-## 사이트 API 리버스 엔지니어링 (§6 — 구현 대기 중)
+## 사이트 API (§6 — 2026-07-19 Network 캡처 기반 구현)
 
-사이트에 공식 API 문서가 없어, 브라우저 캡처를 받아야 `site_api.py`를 완성할 수 있습니다.
+캡처로 확인된 API 구조 (베이스: `https://api.1000.school`):
 
-**진행 방법**: 브라우저에서 사이트 로그인 → `F12` → **Network** 탭을 연 뒤, 아래 4가지 동작을
-수행하면서 각 요청의 ① URL ② 메서드 ③ 요청 헤더(특히 인증: `Authorization: Bearer …`인지
-쿠키/세션인지) ④ 페이로드 JSON ⑤ 응답 JSON을 캡처해 공유해 주세요
-(Network 탭에서 요청 우클릭 → *Copy as cURL* 이 가장 정확합니다. **토큰/쿠키 값은 가려도
-됩니다 — 구조만 필요합니다**):
-
-| 동작 | 구현될 함수 |
+| 동작 | 엔드포인트 |
 |---|---|
-| a. 일간 스니펫 "저장하기" 클릭 | `post_daily_snippet(date, content) -> snippet_id` |
-| b. "AI 채점" 클릭 | `run_ai_grading(snippet_id) -> grading_result` |
-| c. 주간 스니펫 저장 | `post_weekly_snippet(week_range, content) -> snippet_id` |
-| d. 일간 스니펫 목록/상세 조회(GET) | `get_daily_snippets(start, end) -> list` |
+| 일간 데이터/목록 조회 | `GET /daily-snippets/page-data` |
+| 일간 스니펫 저장 | `PUT /daily-snippets/{id}` — 본문 `{"content": "<마크다운>"}` (이미 존재하는 레코드의 id에 PUT) |
+| AI 채점 | `GET /daily-snippets/feedback?stream=1` — SSE(text/event-stream) 스트리밍 |
+| 주간 계열 | `/weekly-snippets/...` — 일간과 대칭 구조로 가정(라이브 검증 필요) |
+| 인증(브라우저 기준) | `session` 쿠키 + 쓰기 요청에 `x-csrf-token`(`GET /auth/csrf`) |
 
-조회 API(d)가 없으면 주간 파이프라인은 자동으로 `log\archive\`의 해당 주 파일들을 사용합니다.
+**인증 전략**: 사이트 설정(설정 → API)에서 발급한 API 토큰을 `Authorization: Bearer`로
+1순위 시도합니다. 거부(401/403)되면 `.env`의 `SNIPPET_SITE_SESSION`에 브라우저 `session`
+쿠키 값을 넣는 쿠키 모드로 전환하세요 (`.env.example` 참고).
+
+**라이브 검증** (원격 개발 환경은 이 도메인 접속이 차단되어 있어 PC에서 실행해야 합니다):
+
+```powershell
+venv\Scripts\python scripts\test_site_api.py check         # 인증 + page-data 구조 + 오늘 id 탐색
+venv\Scripts\python scripts\test_site_api.py weekly-check  # 주간 page-data 구조
+venv\Scripts\python scripts\test_site_api.py save-test     # 일간 저장 테스트(⚠️ 오늘 내용 덮어씀, 확인 입력 필요)
+venv\Scripts\python scripts\test_site_api.py grade         # AI 채점(SSE) 테스트
+```
+
+`check`에서 id 탐색이 실패하거나 응답 구조가 다르면, `logs\dump_*.json` 파일을 공유해
+주세요 — 그 구조에 맞게 코드를 조정합니다.
 
 ## 스케줄러 등록 (§9)
 

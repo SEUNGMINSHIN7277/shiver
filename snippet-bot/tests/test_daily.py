@@ -11,6 +11,9 @@ def _setup_paths(tmp_path, monkeypatch):
     monkeypatch.setattr(config, "TODAY_MD", log_dir / "today.md")
     monkeypatch.setattr(config, "ARCHIVE_DIR", log_dir / "archive")
     monkeypatch.setattr(config, "RUN_LOG_DIR", tmp_path / "logs")
+    # 테스트가 실수로도 실제 사이트에 접근하지 못하게 자격증명을 비운다
+    monkeypatch.setattr(config, "SITE_TOKEN", "")
+    monkeypatch.setattr(config, "SITE_SESSION", "")
 
 
 # --- read_today_md ---------------------------------------------------------
@@ -75,13 +78,19 @@ def test_main_dry_run_prints_and_keeps_today(tmp_path, monkeypatch, capsys):
     assert not (config.ARCHIVE_DIR / "2026-07-19.md").exists()
 
 
-def test_main_site_api_not_implemented_keeps_today(tmp_path, monkeypatch):
+def test_main_site_api_error_keeps_today(tmp_path, monkeypatch):
     _setup_paths(tmp_path, monkeypatch)
     config.TODAY_MD.write_text("오늘 한 일", encoding="utf-8")
     monkeypatch.setattr(generate, "generate_daily_snippet",
                         lambda text, d, logger=None: "스니펫")
 
-    # site_api는 기본적으로 SiteApiNotImplemented를 던진다 → 실패 종료 + today.md 유지
+    import site_api
+
+    def boom(*a, **k):
+        raise site_api.SiteApiError("업로드 실패")
+
+    monkeypatch.setattr(site_api, "post_daily_snippet", boom)
+    # 업로드 실패 → 실패 종료 + today.md는 보관하지 않고 유지
     assert daily.main(["--date", "2026-07-19"]) == 1
     assert config.TODAY_MD.read_text(encoding="utf-8") == "오늘 한 일"
 

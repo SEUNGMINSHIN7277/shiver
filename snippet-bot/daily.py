@@ -96,9 +96,9 @@ def main(argv: list[str] | None = None) -> int:
         logger.info("업로드 완료: snippet_id=%s", snippet_id)
         grading = site_api.run_ai_grading(snippet_id, logger=logger)
         logger.info("AI 채점 완료: %s", grading)
-    except site_api.SiteApiNotImplemented as exc:
+    except site_api.SiteApiError as exc:
         logger.error("%s", exc)
-        notify.notify("SnippetBot", str(exc), logger)
+        notify.notify("SnippetBot 실패", str(exc), logger)
         return 1
     except Exception as exc:
         logger.exception("사이트 업로드/채점 실패 — today.md는 보관하지 않고 유지합니다")

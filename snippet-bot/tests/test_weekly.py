@@ -13,6 +13,10 @@ def _setup_paths(tmp_path, monkeypatch):
     monkeypatch.setattr(config, "TODAY_MD", log_dir / "today.md")
     monkeypatch.setattr(config, "ARCHIVE_DIR", log_dir / "archive")
     monkeypatch.setattr(config, "RUN_LOG_DIR", tmp_path / "logs")
+    # 테스트가 실수로도 실제 사이트에 접근하지 못하게 자격증명을 비운다
+    # (_session()이 즉시 SiteApiError를 던지고 archive 폴백을 타게 된다)
+    monkeypatch.setattr(config, "SITE_TOKEN", "")
+    monkeypatch.setattr(config, "SITE_SESSION", "")
 
 
 # --- week_range_for --------------------------------------------------------
@@ -55,8 +59,12 @@ def test_collect_from_archive_empty(tmp_path, monkeypatch):
 def test_collect_material_falls_back_to_archive(tmp_path, monkeypatch):
     _setup_paths(tmp_path, monkeypatch)
     (config.ARCHIVE_DIR / "2026-07-14.md").write_text("화요일 기록", encoding="utf-8")
+
+    def boom(*a, **k):
+        raise site_api.SiteApiError("조회 실패")
+
+    monkeypatch.setattr(site_api, "get_daily_snippets", boom)
     logger = logging.getLogger("test")
-    # site_api.get_daily_snippets는 기본적으로 SiteApiNotImplemented → 폴백 사용
     text = weekly.collect_weekly_material(date(2026, 7, 13), date(2026, 7, 19), logger)
     assert "화요일 기록" in text
 
@@ -100,6 +108,6 @@ def test_main_full_success(tmp_path, monkeypatch):
     monkeypatch.setattr(site_api, "post_weekly_snippet",
                         lambda wr, c, logger=None: "wid-1")
     monkeypatch.setattr(site_api, "run_ai_grading",
-                        lambda sid, logger=None: {"score": 4})
+                        lambda sid, kind="daily", logger=None: {"score": 4})
 
     assert weekly.main(["--date", "2026-07-19"]) == 0
