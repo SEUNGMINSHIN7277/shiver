@@ -1,0 +1,12 @@
+# 비밀키 — 절대 커밋 금지 (§11)
+.env
+
+# 실행 로그·처리 완료 기록 (§3)
+logs/
+log/archive/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
