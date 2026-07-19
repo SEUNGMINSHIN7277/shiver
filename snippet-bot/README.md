@@ -1,12 +1,18 @@
 # snippet-bot — 일간/주간 스니펫 자동화 파이프라인
 
 팀 스니펫 사이트("1000")에 일간/주간 스니펫을 자동으로 **작성 → 업로드 → AI채점 → 저장**하는
-Windows 자동화 파이프라인입니다.
+Windows 자동화 파이프라인입니다. **사용자 개입 0**이 목표입니다.
 
-- **일간**: 매일 23:30, `log\today.md`의 하루 기록으로 7항목 스니펫 작성
+- **일간**: 매일 23:30, **그날 로컬 Claude Code에서 나눈 대화 기록을 자동 수집**
+  (`%USERPROFILE%\.claude\projects\`)해 7항목 스니펫 작성. `log\today.md`에 메모를
+  적어두면 보조 자료로 함께 사용(선택 사항 — 없어도 동작).
 - **주간**: 매주 일요일 23:30, 그 주의 일간 스니펫들을 요약해 주간 스니펫 작성
 - **LLM**: Anthropic API 키를 쓰지 않습니다. 이 PC에 로그인된 **Claude Code 헤드리스 모드**
   (`claude -p`)를 서브프로세스로 호출해 **구독 사용량**으로 처리합니다(추가 과금 0원).
+
+> ⚠️ 수집 범위 한계: claude.ai **웹/모바일** 대화는 PC에 저장되지 않아 수집할 수 없습니다.
+> **로컬 Claude Code(CLI·IDE 확장)** 에서 작업한 대화만 자동 수집됩니다. 웹에서만 작업한
+> 날은 `log\today.md`에 메모를 남기면 그것으로 스니펫이 생성됩니다.
 
 ## 현재 상태
 
@@ -52,19 +58,23 @@ powershell -ExecutionPolicy Bypass -File scripts\verify_claude.ps1
 ## 사용법
 
 ```powershell
-# 하루 동안 log\today.md 에 자유롭게 기록을 적어둔다 (형식 무관)
+# 평소: 아무것도 안 해도 됩니다. 로컬 Claude Code로 작업만 하면
+# 그날 대화가 자동 수집되어 23:30에 스니펫이 올라갑니다.
+# (선택) log\today.md 에 메모를 적어두면 보조 자료로 함께 사용됩니다.
 
 # dry-run: 사이트 API 호출 없이 스니펫 생성 결과만 콘솔에 출력 (§12-2)
 venv\Scripts\python daily.py --dry-run
 venv\Scripts\python weekly.py --dry-run
 
-# 실제 실행 (site_api.py 구현 후)
+# 실제 실행
 venv\Scripts\python daily.py
 venv\Scripts\python weekly.py
 ```
 
-- `today.md`가 없거나 비어 있으면 빈 스니펫을 올리지 않고 "오늘 기록이 없습니다" 알림 후 종료합니다.
-- 성공 시 `today.md`는 `log\archive\YYYY-MM-DD.md`로 이동하고 빈 `today.md`가 재생성됩니다.
+- 그날 Claude 대화도 `today.md` 메모도 없으면 빈 스니펫을 올리지 않고 "오늘 기록이 없습니다"
+  알림 후 종료합니다.
+- 성공 시 생성된 스니펫이 `log\archive\YYYY-MM-DD.md`로 저장되고(주간 요약의 폴백 자료),
+  `today.md`가 있었다면 `log\archive\YYYY-MM-DD_memo.md`로 보관 후 빈 파일로 재생성됩니다.
 - 실행 로그: `logs\daily_YYYY-MM-DD.log`, `logs\weekly_YYYY-WW.log`
 - 실패 시(생성 실패·로그인 만료·한도 초과·API 오류) Windows 토스트 알림이 뜹니다.
   LLM 생성이 실패하면 **업로드하지 않습니다**(불완전한 내용 업로드 금지).

@@ -8,7 +8,9 @@
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 $OutputEncoding = [System.Text.Encoding]::UTF8
 
-$Base   = "C:\snippet-bot"
+# 이 스크립트가 있는 scripts\ 의 상위 폴더를 프로젝트 루트로 사용
+# (C:\snippet-bot이든 git 클론 폴더든 위치와 무관하게 동작)
+$Base   = Split-Path -Parent $PSScriptRoot
 $Python = Join-Path $Base "venv\Scripts\python.exe"
 
 if (-not (Test-Path $Python)) {

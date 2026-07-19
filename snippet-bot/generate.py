@@ -154,9 +154,12 @@ def generate_daily_snippet(today_text: str, date_str: str, *,
                            logger: logging.Logger | None = None) -> str:
     """today.md 내용으로 일간 스니펫을 생성한다 (§7-2)."""
     instruction = (
-        f"당신은 팀 스니펫 작성 도우미입니다. 표준 입력으로 전달되는 내용은 "
-        f"사용자가 {date_str} 하루 동안 적은 원천 기록(today.md)입니다.\n\n"
-        f"이 기록을 바탕으로 오늘({date_str})의 일간 스니펫을 작성하십시오. "
+        f"당신은 팀 스니펫 작성 도우미입니다. 표준 입력으로 전달되는 내용은 사용자의 "
+        f"{date_str} 하루 활동 원천 자료입니다 — 사용자 메모(today.md), 그리고/또는 "
+        f"사용자가 오늘 Claude와 나눈 대화 기록입니다.\n\n"
+        f"대화 기록이 포함된 경우: 대화를 그대로 옮기지 말고, 대화에서 사용자가 실제로 "
+        f"수행한 작업·목적·진행 결과를 파악해 사용자 1인칭 관점으로 정리하십시오.\n\n"
+        f"이 자료를 바탕으로 오늘({date_str})의 일간 스니펫을 작성하십시오. "
         f"6번 항목(Tomorrow)은 '내일 할 일' 관점으로 작성합니다.\n\n{_FORMAT_SPEC}"
     )
     raw = run_claude(instruction, stdin_text=today_text, logger=logger)
