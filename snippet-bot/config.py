@@ -57,9 +57,17 @@ class _SecretMaskFilter(logging.Filter):
     def filter(self, record: logging.LogRecord) -> bool:
         record.msg = mask_secret(str(record.msg))
         if record.args:
-            record.args = tuple(
-                mask_secret(a) if isinstance(a, str) else a for a in record.args
-            )
+            # logging 특례: 단일 dict 인자는 record.args에 dict 그대로 저장된다.
+            # tuple()로 감싸면 키만 남아 포맷팅이 깨지므로 구조를 보존한다.
+            if isinstance(record.args, dict):
+                record.args = {
+                    k: mask_secret(v) if isinstance(v, str) else v
+                    for k, v in record.args.items()
+                }
+            else:
+                record.args = tuple(
+                    mask_secret(a) if isinstance(a, str) else a for a in record.args
+                )
         return True
 
 

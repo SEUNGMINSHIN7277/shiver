@@ -27,6 +27,11 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 Write-Host "`n== 3) 헤드리스 호출 테스트 ==" -ForegroundColor Cyan
+# 키가 남아 있으면 이 테스트 호출 자체가 API 과금으로 처리되므로,
+# 현재 프로세스 범위에서 제거한 뒤(구독 인증 강제) 호출한다.
+Remove-Item Env:ANTHROPIC_API_KEY -ErrorAction SilentlyContinue
+Remove-Item Env:ANTHROPIC_AUTH_TOKEN -ErrorAction SilentlyContinue
+Write-Host "(첫 호출은 30초~1분 걸릴 수 있습니다)"
 claude -p "안녕이라고만 답해" --output-format text
 if ($LASTEXITCODE -eq 0) {
     Write-Host "`n헤드리스 모드 정상 동작 — 검증 통과" -ForegroundColor Green

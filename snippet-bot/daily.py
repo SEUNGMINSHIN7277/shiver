@@ -18,7 +18,7 @@ from __future__ import annotations
 import argparse
 import shutil
 import sys
-from datetime import date as date_cls
+from datetime import date as date_cls, datetime, timedelta
 from pathlib import Path
 
 import collect_activity
@@ -28,11 +28,33 @@ import notify
 import site_api
 
 
+def default_run_date(now: datetime) -> date_cls:
+    """예정 시각(23:30) 기준 논리적 실행 날짜를 정한다.
+
+    23시 이전 실행은 PC가 꺼져 있어 놓친 전날 23:30 실행의 보충(StartWhenAvailable,
+    §9/§13)으로 보고 전날을 대상으로 한다. 오늘 날짜로 강제하려면 --date를 사용.
+    """
+    if now.hour >= 23:
+        return now.date()
+    return now.date() - timedelta(days=1)
+
+
 def read_today_md() -> str | None:
-    """today.md 내용을 반환한다. 파일이 없거나 공백뿐이면 None."""
+    """today.md 내용을 반환한다. 파일이 없거나 공백뿐이면 None.
+
+    한국어 Windows에서 ANSI(CP949)로 저장된 경우도 조용히 깨뜨리지 않고 읽는다.
+    """
     if not config.TODAY_MD.exists():
         return None
-    text = config.TODAY_MD.read_text(encoding="utf-8", errors="replace")
+    raw = config.TODAY_MD.read_bytes()
+    for encoding in ("utf-8-sig", "cp949"):
+        try:
+            text = raw.decode(encoding)
+            break
+        except UnicodeDecodeError:
+            continue
+    else:
+        text = raw.decode("utf-8", errors="replace")
     return text if text.strip() else None
 
 
@@ -86,10 +108,21 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--date", help="YYYY-MM-DD 형식 실행 날짜(기본: 오늘)")
     args = parser.parse_args(argv)
 
-    run_date = date_cls.fromisoformat(args.date) if args.date else date_cls.today()
+    now = datetime.now()
+    run_date = date_cls.fromisoformat(args.date) if args.date else default_run_date(now)
     logger = config.setup_logging(f"daily_{run_date.isoformat()}.log")
     logger.info("=== 일간 파이프라인 시작 (date=%s, dry_run=%s) ===",
                 run_date.isoformat(), args.dry_run)
+    if not args.date and run_date != now.date():
+        logger.info("23시 이전 실행 → 놓친 전날 실행의 보충으로 판단해 %s 날짜로 "
+                    "진행합니다 (오늘 날짜로 하려면 --date %s)",
+                    run_date.isoformat(), now.date().isoformat())
+
+    # 보충 실행과 정규 실행이 겹쳐도 같은 날짜를 두 번 올리지 않게 멱등성 확인
+    if not args.dry_run and (config.ARCHIVE_DIR / f"{run_date.isoformat()}.md").exists():
+        logger.info("%s 스니펫은 이미 처리되어 있습니다(archive 존재) — 종료합니다.",
+                    run_date.isoformat())
+        return 0
 
     # §4: ANTHROPIC_API_KEY가 있으면 구독 대신 API 과금으로 전환되므로 제거
     if config.strip_anthropic_api_key(logger):

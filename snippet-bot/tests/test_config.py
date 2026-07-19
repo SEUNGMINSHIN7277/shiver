@@ -71,6 +71,20 @@ def test_with_retries_fatal_no_retry(monkeypatch):
     assert calls["n"] == 1
 
 
+def test_logging_dict_args_preserved(tmp_path, monkeypatch):
+    """단일 dict 인자 로그(채점 결과 등)가 필터 때문에 깨지지 않아야 한다."""
+    monkeypatch.setattr(config, "RUN_LOG_DIR", tmp_path)
+    monkeypatch.setattr(config, "SITE_TOKEN", "")
+    logger = config.setup_logging("dict_args.log")
+    logger.info("AI 채점 완료: %s", {"score": 5, "feedback": "좋음"})
+    for handler in logger.handlers:
+        handler.flush()
+        if isinstance(handler, logging.FileHandler):
+            handler.close()
+    content = (tmp_path / "dict_args.log").read_text(encoding="utf-8")
+    assert "'score': 5" in content and "좋음" in content
+
+
 def test_setup_logging_masks_token(tmp_path, monkeypatch):
     monkeypatch.setattr(config, "RUN_LOG_DIR", tmp_path)
     monkeypatch.setattr(config, "SITE_TOKEN", "sekrit-token-123")

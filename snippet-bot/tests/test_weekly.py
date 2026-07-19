@@ -1,5 +1,5 @@
 import logging
-from datetime import date
+from datetime import date, datetime
 
 import config
 import generate
@@ -31,6 +31,21 @@ def test_week_range_midweek():
     monday, sunday = weekly.week_range_for(date(2026, 7, 15))  # 수요일
     assert monday == date(2026, 7, 13)
     assert sunday == date(2026, 7, 19)
+
+
+# --- default_target_date (보충 실행 주간 보정, §9/§13) ------------------------
+
+def test_default_target_regular_sunday():
+    assert weekly.default_target_date(datetime(2026, 7, 19, 23, 30)) == date(2026, 7, 19)
+
+
+def test_default_target_catchup_monday_targets_last_week():
+    # 일요일 23:30을 놓치고 월요일 부팅 → 직전 일요일 기준(지난주 요약)
+    assert weekly.default_target_date(datetime(2026, 7, 20, 9, 0)) == date(2026, 7, 19)
+
+
+def test_default_target_catchup_midweek_targets_last_week():
+    assert weekly.default_target_date(datetime(2026, 7, 22, 14, 0)) == date(2026, 7, 19)
 
 
 # --- collect ---------------------------------------------------------------

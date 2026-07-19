@@ -15,7 +15,7 @@ import argparse
 import json
 import logging
 import sys
-from datetime import date as date_cls, timedelta
+from datetime import date as date_cls, datetime, timedelta
 
 import config
 import generate
@@ -27,6 +27,18 @@ def week_range_for(run_date: date_cls) -> tuple[date_cls, date_cls]:
     """run_date가 속한 주의 (월요일, 일요일)을 반환한다."""
     monday = run_date - timedelta(days=run_date.weekday())
     return monday, monday + timedelta(days=6)
+
+
+def default_target_date(now: datetime) -> date_cls:
+    """요약 대상 주를 정하는 기준 날짜.
+
+    정규 실행(일요일 밤)이면 오늘이 속한 주. 그 외(놓친 일요일 실행의 보충,
+    §9/§13)는 '직전 일요일'을 기준으로 삼아 지난주가 요약되게 한다.
+    """
+    d = now.date()
+    if d.weekday() == 6:  # 일요일
+        return d
+    return d - timedelta(days=(d.weekday() + 1) % 7)
 
 
 def _format_site_snippets(items: list) -> str:
@@ -81,13 +93,18 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--date", help="YYYY-MM-DD 형식 기준 날짜(기본: 오늘)")
     args = parser.parse_args(argv)
 
-    run_date = date_cls.fromisoformat(args.date) if args.date else date_cls.today()
+    now = datetime.now()
+    run_date = (date_cls.fromisoformat(args.date) if args.date
+                else default_target_date(now))
     iso = run_date.isocalendar()
     logger = config.setup_logging(f"weekly_{iso.year}-W{iso.week:02d}.log")
     monday, sunday = week_range_for(run_date)
     week_label = f"{monday.isoformat()} ~ {sunday.isoformat()}"
     logger.info("=== 주간 파이프라인 시작 (주간=%s, dry_run=%s) ===",
                 week_label, args.dry_run)
+    if not args.date and run_date != now.date():
+        logger.info("일요일이 아닌 시점의 실행 → 놓친 주간 실행의 보충으로 판단해 "
+                    "지난주(%s)를 요약합니다", week_label)
 
     if config.strip_anthropic_api_key(logger):
         notify.notify("SnippetBot 경고",

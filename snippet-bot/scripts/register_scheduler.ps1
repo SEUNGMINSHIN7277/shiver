@@ -19,7 +19,9 @@ if (-not (Test-Path $Python)) {
 }
 
 schtasks /create /tn "SnippetBot-Daily"  /tr "`"$Python`" `"$Base\daily.py`""  /sc daily /st 23:30 /f
-schtasks /create /tn "SnippetBot-Weekly" /tr "`"$Python`" `"$Base\weekly.py`"" /sc weekly /d SUN /st 23:30 /f
+# Weekly는 23:50 — 일요일 23:30 Daily가 그날 스니펫을 생성·업로드·보관한 뒤에
+# 주간 수집이 돌아야 주간 요약에 일요일 기록이 포함된다 (동시 실행 시 항상 누락됨)
+schtasks /create /tn "SnippetBot-Weekly" /tr "`"$Python`" `"$Base\weekly.py`"" /sc weekly /d SUN /st 23:50 /f
 
 # 추가 설정: 놓친 실행 보충(StartWhenAvailable), 배터리 제한 해제
 foreach ($name in "SnippetBot-Daily", "SnippetBot-Weekly") {
